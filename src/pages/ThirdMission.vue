@@ -33,7 +33,7 @@
 
       <!-- Titolo principale -->
       <h2 class="text-3xl lg:text-4xl font-playfair text-custom-blue-title text-center mb-10">
-        {{ $t('homeTitle') }}
+        {{ $t('thirdMissionTitle') }}
       </h2>
 
       <!-- Testo con interruzioni di paragrafo -->

@@ -1,6 +1,6 @@
 export default {
   it: {
-    homeTitle: 'Terza Missione',
+    thirdMissionTitle: 'Terza Missione',
     thirdMissionText: `
       <p>Il mare e le sue risorse hanno un ruolo cruciale nel garantire la qualità della vita e della salute umana. Negli ultimi anni è risultato sempre più evidente che la conservazione della biodiversità e la gestione sostenibile delle risorse marine sono essenziali per sostenere le comunità costiere e per garantire la sicurezza alimentare e l’equità sociale ed economica.</p>
 
@@ -12,7 +12,7 @@ export default {
     `,
   },
   en: {
-    homeTitle: 'Third Mission',
+    thirdMissionTitle: 'Third Mission',
     thirdMissionText: `
       <p>The sea and its resources play a crucial role in ensuring the quality of life and human health. In recent years, it has become increasingly evident that preserving biodiversity and sustainable management of marine resources are essential for maintaining coastal communities and ensuring food security, social equality, and economic prosperity.</p>
 

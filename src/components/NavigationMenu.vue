@@ -2,11 +2,11 @@
   <nav class="z-10 bg-custom-blue text-white lg:py-2 md:py-0">
     <!-- Hamburger Menu per schermi piccoli -->
     <div class="md:hidden flex justify-end px-4 py-3">
-      <button @click="toggleMenu" class="text-white">
+      <button @click="toggleMenu" class="text-white flex flex-col space-y-1">
         <!-- Icona Hamburger -->
-        <span class="block w-6 h-0.5 bg-white mb-1"></span>
-        <span class="block w-5 h-0.5 bg-white mb-1 ml-auto"></span>
-        <span class="block w-4 h-0.5 bg-white ml-auto"></span>
+        <span class="block w-6 h-[2.5px] bg-white"></span>
+        <span class="block w-5 h-[2.5px] bg-white ml-auto"></span>
+        <span class="block w-4 h-[2px] bg-white ml-auto"></span>
       </button>
     </div>
 
@@ -76,7 +76,7 @@
     </div>
 
     <!-- Menu orizzontale per schermi grandi -->
-    <div v-if="isLgOrLarger" class="hidden lg:flex justify-center space-x-8 relative">
+    <div v-if="isLgOrLarger" class="hidden lg:flex justify-center space-x-8 relative text-lg">
       <div
         v-for="item in menuItems"
         :key="item.title"
@@ -93,7 +93,7 @@
         </RouterLink>
         <div
           v-if="item.children && item.submenuOpen"
-          class="absolute bg-custom-blue text-white mt-2 shadow-lg w-full"
+          class="absolute bg-custom-blue text-white mt-2 shadow-lg w-full z-50"
         >
           <RouterLink
             v-for="subItem in item.children"

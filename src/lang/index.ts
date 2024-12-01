@@ -1,6 +1,7 @@
 import AppCookie from './AppCookie'
 import AppFooter from './AppFooter'
 import AppHeader from './AppHeader'
+import HeroBanner from './HeroBanner'
 import HomePage from './HomePage'
 import NavigationMenu from './NavigationMenu'
 import ThirdMission from './ThirdMission'
@@ -19,6 +20,7 @@ const messages: Messages = {
     ...HomePage.en,
     ...AppCookie.en,
     ...ThirdMission.en,
+    ...HeroBanner.en,
   },
   it: {
     ...AppHeader.it,
@@ -27,6 +29,7 @@ const messages: Messages = {
     ...HomePage.it,
     ...AppCookie.it,
     ...ThirdMission.it,
+    ...HeroBanner.it,
   },
 }
 

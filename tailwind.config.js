@@ -8,6 +8,7 @@ export default {
         'custom-blue-dark': '#549f96',
         'custom-blue-light': '#7dc1b9',
         'custom-blue-navy': '#4a8e9f',
+        'custom-blue-lobster': '#286ba6',
         'custom-blue-title': '#5d7cb1',
       },
       fontFamily: {

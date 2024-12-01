@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollToPlugin)
 
 const isVisible = ref(false)
 
-const handelScroll = () => {
+const handleScroll = () => {
   isVisible.value = window.scrollY > 100
 }
 
@@ -28,10 +28,10 @@ const scrollToTop = () => {
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', handelScroll)
+  window.addEventListener('scroll', handleScroll)
 })
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handelScroll)
+  window.removeEventListener('scroll', handleScroll)
 })
 </script>
