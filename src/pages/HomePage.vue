@@ -9,158 +9,227 @@
       </h2>
 
       <!-- CISMAR -->
-      <div
-        ref="element1"
-        class="flex flex-col md:flex-row items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
-      >
-        <img
-          src="@/assets/images/cismar1.png"
-          alt="CISMAR"
-          class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
-          @click="openModal('cismar1.png')"
-          @load="setImageOpacity($event.target)"
-        />
-        <div class="text-center md:text-left max-w-full w-full md:w-2/3 lg:w-3/4">
-          <p
-            class="text-gray-800 text-lg pr-6 md:mr-6 text-justify"
-            v-html="$t('cismarDescription1')"
-          ></p>
+      <section id="cismar">
+        <div
+          ref="element1"
+          class="flex flex-col md:flex-row items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
+        >
+          <img
+            src="@/assets/images/cismar1.png"
+            alt="CISMAR"
+            class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
+            @click="openModal('cismar1.png')"
+            @load="setImageOpacity($event.target)"
+          />
+          <div class="text-center md:text-left max-w-full w-full md:w-2/3 lg:w-3/4">
+            <h3
+              v-if="$t('cismarTitle')"
+              class="text-3xl font-semibold text-custom-blue-lobster mb-2"
+            >
+              {{ $t('cismarTitle') }}
+            </h3>
+            <p
+              class="text-gray-800 text-lg pr-6 md:mr-6 text-justify"
+              v-html="$t('cismarDescription1')"
+            ></p>
+          </div>
         </div>
-      </div>
-
-      <div
-        ref="element2"
-        class="flex flex-col md:flex-row-reverse items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
-      >
-        <img
-          src="@/assets/images/cavalluccio.jpg"
-          alt="Cavalluccio"
-          class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
-          @click="openModal('cavalluccio.jpg')"
-          @load="setImageOpacity($event.target)"
-        />
-        <div class="text-center md:text-left max-w-full w-full md:w-2/3 lg:w-3/4">
-          <p
-            class="text-gray-800 text-lg pr-6 md:mr-6 text-justify"
-            v-html="$t('cismarDescription2')"
-          ></p>
+        <div
+          ref="element2"
+          class="flex flex-col md:flex-row-reverse items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
+        >
+          <img
+            src="@/assets/images/cavalluccio.jpg"
+            alt="Cavalluccio"
+            class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
+            @click="openModal('cavalluccio.jpg')"
+            @load="setImageOpacity($event.target)"
+          />
+          <div class="text-center md:text-left max-w-full w-full md:w-2/3 lg:w-3/4">
+            <p
+              class="text-gray-800 text-lg pr-6 md:mr-6 text-justify"
+              v-html="$t('cismarDescription2')"
+            ></p>
+          </div>
         </div>
-      </div>
-
-      <!-- Biodiversità e ricerca -->
-      <div
-        ref="element3"
-        class="flex flex-col md:flex-row items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
-      >
-        <img
-          src="@/assets/images/mazzancolla.jpg"
-          alt="Mazzancolla"
-          class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
-          @click="openModal('mazzancolla.jpg')"
-          @load="setImageOpacity($event.target)"
-        />
-        <div class="text-center md:text-left md:mr-6 max-w-full w-full md:w-2/3 lg:w-3/4">
-          <p
-            class="text-gray-800 text-lg pr-6 text-justify"
-            v-html="$t('biodiversityDescription')"
-          ></p>
+        <!-- Biodiversità e ricerca -->
+        <div
+          ref="element3"
+          class="flex flex-col md:flex-row items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
+        >
+          <img
+            src="@/assets/images/mazzancolla.jpg"
+            alt="Mazzancolla"
+            class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
+            @click="openModal('mazzancolla.jpg')"
+            @load="setImageOpacity($event.target)"
+          />
+          <div class="text-center md:text-left md:mr-6 max-w-full w-full md:w-2/3 lg:w-3/4">
+            <p
+              class="text-gray-800 text-lg pr-6 text-justify"
+              v-html="$t('biodiversityDescription')"
+            ></p>
+          </div>
         </div>
-      </div>
-
-      <!-- Laboratori -->
-      <div
-        ref="element4"
-        class="flex flex-col md:flex-row-reverse items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
-      >
-        <img
-          src="@/assets/images/laboratory.jpg"
-          alt="Laboratorio"
-          class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
-          @click="openModal('laboratory.jpg')"
-          @load="setImageOpacity($event.target)"
-        />
-        <div class="text-center md:text-left max-w-full w-full md:w-2/3 lg:w-3/4">
-          <p
-            class="text-gray-800 text-lg pr-6 md:mr-6 text-justify"
-            v-html="$t('laboratoryDescription')"
-          ></p>
-
-          <!-- Link 'Show more' -->
-          <button @click="toggleCarousel" class="text-blue-500 underline">
-            {{ isCarouselVisible ? $t('showLess') : $t('showMore') }}
-          </button>
-
-          <!-- Carousel -->
-          <div v-if="isCarouselVisible" class="mt-6">
-            <div class="flex space-x-4 overflow-x-auto max-w-full lg:max-w-full md:max-w-sm">
-              <!-- Immagine 1 -->
-              <img
-                src="@/assets/images/bioreactors.jpg"
-                alt="Bioreattori"
-                class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64"
-              />
-              <!-- Immagine 2 -->
-              <img
-                src="@/assets/images/vasche1.jpg"
-                alt="Vasche 1"
-                class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64"
-              />
-              <!-- Immagine 3 -->
-              <img
-                src="@/assets/images/vasche2.jpg"
-                alt="Vasche 2"
-                class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64"
-              />
+        <!-- Laboratori -->
+        <div
+          ref="element4"
+          class="flex flex-col md:flex-row-reverse items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
+        >
+          <img
+            src="@/assets/images/laboratory.jpg"
+            alt="Laboratorio"
+            class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
+            @click="openModal('laboratory.jpg')"
+            @load="setImageOpacity($event.target)"
+          />
+          <div class="text-center md:text-left max-w-full w-full md:w-2/3 lg:w-3/4">
+            <p
+              class="text-gray-800 text-lg pr-6 md:mr-6 text-justify"
+              v-html="$t('laboratoryDescription')"
+            ></p>
+            <!-- Link 'Show more' -->
+            <button @click="toggleCarousel" class="text-blue-500 underline">
+              {{ isCarouselVisible ? $t('showLess') : $t('showMore') }}
+            </button>
+            <!-- Carousel -->
+            <div v-if="isCarouselVisible" class="mt-6">
+              <div class="flex space-x-4 overflow-x-auto max-w-full lg:max-w-full md:max-w-sm">
+                <!-- Immagine 1 -->
+                <img
+                  src="@/assets/images/bioreactors.jpg"
+                  alt="Bioreattori"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64"
+                />
+                <!-- Immagine 2 -->
+                <img
+                  src="@/assets/images/vasche1.jpg"
+                  alt="Vasche 1"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64"
+                />
+                <!-- Immagine 3 -->
+                <img
+                  src="@/assets/images/vasche2.jpg"
+                  alt="Vasche 2"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Allevamento specie marine -->
-      <div
-        ref="element5"
-        class="flex flex-col md:flex-row items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
-      >
-        <img
-          src="@/assets/images/astice1.png"
-          alt="Astice 1"
-          class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
-          @click="openModal('astice1.png')"
-          @load="setImageOpacity($event.target)"
-        />
-        <div class="text-center md:text-left md:mr-6 max-w-full w-full md:w-2/3 lg:w-3/4">
-          <p
-            class="text-gray-800 text-lg pr-6 text-justify"
-            v-html="$t('marineBreedingDescription')"
-          ></p>
+        <!-- Allevamento specie marine -->
+        <div
+          ref="element5"
+          class="flex flex-col md:flex-row items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
+        >
+          <img
+            src="@/assets/images/astice1.png"
+            alt="Astice 1"
+            class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
+            @click="openModal('astice1.png')"
+            @load="setImageOpacity($event.target)"
+          />
+          <div class="text-center md:text-left md:mr-6 max-w-full w-full md:w-2/3 lg:w-3/4">
+            <p
+              class="text-gray-800 text-lg pr-6 text-justify"
+              v-html="$t('marineBreedingDescription')"
+            ></p>
+          </div>
         </div>
-      </div>
+        <!-- Linea divisoria decorativa -->
+        <div class="relative py-8">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-gray-300"></div>
+          </div>
+          <div class="relative flex justify-center">
+            <span class="bg-gray-50 px-4 text-gray-600 text-sm italic">
+              {{ $t('dividerText') }}
+            </span>
+          </div>
+        </div>
+      </section>
 
       <!-- Astice -->
-      <div
-        ref="element6"
-        class="flex flex-col md:flex-row-reverse items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
-      >
-        <img
-          src="@/assets/images/astice2.jpg"
-          alt="Astice"
-          class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
-          @click="openModal('astice2.jpg')"
-          @load="setImageOpacity($event.target)"
-        />
-        <div class="text-center md:text-left max-w-full w-full md:w-2/3 lg:w-3/4">
-          <h3
-            v-if="$t('lobsterTitle')"
-            class="text-3xl font-semibold text-custom-blue-lobster mb-2"
-          >
-            {{ $t('lobsterTitle') }}
-          </h3>
-          <p
-            class="text-gray-800 text-lg pr-6 md:mr-6 text-justify"
-            v-html="$t('lobsterDescription')"
-          ></p>
+      <section id="lobster">
+        <div
+          ref="element6"
+          class="flex flex-col md:flex-row-reverse items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
+        >
+          <img
+            src="@/assets/images/astice2.jpg"
+            alt="Astice 1"
+            class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
+            @click="openModal('astice2.jpg')"
+            @load="setImageOpacity($event.target)"
+          />
+          <div class="text-center md:text-left max-w-full w-full md:w-2/3 lg:w-3/4">
+            <h3
+              v-if="$t('lobsterTitle')"
+              class="text-3xl font-semibold text-custom-blue-lobster mb-2"
+            >
+              {{ $t('lobsterTitle') }}
+            </h3>
+            <p
+              class="text-gray-800 text-lg pr-6 md:mr-6 text-justify"
+              v-html="$t('lobsterDescription1')"
+            ></p>
+          </div>
         </div>
-      </div>
+        <div
+          ref="element7"
+          class="flex flex-col md:flex-row items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
+        >
+          <img
+            src="@/assets/images/asticinoBlu.jpg"
+            alt="Astice 2"
+            class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
+            @click="openModal('asticinoBlu.jpg')"
+            @load="setImageOpacity($event.target)"
+          />
+          <div class="text-center md:text-left md:mr-6 max-w-full w-full md:w-2/3 lg:w-3/4">
+            <p
+              class="text-gray-800 text-lg pr-6 text-justify"
+              v-html="$t('lobsterDescription2')"
+            ></p>
+          </div>
+        </div>
+        <div
+          ref="element8"
+          class="flex flex-col md:flex-row-reverse items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
+        >
+          <img
+            src="@/assets/images/larvaAstice2.jpg"
+            alt="Astice 3"
+            class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
+            @click="openModal('larvaAstice2.jpg')"
+            @load="setImageOpacity($event.target)"
+          />
+          <div class="text-center md:text-left max-w-full w-full md:w-2/3 lg:w-3/4">
+            <p
+              class="text-gray-800 text-lg pr-6 md:mr-6 text-justify"
+              v-html="$t('lobsterDescription3')"
+            ></p>
+          </div>
+        </div>
+        <div
+          ref="element9"
+          class="flex flex-col md:flex-row items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
+        >
+          <img
+            src="@/assets/images/misurazioneAstice.jpg"
+            alt="Astice 4"
+            class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
+            @click="openModal('misurazioneAstice.jpg')"
+            @load="setImageOpacity($event.target)"
+          />
+          <div class="text-center md:text-left md:mr-6 max-w-full w-full md:w-2/3 lg:w-3/4">
+            <p
+              class="text-gray-800 text-lg pr-6 text-justify"
+              v-html="$t('lobsterDescription4')"
+            ></p>
+          </div>
+        </div>
+      </section>
 
       <!-- Modale per l'immagine ingrandita -->
       <div
@@ -197,6 +266,9 @@ import mazzancolla from '@/assets/images/mazzancolla.jpg'
 import laboratory from '@/assets/images/laboratory.jpg'
 import astice1 from '@/assets/images/astice1.png'
 import astice2 from '@/assets/images/astice2.jpg'
+import asticinoBlu from '@/assets/images/asticinoBlu.jpg'
+import larvaAstice2 from '@/assets/images/larvaAstice2.jpg'
+import misurazioneAstice from '@/assets/images/misurazioneAstice.jpg'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -206,6 +278,9 @@ const element3 = ref<HTMLElement | null>(null)
 const element4 = ref<HTMLElement | null>(null)
 const element5 = ref<HTMLElement | null>(null)
 const element6 = ref<HTMLElement | null>(null)
+const element7 = ref<HTMLElement | null>(null)
+const element8 = ref<HTMLElement | null>(null)
+const element9 = ref<HTMLElement | null>(null)
 
 const isModalOpen = ref(false)
 const modalImageSrc = ref(cismar1)
@@ -223,7 +298,14 @@ const openModal = (imageSrc: string) => {
     modalImageSrc.value = astice1
   } else if (imageSrc === 'astice2.jpg') {
     modalImageSrc.value = astice2
+  } else if (imageSrc === 'asticinoBlu.jpg') {
+    modalImageSrc.value = asticinoBlu
+  } else if (imageSrc === 'larvaAstice2.jpg') {
+    modalImageSrc.value = larvaAstice2
+  } else if (imageSrc === 'misurazioneAstice.jpg') {
+    modalImageSrc.value = misurazioneAstice
   }
+
   isModalOpen.value = true
   document.body.style.overflow = 'hidden'
 }

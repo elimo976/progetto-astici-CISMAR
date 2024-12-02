@@ -28,6 +28,7 @@
             <RouterLink
               :to="item.link"
               class="text-xl py-2 block focus:text-gray-800 active:text-gray-600"
+              @click="scrollToAnchor(item.link)"
               >{{ item.title }}</RouterLink
             >
             <span v-if="item.children" class="text-xl">{{ item.submenuOpen ? '−' : '▿' }}</span>
@@ -37,6 +38,7 @@
               v-for="subItem in item.children"
               :key="subItem.title"
               :to="subItem.link"
+              @click="scrollToAnchor(subItem.link)"
               class="block py-1 text-lg focus:text-custom-blue-navy active:text-custom-blue-navy"
               >{{ subItem.title }}</RouterLink
             >
@@ -55,6 +57,7 @@
           <RouterLink
             :to="item.link"
             class="text-xl block py-2 text-white w-full text-center hover:bg-custom-blue-dark hover:text-gray-800 focus:text-custom-blue-navy active:text-custom-blue-navy border-b border-custom-blue-light"
+            @click="scrollToAnchor(item.link)"
           >
             {{ item.title }}
           </RouterLink>
@@ -64,6 +67,7 @@
             v-for="(subItem, index) in item.children"
             :key="subItem.title"
             :to="subItem.link"
+            @click="scrollToAnchor(subItem.link)"
             :class="[
               'block w-full py-1 text-lg text-center hover:bg-custom-blue-light hover:text-custom-blue-navy',
               index === item.children.length - 1 ? 'border-b-0' : '',
@@ -76,7 +80,7 @@
     </div>
 
     <!-- Menu orizzontale per schermi grandi -->
-    <div v-if="isLgOrLarger" class="hidden lg:flex justify-center space-x-8 relative text-lg">
+    <div v-if="isLgOrLarger" class="hidden lg:flex justify-center space-x-8 relative">
       <div
         v-for="item in menuItems"
         :key="item.title"
@@ -86,19 +90,22 @@
       >
         <RouterLink
           :to="item.link"
-          class="py-2 px-4 hover:text-gray-800 flex items-center space-x-2"
+          class="py-2 px-4 hover:text-gray-800 flex items-center space-x-2 text-xl"
+          @click="scrollToAnchor(item.link)"
         >
           <span>{{ item.title }}</span>
           <span v-if="item.children">{{ item.submenuOpen ? '−' : '▿' }}</span>
         </RouterLink>
         <div
           v-if="item.children && item.submenuOpen"
-          class="absolute bg-custom-blue text-white mt-2 shadow-lg w-full z-50"
+          class="absolute bg-custom-blue text-white mt-2 shadow-lg z-50 text-lg"
+          style="width: 250px"
         >
           <RouterLink
             v-for="subItem in item.children"
             :key="subItem.title"
             :to="subItem.link"
+            @click="scrollToAnchor(subItem.link)"
             class="block px-4 py-2 hover:bg-custom-blue-light hover:text-custom-blue-navy whitespace-nowrap border-b border-gray-200 last:border-0"
             >{{ subItem.title }}</RouterLink
           >
@@ -133,40 +140,40 @@ const updateMenuItems = () => {
   menuItems.value = [
     {
       title: t('home'),
-      link: '/',
+      link: '#home',
       submenuOpen: false,
       children: [
-        { title: t('aboutUs'), link: '/cismar' },
-        { title: t('lobster'), link: '/astice' },
+        { title: t('aboutUs'), link: '#cismar' },
+        { title: t('lobster'), link: '#lobster' },
       ],
     },
     {
       title: t('conservation'),
-      link: '/conservazione',
+      link: '#conservation',
       submenuOpen: false,
       children: [
-        { title: t('releases'), link: '/allevamento' },
-        { title: t('results'), link: '/risultati' },
+        { title: t('releases'), link: '#releases' },
+        { title: t('results'), link: '#results' },
       ],
     },
     {
       title: t('research'),
-      link: '/ricerca',
+      link: '#research',
       submenuOpen: false,
       children: [
-        { title: t('project'), link: '/progetti' },
-        { title: t('publications'), link: '/pubblicazioni' },
+        { title: t('project'), link: '#project' },
+        { title: t('publications'), link: '#publications' },
       ],
     },
     {
       title: t('thirdMission'),
-      link: '/third-mission',
+      link: '#third-mission',
       submenuOpen: false,
       children: [
-        { title: t('conferences'), link: '/conferenze' },
-        { title: t('orientation'), link: '/orientamento' },
-        { title: t('media'), link: '/media' },
-        { title: t('partners'), link: '/partners' },
+        { title: t('conferences'), link: '#conferences' },
+        { title: t('orientation'), link: '#orientation' },
+        { title: t('media'), link: '#media' },
+        { title: t('partners'), link: '#partners' },
       ],
     },
   ]
@@ -202,10 +209,15 @@ onMounted(() => {
   updateScreenSize()
   window.addEventListener('resize', updateScreenSize)
 })
-</script>
 
-<style scoped>
-nav div.group div.absolute {
-  min-width: 230px;
+// Funzione per lo scroll all'ancora
+const scrollToAnchor = (link: string) => {
+  const element = document.querySelector(link)
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+  }
 }
-</style>
+</script>
