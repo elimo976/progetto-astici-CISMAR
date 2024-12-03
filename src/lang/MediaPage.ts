@@ -1,12 +1,12 @@
-// lang/MediaPage.ts
 export default {
   it: {
-    title: 'Galleria di foto e video',
+    title: 'Esplora la nostra Galleria Multimediale',
     intro:
-      'Ti invitiamo a visitare la galleria di foto e filmati per scoprire di più riguardo il nostro progetto.',
+      'Immergiti nel cuore del nostro progetto. Scopri foto e video esclusivi che raccontano la nostra storia e il nostro impegno. Ogni immagine e filmato ti avvicinerà sempre di più alla nostra missione.',
   },
   en: {
-    title: 'Images and photos gallery',
-    intro: 'We invite you to visit our photo and video gallery to discover more about our project.',
+    title: 'Explore Our Multimedia Gallery',
+    intro:
+      'Dive into the heart of our project. Discover exclusive photos and videos that tell our story and mission. Each image and video brings you closer to what we do and believe in.',
   },
 }

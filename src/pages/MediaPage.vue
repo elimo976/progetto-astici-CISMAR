@@ -1,17 +1,24 @@
 <template>
-  <div class="py-12 px-16 bg-gray-200">
+  <div class="py-12 px-16 bg-custom-blue-lobster-light">
     <!-- Titolo principale -->
-    <h1 class="text-4xl font-semibold text-center text-custom-blue-lobster mb-8">
+    <h1
+      class="text-5xl font-extrabold text-center text-custom-blue-lobster text-gradient mb-6 md:mb-10"
+    >
       {{ $t('title') }}
     </h1>
 
     <!-- Introduzione -->
-    <p class="text-lg text-gray-700 leading-relaxed text-center mb-8">
+    <p
+      class="text-xl text-gray-800 leading-relaxed text-center max-w-4xl mx-auto mb-8 px-4 md:px-0"
+    >
       {{ $t('intro') }}
     </p>
 
     <!-- Griglia dei video -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <div
+      v-if="videos2020.length || videos2021.length || videos2023.length || videos2024.length"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+    >
       <!-- Video 2020 -->
       <div v-for="video in videos2020" :key="video.id" class="video-card">
         <a :href="video.url" target="_blank">
@@ -92,6 +99,11 @@
 </template>
 
 <script lang="ts">
+import tusciaUpThumbnail from '@/assets/images/tusciaUpThumbnail.jpg'
+import prinAstice from '@/assets/images/prinAstice.jpg'
+import ripopolamento2021 from '@/assets/images/ripopolamento2021.jpg'
+import tgUno from '@/assets/images/tgUno.jpg'
+
 export default {
   name: 'MediaPage',
   data() {
@@ -116,13 +128,13 @@ export default {
           id: 2,
           title: 'Campagna conclusiva di ripopolamento 2021',
           url: 'https://www.facebook.com/UnitusDeb/videos/campagna-conclusiva-di-ripopolamento-2021-di-%F0%9D%90%BB%F0%9D%91%9C%F0%9D%91%9A%F0%9D%91%8E%F0%9D%91%9F%F0%9D%91%A2%F0%9D%91%A0-%F0%9D%91%94%F0%9D%91%8E%F0%9D%91%9A%F0%9D%91%9A%F0%9D%91%8E%F0%9D%91%9F%F0%9D%91%A2%F0%9D%91%A0-astice-europeo/560637631866473/',
-          thumbnail: 'https://graph.facebook.com/560637631866473/picture?type=large',
+          thumbnail: ripopolamento2021,
         },
         {
           id: 3,
           title: 'Unitus al TG1',
           url: 'https://www.facebook.com/universitadeglistudidellatuscia/videos/unitus-al-tg1-un-mare-da-salvare-nella-giornata-nazionale-dedicata-al-nostro-eco/775610793088405/',
-          thumbnail: 'https://graph.facebook.com/775610793088405/picture?type=large',
+          thumbnail: tgUno,
         },
         {
           id: 4,
@@ -156,13 +168,13 @@ export default {
           id: 2,
           title: 'PRIN PL-Astici',
           url: 'https://www.instagram.com/unitus_deb/p/C1JjTprMP4r/?img_index=1',
-          thumbnail: 'https://www.instagram.com/unitus_deb/p/C1JjTprMP4r/?img_index=1',
+          thumbnail: prinAstice,
         },
         {
           id: 3,
           title: 'TusciaUP',
           url: 'https://www.instagram.com/tusciaup/p/C8wersRMBMS/',
-          thumbnail: '@/assets/images/tusciaUpThumbnail.jpg',
+          thumbnail: tusciaUpThumbnail, // Correct image reference
         },
         {
           id: 4,
@@ -186,11 +198,21 @@ export default {
   transform: scale(1.05);
 }
 
-.video-card img {
-  border-radius: 10px;
+.video-card a {
+  display: block;
+  text-decoration: none;
 }
 
-.video-card .fa-play {
-  font-size: 50px;
+.video-card img {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #549f96, #7dc1b9); /* esempio di gradiente blu */
+  -webkit-background-clip: text;
+  color: transparent;
 }
 </style>
