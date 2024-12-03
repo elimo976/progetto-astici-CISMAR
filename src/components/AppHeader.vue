@@ -1,33 +1,58 @@
 <template>
-  <header class="relative w-full py-8 px-8 shadow-md bg-white">
+  <header class="relative w-full py-10 md:px-8 lg:px-12 shadow-md bg-white">
     <div
-      class="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between"
+      class="flex flex-col md:flex-row items-center justify-center md:justify-between space-y-8 md:space-y-6"
     >
-      <!-- Logo a sinistra, ma sopra nel layout mobile -->
-      <div class="flex-shrink-0 order-1 md:order-1 mb-4 md:mb-0">
+      <!-- Logo a sinistra (per dispositivi grandi e centrato nei piccoli) -->
+      <div class="flex-shrink-0 md:order-1">
         <RouterLink to="/" class="block">
           <img
-            src="@/assets/logo-astice-cerchio.svg"
+            src="@/assets/logo-astice.svg"
             alt="Logo"
-            class="h-20 w-auto cursor-pointer"
+            title="logo astice"
+            class="h-20 w-auto md:h-36 md:mb-6 cursor-pointer"
           />
         </RouterLink>
       </div>
 
-      <!-- Titolo centrato sopra il logo nei dispositivi mobili -->
-      <h1
-        class="text-3xl md:text-4xl text-custom-blue font-bold text-center flex-1 order-2 md:order-2 lg:mt-3 md:mt-3 mb-4 md:mb-0"
-      >
+      <!-- Titolo centrale -->
+      <h1 class="text-3xl md:text-5xl text-custom-blue font-bold text-center md:order-2">
         {{ $t('headerTitle') }}
       </h1>
 
-      <!-- Pubblicazioni -->
-      <div class="flex-shrink-0 order-3 md:order-3 lg:mt-6 md:mt-6">
+      <!-- Blocco logo DEB Unitus (per dispositivi grandi a destra e centrato nei piccoli) -->
+      <div class="flex flex-col items-center space-y-4 md:flex-shrink-0 md:order-3">
         <a
-          href="#"
-          class="text-lg md:text-xl font-medium text-gray-500 hover:text-custom-blue text-center"
+          href="https://www.unitus.it/dipartimenti/deb/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="DEB DIPARTIMENTO di scienze ecologiche e biologiche - Università degli Studi della Tuscia"
+          class="flex flex-col items-center space-y-2"
         >
-          {{ $t('publication') }}
+          <!-- Contenitore logo e testo DEB -->
+          <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-5">
+            <!-- Logo -->
+            <div class="w-16 h-auto md:w-24 bg-custom-blue rounded-lg">
+              <img
+                src="@/assets/loghi/logo-unitus-simplex.png"
+                alt="Logo DEB Unitus"
+                title="Logo DEB Unitus"
+                class="w-16 h-auto md:w-24 p-1"
+              />
+            </div>
+
+            <!-- Linea verticale solo su dispositivi grandi -->
+            <div class="hidden md:block h-20 border-l-2 border-gray-300"></div>
+
+            <!-- Testo DEB -->
+            <span class="text-3xl md:text-4xl font-playfair font-bold text-custom-blue">DEB</span>
+          </div>
+
+          <!-- Testo lungo sotto (visibile solo su medi e grandi) -->
+          <span
+            class="hidden md:block text-sm md:text-md font-semibold text-gray-700 hover:text-gray-500"
+            v-html="sanitizedDebLink"
+          ></span>
         </a>
       </div>
     </div>
@@ -52,11 +77,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import DOMPurify from 'dompurify'
 
 // Usa Vue I18n per ottenere l'istanza i18n
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 
 // Variabile di stato per la lingua (inizializzata da localStorage)
 const language = ref(localStorage.getItem('language') || 'it')
@@ -75,5 +101,11 @@ onMounted(() => {
   } else if (language.value === 'it' && window.location.pathname !== '/') {
     window.location.href = '/'
   }
+})
+
+// Computed property per sanitizzare il testo dinamico
+const sanitizedDebLink = computed(() => {
+  const rawHtml = t('debLink') as string
+  return DOMPurify.sanitize(rawHtml)
 })
 </script>

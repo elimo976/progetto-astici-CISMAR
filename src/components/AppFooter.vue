@@ -1,12 +1,12 @@
 <template>
   <footer
-    class="w-full bg-gradient-to-tl from-custom-blue-light to-custom-blue-lobster text-white p-12 mt-auto"
+    class="relative w-full bg-gradient-to-tl from-custom-blue-light to-custom-blue-lobster text-white px-12 py-8 md:px-24 md:py-12 mt-auto"
   >
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-8">
       <!-- Colonna 1: Navigazione -->
       <div>
-        <h2 class="font-bold mb-4">{{ $t('navigation') }}</h2>
-        <ul class="space-y-2">
+        <h2 class="font-bold mb-6">{{ $t('navigation') }}</h2>
+        <ul class="space-y-4">
           <li>
             <RouterLink to="/" class="hover:text-custom-blue-light hover:underline">{{
               $t('home')
@@ -32,8 +32,8 @@
 
       <!-- Colonna 2: Progetti e ricerca -->
       <div>
-        <h2 class="font-bold mb-4">{{ $t('researchAndProjects') }}</h2>
-        <ul class="space-y-2">
+        <h2 class="font-bold mb-6">{{ $t('researchAndProjects') }}</h2>
+        <ul class="space-y-4">
           <li>
             <RouterLink to="/#releases" class="hover:text-custom-blue-light hover:underline">{{
               $t('releases')
@@ -59,15 +59,15 @@
 
       <!-- Colonna 3: Eventi e media -->
       <div>
-        <h2 class="font-bold mb-4">{{ $t('eventsAndMedia') }}</h2>
-        <ul class="space-y-2">
+        <h2 class="font-bold mb-6">{{ $t('eventsAndMedia') }}</h2>
+        <ul class="space-y-4">
           <li>
             <RouterLink to="/#conferences" class="hover:text-custom-blue-light hover:underline">{{
               $t('conferences')
             }}</RouterLink>
           </li>
           <li>
-            <RouterLink to="/#media" class="hover:text-custom-blue-light hover:underline">{{
+            <RouterLink to="/media" class="hover:text-custom-blue-light hover:underline">{{
               $t('media')
             }}</RouterLink>
           </li>
@@ -78,32 +78,43 @@
           </li>
         </ul>
       </div>
+    </div>
 
-      <!-- Colonna 4: DEB -->
-      <div
-        class="mt-8 flex items-center justify-center bg-gradient-to-br from-custom-blue-light to-custom-blue-dark p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+    <!-- Onde decorative -->
+    <div class="absolute inset-y-0 right-0 w-full pointer-events-none">
+      <svg
+        class="h-full w-full opacity-60"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 300 500"
+        fill="none"
+        preserveAspectRatio="none"
       >
-        <a
-          href="https://www.unitus.it/dipartimenti/deb/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Dipartimento DEB - Università della Tuscia"
-          class="flex items-center space-x-4 text-white"
-        >
-          <img
-            src="@/assets/loghi/logo-unitus.png"
-            alt="Logo DEB Unitus"
-            class="w-auto h-16 md:h-20"
-          />
-          <span class="text-lg font-semibold text-gray-100 hover:text-gray-200">{{
-            $t('debLink')
-          }}</span>
-        </a>
-      </div>
+        <!-- Prima onda - più fluida e lunga, inizio più basso -->
+        <path
+          d="M0 120 C60 140, 150 60, 250 120 C300 140, 250 220, 300 260"
+          stroke="rgba(255, 255, 255, 0.4)"
+          stroke-width="2"
+          fill="none"
+        />
+        <!-- Seconda onda - più sinuosa, inizio più basso -->
+        <path
+          d="M0 200 C50 260, 140 220, 230 290 C280 320, 300 400, 250 420"
+          stroke="rgba(255, 255, 255, 0.3)"
+          stroke-width="2"
+          fill="none"
+        />
+        <!-- Terza onda - più dinamica, inizio più basso -->
+        <path
+          d="M0 280 C70 310, 140 270, 220 310 C280 350, 300 420, 250 440"
+          stroke="rgba(255, 255, 255, 0.25)"
+          stroke-width="2"
+          fill="none"
+        />
+      </svg>
     </div>
 
     <!-- Credits -->
-    <div class="text-center mt-8 border-t border-white pt-4 text-md">
+    <div class="text-center mt-10 pt-6 text-md">
       &copy; 2024
       <a href="mailto:elisamorreale@gmail.com" class="hover:underline hover:text-red-800">
         <span class="text-red-500">e</span>lisa<span class="text-red-500">m</span>orreale

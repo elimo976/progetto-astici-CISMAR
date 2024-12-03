@@ -1,10 +1,14 @@
 export default {
   it: {
-    headerTitle: 'Astici del CISMAR',
-    publication: 'Pubblicazioni',
+    headerTitle: 'Progetto Astici',
+    debLink: `
+              <p>Dipartimento di scienze</p>
+              <p>ecologiche e biologiche</p>
+              <p>Università degli Studi della Tuscia</p>
+              `,
   },
   en: {
-    headerTitle: "CISMAR's Lobsters",
-    publication: 'Publications',
+    headerTitle: 'Lobsters Projects',
+    debLink: 'Department of ecological and biological sciences - University of Tuscia',
   },
 }
