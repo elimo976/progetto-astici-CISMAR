@@ -1,7 +1,6 @@
 export default {
   it: {
-    homeTitle: 'Scopri di più sul nostro progetto', // Discover more about our project
-
+    homeTitle: 'Scopri di più sul nostro progetto',
     // CISMAR
     cismarTitle: 'CISMAR',
     cismarDescription1: `Il CISMAR, fondato nel 2008, è la struttura di ricerca del DEB per l’acquacoltura sperimentale e l’ecologia marina.<br />
@@ -23,7 +22,7 @@ export default {
 
     lobsterTitle: "L'astice", // European lobster repopulation
     lobsterDescription1: `L’astice europeo (<i>Homarus gammarus</i>) è uno dei crostacei più iconici dei mari italiani.<br />
-    <br />,
+    <br />
     Diffuso dall’Atlantico nord-orientale al Mediterraneo, abita prevalentemente fondali rocciosi e sabbiosi, da pochi metri fino a 150 m di profondità. Questo crostaceo notturno si nutre di una dieta varia, composta principalmente da molluschi, piccoli pesci e altri invertebrati bentonici.`,
     lobsterDescription2: `La sua crescita è lenta e avviene tramite mute successive, con individui che possono raggiungere anche i 50 cm di lunghezza e un peso superiore ai 5 kg. L’astice ha una vita riproduttiva lunga, e le femmine depongono fino a 20.000 uova ogni 1-2 anni, ma la sopravvivenza delle larve è estremamente bassa, rendendo la specie vulnerabile a pressioni esterne.`,
     lobsterDescription3: `In Italia, le popolazioni di astice sono in declino a causa della sovrapesca, dovuta anche alla pesca illegale di individui sotto la taglia minima (30 cm) e al prelevo durante la riproduzione. Di conseguenza, le catture sono diminuite, mentre la pressione della pesca è aumentata, rendendo necessarie misure di gestione più rigorose.`,
@@ -32,7 +31,8 @@ export default {
 
   en: {
     homeTitle: 'Discover more about our project',
-
+    // CISMAR
+    cismarTitle: 'CISMAR',
     cismarDescription1: `Founded in 2008, CISMAR is the DEB's research facility for experimental aquaculture and marine ecology.<br />
     Located within the Regional Natural Reserve of the Saline di Tarquinia, CISMAR repurposes buildings once used for salt extraction and later abandoned. These structures have been restored and transformed into laboratories and research facilities by the Department of Ecological and Biological Sciences at the University of Tuscia.`,
 

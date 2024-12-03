@@ -5,7 +5,13 @@
     >
       <!-- Logo a sinistra, ma sopra nel layout mobile -->
       <div class="flex-shrink-0 order-1 md:order-1 mb-4 md:mb-0">
-        <img src="@/assets/logo-astice-cerchio.svg" alt="Logo" class="h-20 w-auto" />
+        <RouterLink to="/" class="block">
+          <img
+            src="@/assets/logo-astice-cerchio.svg"
+            alt="Logo"
+            class="h-20 w-auto cursor-pointer"
+          />
+        </RouterLink>
       </div>
 
       <!-- Titolo centrato sopra il logo nei dispositivi mobili -->

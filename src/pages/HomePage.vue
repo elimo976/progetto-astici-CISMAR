@@ -9,7 +9,7 @@
       </h2>
 
       <!-- CISMAR -->
-      <section id="cismar">
+      <section id="cismar" class="py-6">
         <div
           ref="element1"
           class="flex flex-col md:flex-row items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0"
@@ -24,7 +24,7 @@
           <div class="text-center md:text-left max-w-full w-full md:w-2/3 lg:w-3/4">
             <h3
               v-if="$t('cismarTitle')"
-              class="text-3xl font-semibold text-custom-blue-lobster mb-2"
+              class="text-4xl font-semibold text-custom-blue-lobster mb-6"
             >
               {{ $t('cismarTitle') }}
             </h3>
@@ -89,31 +89,84 @@
               v-html="$t('laboratoryDescription')"
             ></p>
             <!-- Link 'Show more' -->
-            <button @click="toggleCarousel" class="text-blue-500 underline">
-              {{ isCarouselVisible ? $t('showLess') : $t('showMore') }}
+            <button @click="toggleCarouselLab" class="text-blue-500 underline">
+              {{ isCarouselLabVisible ? $t('showLess') : $t('showMore') }}
             </button>
-            <!-- Carousel -->
-            <div v-if="isCarouselVisible" class="mt-6">
-              <div class="flex space-x-4 overflow-x-auto max-w-full lg:max-w-full md:max-w-sm">
+            <!-- Carousel Lab-->
+            <div v-if="isCarouselLabVisible" class="my-10 relative">
+              <!-- Pulsanti freccia -->
+              <button
+                @click="scrollCarousel('left', 'labCarousel')"
+                class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-10 lg:hidden"
+                aria-label="Scroll left"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-gray-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              <div
+                id="labCarousel"
+                class="flex space-x-4 my-4 overflow-x-hidden lg:overflow-x-auto scroll-smooth max-w-full md:mr-10"
+              >
                 <!-- Immagine 1 -->
                 <img
                   src="@/assets/images/bioreactors.jpg"
                   alt="Bioreattori"
-                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64 cursor-pointer"
+                  @click="openModal('bioreactors.jpg')"
+                  @load="setImageOpacity($event.target)"
                 />
                 <!-- Immagine 2 -->
                 <img
                   src="@/assets/images/vasche1.jpg"
                   alt="Vasche 1"
-                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64 cursor-pointer"
+                  @click="openModal('vasche1.jpg')"
+                  @load="setImageOpacity($event.target)"
                 />
                 <!-- Immagine 3 -->
                 <img
                   src="@/assets/images/vasche2.jpg"
                   alt="Vasche 2"
-                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64 cursor-pointer"
+                  @click="openModal('vasche2.jpg')"
+                  @load="setImageOpacity($event.target)"
                 />
               </div>
+
+              <!-- Pulsante freccia destra -->
+              <button
+                @click="scrollCarousel('right', 'labCarousel')"
+                class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 md:mr-10 z-10 lg:hidden"
+                aria-label="Scroll right"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-gray-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -134,10 +187,89 @@
               class="text-gray-800 text-lg pr-6 text-justify"
               v-html="$t('marineBreedingDescription')"
             ></p>
+            <!-- Link 'Show more' -->
+            <button @click="toggleCarouselBreed" class="text-blue-500 underline">
+              {{ isCarouselBreedVisible ? $t('showLess') : $t('showMore') }}
+            </button>
+            <!-- Carousel Breeding-->
+            <div v-if="isCarouselBreedVisible" class="my-10 relative">
+              <!-- Pulsanti freccia -->
+              <button
+                @click="scrollCarousel('left', 'breedCarousel')"
+                class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-10 lg:hidden"
+                aria-label="Scroll left"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-gray-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              <div
+                id="breedCarousel"
+                class="flex space-x-4 overflow-x-hidden lg:overflow-x-auto max-w-full"
+              >
+                <!-- Immagine 1 -->
+                <img
+                  src="@/assets/images/incub1.jpg"
+                  alt="Incubatoio 1"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64 cursor-pointer"
+                  @click="openModal('incub1.jpg')"
+                  @load="setImageOpacity($event.target)"
+                />
+                <!-- Immagine 2 -->
+                <img
+                  src="@/assets/images/incub2.jpg"
+                  alt="Incubatoio 2"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64 cursor-pointer"
+                  @click="openModal('incub2.jpg')"
+                  @load="setImageOpacity($event.target)"
+                />
+                <!-- Immagine 3 -->
+                <img
+                  src="@/assets/images/incub3.jpg"
+                  alt="Incubatoio 3"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64 cursor-pointer"
+                  @click="openModal('incub3.jpg')"
+                  @load="setImageOpacity($event.target)"
+                />
+              </div>
+              <!-- Pulsante freccia destra -->
+              <button
+                @click="scrollCarousel('right', 'breedCarousel')"
+                class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-10 lg:hidden"
+                aria-label="Scroll right"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-gray-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
         <!-- Linea divisoria decorativa -->
-        <div class="relative py-8">
+        <div class="relative py-8 mt-4">
           <div class="absolute inset-0 flex items-center">
             <div class="w-full border-t border-gray-300"></div>
           </div>
@@ -165,7 +297,7 @@
           <div class="text-center md:text-left max-w-full w-full md:w-2/3 lg:w-3/4">
             <h3
               v-if="$t('lobsterTitle')"
-              class="text-3xl font-semibold text-custom-blue-lobster mb-2"
+              class="text-4xl font-semibold text-custom-blue-lobster mb-6"
             >
               {{ $t('lobsterTitle') }}
             </h3>
@@ -237,14 +369,23 @@
         class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
       >
         <div class="relative bg-white p-4 rounded-lg">
+          <!-- Pulsante chiudi -->
           <button @click="closeModal" class="absolute top-0 right-2 text-black text-3xl p-2">
             &times;
           </button>
+          <!-- Immagine ingrandita -->
           <img
             :src="modalImageSrc"
             alt="Ingrandito"
             class="max-w-full max-h-screen object-contain p-8"
           />
+          <!-- Credits -->
+          <p
+            v-if="modalCredits"
+            class="absolute bottom-3 right-12 text-white bg-black bg-opacity-50 px-2 py-1 rounded text-sm"
+          >
+            {{ modalCredits }}
+          </p>
         </div>
       </div>
     </section>
@@ -269,6 +410,12 @@ import astice2 from '@/assets/images/astice2.jpg'
 import asticinoBlu from '@/assets/images/asticinoBlu.jpg'
 import larvaAstice2 from '@/assets/images/larvaAstice2.jpg'
 import misurazioneAstice from '@/assets/images/misurazioneAstice.jpg'
+import bioreactors from '@/assets/images/bioreactors.jpg'
+import vasche1 from '@/assets/images/vasche1.jpg'
+import vasche2 from '@/assets/images/vasche2.jpg'
+import incub1 from '@/assets/images/incub1.jpg'
+import incub2 from '@/assets/images/incub2.jpg'
+import incub3 from '@/assets/images/incub3.jpg'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -284,26 +431,54 @@ const element9 = ref<HTMLElement | null>(null)
 
 const isModalOpen = ref(false)
 const modalImageSrc = ref(cismar1)
+const modalCredits = ref('')
 
 const openModal = (imageSrc: string) => {
   if (imageSrc === 'cismar1.png') {
     modalImageSrc.value = cismar1
+    modalCredits.value = ''
   } else if (imageSrc === 'cavalluccio.jpg') {
     modalImageSrc.value = cavalluccio
+    modalCredits.value = 'credits: Stefano Guerrieri'
   } else if (imageSrc === 'mazzancolla.jpg') {
     modalImageSrc.value = mazzancolla
+    modalCredits.value = 'credits: Xavier Rufray'
   } else if (imageSrc === 'laboratory.jpg') {
     modalImageSrc.value = laboratory
+    modalCredits.value = ''
   } else if (imageSrc === 'astice1.png') {
     modalImageSrc.value = astice1
+    modalCredits.value = 'credits: https://pixabay.com/users/tauchteufel-2599128/'
   } else if (imageSrc === 'astice2.jpg') {
     modalImageSrc.value = astice2
+    modalCredits.value = ''
   } else if (imageSrc === 'asticinoBlu.jpg') {
     modalImageSrc.value = asticinoBlu
+    modalCredits.value = ''
   } else if (imageSrc === 'larvaAstice2.jpg') {
     modalImageSrc.value = larvaAstice2
+    modalCredits.value = ''
   } else if (imageSrc === 'misurazioneAstice.jpg') {
     modalImageSrc.value = misurazioneAstice
+    modalCredits.value = ''
+  } else if (imageSrc === 'bioreactors.jpg') {
+    modalImageSrc.value = bioreactors
+    modalCredits.value = ''
+  } else if (imageSrc === 'vasche1.jpg') {
+    modalImageSrc.value = vasche1
+    modalCredits.value = ''
+  } else if (imageSrc === 'vasche2.jpg') {
+    modalImageSrc.value = vasche2
+    modalCredits.value = ''
+  } else if (imageSrc === 'incub1.jpg') {
+    modalImageSrc.value = incub1
+    modalCredits.value = ''
+  } else if (imageSrc === 'incub2.jpg') {
+    modalImageSrc.value = incub2
+    modalCredits.value = ''
+  } else if (imageSrc === 'incub3.jpg') {
+    modalImageSrc.value = incub3
+    modalCredits.value = ''
   }
 
   isModalOpen.value = true
@@ -316,32 +491,46 @@ const closeModal = () => {
 }
 
 const setImageOpacity = (imgElement: EventTarget | null) => {
-  const image = imgElement as HTMLImageElement
-  if (image) {
-    image.style.opacity = '1'
+  if (imgElement instanceof HTMLImageElement) {
+    imgElement.style.opacity = '1'
   }
 }
 
-const isCarouselVisible = ref(false)
-const toggleCarousel = () => {
-  isCarouselVisible.value = !isCarouselVisible.value
+const scrollCarousel = (direction: 'left' | 'right', id: string) => {
+  const carousel = document.getElementById(id)
+  if (carousel) {
+    const scrollAmount = direction === 'left' ? -200 : 200
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+  }
+}
+
+const isCarouselLabVisible = ref(false)
+const toggleCarouselLab = () => {
+  isCarouselLabVisible.value = !isCarouselLabVisible.value
+}
+
+const isCarouselBreedVisible = ref(false)
+const toggleCarouselBreed = () => {
+  isCarouselBreedVisible.value = !isCarouselBreedVisible.value
 }
 
 const animateOnScroll = () => {
   const elements = [element1, element2, element3, element4, element5]
 
   elements.forEach((el) => {
-    gsap.from(el.value, {
-      opacity: 0,
-      y: 100,
-      duration: 1,
-      scrollTrigger: {
-        trigger: el.value,
-        start: 'top bottom',
-        end: 'top center',
-        scrub: 1,
-      },
-    })
+    if (el.value) {
+      gsap.from(el.value, {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        scrollTrigger: {
+          trigger: el.value,
+          start: 'top bottom',
+          end: 'top center',
+          scrub: 1,
+        },
+      })
+    }
   })
 }
 

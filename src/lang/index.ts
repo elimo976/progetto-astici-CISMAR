@@ -3,6 +3,7 @@ import AppFooter from './AppFooter'
 import AppHeader from './AppHeader'
 import HeroBanner from './HeroBanner'
 import HomePage from './HomePage'
+import MediaPage from './MediaPage'
 import NavigationMenu from './NavigationMenu'
 import ThirdMission from './ThirdMission'
 
@@ -21,6 +22,7 @@ const messages: Messages = {
     ...AppCookie.en,
     ...ThirdMission.en,
     ...HeroBanner.en,
+    ...MediaPage.en,
   },
   it: {
     ...AppHeader.it,
@@ -30,6 +32,7 @@ const messages: Messages = {
     ...AppCookie.it,
     ...ThirdMission.it,
     ...HeroBanner.it,
+    ...MediaPage.it,
   },
 }
 

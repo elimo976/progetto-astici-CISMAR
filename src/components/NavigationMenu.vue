@@ -99,7 +99,7 @@
         <div
           v-if="item.children && item.submenuOpen"
           class="absolute bg-custom-blue text-white mt-2 shadow-lg z-50 text-lg"
-          style="width: 250px"
+          style="width: 260px"
         >
           <RouterLink
             v-for="subItem in item.children"
@@ -140,11 +140,11 @@ const updateMenuItems = () => {
   menuItems.value = [
     {
       title: t('home'),
-      link: '#home',
+      link: '/',
       submenuOpen: false,
       children: [
-        { title: t('aboutUs'), link: '#cismar' },
-        { title: t('lobster'), link: '#lobster' },
+        { title: t('aboutUs'), link: '/#cismar' },
+        { title: t('lobster'), link: '/#lobster' },
       ],
     },
     {
@@ -167,12 +167,12 @@ const updateMenuItems = () => {
     },
     {
       title: t('thirdMission'),
-      link: '#third-mission',
+      link: '/third-mission',
       submenuOpen: false,
       children: [
         { title: t('conferences'), link: '#conferences' },
         { title: t('orientation'), link: '#orientation' },
-        { title: t('media'), link: '#media' },
+        { title: t('media'), link: 'media' },
         { title: t('partners'), link: '#partners' },
       ],
     },
@@ -210,7 +210,7 @@ onMounted(() => {
   window.addEventListener('resize', updateScreenSize)
 })
 
-// Funzione per lo scroll all'ancora
+// Funzione per lo scroll all'ancoraggio
 const scrollToAnchor = (link: string) => {
   const element = document.querySelector(link)
   if (element) {
