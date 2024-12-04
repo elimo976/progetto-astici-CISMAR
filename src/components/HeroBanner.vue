@@ -30,7 +30,7 @@
       <div class="relative w-11/12 max-w-3xl bg-black rounded-lg shadow-lg">
         <!-- Video -->
         <video
-          src="@/assets/video/video-hero-banner-extended.mp4"
+          src="@/assets/video/video-hero-banner-extended-low.mp4"
           controls
           autoplay
           muted
