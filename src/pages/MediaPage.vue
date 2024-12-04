@@ -1,9 +1,7 @@
 <template>
-  <div class="py-12 px-16 bg-custom-blue-lobster-light">
+  <div class="py-12 px-16 bg-custom-beige">
     <!-- Titolo principale -->
-    <h1
-      class="text-5xl font-extrabold text-center text-custom-blue-lobster text-gradient mb-6 md:mb-10"
-    >
+    <h1 class="text-5xl font-light text-center text-custom-blue-lobster mb-6 md:mb-10">
       {{ $t('title') }}
     </h1>
 
@@ -208,11 +206,5 @@ export default {
   width: 100%;
   height: 200px;
   object-fit: cover;
-}
-
-.text-gradient {
-  background: linear-gradient(to right, #549f96, #7dc1b9); /* esempio di gradiente blu */
-  -webkit-background-clip: text;
-  color: transparent;
 }
 </style>

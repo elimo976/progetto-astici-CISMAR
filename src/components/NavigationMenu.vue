@@ -167,9 +167,10 @@ const updateMenuItems = () => {
     },
     {
       title: t('thirdMission'),
-      link: '/third-mission',
+      link: '',
       submenuOpen: false,
       children: [
+        { title: t('focusThirdMission'), link: '/third-mission' },
         { title: t('conferences'), link: '#conferences' },
         { title: t('orientation'), link: '#orientation' },
         { title: t('media'), link: 'media' },

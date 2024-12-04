@@ -1,7 +1,37 @@
 <template>
   <main class="w-full flex-grow bg-gray-50 p-16 md:px-24 md:py-12 lg:py-8 lg:px-36 lg:pb-12">
     <section class="space-y-12">
-      <!-- Loghi con separatori centrati sopra il titolo -->
+      <!-- Contenitore per il testo e le immagini -->
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+        <!-- Testo con interruzioni di paragrafo -->
+        <div
+          class="text-base text-justify lg:text-lg text-gray-700 leading-relaxed space-y-6 flex-1 pr-10"
+        >
+          <!-- Titolo principale -->
+          <h1 class="text-3xl lg:text-4xl font-playfair text-custom-blue-title text-center mb-10">
+            {{ $t('thirdMissionTitle') }}
+          </h1>
+          <div v-html="sanitizedThirdMissionText"></div>
+        </div>
+
+        <!-- Immagini verticali a destra -->
+        <div class="flex-shrink-0 space-y-6 pt-14">
+          <!-- Immagine verticale 1 -->
+          <img
+            src="@/assets/images/bent.jpeg"
+            alt="Immagine Bent"
+            class="w-full max-w-sm lg:max-w-48 rounded-lg shadow-lg"
+          />
+          <!-- Immagine verticale 2 -->
+          <img
+            src="@/assets/images/bent3.jpeg"
+            alt="Immagine Bent 3"
+            class="w-full max-w-sm lg:max-w-48 rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+
+      <!-- Loghi con separatori centrati sotto il testo -->
       <div class="mt-4 flex justify-center items-center gap-10">
         <img
           src="@/assets/loghi/logo-unitus.png"
@@ -20,36 +50,6 @@
           alt="Logo Cismar"
           class="h-10 lg:h-12 object-contain"
         />
-      </div>
-
-      <!-- Contenitore per il testo e le immagini -->
-      <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
-        <!-- Testo con interruzioni di paragrafo -->
-        <div
-          class="text-base text-justify lg:text-lg text-gray-700 leading-relaxed space-y-6 flex-1 pr-10"
-        >
-          <!-- Titolo principale -->
-          <h1 class="text-3xl lg:text-4xl font-playfair text-custom-blue-title text-center mb-10">
-            {{ $t('thirdMissionTitle') }}
-          </h1>
-          <div v-html="sanitizedThirdMissionText"></div>
-        </div>
-
-        <!-- Immagini verticali, ora più piccole -->
-        <div class="flex-shrink-0 space-y-6 pt-14">
-          <!-- Immagine verticale 1 -->
-          <img
-            src="@/assets/images/bent.jpeg"
-            alt="Immagine Bent"
-            class="w-full max-w-sm lg:max-w-48 rounded-lg shadow-lg"
-          />
-          <!-- Immagine verticale 2 -->
-          <img
-            src="@/assets/images/bent3.jpeg"
-            alt="Immagine Bent 3"
-            class="w-full max-w-sm lg:max-w-48 rounded-lg shadow-lg"
-          />
-        </div>
       </div>
     </section>
     <ScrollTopButton />
