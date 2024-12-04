@@ -8,12 +8,12 @@ import router from './router'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp, faCogs } from '@fortawesome/free-solid-svg-icons'
 
 import i18n from './i18n'
 import ScrollTopButton from './components/ScrollTopButton.vue'
 
-library.add(faChevronUp)
+library.add(faChevronUp, faCogs)
 
 const app = createApp(App)
 

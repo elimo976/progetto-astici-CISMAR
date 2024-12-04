@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/pages/HomePage.vue'
 import ThirdMission from '@/pages/ThirdMission.vue'
 import MediaPage from '@/pages/MediaPage.vue'
+import UnderConstruction from '@/pages/UnderConstruction.vue'
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     path: '/media',
     name: 'Media',
     component: MediaPage,
+  },
+  {
+    path: '/under-construction',
+    name: 'UnderConstruction',
+    component: UnderConstruction,
   },
   {
     // Catch-all route (fallback)

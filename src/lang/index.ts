@@ -6,6 +6,7 @@ import HomePage from './HomePage'
 import MediaPage from './MediaPage'
 import NavigationMenu from './NavigationMenu'
 import ThirdMission from './ThirdMission'
+import UnderConstruction from './UnderConstruction'
 
 export interface Messages {
   [key: string]: {
@@ -23,6 +24,7 @@ const messages: Messages = {
     ...ThirdMission.en,
     ...HeroBanner.en,
     ...MediaPage.en,
+    ...UnderConstruction.en,
   },
   it: {
     ...AppHeader.it,
@@ -33,6 +35,7 @@ const messages: Messages = {
     ...ThirdMission.it,
     ...HeroBanner.it,
     ...MediaPage.it,
+    ...UnderConstruction.it,
   },
 }
 

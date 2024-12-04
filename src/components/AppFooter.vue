@@ -35,24 +35,32 @@
         <h2 class="font-bold mb-6">{{ $t('researchAndProjects') }}</h2>
         <ul class="space-y-4">
           <li>
-            <RouterLink to="/#releases" class="hover:text-custom-blue-light hover:underline">{{
-              $t('releases')
-            }}</RouterLink>
+            <RouterLink
+              to="/under-construction"
+              class="hover:text-custom-blue-light hover:underline"
+              >{{ $t('releases') }}</RouterLink
+            >
           </li>
           <li>
-            <RouterLink to="/#results" class="hover:text-custom-blue-light hover:underline">{{
-              $t('results')
-            }}</RouterLink>
+            <RouterLink
+              to="/under-construction"
+              class="hover:text-custom-blue-light hover:underline"
+              >{{ $t('results') }}</RouterLink
+            >
           </li>
           <li>
-            <RouterLink to="/#project" class="hover:text-custom-blue-light hover:underline">{{
-              $t('project')
-            }}</RouterLink>
+            <RouterLink
+              to="/under-construction"
+              class="hover:text-custom-blue-light hover:underline"
+              >{{ $t('project') }}</RouterLink
+            >
           </li>
           <li>
-            <RouterLink to="/#publications" class="hover:text-custom-blue-light hover:underline">{{
-              $t('publications')
-            }}</RouterLink>
+            <RouterLink
+              to="/under-construction"
+              class="hover:text-custom-blue-light hover:underline"
+              >{{ $t('publications') }}</RouterLink
+            >
           </li>
         </ul>
       </div>
@@ -62,9 +70,11 @@
         <h2 class="font-bold mb-6">{{ $t('eventsAndMedia') }}</h2>
         <ul class="space-y-4">
           <li>
-            <RouterLink to="/#conferences" class="hover:text-custom-blue-light hover:underline">{{
-              $t('conferences')
-            }}</RouterLink>
+            <RouterLink
+              to="/under-construction"
+              class="hover:text-custom-blue-light hover:underline"
+              >{{ $t('conferences') }}</RouterLink
+            >
           </li>
           <li>
             <RouterLink to="/media" class="hover:text-custom-blue-light hover:underline">{{
@@ -72,9 +82,11 @@
             }}</RouterLink>
           </li>
           <li>
-            <RouterLink to="/#partners" class="hover:text-custom-blue-light hover:underline">{{
-              $t('partners')
-            }}</RouterLink>
+            <RouterLink
+              to="/under-construction"
+              class="hover:text-custom-blue-light hover:underline"
+              >{{ $t('partners') }}</RouterLink
+            >
           </li>
         </ul>
       </div>

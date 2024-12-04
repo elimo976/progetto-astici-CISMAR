@@ -149,20 +149,20 @@ const updateMenuItems = () => {
     },
     {
       title: t('conservation'),
-      link: '#conservation',
+      link: '',
       submenuOpen: false,
       children: [
-        { title: t('releases'), link: '#releases' },
-        { title: t('results'), link: '#results' },
+        { title: t('releases'), link: '/under-construction' },
+        { title: t('results'), link: '/under-construction' },
       ],
     },
     {
       title: t('research'),
-      link: '#research',
+      link: '',
       submenuOpen: false,
       children: [
-        { title: t('project'), link: '#project' },
-        { title: t('publications'), link: '#publications' },
+        { title: t('project'), link: '/under-construction' },
+        { title: t('publications'), link: '/under-construction' },
       ],
     },
     {
@@ -171,10 +171,10 @@ const updateMenuItems = () => {
       submenuOpen: false,
       children: [
         { title: t('focusThirdMission'), link: '/third-mission' },
-        { title: t('conferences'), link: '#conferences' },
-        { title: t('orientation'), link: '#orientation' },
-        { title: t('media'), link: 'media' },
-        { title: t('partners'), link: '#partners' },
+        { title: t('conferences'), link: '/under-construction' },
+        { title: t('orientation'), link: '/under-construction' },
+        { title: t('media'), link: '/media' },
+        { title: t('partners'), link: '/under-construction' },
       ],
     },
   ]
