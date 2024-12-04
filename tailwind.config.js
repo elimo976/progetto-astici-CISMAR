@@ -9,7 +9,7 @@ export default {
         'custom-blue-light': '#7dc1b9',
         'custom-blue-navy': '#4a8e9f',
         'custom-blue-lobster': '#286ba6',
-        'custom-beige': '#d1cfcf',
+        'custom-beige': '#f1f1f1',
         'custom-blue-title': '#5d7cb1',
         'custom-green-cogs': '#62978e',
       },
