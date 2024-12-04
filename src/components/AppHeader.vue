@@ -16,7 +16,9 @@
       </div>
 
       <!-- Titolo centrale -->
-      <h1 class="text-3xl md:text-5xl text-custom-blue font-bold text-center md:order-2">
+      <h1
+        class="text-3xl md:text-5xl text-custom-blue font-playfair font-medium text-center md:order-2"
+      >
         {{ $t('headerTitle') }}
       </h1>
 
