@@ -152,7 +152,7 @@ const updateMenuItems = () => {
       link: '',
       submenuOpen: false,
       children: [
-        { title: t('releases'), link: '/under-construction' },
+        { title: t('releases'), link: '/lobster-stages' },
         { title: t('results'), link: '/under-construction' },
       ],
     },

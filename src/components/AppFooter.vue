@@ -35,11 +35,9 @@
         <h2 class="font-bold mb-6">{{ $t('researchAndProjects') }}</h2>
         <ul class="space-y-4">
           <li>
-            <RouterLink
-              to="/under-construction"
-              class="hover:text-custom-blue-light hover:underline"
-              >{{ $t('releases') }}</RouterLink
-            >
+            <RouterLink to="/lobster-stages" class="hover:text-custom-blue-light hover:underline">{{
+              $t('releases')
+            }}</RouterLink>
           </li>
           <li>
             <RouterLink

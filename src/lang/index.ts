@@ -3,6 +3,7 @@ import AppFooter from './AppFooter'
 import AppHeader from './AppHeader'
 import HeroBanner from './HeroBanner'
 import HomePage from './HomePage'
+import LobsterStages from './LobsterStages'
 import MediaPage from './MediaPage'
 import NavigationMenu from './NavigationMenu'
 import ThirdMission from './ThirdMission'
@@ -25,6 +26,7 @@ const messages: Messages = {
     ...HeroBanner.en,
     ...MediaPage.en,
     ...UnderConstruction.en,
+    ...LobsterStages.en,
   },
   it: {
     ...AppHeader.it,
@@ -36,6 +38,7 @@ const messages: Messages = {
     ...HeroBanner.it,
     ...MediaPage.it,
     ...UnderConstruction.it,
+    ...LobsterStages.it,
   },
 }
 

@@ -4,6 +4,7 @@ import HomePage from '@/pages/HomePage.vue'
 import ThirdMission from '@/pages/ThirdMission.vue'
 import MediaPage from '@/pages/MediaPage.vue'
 import UnderConstruction from '@/pages/UnderConstruction.vue'
+import LobsterStages from '@/pages/LobsterStages.vue'
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: '/under-construction',
     name: 'UnderConstruction',
     component: UnderConstruction,
+  },
+  {
+    path: '/lobster-stages',
+    name: 'LobsterStages',
+    component: LobsterStages,
   },
   {
     // Catch-all route (fallback)
