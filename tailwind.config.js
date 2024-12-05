@@ -20,6 +20,9 @@ export default {
         29: '8.25rem',
         25: '7.25rem',
       },
+      scale: {
+        200: '2',
+      },
     },
   },
   plugins: [],

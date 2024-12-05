@@ -118,6 +118,7 @@
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 
 interface MenuItem {
   title: string
@@ -132,6 +133,8 @@ const isMdOrLarger = ref(false)
 const isLgOrLarger = ref(false)
 
 const { t, locale } = useI18n()
+
+const router = useRouter() // Ottieni il router
 
 const menuItems = ref<MenuItem[]>([])
 
@@ -170,7 +173,7 @@ const updateMenuItems = () => {
       link: '',
       submenuOpen: false,
       children: [
-        { title: t('focusThirdMission'), link: '/third-mission' },
+        { title: t('dissemination'), link: '/third-mission' },
         { title: t('conferences'), link: '#conferences' },
         { title: t('orientation'), link: '#orientation' },
         { title: t('media'), link: 'media' },
@@ -213,12 +216,22 @@ onMounted(() => {
 
 // Funzione per lo scroll all'ancoraggio
 const scrollToAnchor = (link: string) => {
-  const element = document.querySelector(link)
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    })
+  console.log('Router:', router) // Verifica se il router è definito
+
+  if (router) {
+    if (link.startsWith('#')) {
+      const element = document.querySelector(link)
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })
+      }
+    } else {
+      router.push(link)
+    }
+  } else {
+    console.error('Router non trovato')
   }
 }
 </script>
