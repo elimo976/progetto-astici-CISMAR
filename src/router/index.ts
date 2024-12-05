@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/pages/HomePage.vue'
 import ThirdMission from '@/pages/ThirdMission.vue'
 import MediaPage from '@/pages/MediaPage.vue'
+import UnderConstruction from '@/pages/UnderConstruction.vue'
 
 const routes = [
   {
