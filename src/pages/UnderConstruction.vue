@@ -19,9 +19,17 @@
       </h1>
 
       <!-- Descrizione -->
-      <p class="text-2xl text-gray-600 mb-8 leading-relaxed">
+      <p class="text-2xl text-gray-600 mb-6 leading-relaxed">
         {{ $t('introUC') }}
       </p>
+
+      <!-- Torna alla Home -->
+
+      <a
+        :href="'/'"
+        class="inline-flex items-center px-6 py-4 text-md font-medium text-custom-blue-lobster bg-custom-blue-hover border border-custom-blue-hover rounded-md hover:bg-custom-blue-active transition-all duration-300 mb-2 hover:bg-custom-blue-lobster hover:text-gray-200"
+        >{{ $t('backHome') }}</a
+      >
 
       <!-- Footer -->
       <footer class="mt-6 text-sm text-gray-500">
