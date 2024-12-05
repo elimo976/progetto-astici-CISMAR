@@ -171,10 +171,10 @@ const updateMenuItems = () => {
       submenuOpen: false,
       children: [
         { title: t('focusThirdMission'), link: '/third-mission' },
-        { title: t('conferences'), link: '/under-construction' },
-        { title: t('orientation'), link: '/under-construction' },
-        { title: t('media'), link: '/media' },
-        { title: t('partners'), link: '/under-construction' },
+        { title: t('conferences'), link: '#conferences' },
+        { title: t('orientation'), link: '#orientation' },
+        { title: t('media'), link: 'media' },
+        { title: t('partners'), link: '#partners' },
       ],
     },
   ]
