@@ -57,7 +57,7 @@
 
           <!-- Contenitore delle immagini -->
           <div
-            class="flex flex-col lg:px-12 md:gap-24 md:px-10 sm:flex-row justify-between w-full mx-auto xs:pt-10"
+            class="flex flex-col lg:px-12 md:gap-24 md:px-0 sm:flex-row justify-between w-full mx-auto xs:pt-10"
           >
             <div
               v-for="(phase, index) in phases"

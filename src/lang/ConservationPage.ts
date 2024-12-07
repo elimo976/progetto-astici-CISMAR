@@ -1,91 +1,125 @@
 export default {
   it: {
-    titleConservation: 'Il ruolo del CISMAR',
-    introConservation: `Il ripopolamento (o restocking) è una tecnica fondamentale per favorire la ripresa delle specie marine che hanno subito un forte calo numerico a causa di attività umane, come la pesca intensiva.`,
-    linkDiscoverConservation: 'Scopri di più sulle nostre attività di ricerca',
-    researchConservation: 'qui!',
-    researchProcessConservation: 'Il Processo di Ricerca',
-    trainingAndReleaseConservation: 'Allenamento e Rilascio',
-    releaseConservation: 'Il Rilascio',
-    headingConservation1: 'Il ruolo del CISMAR',
-    contentConservation1: `
-      Nel caso dell’astice europeo un ostacolo iniziale importante è stato l’assenza di tecniche consolidate per l’allevamento.
-      Essendo una specie non allevata per scopi commerciali, è stato necessario sviluppare da zero procedure e metodologie specifiche.
-      Questo risultato è stato raggiunto grazie alle ricerche condotte dal CISMAR, il centro di eccellenza del DEB impegnato nello studio e nella conservazione dell’astice.
+    // CISMAR
+    titleCismar: 'Il ruolo del CISMAR',
+    contentCismar1: `Il ripopolamento (o restocking) è una tecnica fondamentale per favorire la ripresa delle specie marine che hanno subito un forte calo numerico a causa di attività umane, come la pesca intensiva.`,
+    contentCismar2: `
+      Nel caso dell’astice europeo un ostacolo iniziale importante è stato l’assenza di tecniche consolidate per l’allevamento. Essendo una specie non allevata per scopi commerciali, è stato necessario sviluppare da zero procedure e metodologie specifiche. Questo risultato è stato raggiunto grazie alle ricerche condotte dal CISMAR, il centro di eccellenza del DEB impegnato nello studio e nella conservazione dell’astice.,
+    `,
+    linkCismar: ` (link alla pagina CISMAR)`,
+    contentCismar3: `
       Ci sono voluti anni di ricerche, perché gli esemplari destinati al ripopolamento devono possedere caratteristiche genetiche, comportamentali e fisiologiche identiche a quelle degli animali selvatici, per garantire il successo del rilascio in mare.
     `,
-    imageAltConservation1: 'Foto Astice adulto',
-    imageSrcConservation1: '@/assets/images/adult-lobster.jpg',
+    contentCismar4: `
+     Per raggiungere questo obiettivo, sono stati condotti studi approfonditi sulla genetica, sull’ecologia e sul comportamento dell’astice. Questi dati sono stati fondamentali per progettare strutture adeguate e impostare le condizioni di allevamento ideali, un risultato raggiunto grazie al lavoro di un team di tecnici e ricercatori altamente qualificati del CISMAR, che continuano a impegnarsi in queste ricerche avanzate`,
+    imageAltCismar1: 'Astice adulto',
+    textDiscoverCismar: 'Scopri di più sulle nostre attività di ricerca',
+    linkDiscoverCismar: 'qui!',
 
-    headingConservation2: 'L’allevamento dell’astice europeo',
-    contentConservation2: `
+    // Lobster
+    titleLobster: 'L’allevamento dell’astice europeo',
+    contentLobster1: `
       Gli astici non si riproducono in cattività e quindi l’allevamento parte da femmine ovigere che vengono prelevate dalle stesse aree in cui i giovani saranno liberati.
       Questo permette di essere certi che il patrimonio genetico degli animali sarà del tutto compatibile con quello delle popolazioni selvatiche, visto che proprio da esse si origina.
-      Le femmine con le uova vengono mantenute in vasche con parametri ambientali controllati, come temperatura, luce e qualità dell’acqua.
-      Quando le uova sono prossime alla schiusa, le madri vengono trasferite in apposite “sale parto” dove rilasciano le larve, successivamente nutrite con una dieta bilanciata e curate fino a diventare piccoli astici bentonici.
     `,
-    imageAltConservation2: 'Foto Femmina con Uova',
-    imageSrcConservation2: '@/assets/images/female-lobster-eggs.jpg',
-    headingConservation3: 'Il training e il DNA',
-    contentConservation3: `
-      I giovani astici bentonici, a due mesi di età, vengono rilasciati in mare dopo un periodo di allenamento in ambienti arricchiti con substrati e tane.
-      Questo li prepara a trovare rifugi e sfuggire ai predatori. Prima del rilascio, sia i giovani astici che le madri vengono identificati geneticamente grazie a marcatori molecolari unici.
-      Questa analisi consente di monitorare l’impatto reale del ripopolamento sulla consistenza delle popolazioni selvatiche e sul sostegno alla pesca costiera.
+    contentLobster2: `
+    Le femmine con le uova vengono mantenute in vasche con parametri ambientali controllati, come temperatura, luce e qualità dell’acqua.
+  `,
+    contentLobster3: `
+    Quando le uova sono prossime alla schiusa, le madri vengono trasferite in apposite “sale parto” e quando rilasciano le larve, queste vengono contate e trasferite nei loro incubatoi dove saranno nutrite con una dieta bilanciata appositamente studiata e potranno compiere tutte le mute fino a trasformarsi in piccoli astici bentonici (che vivono sul fondo, invece di galleggiare nella colonna d’acqua).
+  `,
+    imageAltLobster: 'Femmina con Uova',
+
+    // Training and DNA
+    titleTraining: 'Il training e il DNA',
+    contentTraining1: `
+     I giovani astici bentonici verranno rilasciati in mare a due mesi di età.
     `,
-    imageAltConservation3: 'Astice su ghiaia',
-    imageSrcConservation3: '@/assets/images/lobster-training.jpg',
-    headingConservation4: 'Il rilascio',
-    contentConservation4: `
-      Arrivati a circa due mesi di età, i piccoli astici vengono rilasciati in mare nei luoghi di rilascio, vicino a habitat idonei come praterie di posidonia e fondali rocciosi.
-      I ricercatori si immergono per liberarli uno ad uno, assicurando che abbiano il tempo di trovare rifugio e sfuggire ai predatori.
-      Da questo momento sarà il mare ad occuparsi di loro.
+    contentTraining2: `
+    Nel frattempo, saranno allenati a confrontarsi con l’ambiente naturale grazie al substrato e alle tane presenti nelle loro celle di allevamento. Questo “arricchimento” ambientale produrrà giovani pronti ad esplorare l’ambiente marino per identificare velocemente il rifugio più adatto e sfuggire ai predatori.
+  `,
+    contentTraining3: `
+    Prima di essere liberati i giovali astici, e le loro madri selvatiche, saranno identificati su base genetica. Grazie a marcatori molecolari sviluppati appositamente per questa specie, ogni gruppo di fratelli viene caratterizzato da un insieme di varianti genetiche uniche, che permetteranno di individuare gli astici prodotti dal CISMAR tra quelli pescati. In questo modo è possibile valutare il reale apporto delle operazioni di rilascio sia alla consistenza delle popolazioni naturali sia al sostegno della piccola pesca costiera.
+  `,
+    imageAltTraining1: 'Astice su ghiaia',
+    imageAltTraining2: 'Astice ...',
+    imageAltTraining3: 'Astice ...',
+
+    // Release
+    titleRelease: 'Il rilascio',
+    contentRelease1: `
+    Arrivati a circa due mesi di età i piccoli astici vengono rilasciati in mare.
     `,
-    imageAltConservation4: 'Asticini nelle provette',
-    imageSrcConservation4: '@/assets/images/lobster-release.jpg',
+    contentRelease2: `
+    Per evitare che si aggrediscano a vicenda vengono sistemati in provette individuali e portati con le imbarcazioni del CISMAR nei luoghi di rilascio, nelle vicinanze di habitat idonei come praterie di posidonia e fondali rocciosi.
+    `,
+    contentRelease3: `
+    Qui i ricercatori si immergono liberando gli astici uno ad uno; la loro presenza tiene lontani i predatori dando tempo ai piccoli di rifugiarsi tra le rocce o le piante di Posidonia.
+    Da questo momento sarà il mare ad occuparsi di loro.
+    `,
+    imageAltRelease1: 'Asticini nelle provette',
+    imageAltRelease2: 'Asticini nelle provette',
+
     watchVideoConservation: 'Guarda il video del rilascio',
   },
   en: {
-    titleConservation: 'The Role of CISMAR',
-    introConservation: `Restocking is a crucial technique to help marine species recover after significant population declines caused by human activities such as overfishing.`,
-    linkDiscoverConservation: 'Learn more about our research',
-    researchConservation: 'here!',
-    researchProcessConservation: 'Research Process',
-    trainingAndReleaseConservation: 'Training and Release',
-    releaseConservation: 'The Release',
-    headingConservation1: 'The Role of CISMAR',
-    contentConservation1: `
-  For the European lobster, an initial major obstacle was the lack of established breeding techniques.
-  As a species not bred for commercial purposes, it was necessary to develop specific procedures and methodologies from scratch.
-  This achievement was made possible by the research carried out by CISMAR, the DEB's center of excellence dedicated to the study and conservation of lobsters.
-  Years of research were required, as the specimens intended for restocking need to have genetic, behavioral, and physiological characteristics identical to those of wild animals to ensure successful release into the sea.
-`,
-    imageAltConservation1: 'Adult Lobster Photo',
-    imageSrcConservation1: '@/assets/images/adult-lobster.jpg',
-    headingConservation2: 'European Lobster Farming',
-    contentConservation2: `
-  Lobsters do not reproduce in captivity, so farming starts with egg-bearing females taken from the same areas where the young will be released.
-  This ensures that the genetic makeup of the animals will be fully compatible with that of wild populations, as they originate from them.
-  Egg-bearing females are kept in tanks with controlled environmental parameters, such as temperature, light, and water quality.
-  When the eggs are close to hatching, the mothers are transferred to special "birthing rooms" where they release larvae, which are then fed a balanced diet and nurtured until they become small benthic lobsters.
-`,
-    imageAltConservation2: 'Egg-bearing Female Lobster',
-    imageSrcConservation2: '@/assets/images/female-lobster-eggs.jpg',
-    headingConservation3: 'Training and DNA',
-    contentConservation3: `
-  Young benthic lobsters, at two months of age, are released into the sea after a training period in enriched environments with substrates and dens.
-  This prepares them to find shelters and escape predators. Before release, both the young lobsters and the mothers are genetically identified using unique molecular markers.
-  This analysis allows monitoring the actual impact of restocking on the wild population and coastal fishing support.
-`,
-    imageAltConservation3: 'Lobster Training',
-    imageSrcConservation3: '@/assets/images/lobster-training.jpg',
-    headingConservation4: 'The Release',
-    contentConservation4: `
-  At around two months of age, the young lobsters are released into the sea near suitable habitats, such as seagrass meadows and rocky seabeds.
-  Researchers dive to release them one by one, ensuring they have time to find shelter and evade predators.
-  From this moment on, the sea will take care of them.
-`,
-    imageAltConservation4: 'Lobsters in Tubes',
-    imageSrcConservation4: '@/assets/images/lobster-release.jpg',
+    titleCismar: 'The Role of CISMAR',
+    contentCismar1: `Restocking is a fundamental technique to help recover marine species that have suffered significant population declines due to human activities, such as intensive fishing.`,
+    contentCismar2: `
+      In the case of the European lobster, an initial major challenge was the lack of established techniques for rearing. Since this species is not farmed for commercial purposes, it was necessary to develop specific procedures and methodologies from scratch. This achievement was made possible by research conducted by CISMAR, the DEB’s center of excellence dedicated to the study and conservation of lobsters.,
+    `,
+    linkCismar: `(link to the CISMAR page)`,
+    contentCismar3: `
+      Years of research were required because the specimens intended for restocking must have genetic, behavioral, and physiological characteristics identical to those of wild animals to ensure the success of their release into the sea.
+    `,
+    contentCismar4: `
+      To achieve this goal, in-depth studies on the genetics, ecology, and behavior of lobsters were conducted. These data were crucial for designing appropriate facilities and setting ideal breeding conditions, an outcome achieved through the work of a team of highly skilled technicians and researchers at CISMAR, who continue to pursue advanced research in this area.
+    `,
+    imageAltCismar1: 'Adult Lobster',
+
+    textDiscoverCismar: 'Learn more about our research activities',
+    linkDiscoverCismar: 'here!',
+
+    titleLobster: 'European Lobster Rearing',
+    contentLobster1: `
+      Lobsters do not reproduce in captivity, so rearing begins with egg-bearing females that are collected from the same areas where the juveniles will be released.
+      This ensures that the genetic heritage of the animals will be entirely compatible with wild populations, as they originate from them.
+    `,
+    contentLobster2: `
+      The egg-bearing females are kept in tanks with controlled environmental parameters, such as temperature, light, and water quality.
+    `,
+    contentLobster3: `
+      When the eggs are about to hatch, the mothers are transferred to special "birthing rooms," and once they release the larvae, these are counted and moved to incubators where they are fed a specially designed balanced diet and undergo all molts until they transform into small benthic lobsters (living on the seabed rather than floating in the water column).
+    `,
+    imageAltLobster: 'Egg-Bearing Female',
+
+    titleTraining: 'Training and DNA',
+    contentTraining1: `
+      The young benthic lobsters will be released into the sea at two months of age.
+    `,
+    contentTraining2: `
+      Meanwhile, they are trained to adapt to the natural environment through the substrate and burrows in their rearing cells. This environmental "enrichment" will produce juveniles ready to explore the marine environment, quickly identify the most suitable shelter, and evade predators.
+    `,
+    contentTraining3: `
+      Before being released, the young lobsters and their wild mothers will be identified genetically. Thanks to molecular markers specifically developed for this species, each sibling group is characterized by a unique set of genetic variants, allowing researchers to distinguish CISMAR-produced lobsters among those caught. This makes it possible to assess the actual contribution of the release operations to both the natural population's abundance and the support of small-scale coastal fisheries.
+    `,
+    imageAltTraining1: 'Lobster on Gravel',
+    imageAltTraining2: 'Lobster on Gravel',
+    imageAltTraining3: 'Lobster on Gravel',
+
+    titleRelease: 'The Release',
+    contentRelease1: `
+      At around two months of age, the young lobsters are released into the sea.
+    `,
+    contentRelease2: `
+      To prevent them from attacking each other, they are placed in individual tubes and transported by CISMAR boats to release sites near suitable habitats such as Posidonia meadows and rocky seabeds.
+    `,
+    contentRelease3: `
+      Here, researchers dive to release the lobsters one by one; their presence keeps predators away, giving the juveniles time to hide among rocks or Posidonia plants. From this moment, the sea will take care of them.
+    `,
+    imageAltRelease1: 'Small Lobsters in Tubes',
+    imageAltRelease2: 'Small Lobsters in Tubes',
+
     watchVideoConservation: 'Watch the release video',
   },
 }
