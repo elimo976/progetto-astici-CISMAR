@@ -4,7 +4,7 @@ export default {
     titleCismar: 'Il ruolo del CISMAR',
     contentCismar1: `Il ripopolamento (o restocking) è una tecnica fondamentale per favorire la ripresa delle specie marine che hanno subito un forte calo numerico a causa di attività umane, come la pesca intensiva.`,
     contentCismar2: `
-      Nel caso dell’astice europeo un ostacolo iniziale importante è stato l’assenza di tecniche consolidate per l’allevamento. Essendo una specie non allevata per scopi commerciali, è stato necessario sviluppare da zero procedure e metodologie specifiche. Questo risultato è stato raggiunto grazie alle ricerche condotte dal CISMAR, il centro di eccellenza del DEB impegnato nello studio e nella conservazione dell’astice.,
+      Nel caso dell’astice europeo un ostacolo iniziale importante è stato l’assenza di tecniche consolidate per l’allevamento. Essendo una specie non allevata per scopi commerciali, è stato necessario sviluppare da zero procedure e metodologie specifiche. Questo risultato è stato raggiunto grazie alle ricerche condotte dal <strong>CISMAR</strong>, il centro di eccellenza del DEB impegnato nello studio e nella conservazione dell’astice.,
     `,
     linkCismar: ` (link alla pagina CISMAR)`,
     contentCismar3: `
@@ -66,7 +66,7 @@ export default {
     titleCismar: 'The Role of CISMAR',
     contentCismar1: `Restocking is a fundamental technique to help recover marine species that have suffered significant population declines due to human activities, such as intensive fishing.`,
     contentCismar2: `
-      In the case of the European lobster, an initial major challenge was the lack of established techniques for rearing. Since this species is not farmed for commercial purposes, it was necessary to develop specific procedures and methodologies from scratch. This achievement was made possible by research conducted by CISMAR, the DEB’s center of excellence dedicated to the study and conservation of lobsters.,
+      In the case of the European lobster, an initial major challenge was the lack of established techniques for rearing. Since this species is not farmed for commercial purposes, it was necessary to develop specific procedures and methodologies from scratch. This achievement was made possible by research conducted by <strong>CISMAR</strong>, the DEB’s center of excellence dedicated to the study and conservation of lobsters.,
     `,
     linkCismar: `(link to the CISMAR page)`,
     contentCismar3: `

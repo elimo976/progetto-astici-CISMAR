@@ -6,7 +6,7 @@
         {{ $t('titleCismar') }}
       </h1>
       <p class="mb-4">{{ $t('contentCismar1') }}</p>
-      <p class="mb-4">{{ $t('contentCismar2') }}</p>
+      <p v-html="sanitizedContentCismar2()" class="mb-3"></p>
       <p class="mb-4">{{ $t('contentCismar3') }}</p>
       <p class="mb-6">{{ $t('contentCismar4') }}</p>
       <!-- Immagine sezione 1-->
@@ -157,10 +157,10 @@
         </div>
       </div>
       <!-- Video rilascio -->
-      <div class="text-center mt-8">
+      <div class="text-center my-8">
         <button
           @click="showVideoModal = true"
-          class="bg-custom-blue-lobster text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition"
+          class="bg-custom-blue-lobster text-white px-6 py-3 rounded-full shadow-md hover:bg-gray-300 hover:text-custom-blue-lobster hover:font-semibold transition"
         >
           {{ $t('watchVideoConservation') }}
         </button>
@@ -213,8 +213,10 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
+import { ref, defineComponent } from 'vue'
+import DOMPurify from 'dompurify'
 import LobsterStages from '@/pages/LobsterStages.vue'
+
 import imageSrcCismar1 from '@/assets/images/fotoDefault.jpg'
 import imageSrcLobster from '@/assets/images/fotoDefault.jpg'
 import imageSrcTraining1 from '@/assets/images/fotoDefault.jpg'
@@ -223,7 +225,7 @@ import imageSrcTraining3 from '@/assets/images/fotoDefault.jpg'
 import imageSrcRelease1 from '@/assets/images/fotoDefault.jpg'
 import imageSrcRelease2 from '@/assets/images/fotoDefault.jpg'
 
-export default {
+export default defineComponent({
   name: 'ConservationPage',
   components: { LobsterStages },
   setup() {
@@ -241,6 +243,13 @@ export default {
       selectedImage.value = ''
     }
 
+    const sanitizedContentCismar2 = () => {
+      // Usa una stringa come esempio del contenuto che vuoi sanificare
+      const rawHtml =
+        '<p>Nel caso dell’astice europeo un ostacolo iniziale importante è stato l’assenza di tecniche consolidate per l’allevamento. Essendo una specie non allevata per scopi commerciali, è stato necessario sviluppare da zero procedure e metodologie specifiche. Questo risultato è stato raggiunto grazie alle ricerche condotte dal <strong>CISMAR</strong>, il centro di eccellenza del DEB impegnato nello studio e nella conservazione dell’astice.</p>'
+      return DOMPurify.sanitize(rawHtml)
+    }
+
     return {
       showVideoModal,
       showImageModal,
@@ -254,32 +263,10 @@ export default {
       imageSrcRelease2,
       openModal,
       closeImageModal,
+      sanitizedContentCismar2,
     }
   },
-}
+})
 </script>
 
-<style scoped>
-/* .image-container {
-  width: 300px;
-  height: auto;
-  overflow: hidden;
-  border-radius: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-
-.image-container:hover {
-  transform: scale(1.05);
-}
-
-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-} */
-</style>
+<style scoped></style>
