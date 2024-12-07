@@ -23,6 +23,12 @@ export default {
       scale: {
         200: '2',
       },
+      screens: {
+        xs: { max: '639px' },
+      },
+      gap: {
+        22: '5.5rem',
+      },
     },
   },
   plugins: [],

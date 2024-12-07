@@ -20,7 +20,7 @@
           ></div>
           <!-- Linea verticale (solo per mobile) -->
           <div
-            class="absolute sm:w-5 sm:rounded-full sm:top-0 sm:left-1/2 sm:ml-3 sm:block md:hidden lg:hidden bg-gray-600 top-32 left-1/3 transform -translate-x-1/2"
+            class="absolute sm:w-5 sm:rounded-full sm:top-0 sm:left-1/2 sm:block md:hidden lg:hidden bg-gray-600 top-32 left-1/3 transform -translate-x-1/2"
             :style="{
               background: `linear-gradient(to bottom, ${phaseColors[0]}, ${phaseColors[1]}, ${phaseColors[2]}, ${phaseColors[3]})`,
             }"
@@ -46,30 +46,39 @@
             </div>
           </div>
         </div>
-        <!-- Immagini delle fasi -->
-        <div
-          class="flex flex-col md:gap-24 sm:flex-row justify-between w-full mt-12 ml-6 md:mx-auto md:w-full md:px-6 sm:mt-0"
-        >
+        <div class="relative w-full">
+          <!-- Contenitore dello sfondo -->
           <div
-            v-for="(phase, index) in phases"
-            :key="index"
-            class="flex flex-col items-center mb-8 sm:mb-0 md:mx-auto md:w-1/2"
+            class="absolute inset-0 xs:block hidden rounded-full"
+            :style="{
+              background: `linear-gradient(to bottom, ${phaseColors[0]}, ${phaseColors[1]}, ${phaseColors[2]}, ${phaseColors[3]})`,
+            }"
+          ></div>
+
+          <!-- Contenitore delle immagini -->
+          <div
+            class="flex flex-col lg:px-12 md:gap-24 md:px-10 sm:flex-row justify-between w-full mx-auto xs:pt-10"
           >
-            <img
-              :src="phase.image"
-              :alt="$t(phase.altText)"
-              class="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 md:mb-0 md:ml-0 md:mt-12 sm:mb-24 object-cover shadow-lg rounded-full border-2 border-white transition-transform duration-300 transform hover:scale-150 md:active:scale-150 md:hover:translate-y-10 md:active:translate-y-10 hover:z-50 sm:relative"
-            />
-            <p class="mt-6 mb-0 ml-0 text-gray-500 font-bold hidden md:block">
-              {{ $t(phase.description) }}
-            </p>
+            <div
+              v-for="(phase, index) in phases"
+              :key="index"
+              class="flex flex-col items-center mb-8 sm:mb-0 md:mx-auto md:w-1/2"
+            >
+              <img
+                :src="phase.image"
+                :alt="$t(phase.altText)"
+                class="xs:w-24 xs:h-24 w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 md:mb-0 md:ml-0 md:mt-12 sm:mb-24 xs:mb-4 object-cover shadow-lg rounded-full border-2 border-white transition-transform duration-300 transform hover:scale-150 active:scale-150 md:hover:translate-y-10 md:active:translate-y-10 hover:z-50 sm:relative"
+              />
+              <p class="mt-6 mb-0 ml-0 text-gray-500 font-bold hidden md:block">
+                {{ $t(phase.description) }}
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      div
 
       <!-- Descrizione delle fasi per small device -->
-      <div class="flex flex-col sm:w-1/3 sm:gap-40 mt-3 md:hidden">
+      <div class="flex flex-col sm:w-1/3 sm:gap-40 xs:mt-32 xs:ml-4 xs:gap-22 mt-8 ml-4 md:hidden">
         <div v-for="(phase, index) in phases" :key="index" class="flex items-center">
           <!-- Linea con colore dinamico a sinistra della descrizione -->
           <div
@@ -86,7 +95,7 @@
               'mt-4': index !== phases.length - 1, // Per tutti tranne l'ultimo
               'mt-10': index === phases.length - 1, // Cambia il mt per l'ultimo elemento
             }"
-            class="mb-0 text-xl font-medium text-gray-500 sm:block"
+            class="mb-0 text-xl font-medium text-gray-500 sm:block xs:pb-1"
           >
             {{ $t(phase.description) }}
           </p>
