@@ -46,6 +46,7 @@ export default {
     imageAltTraining1: 'Giovane astice',
     imageAltTraining2: 'Astice nella tana',
     imageAltTraining3: 'Astice nella tana.',
+    imageAltTraining4: 'Labwork - credits: Czapp Árpád',
 
     // Release
     titleRelease: 'Il rilascio',
@@ -60,7 +61,7 @@ export default {
     Da questo momento sarà il mare ad occuparsi di loro.
     `,
     imageAltRelease1: 'Provette con larve di astici',
-    imageAltRelease2: 'Giovane astice',
+    imageAltRelease2: 'Rilascio di giovane astice',
 
     watchVideoConservation: 'Guarda il video del rilascio',
   },
@@ -110,6 +111,7 @@ export default {
     imageAltTraining1: 'Young lobster',
     imageAltTraining2: 'Lobster in den',
     imageAltTraining3: 'Lobster in the den',
+    imageAltTraining4: 'Labwork - credits: Czapp Árpád',
 
     titleRelease: 'The Release',
     contentRelease1: `
@@ -122,7 +124,7 @@ export default {
       Here, researchers dive to release the lobsters one by one; their presence keeps predators away, giving the juveniles time to hide among rocks or Posidonia plants. From this moment, the sea will take care of them.
     `,
     imageAltRelease1: 'Lobster larvae in test tubes',
-    imageAltRelease2: 'Young lobster',
+    imageAltRelease2: 'Release of young lobster',
 
     watchVideoConservation: 'Watch the release video',
   },

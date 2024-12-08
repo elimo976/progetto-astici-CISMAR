@@ -19,6 +19,8 @@ export default {
       spacing: {
         29: '8.25rem',
         25: '7.25rem',
+        127: '42rem',
+        150: '50rem',
       },
       scale: {
         200: '2',

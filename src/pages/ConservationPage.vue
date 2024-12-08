@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-custom-beige text-gray-800 px-8 py-8 text-justify">
+  <section class="bg-custom-beige text-gray-800 px-8 py-8 text-justify max-w-screen mx-auto">
     <!-- Sezione 1 -->
     <div class="mb-10">
       <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
@@ -10,35 +10,35 @@
       <p class="mb-4">{{ $t('contentCismar3') }}</p>
 
       <!-- Immagine 1 sezione 1-->
-      <div
+      <figure
         class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
         @click="openModal(imageSrcCismar1)"
       >
         <img
           :src="imageSrcCismar1"
           :alt="$t('imageAltCismar1')"
-          class="w-full object-cover rounded-lg"
+          class="h-96 w-full object-cover rounded-lg shadow-xl"
         />
         <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
           {{ $t('imageAltCismar1') }}
         </figcaption>
-      </div>
+      </figure>
 
       <p class="mb-6">{{ $t('contentCismar4') }}</p>
       <!-- Immagine 2 sezione 1-->
-      <div
+      <figure
         class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
         @click="openModal(imageSrcCismar2)"
       >
         <img
           :src="imageSrcCismar2"
           :alt="$t('imageAltCismar2')"
-          class="w-full object-cover rounded-lg"
+          class="h-96 w-full object-cover rounded-lg shadow-xl"
         />
         <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
           {{ $t('imageAltCismar2') }}
         </figcaption>
-      </div>
+      </figure>
 
       <p class="mt-6 text-center">
         {{ $t('textDiscoverCismar') }}
@@ -56,41 +56,41 @@
       <p class="mb-4">{{ $t('contentLobster1') }}</p>
 
       <!-- Immagine 1 sezione 2 -->
-      <div
+      <figure
         class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
         @click="openModal(imageSrcLobster1)"
       >
         <img
           :src="imageSrcLobster1"
           :alt="$t('imageAltLobster1')"
-          class="w-full object-cover rounded-lg"
+          class="h-105 w-full object-cover rounded-lg shadow-xl"
         />
         <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
           {{ $t('imageAltLobster1') }}
         </figcaption>
-      </div>
+      </figure>
 
       <p class="mb-4">{{ $t('contentLobster2') }}</p>
 
       <!-- Immagine 2 sezione 2 -->
-      <div
+      <figure
         class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
         @click="openModal(imageSrcLobster2)"
       >
         <img
           :src="imageSrcLobster2"
           :alt="$t('imageAltLobster2')"
-          class="w-full object-cover rounded-lg"
+          class="h-80 w-full object-cover rounded-lg shadow-xl"
         />
         <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
           {{ $t('imageAltLobster2') }}
         </figcaption>
-      </div>
+      </figure>
 
       <p class="mb-6">{{ $t('contentLobster3') }}</p>
 
       <!-- LobsterStages Component -->
-      <div class="mt-8 text-center border-2 shadow-lg">
+      <div class="mt-8 text-center border-2 rounded-xl shadow-lg">
         <LobsterStages />
       </div>
     </div>
@@ -105,50 +105,65 @@
 
       <!-- Immagini sezione 3 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div
+        <figure
           class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
           @click="openModal(imageSrcTraining1)"
         >
           <img
             :src="imageSrcTraining1"
             :alt="$t('imageAltTraining1')"
-            class="w-full object-cover rounded-lg"
+            class="w-full h-64 object-cover rounded-lg shadow-xl"
           />
           <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltTraining1') }}
           </figcaption>
-        </div>
+        </figure>
 
-        <div
+        <figure
           class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
           @click="openModal(imageSrcTraining2)"
         >
           <img
             :src="imageSrcTraining2"
             :alt="$t('imageAltTraining2')"
-            class="w-full object-cover rounded-lg"
+            class="w-full h-64 object-cover rounded-lg shadow-xl"
           />
           <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltTraining2') }}
           </figcaption>
-        </div>
+        </figure>
 
-        <div
+        <figure
           class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
           @click="openModal(imageSrcTraining3)"
         >
           <img
             :src="imageSrcTraining3"
             :alt="$t('imageAltTraining3')"
-            class="w-full object-cover rounded-lg"
+            class="w-full h-64 object-cover rounded-lg shadow-xl"
           />
           <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltTraining3') }}
           </figcaption>
-        </div>
+        </figure>
       </div>
 
       <p class="mb-6">{{ $t('contentTraining3') }}</p>
+
+      <!-- Immagine sezione 3 -->
+      <figure
+        class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+        @click="openModal(imageSrcTraining4)"
+      >
+        <img
+          :src="imageSrcTraining4"
+          :alt="$t('imageAltTraining4')"
+          class="h-96 w-full object-cover rounded-lg shadow-xl"
+        />
+        <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+          {{ $t('imageAltTraining4') }}
+        </figcaption>
+      </figure>
     </div>
 
     <!-- Sezione 4 -->
@@ -162,33 +177,33 @@
 
       <!-- Immagini sezione 4 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div
+        <figure
           class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
           @click="openModal(imageSrcRelease1)"
         >
           <img
             :src="imageSrcRelease1"
             :alt="$t('imageAltRelease1')"
-            class="w-full object-cover rounded-lg"
+            class="h-80 w-full object-cover rounded-lg shadow-xl"
           />
           <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltRelease1') }}
           </figcaption>
-        </div>
+        </figure>
 
-        <div
+        <figure
           class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
           @click="openModal(imageSrcRelease2)"
         >
           <img
             :src="imageSrcRelease2"
             :alt="$t('imageAltRelease2')"
-            class="w-full object-cover rounded-lg"
+            class="h-80 w-full object-cover rounded-lg shadow-xl"
           />
           <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltRelease2') }}
           </figcaption>
-        </div>
+        </figure>
       </div>
       <!-- Video rilascio -->
       <div class="text-center my-8">
@@ -229,7 +244,7 @@
       class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
       @click="closeImageModal"
     >
-      <div class="relative w-3/4 max-w-3xl">
+      <div class="relative w-3/4 max-w-3xl p-12">
         <img
           :src="selectedImage"
           alt="Immagine ingrandita"
@@ -237,7 +252,7 @@
         />
         <button
           @click="closeImageModal"
-          class="absolute top-2 right-2 bg-white opacity-60 text-black rounded-full py-1 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+          class="absolute top-14 right-14 bg-white opacity-60 text-black rounded-full py-1 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
         >
           ✕
         </button>
@@ -258,8 +273,9 @@ import imageSrcLobster2 from '@/assets/images/uova.jpg'
 import imageSrcTraining1 from '@/assets/images/asticeGiovane.jpg'
 import imageSrcTraining2 from '@/assets/images/asticeTana1.jpg'
 import imageSrcTraining3 from '@/assets/images/asticeTana2.jpg'
+import imageSrcTraining4 from '@/assets/images/labwork.jpg'
 import imageSrcRelease1 from '@/assets/images/asticiniProvette.jpg'
-import imageSrcRelease2 from '@/assets/images/prinAstice.jpg'
+import imageSrcRelease2 from '@/assets/images/rilascioAstice.jpg'
 
 export default defineComponent({
   name: 'ConservationPage',
@@ -297,6 +313,7 @@ export default defineComponent({
       imageSrcTraining1,
       imageSrcTraining2,
       imageSrcTraining3,
+      imageSrcTraining4,
       imageSrcRelease1,
       imageSrcRelease2,
       openModal,

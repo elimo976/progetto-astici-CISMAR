@@ -6,25 +6,24 @@
     </div>
     <div class="flex md:flex-col sm:flex-row justify-center w-full">
       <!-- Fasi del ciclo di vita dell'astice -->
-      <div class="flex flex-col items-center">
+      <div class="relative flex flex-col items-center">
         <!-- Linea orizzontale con i tondini distribuiti -->
         <div
           class="flex flex-col sm:flex-row items-center justify-between w-full md:w-4/5 lg:w-3/4 relative"
         >
           <!-- Linea orizzontale con gradiente tra i tondini -->
           <div
-            class="absolute w-1 sm:w-full sm:h-full md:w-full md:h-1 lg:h-1 rounded-full"
+            class="absolute w-1 md:w-full md:h-1 lg:h-1 rounded-full"
             :style="{
               background: `linear-gradient(to right, ${phaseColors[0]}, ${phaseColors[1]}, ${phaseColors[2]}, ${phaseColors[3]})`,
             }"
           ></div>
           <!-- Linea verticale (solo per mobile) -->
           <div
-            class="absolute sm:w-5 sm:rounded-full sm:top-0 sm:left-1/2 sm:block md:hidden lg:hidden bg-gray-600 top-32 left-1/3 transform -translate-x-1/2"
+            class="absolute sm:w-5 sm:h-150 sm:rounded-full sm:top-0 sm:left-1/2 sm:block md:hidden lg:hidden bg-gray-600 top-32 left-1/3 transform -translate-x-1/2"
             :style="{
               background: `linear-gradient(to bottom, ${phaseColors[0]}, ${phaseColors[1]}, ${phaseColors[2]}, ${phaseColors[3]})`,
             }"
-            style="height: 65vh"
           ></div>
           <!-- Tondini per ogni fase -->
           <div
