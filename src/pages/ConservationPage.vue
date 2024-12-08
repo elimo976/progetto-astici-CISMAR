@@ -1,261 +1,243 @@
 <template>
-  <section class="bg-custom-beige text-gray-800 px-8 py-8 text-justify max-w-screen mx-auto">
-    <!-- Sezione 1 -->
-    <div class="mb-10">
-      <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
-        {{ $t('titleCismar') }}
-      </h1>
-      <p class="mb-4">{{ $t('contentCismar1') }}</p>
-      <p v-html="sanitizedContentCismar2()" class="mb-3"></p>
-      <p class="mb-4">{{ $t('contentCismar3') }}</p>
-
-      <!-- Immagine 1 sezione 1-->
-      <figure
-        class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-        @click="openModal(imageSrcCismar1)"
-      >
-        <img
-          :src="imageSrcCismar1"
-          :alt="$t('imageAltCismar1')"
-          class="h-96 w-full object-cover rounded-lg shadow-xl"
-        />
-        <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-          {{ $t('imageAltCismar1') }}
-        </figcaption>
-      </figure>
-
-      <p class="mb-6">{{ $t('contentCismar4') }}</p>
-      <!-- Immagine 2 sezione 1-->
-      <figure
-        class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-        @click="openModal(imageSrcCismar2)"
-      >
-        <img
-          :src="imageSrcCismar2"
-          :alt="$t('imageAltCismar2')"
-          class="h-96 w-full object-cover rounded-lg shadow-xl"
-        />
-        <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-          {{ $t('imageAltCismar2') }}
-        </figcaption>
-      </figure>
-
-      <p class="mt-6 text-center">
-        {{ $t('textDiscoverCismar') }}
-        <a href="#" class="text-blue-500 font-semibold hover:underline">
-          {{ $t('linkDiscoverCismar') }}
-        </a>
-      </p>
-    </div>
-
-    <!-- Sezione 2 -->
-    <div class="mb-10">
-      <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
-        {{ $t('titleLobster') }}
-      </h1>
-      <p class="mb-4">{{ $t('contentLobster1') }}</p>
-
-      <!-- Immagine 1 sezione 2 -->
-      <figure
-        class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-        @click="openModal(imageSrcLobster1)"
-      >
-        <img
-          :src="imageSrcLobster1"
-          :alt="$t('imageAltLobster1')"
-          class="h-105 w-full object-cover rounded-lg shadow-xl"
-        />
-        <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-          {{ $t('imageAltLobster1') }}
-        </figcaption>
-      </figure>
-
-      <p class="mb-4">{{ $t('contentLobster2') }}</p>
-
-      <!-- Immagine 2 sezione 2 -->
-      <figure
-        class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-        @click="openModal(imageSrcLobster2)"
-      >
-        <img
-          :src="imageSrcLobster2"
-          :alt="$t('imageAltLobster2')"
-          class="h-80 w-full object-cover rounded-lg shadow-xl"
-        />
-        <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-          {{ $t('imageAltLobster2') }}
-        </figcaption>
-      </figure>
-
-      <p class="mb-6">{{ $t('contentLobster3') }}</p>
-
-      <!-- LobsterStages Component -->
-      <div class="mt-8 text-center border-2 rounded-xl shadow-lg">
-        <LobsterStages />
+  <section class="bg-custom-beige text-gray-800 px-8 py-8 text-justify w-full">
+    <div class="max-w-7xl mx-auto">
+      <!-- Sezione 1 -->
+      <div class="mb-10">
+        <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
+          {{ $t('titleCismar') }}
+        </h1>
+        <p class="mb-4">{{ $t('contentCismar1') }}</p>
+        <p v-html="sanitizedContentCismar2()" class="mb-3"></p>
+        <p class="mb-4">{{ $t('contentCismar3') }}</p>
+        <!-- Immagine 1 sezione 1-->
+        <figure
+          class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+          @click="openModal(imageSrcCismar1)"
+        >
+          <img
+            :src="imageSrcCismar1"
+            :alt="$t('imageAltCismar1')"
+            class="h-96 w-full object-cover rounded-lg shadow-xl"
+          />
+          <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+            {{ $t('imageAltCismar1') }}
+          </figcaption>
+        </figure>
+        <p class="mb-6">{{ $t('contentCismar4') }}</p>
+        <!-- Immagine 2 sezione 1-->
+        <figure
+          class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+          @click="openModal(imageSrcCismar2)"
+        >
+          <img
+            :src="imageSrcCismar2"
+            :alt="$t('imageAltCismar2')"
+            class="h-96 w-full object-cover rounded-lg shadow-xl"
+          />
+          <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+            {{ $t('imageAltCismar2') }}
+          </figcaption>
+        </figure>
+        <p class="mt-6 text-center">
+          {{ $t('textDiscoverCismar') }}
+          <router-link to="/under-construction" class="text-blue-500 font-semibold hover:underline">
+            {{ $t('linkDiscoverCismar') }}
+          </router-link>
+        </p>
       </div>
-    </div>
-
-    <!-- Sezione 3 -->
-    <div class="mb-10">
-      <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
-        {{ $t('titleTraining') }}
-      </h1>
-      <p class="mb-4">{{ $t('contentTraining1') }}</p>
-      <p class="mb-4">{{ $t('contentTraining2') }}</p>
-
-      <!-- Immagini sezione 3 -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Sezione 2 -->
+      <div class="mb-10">
+        <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
+          {{ $t('titleLobster') }}
+        </h1>
+        <p class="mb-4">{{ $t('contentLobster1') }}</p>
+        <!-- Immagine 1 sezione 2 -->
         <figure
-          class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-          @click="openModal(imageSrcTraining1)"
+          class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+          @click="openModal(imageSrcLobster1)"
         >
           <img
-            :src="imageSrcTraining1"
-            :alt="$t('imageAltTraining1')"
-            class="w-full h-64 object-cover rounded-lg shadow-xl"
+            :src="imageSrcLobster1"
+            :alt="$t('imageAltLobster1')"
+            class="h-105 w-full object-cover rounded-lg shadow-xl"
           />
           <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-            {{ $t('imageAltTraining1') }}
+            {{ $t('imageAltLobster1') }}
           </figcaption>
         </figure>
-
+        <p class="mb-4">{{ $t('contentLobster2') }}</p>
+        <!-- Immagine 2 sezione 2 -->
         <figure
-          class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-          @click="openModal(imageSrcTraining2)"
+          class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+          @click="openModal(imageSrcLobster2)"
         >
           <img
-            :src="imageSrcTraining2"
-            :alt="$t('imageAltTraining2')"
-            class="w-full h-64 object-cover rounded-lg shadow-xl"
-          />
-          <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-            {{ $t('imageAltTraining2') }}
-          </figcaption>
-        </figure>
-
-        <figure
-          class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-          @click="openModal(imageSrcTraining3)"
-        >
-          <img
-            :src="imageSrcTraining3"
-            :alt="$t('imageAltTraining3')"
-            class="w-full h-64 object-cover rounded-lg shadow-xl"
-          />
-          <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-            {{ $t('imageAltTraining3') }}
-          </figcaption>
-        </figure>
-      </div>
-
-      <p class="mb-6">{{ $t('contentTraining3') }}</p>
-
-      <!-- Immagine sezione 3 -->
-      <figure
-        class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-        @click="openModal(imageSrcTraining4)"
-      >
-        <img
-          :src="imageSrcTraining4"
-          :alt="$t('imageAltTraining4')"
-          class="h-96 w-full object-cover rounded-lg shadow-xl"
-        />
-        <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-          {{ $t('imageAltTraining4') }}
-        </figcaption>
-      </figure>
-    </div>
-
-    <!-- Sezione 4 -->
-    <div>
-      <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
-        {{ $t('titleRelease') }}
-      </h1>
-      <p class="mb-4">{{ $t('contentRelease1') }}</p>
-      <p class="mb-4">{{ $t('contentRelease2') }}</p>
-      <p class="mb-6">{{ $t('contentRelease3') }}</p>
-
-      <!-- Immagini sezione 4 -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <figure
-          class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-          @click="openModal(imageSrcRelease1)"
-        >
-          <img
-            :src="imageSrcRelease1"
-            :alt="$t('imageAltRelease1')"
+            :src="imageSrcLobster2"
+            :alt="$t('imageAltLobster2')"
             class="h-80 w-full object-cover rounded-lg shadow-xl"
           />
           <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-            {{ $t('imageAltRelease1') }}
+            {{ $t('imageAltLobster2') }}
           </figcaption>
         </figure>
-
+        <p class="mb-6">{{ $t('contentLobster3') }}</p>
+        <!-- LobsterStages Component -->
+        <div class="mt-8 text-center border-2 rounded-xl shadow-lg">
+          <LobsterStages />
+        </div>
+      </div>
+      <!-- Sezione 3 -->
+      <div class="mb-10">
+        <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
+          {{ $t('titleTraining') }}
+        </h1>
+        <p class="mb-4">{{ $t('contentTraining1') }}</p>
+        <p class="mb-4">{{ $t('contentTraining2') }}</p>
+        <!-- Immagini sezione 3 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <figure
+            class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+            @click="openModal(imageSrcTraining1)"
+          >
+            <img
+              :src="imageSrcTraining1"
+              :alt="$t('imageAltTraining1')"
+              class="w-full h-64 object-cover rounded-lg shadow-xl"
+            />
+            <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+              {{ $t('imageAltTraining1') }}
+            </figcaption>
+          </figure>
+          <figure
+            class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+            @click="openModal(imageSrcTraining2)"
+          >
+            <img
+              :src="imageSrcTraining2"
+              :alt="$t('imageAltTraining2')"
+              class="w-full h-64 object-cover rounded-lg shadow-xl"
+            />
+            <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+              {{ $t('imageAltTraining2') }}
+            </figcaption>
+          </figure>
+          <figure
+            class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+            @click="openModal(imageSrcTraining3)"
+          >
+            <img
+              :src="imageSrcTraining3"
+              :alt="$t('imageAltTraining3')"
+              class="w-full h-64 object-cover rounded-lg shadow-xl"
+            />
+            <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+              {{ $t('imageAltTraining3') }}
+            </figcaption>
+          </figure>
+        </div>
+        <p class="mb-6">{{ $t('contentTraining3') }}</p>
+        <!-- Immagine sezione 3 -->
         <figure
-          class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-          @click="openModal(imageSrcRelease2)"
+          class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+          @click="openModal(imageSrcTraining4)"
         >
           <img
-            :src="imageSrcRelease2"
-            :alt="$t('imageAltRelease2')"
-            class="h-80 w-full object-cover rounded-lg shadow-xl"
+            :src="imageSrcTraining4"
+            :alt="$t('imageAltTraining4')"
+            class="h-96 w-full object-cover rounded-lg shadow-xl"
           />
           <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-            {{ $t('imageAltRelease2') }}
+            {{ $t('imageAltTraining4') }}
           </figcaption>
         </figure>
       </div>
-      <!-- Video rilascio -->
-      <div class="text-center my-8">
-        <button
-          @click="showVideoModal = true"
-          class="bg-custom-blue-lobster text-white px-6 py-3 rounded-full shadow-md hover:bg-gray-300 hover:text-custom-blue-lobster hover:font-semibold transition"
-        >
-          {{ $t('watchVideoConservation') }}
-        </button>
+      <!-- Sezione 4 -->
+      <div>
+        <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
+          {{ $t('titleRelease') }}
+        </h1>
+        <p class="mb-4">{{ $t('contentRelease1') }}</p>
+        <p class="mb-4">{{ $t('contentRelease2') }}</p>
+        <p class="mb-6">{{ $t('contentRelease3') }}</p>
+        <!-- Immagini sezione 4 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <figure
+            class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+            @click="openModal(imageSrcRelease1)"
+          >
+            <img
+              :src="imageSrcRelease1"
+              :alt="$t('imageAltRelease1')"
+              class="h-80 w-full object-cover rounded-lg shadow-xl"
+            />
+            <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+              {{ $t('imageAltRelease1') }}
+            </figcaption>
+          </figure>
+          <figure
+            class="w-full mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+            @click="openModal(imageSrcRelease2)"
+          >
+            <img
+              :src="imageSrcRelease2"
+              :alt="$t('imageAltRelease2')"
+              class="h-80 w-full object-cover rounded-lg shadow-xl"
+            />
+            <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+              {{ $t('imageAltRelease2') }}
+            </figcaption>
+          </figure>
+        </div>
+        <!-- Video rilascio -->
+        <div class="text-center my-8">
+          <button
+            @click="showVideoModal = true"
+            class="bg-custom-blue-lobster text-white px-6 py-3 rounded-full shadow-md hover:bg-gray-300 hover:text-custom-blue-lobster hover:font-semibold transition"
+          >
+            {{ $t('watchVideoConservation') }}
+          </button>
+        </div>
       </div>
-    </div>
-
-    <!-- Modal per il video -->
-    <div
-      v-if="showVideoModal"
-      class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-    >
-      <div class="relative w-11/12 max-w-3xl bg-black rounded-lg shadow-lg">
-        <video
-          src="@/assets/video/video-hero-banner-extended-low.mp4"
-          controls
-          autoplay
-          muted
-          class="w-full h-auto rounded-lg"
-        ></video>
-        <button
-          @click="showVideoModal = false"
-          class="absolute top-3 right-3 bg-white opacity-60 text-black rounded-full py-1 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
-        >
-          ✕
-        </button>
+      <!-- Modal per il video -->
+      <div
+        v-if="showVideoModal"
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+      >
+        <div class="relative w-11/12 max-w-3xl bg-black rounded-lg shadow-lg">
+          <video
+            src="@/assets/video/video-hero-banner-extended-low.mp4"
+            controls
+            autoplay
+            muted
+            class="w-full h-auto rounded-lg"
+          ></video>
+          <button
+            @click="showVideoModal = false"
+            class="absolute top-3 right-3 bg-white opacity-60 text-black rounded-full py-1 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+          >
+            ✕
+          </button>
+        </div>
       </div>
-    </div>
-
-    <!-- Modal per immagine grande -->
-    <div
-      v-if="showImageModal"
-      class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-      @click="closeImageModal"
-    >
-      <div class="relative w-3/4 max-w-3xl p-12">
-        <img
-          :src="selectedImage"
-          alt="Immagine ingrandita"
-          class="w-full h-auto rounded-lg border-4 border-white"
-        />
-        <button
-          @click="closeImageModal"
-          class="absolute top-14 right-14 bg-white opacity-60 text-black rounded-full py-1 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
-        >
-          ✕
-        </button>
+      <!-- Modal per immagine grande -->
+      <div
+        v-if="showImageModal"
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+        @click="closeImageModal"
+      >
+        <div class="relative w-3/4 max-w-3xl px-32 py-12">
+          <img
+            :src="selectedImage"
+            alt="Immagine ingrandita"
+            class="w-full h-auto rounded-lg border-4 border-white"
+          />
+          <button
+            @click="closeImageModal"
+            class="absolute top-14 right-35 bg-white opacity-60 text-black rounded-full py-1 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+          >
+            ✕
+          </button>
+        </div>
       </div>
     </div>
   </section>
