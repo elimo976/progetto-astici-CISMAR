@@ -8,8 +8,8 @@
       <p class="mb-4">{{ $t('contentCismar1') }}</p>
       <p v-html="sanitizedContentCismar2()" class="mb-3"></p>
       <p class="mb-4">{{ $t('contentCismar3') }}</p>
-      <p class="mb-6">{{ $t('contentCismar4') }}</p>
-      <!-- Immagine sezione 1-->
+
+      <!-- Immagine 1 sezione 1-->
       <div
         class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
         @click="openModal(imageSrcCismar1)"
@@ -21,6 +21,22 @@
         />
         <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
           {{ $t('imageAltCismar1') }}
+        </figcaption>
+      </div>
+
+      <p class="mb-6">{{ $t('contentCismar4') }}</p>
+      <!-- Immagine 2 sezione 1-->
+      <div
+        class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+        @click="openModal(imageSrcCismar2)"
+      >
+        <img
+          :src="imageSrcCismar2"
+          :alt="$t('imageAltCismar2')"
+          class="w-full object-cover rounded-lg"
+        />
+        <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+          {{ $t('imageAltCismar2') }}
         </figcaption>
       </div>
 
@@ -38,26 +54,43 @@
         {{ $t('titleLobster') }}
       </h1>
       <p class="mb-4">{{ $t('contentLobster1') }}</p>
-      <p class="mb-4">{{ $t('contentLobster2') }}</p>
-      <p class="mb-6">{{ $t('contentLobster3') }}</p>
 
-      <!-- Immagine sezione 2 -->
+      <!-- Immagine 1 sezione 2 -->
       <div
         class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-        @click="openModal(imageSrcLobster)"
+        @click="openModal(imageSrcLobster1)"
       >
         <img
-          :src="imageSrcLobster"
-          :alt="$t('imageAltLobster')"
+          :src="imageSrcLobster1"
+          :alt="$t('imageAltLobster1')"
           class="w-full object-cover rounded-lg"
         />
         <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-          {{ $t('imageAltLobster') }}
+          {{ $t('imageAltLobster1') }}
         </figcaption>
       </div>
 
+      <p class="mb-4">{{ $t('contentLobster2') }}</p>
+
+      <!-- Immagine 2 sezione 2 -->
+      <div
+        class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+        @click="openModal(imageSrcLobster2)"
+      >
+        <img
+          :src="imageSrcLobster2"
+          :alt="$t('imageAltLobster2')"
+          class="w-full object-cover rounded-lg"
+        />
+        <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+          {{ $t('imageAltLobster2') }}
+        </figcaption>
+      </div>
+
+      <p class="mb-6">{{ $t('contentLobster3') }}</p>
+
       <!-- LobsterStages Component -->
-      <div class="mt-8 text-center">
+      <div class="mt-8 text-center border-2 shadow-lg">
         <LobsterStages />
       </div>
     </div>
@@ -69,7 +102,6 @@
       </h1>
       <p class="mb-4">{{ $t('contentTraining1') }}</p>
       <p class="mb-4">{{ $t('contentTraining2') }}</p>
-      <p class="mb-6">{{ $t('contentTraining3') }}</p>
 
       <!-- Immagini sezione 3 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -115,6 +147,8 @@
           </figcaption>
         </div>
       </div>
+
+      <p class="mb-6">{{ $t('contentTraining3') }}</p>
     </div>
 
     <!-- Sezione 4 -->
@@ -217,13 +251,15 @@ import { ref, defineComponent } from 'vue'
 import DOMPurify from 'dompurify'
 import LobsterStages from '@/pages/LobsterStages.vue'
 
-import imageSrcCismar1 from '@/assets/images/fotoDefault.jpg'
-import imageSrcLobster from '@/assets/images/fotoDefault.jpg'
-import imageSrcTraining1 from '@/assets/images/fotoDefault.jpg'
-import imageSrcTraining2 from '@/assets/images/fotoDefault.jpg'
-import imageSrcTraining3 from '@/assets/images/fotoDefault.jpg'
-import imageSrcRelease1 from '@/assets/images/fotoDefault.jpg'
-import imageSrcRelease2 from '@/assets/images/fotoDefault.jpg'
+import imageSrcCismar1 from '@/assets/images/asticeAdulto.jpg'
+import imageSrcCismar2 from '@/assets/images/aquahiveLoaded.jpg'
+import imageSrcLobster1 from '@/assets/images/lobsterStage1.jpg'
+import imageSrcLobster2 from '@/assets/images/uova.jpg'
+import imageSrcTraining1 from '@/assets/images/asticeGiovane.jpg'
+import imageSrcTraining2 from '@/assets/images/asticeTana1.jpg'
+import imageSrcTraining3 from '@/assets/images/asticeTana2.jpg'
+import imageSrcRelease1 from '@/assets/images/asticiniProvette.jpg'
+import imageSrcRelease2 from '@/assets/images/prinAstice.jpg'
 
 export default defineComponent({
   name: 'ConservationPage',
@@ -255,7 +291,9 @@ export default defineComponent({
       showImageModal,
       selectedImage,
       imageSrcCismar1,
-      imageSrcLobster,
+      imageSrcCismar2,
+      imageSrcLobster1,
+      imageSrcLobster2,
       imageSrcTraining1,
       imageSrcTraining2,
       imageSrcTraining3,

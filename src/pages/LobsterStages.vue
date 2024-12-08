@@ -107,7 +107,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import lobsterStage1 from '@/assets/images/lobsterStage1.png'
+import lobsterStage1 from '@/assets/images/lobsterStage1.jpg'
 import lobsterStage2 from '@/assets/images/lobsterStage2.jpg'
 import lobsterStage3 from '@/assets/images/lobsterStage3.jpg'
 import lobsterStage4 from '@/assets/images/lobsterStage4.jpg'
