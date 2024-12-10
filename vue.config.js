@@ -2,7 +2,7 @@ import * as path from 'path'
 
 module.exports = {
   // Definisce il percorso pubblico per il deploy su GitHub Pages (come hai già fatto)
-  publicPath: '/progetto-homarus-gammarus/',
+  publicPath: '/progetto-astici-CISMAR/',
 
   // Configurazione di Webpack
   configureWebpack: {
