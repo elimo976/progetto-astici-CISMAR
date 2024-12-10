@@ -118,7 +118,7 @@
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 
 interface MenuItem {
   title: string
@@ -134,7 +134,8 @@ const isLgOrLarger = ref(false)
 
 const { t, locale } = useI18n()
 
-const router = useRouter() // Ottieni il router
+const router = useRouter()
+const route = useRoute() // Per ottenere la rotta corrente
 
 const menuItems = ref<MenuItem[]>([])
 
@@ -185,6 +186,14 @@ const updateMenuItems = () => {
 
 watch(() => locale.value, updateMenuItems, { immediate: true })
 
+// Chiudi il menu quando cambia la rotta
+watch(
+  () => route.path,
+  () => {
+    menuOpen.value = false
+  },
+)
+
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value
 }
@@ -216,8 +225,6 @@ onMounted(() => {
 
 // Funzione per lo scroll all'ancoraggio
 const scrollToAnchor = (link: string) => {
-  console.log('Router:', router) // Verifica se il router è definito
-
   if (router) {
     if (link.startsWith('#')) {
       const element = document.querySelector(link)
@@ -227,8 +234,10 @@ const scrollToAnchor = (link: string) => {
           block: 'start',
         })
       }
+      menuOpen.value = false // Chiudi il menu anche per le ancore
     } else {
       router.push(link)
+      menuOpen.value = false // Chiudi il menu per le altre rotte
     }
   } else {
     console.error('Router non trovato')
