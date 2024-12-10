@@ -6,7 +6,7 @@ export default {
 
       <p>È quindi importante che il mondo della ricerca contribuisca a diffondere una sempre maggiore comprensione non solo degli impatti che le attività umane determinano sulla biodiversità marina, ma anche delle nuove e sempre più avanzate soluzioni scientifiche disponibili. Pertanto, la Divulgazione delle Conoscenze sulla conservazione e gestione della biodiversità marina dovrebbe essere una priorità per le università e gli enti di ricerca.</p>
 
-      <p>L’università degli studi della Tuscia da tempo coniuga ricerca e didattica nel settore dell’ecologia e biologia marina grazie alle attività del Dipartimento di Scienze Ecologiche e Biologiche (DEB) presso il Centro Ittiogenico Marino Sperimentale delle Saline di Tarquinia (CISMAR).</p>
+      <p>L’Università degli Studi della Tuscia da tempo coniuga ricerca e didattica nel settore dell’ecologia e biologia marina grazie alle attività del Dipartimento di Scienze Ecologiche e Biologiche (DEB) presso il Centro Ittiogenico Marino Sperimentale delle Saline di Tarquinia (CISMAR).</p>
 
       <p>Il programma di ripopolamento di astici europei è stato al centro di molte delle attività di Divulgazione delle Conoscenze condotte dal DEB. I programmi di ripopolamento si prestano infatti ad aumentare la consapevolezza dei cittadini, dei pescatori e anche delle Istituzioni sulla necessità di pratiche di pesca sostenibili e, più in generale, sull'importanza della conservazione delle risorse marine.</p>
     `,
