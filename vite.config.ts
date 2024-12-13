@@ -12,4 +12,6 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  // Configura il percorso base per il dominio principale
+  base: '/',
 })
