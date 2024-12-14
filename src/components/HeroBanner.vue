@@ -2,18 +2,19 @@
   <section class="w-full">
     <div class="relative w-full shadow-lg">
       <!-- Video di sfondo -->
-      <video
-        src="@/assets/video/video-hero-banner.mp4"
-        autoplay
-        loop
-        muted
-        class="w-full shadow-lg"
-      ></video>
+      <video autoplay loop muted class="w-full shadow-lg">
+        <!-- Video per schermi grandi -->
+        <source src="@/assets/video/video-hero-banner.mp4" media="(min-width: 1024px)" />
+        <!-- Video per schermi medi e piccoli -->
+        <source src="@/assets/video/video-hero-banner-low.mp4" media="(max-width: 1023px)" />
+        <!-- Fallback -->
+        Your browser does not support the video tag.
+      </video>
 
       <!-- Bottone 'Guarda il video' -->
       <button
         @click="showVideoModal = true"
-        class="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 backdrop-blur-md bg-white/30 border-2 border-custom-blue-lobster text-white px-8 py-4 text-lg font-semibold rounded-full shadow-md hover:bg-white/50 hover:scale-105 transition-all duration-300"
+        class="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 translate-y-2/3 backdrop-blur-md bg-white/30 border-2 border-custom-blue-lobster text-white lg:px-8 lg:py-4 px-6 py-3 lg:text-lg text-sm font-semibold rounded-full shadow-md hover:bg-white/50 lg:hover:scale-105 hover:scale-110 active:scale-110 transition-all duration-300"
       >
         {{ $t('button') }}
       </button>
@@ -28,7 +29,7 @@
       class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
     >
       <div class="relative w-11/12 max-w-3xl bg-black rounded-lg shadow-lg">
-        <!-- Video -->
+        <!-- Video unico per tutti gli schermi -->
         <video
           src="@/assets/video/video-hero-banner-extended-low.mp4"
           controls

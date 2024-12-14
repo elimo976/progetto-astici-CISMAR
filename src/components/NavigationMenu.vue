@@ -13,7 +13,7 @@
     <!-- Menu laterale per schermi piccoli -->
     <div
       v-if="menuOpen && !isMdOrLarger"
-      class="fixed top-0 right-0 bg-custom-blue text-white w-64 py-4 px-6 h-full shadow-lg z-50"
+      class="fixed top-0 right-0 bg-custom-blue text-white w-64 py-4 px-6 h-full shadow-lg z-50 overflow-y-auto max-h-screen"
     >
       <button @click="toggleMenu" class="text-white text-2xl absolute top-4 right-4">
         <span class="block w-6 h-0.5 bg-white mb-1 rotate-45 transform origin-center"></span>
@@ -21,18 +21,26 @@
       </button>
       <div class="space-y-4 mt-8">
         <div v-for="item in menuItems" :key="item.title">
+          <!-- Voce di menu -->
           <div
             class="flex justify-between items-center cursor-pointer"
-            @click="toggleSubmenu(item)"
+            @click="item.children ? toggleSubmenu(item) : scrollToAnchor(item.link)"
           >
             <RouterLink
               :to="item.link"
               class="text-xl py-2 block focus:text-gray-800 active:text-gray-600"
-              @click="scrollToAnchor(item.link)"
-              >{{ item.title }}</RouterLink
+              @click="item.children ? $event.preventDefault() : scrollToAnchor(item.link)"
             >
-            <span v-if="item.children" class="text-xl">{{ item.submenuOpen ? '−' : '▿' }}</span>
+              {{ item.title }}
+            </RouterLink>
+
+            <!-- Simbolo accanto alla voce -->
+            <span v-if="item.children" class="text-2xl" @click.stop="toggleSubmenu(item)">
+              {{ item.submenuOpen ? '−' : '▿' }}
+            </span>
           </div>
+
+          <!-- Sottomenu -->
           <div v-if="item.submenuOpen" class="pl-4">
             <RouterLink
               v-for="subItem in item.children"
@@ -40,8 +48,9 @@
               :to="subItem.link"
               @click="scrollToAnchor(subItem.link)"
               class="block py-1 text-lg focus:text-custom-blue-navy active:text-custom-blue-navy"
-              >{{ subItem.title }}</RouterLink
             >
+              {{ subItem.title }}
+            </RouterLink>
           </div>
         </div>
       </div>
@@ -199,6 +208,14 @@ const toggleMenu = () => {
 }
 
 const toggleSubmenu = (item: MenuItem) => {
+  // Chiude tutti gli altri sottomenu
+  menuItems.value.forEach((menuItem) => {
+    if (menuItem !== item) {
+      menuItem.submenuOpen = false
+    }
+  })
+
+  // Toggle dello stato del sottomenu selezionato
   item.submenuOpen = !item.submenuOpen
 }
 

@@ -39,7 +39,7 @@
           class="flex flex-col lg:flex-row-reverse items-center space-x-0 lg:space-x-[clamp(1rem, 2vw, 1.5rem)] space-y-6 lg:mb-6 mb-10"
         >
           <img
-            src="@/assets/images/cavalluccio.jpg"
+            src="@/assets/images/cavalluccioTondino.jpg"
             alt="Cavalluccio"
             class="w-48 h-48 lg:w-72 lg:h-72 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
             @click="openModal('cavalluccio.jpg')"
@@ -293,7 +293,7 @@
           class="flex flex-col lg:flex-row-reverse items-center space-x-0 lg:space-x-[clamp(1rem, 2vw, 1.5rem)] space-y-6 mb-10"
         >
           <img
-            src="@/assets/images/astice2.jpg"
+            src="@/assets/images/astice2Tondino.jpg"
             alt="Astice 1"
             class="w-48 h-48 lg:w-72 lg:h-72 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
             @click="openModal('astice2.jpg')"
