@@ -2,18 +2,23 @@
   <section class="w-full">
     <div class="relative w-full shadow-lg">
       <!-- Video di sfondo -->
-      <video autoplay loop muted class="w-full shadow-lg">
-        <!-- Video per schermi grandi -->
+      <video
+        ref="heroVideo"
+        playsinline
+        autoplay
+        loop
+        muted
+        preload="auto"
+        class="w-full shadow-lg"
+      >
         <source src="@/assets/video/video-hero-banner.mp4" media="(min-width: 1024px)" />
-        <!-- Video per schermi medi e piccoli -->
         <source src="@/assets/video/video-hero-banner-low.mp4" media="(max-width: 1023px)" />
-        <!-- Fallback -->
         Your browser does not support the video tag.
       </video>
 
       <!-- Bottone 'Guarda il video' -->
       <button
-        @click="showVideoModal = true"
+        @click="openVideoModal"
         class="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 translate-y-2/3 backdrop-blur-md bg-white/30 border-2 border-custom-blue-lobster text-white lg:px-8 lg:py-4 px-6 py-3 lg:text-lg text-sm font-semibold rounded-full shadow-md hover:bg-white/50 lg:hover:scale-105 hover:scale-110 active:scale-110 transition-all duration-300"
       >
         {{ $t('button') }}
@@ -31,16 +36,18 @@
       <div class="relative w-11/12 max-w-3xl bg-black rounded-lg shadow-lg">
         <!-- Video unico per tutti gli schermi -->
         <video
+          ref="popupVideo"
           src="@/assets/video/video-hero-banner-extended-low.mp4"
+          preload="auto"
           controls
-          autoplay
           muted
+          playsinline
           class="w-full h-auto rounded-lg"
         ></video>
 
         <!-- Pulsante di chiusura -->
         <button
-          @click="showVideoModal = false"
+          @click="closeVideoModal"
           class="absolute top-3 right-3 bg-white opacity-60 text-black rounded-full py-1 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
         >
           ✕
@@ -51,9 +58,47 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import ScrollTopButton from '@/components/ScrollTopButton.vue' // Importa il componente
+import { ref, onMounted } from 'vue'
+import ScrollTopButton from '@/components/ScrollTopButton.vue'
 
 // Stato per controllare l'apertura del modal
 const showVideoModal = ref(false)
+
+// Riferimenti ai video
+const heroVideo = ref<HTMLVideoElement | null>(null)
+const popupVideo = ref<HTMLVideoElement | null>(null)
+
+// Funzione per forzare il play del video di sfondo su Safari (dispositivi iOS)
+const playVideoOnLoad = () => {
+  if (heroVideo.value) {
+    heroVideo.value.play().catch((error) => {
+      console.error('Errore nel tentativo di avviare il video di sfondo:', error)
+    })
+  }
+}
+
+// Funzione per forzare il play del video del popup su Safari (dispositivi iOS)
+const playPopupVideoOnLoad = () => {
+  if (popupVideo.value) {
+    popupVideo.value.play().catch((error) => {
+      console.error('Errore nel tentativo di avviare il video del popup:', error)
+    })
+  }
+}
+
+onMounted(() => {
+  playVideoOnLoad()
+})
+
+// Funzione per aprire il modal e avviare il video del popup
+const openVideoModal = () => {
+  showVideoModal.value = true
+  // Forza il play del video del popup appena il modal è aperto
+  playPopupVideoOnLoad()
+}
+
+// Funzione per chiudere il modal
+const closeVideoModal = () => {
+  showVideoModal.value = false
+}
 </script>
