@@ -82,7 +82,7 @@
 
       <!-- Descrizione delle fasi per small device -->
       <div
-        class="flex flex-col sm:w-1/3 sm:justify-between xs:justify-between sm:pt-6 sm:pb-24 xs:mt-32 xs:ml-0 xs:pt-6 xs:pb-20 xs:gap-22 mt-8 ml-4 xs:mr-2 md:hidden"
+        class="flex flex-col w-full sm:w-1/3 sm:justify-between xs:justify-between sm:pt-6 sm:pb-24 xs:pt-24 xs:pb-6 xs:ml-0 mt-8 ml-4 xs:mr-2 md:hidden"
       >
         <div v-for="(phase, index) in phases" :key="index" class="flex items-center">
           <!-- Linea con colore dinamico a sinistra della descrizione -->
@@ -97,7 +97,7 @@
           ></div>
           <!-- Testo della descrizione -->
           <p
-            class="mb-0 text-xl font-medium text-gray-500 sm:block xs:pb-1"
+            class="mb-0 text-xl font-medium xs:text-lg text-gray-500 sm:block xs:pb-1"
             :style="{ marginTop: 'calc(1rem + (50px * index))' }"
           >
             {{ $t(phase.description) }}
