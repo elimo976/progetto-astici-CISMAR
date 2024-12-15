@@ -45,7 +45,7 @@ export default {
   `,
     imageAltTraining1: 'Giovane astice',
     imageAltTraining2: 'Astice nella tana',
-    imageAltTraining3: 'Astice nella tana.',
+    imageAltTraining3: 'Astice nella tana',
     imageAltTraining4: 'Labwork - credits: Czapp Árpád',
 
     // Release

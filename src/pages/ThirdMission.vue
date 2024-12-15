@@ -32,23 +32,34 @@
       </div>
 
       <!-- Loghi con separatori centrati sotto il testo -->
-      <div class="mt-4 flex justify-center items-center gap-10">
+      <div
+        class="mt-4 flex flex-wrap justify-center items-center gap-6 px-4 lg:flex-nowrap lg:h-32"
+      >
+        <!-- Logo Unitus -->
         <img
           src="@/assets/loghi/logo-unitus.png"
           alt="Logo Unitus"
-          class="h-25 lg:h-29 object-contain"
+          class="h-16 lg:h-full object-contain max-w-[100px] md:max-w-[30%]"
         />
-        <div class="h-24 w-px bg-gray-400"></div>
+
+        <!-- Linea di separazione -->
+        <div class="hidden lg:block h-4/5 w-px bg-gray-400"></div>
+
+        <!-- Logo Tecnopolo -->
         <img
           src="@/assets/loghi/logo-tecnopolo.png"
           alt="Logo Tecnopolo"
-          class="h-24 lg:h-28 object-contain"
+          class="h-16 lg:h-full object-contain max-w-[100px] md:max-w-[30%]"
         />
-        <div class="h-24 w-px bg-gray-400"></div>
+
+        <!-- Linea di separazione -->
+        <div class="hidden lg:block h-4/5 w-px bg-gray-400"></div>
+
+        <!-- Logo Cismar -->
         <img
           src="@/assets/loghi/logo-cismar.png"
           alt="Logo Cismar"
-          class="h-10 lg:h-12 object-contain"
+          class="h-16 lg:h-full object-contain max-w-[100px] md:max-w-[30%]"
         />
       </div>
     </section>
