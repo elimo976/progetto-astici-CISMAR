@@ -1,13 +1,13 @@
 <template>
   <div class="py-12 px-16 bg-custom-beige">
     <!-- Titolo principale -->
-    <h1 class="text-5xl font-light text-center text-custom-blue-lobster mb-6 md:mb-10">
+    <h1 class="lg:text-5xl text-4xl font-light text-center text-custom-blue-lobster mb-6 md:mb-10">
       {{ $t('title') }}
     </h1>
 
     <!-- Introduzione -->
     <p
-      class="text-xl text-gray-800 leading-relaxed text-center max-w-4xl mx-auto mb-8 px-4 md:px-0"
+      class="text-xl text-gray-800 leading-relaxed lg:text-center text-left max-w-4xl mx-auto mb-8 px-4 md:px-0"
     >
       {{ $t('intro') }}
     </p>

@@ -1,29 +1,32 @@
 <template>
-  <section class="bg-custom-beige text-gray-800 px-8 py-8 text-justify w-full">
+  <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
       <!-- Sezione 1 -->
       <div class="mb-10">
         <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
           {{ $t('titleCismar') }}
         </h1>
-        <p class="mb-4">{{ $t('contentCismar1') }}</p>
-        <p v-html="sanitizedContentCismar2()" class="mb-3"></p>
-        <p class="mb-4">{{ $t('contentCismar3') }}</p>
+        <div class="max-w-[34rem] mx-auto xs:px-4">
+          <p class="mb-4">{{ $t('contentCismar1') }}</p>
+          <p v-html="sanitizedContentCismar2()" class="mb-3"></p>
+          <p class="mb-4">{{ $t('contentCismar3') }}</p>
+        </div>
         <!-- Immagine 1 sezione 1-->
         <figure
-          class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+          class="md:w-1/3 sm:w-2/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
           @click="openModal(imageSrcCismar1)"
         >
           <img
             :src="imageSrcCismar1"
             :alt="$t('imageAltCismar1')"
-            class="h-96 w-full object-cover rounded-lg shadow-xl"
+            class="aspect-square lg:w-4/5 w-full object-cover rounded-lg shadow-xl"
           />
           <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltCismar1') }}
           </figcaption>
         </figure>
-        <p class="mb-6">{{ $t('contentCismar4') }}</p>
+
+        <p class="mb-6 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentCismar4') }}</p>
         <!-- Immagine 2 sezione 1-->
         <figure
           class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
@@ -50,7 +53,7 @@
         <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
           {{ $t('titleLobster') }}
         </h1>
-        <p class="mb-4">{{ $t('contentLobster1') }}</p>
+        <p class="mb-4 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentLobster1') }}</p>
         <!-- Immagine 1 sezione 2 -->
         <figure
           class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
@@ -65,7 +68,7 @@
             {{ $t('imageAltLobster1') }}
           </figcaption>
         </figure>
-        <p class="mb-4">{{ $t('contentLobster2') }}</p>
+        <p class="mb-4 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentLobster2') }}</p>
         <!-- Immagine 2 sezione 2 -->
         <figure
           class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
@@ -80,7 +83,7 @@
             {{ $t('imageAltLobster2') }}
           </figcaption>
         </figure>
-        <p class="mb-6">{{ $t('contentLobster3') }}</p>
+        <p class="mb-6 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentLobster3') }}</p>
         <!-- LobsterStages Component -->
         <div class="mt-8 text-center border-2 rounded-xl shadow-lg">
           <LobsterStages />
@@ -91,8 +94,10 @@
         <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
           {{ $t('titleTraining') }}
         </h1>
-        <p class="mb-4">{{ $t('contentTraining1') }}</p>
-        <p class="mb-4">{{ $t('contentTraining2') }}</p>
+        <div class="max-w-[34rem] mx-auto xs:px-4">
+          <p class="mb-4">{{ $t('contentTraining1') }}</p>
+          <p class="mb-4">{{ $t('contentTraining2') }}</p>
+        </div>
         <!-- Immagini sezione 3 -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <figure
@@ -135,7 +140,7 @@
             </figcaption>
           </figure>
         </div>
-        <p class="mb-6">{{ $t('contentTraining3') }}</p>
+        <p class="mb-6 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentTraining3') }}</p>
         <!-- Immagine sezione 3 -->
         <figure
           class="w-1/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
@@ -156,9 +161,11 @@
         <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
           {{ $t('titleRelease') }}
         </h1>
-        <p class="mb-4">{{ $t('contentRelease1') }}</p>
-        <p class="mb-4">{{ $t('contentRelease2') }}</p>
-        <p class="mb-6">{{ $t('contentRelease3') }}</p>
+        <div class="max-w-[34rem] mx-auto xs:px-4">
+          <p class="mb-4">{{ $t('contentRelease1') }}</p>
+          <p class="mb-4">{{ $t('contentRelease2') }}</p>
+          <p class="mb-6">{{ $t('contentRelease3') }}</p>
+        </div>
         <!-- Immagini sezione 4 -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <figure
