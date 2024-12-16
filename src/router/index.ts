@@ -5,6 +5,14 @@ import ThirdMission from '@/pages/ThirdMission.vue'
 import MediaPage from '@/pages/MediaPage.vue'
 import UnderConstruction from '@/pages/UnderConstruction.vue'
 import ConservationPage from '@/pages/ConservationPage.vue'
+import TrainingPage from '@/pages/TrainingPage.vue'
+import HatcheryPage from '@/pages/HatcheryPage.vue'
+import ReleasePage from '@/pages/ReleasePage.vue'
+import ResearchPage from '@/pages/ResearchPage.vue'
+import BehaviorPage from '@/pages/BehaviorPage.vue'
+import GeneticsPage from '@/pages/GeneticsPage.vue'
+import ProjectsPage from '@/pages/ProjectsPage.vue'
+import PublicationsPage from '@/pages/PublicationsPage.vue'
 
 const routes = [
   {
@@ -23,14 +31,54 @@ const routes = [
     component: MediaPage,
   },
   {
-    path: '/under-construction',
-    name: 'UnderConstruction',
-    component: UnderConstruction,
-  },
-  {
     path: '/conservation',
     name: 'ConservationPage',
     component: ConservationPage,
+  },
+  {
+    path: '/hatchery',
+    name: 'HatcheryPage',
+    component: HatcheryPage,
+  },
+  {
+    path: '/training',
+    name: 'TrainingPage',
+    component: TrainingPage,
+  },
+  {
+    path: '/release',
+    name: 'ReleasePage',
+    component: ReleasePage,
+  },
+  {
+    path: '/research',
+    name: 'ResearchPage',
+    component: ResearchPage,
+  },
+  {
+    path: '/behavior',
+    name: 'BehaviorPage',
+    component: BehaviorPage,
+  },
+  {
+    path: '/genetics',
+    name: 'GeneticsPage',
+    component: GeneticsPage,
+  },
+  {
+    path: '/projects',
+    name: 'Projects',
+    component: ProjectsPage,
+  },
+  {
+    path: '/publications',
+    name: 'Publications',
+    component: PublicationsPage,
+  },
+  {
+    path: '/under-construction',
+    name: 'UnderConstruction',
+    component: UnderConstruction,
   },
   {
     // Catch-all route (fallback)

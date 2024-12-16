@@ -1,52 +1,46 @@
 <template>
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
-      <!-- Sezione 1 -->
+      <!-- Sezione 2 -->
       <div class="mb-10">
         <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
-          {{ $t('titleCismar') }}
+          {{ $t('titleLobster') }}
         </h1>
-        <div class="max-w-[34rem] mx-auto xs:px-4">
-          <p class="mb-4">{{ $t('contentCismar1') }}</p>
-          <p v-html="sanitizedContentCismar2()" class="mb-3"></p>
-          <p class="mb-4">{{ $t('contentCismar3') }}</p>
+        <p class="mb-4 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentLobster1') }}</p>
+        <!-- Immagine 1 sezione 2 -->
+        <figure
+          class="md:w-1/3 sm:w-2/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+          @click="openModal(imageSrcLobster1)"
+        >
+          <img
+            :src="imageSrcLobster1"
+            :alt="$t('imageAltLobster1')"
+            class="aspect-square lg:w-4/5 w-full object-cover rounded-lg shadow-xl"
+          />
+          <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+            {{ $t('imageAltLobster1') }}
+          </figcaption>
+        </figure>
+        <p class="mb-4 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentLobster2') }}</p>
+        <!-- Immagine 2 sezione 2 -->
+        <figure
+          class="md:w-1/3 sm:w-2/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+          @click="openModal(imageSrcLobster2)"
+        >
+          <img
+            :src="imageSrcLobster2"
+            :alt="$t('imageAltLobster2')"
+            class="aspect-square lg:w-4/5 w-full object-cover rounded-lg shadow-xl"
+          />
+          <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+            {{ $t('imageAltLobster2') }}
+          </figcaption>
+        </figure>
+        <p class="mb-6 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentLobster3') }}</p>
+        <!-- LobsterStages Component -->
+        <div class="mt-8 text-center border-2 rounded-xl shadow-lg">
+          <LobsterStages />
         </div>
-        <!-- Immagine 1 sezione 1-->
-        <figure
-          class="md:w-1/3 sm:w-2/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-          @click="openModal(imageSrcCismar1)"
-        >
-          <img
-            :src="imageSrcCismar1"
-            :alt="$t('imageAltCismar1')"
-            class="aspect-square lg:w-4/5 w-full object-cover rounded-lg shadow-xl"
-          />
-          <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-            {{ $t('imageAltCismar1') }}
-          </figcaption>
-        </figure>
-
-        <p class="mb-6 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentCismar4') }}</p>
-        <!-- Immagine 2 sezione 1-->
-        <figure
-          class="md:w-1/3 sm:w-2/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-          @click="openModal(imageSrcCismar2)"
-        >
-          <img
-            :src="imageSrcCismar2"
-            :alt="$t('imageAltCismar2')"
-            class="aspect-square lg:w-4/5 w-full object-cover rounded-lg shadow-xl"
-          />
-          <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-            {{ $t('imageAltCismar2') }}
-          </figcaption>
-        </figure>
-        <p class="mt-6 text-center">
-          {{ $t('textDiscoverCismar') }}
-          <router-link to="/under-construction" class="text-blue-500 font-semibold hover:underline">
-            {{ $t('linkDiscoverCismar') }}
-          </router-link>
-        </p>
       </div>
 
       <!-- Modal per immagine grande -->
@@ -75,13 +69,14 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
-import DOMPurify from 'dompurify'
+import LobsterStages from '@/pages/LobsterStages.vue'
 
-import imageSrcCismar1 from '@/assets/images/asticeAdulto.jpg'
-import imageSrcCismar2 from '@/assets/images/aquahiveLoaded.jpg'
+import imageSrcLobster1 from '@/assets/images/lobsterStage1.jpg'
+import imageSrcLobster2 from '@/assets/images/uova.jpg'
 
 export default defineComponent({
   name: 'ConservationPage',
+  components: { LobsterStages },
   setup() {
     const showImageModal = ref(false)
     const selectedImage = ref('')
@@ -96,21 +91,13 @@ export default defineComponent({
       selectedImage.value = ''
     }
 
-    const sanitizedContentCismar2 = () => {
-      // Usa una stringa come esempio del contenuto che vuoi sanificare
-      const rawHtml =
-        '<p>Nel caso dell’astice europeo un ostacolo iniziale importante è stato l’assenza di tecniche consolidate per l’allevamento. Essendo una specie non allevata per scopi commerciali, è stato necessario sviluppare da zero procedure e metodologie specifiche. Questo risultato è stato raggiunto grazie alle ricerche condotte dal <strong>CISMAR</strong>, il centro di eccellenza del DEB impegnato nello studio e nella conservazione dell’astice.</p>'
-      return DOMPurify.sanitize(rawHtml)
-    }
-
     return {
       showImageModal,
       selectedImage,
-      imageSrcCismar1,
-      imageSrcCismar2,
+      imageSrcLobster1,
+      imageSrcLobster2,
       openModal,
       closeImageModal,
-      sanitizedContentCismar2,
     }
   },
 })

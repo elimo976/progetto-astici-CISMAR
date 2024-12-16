@@ -108,7 +108,7 @@
         <div
           v-if="item.children && item.submenuOpen"
           class="absolute bg-custom-blue text-white mt-2 shadow-lg z-50 text-lg"
-          style="width: 260px"
+          style="width: 270px"
         >
           <RouterLink
             v-for="subItem in item.children"
@@ -165,17 +165,22 @@ const updateMenuItems = () => {
       link: '',
       submenuOpen: false,
       children: [
-        { title: t('releases'), link: '/conservation' },
-        { title: t('results'), link: '/under-construction' },
+        { title: t('cismarRole'), link: '/conservation' },
+        { title: t('hatchery'), link: '/hatchery' },
+        { title: t('training'), link: '/training' },
+        { title: t('release'), link: '/release' },
       ],
     },
     {
-      title: t('research'),
+      title: t('goals'),
       link: '',
       submenuOpen: false,
       children: [
-        { title: t('project'), link: '/under-construction' },
-        { title: t('publications'), link: '/under-construction' },
+        { title: t('research'), link: '/research' },
+        { title: t('behavior'), link: '/behavior' },
+        { title: t('genetics'), link: '/genetics' },
+        { title: t('projects'), link: '/projects' },
+        { title: t('publications'), link: '/publications' },
       ],
     },
     {

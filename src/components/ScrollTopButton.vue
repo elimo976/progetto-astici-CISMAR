@@ -2,7 +2,7 @@
   <div
     v-show="isVisible"
     @click="scrollToTop"
-    class="fixed z-50 bottom-5 right-5 bg-gray-100 text-custom-blue-navy p-3 rounded-full cursor-pointer transition-opacity duration-300 ease-in-out"
+    class="fixed z-50 bottom-5 right-5 bg-gray-200 border border-custom-blue-lobster shadow-lg text-custom-blue-lobster p-3 rounded-full cursor-pointer transition-opacity duration-300 ease-in-out"
     aria-label="Scroll to top"
   >
     <font-awesome-icon :icon="['fas', 'chevron-up']" class="text-2xl" />

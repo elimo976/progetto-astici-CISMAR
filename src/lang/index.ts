@@ -7,6 +7,7 @@ import HomePage from './HomePage'
 import LobsterStages from './LobsterStages'
 import MediaPage from './MediaPage'
 import NavigationMenu from './NavigationMenu'
+import ResearchPage from './ResearchPage'
 import ThirdMission from './ThirdMission'
 import UnderConstruction from './UnderConstruction'
 
@@ -36,6 +37,7 @@ const messages: Messages = {
     ...UnderConstruction.en,
     ...LobsterStages.en,
     ...ConservationPage.en,
+    ...ResearchPage.en,
   },
   it: {
     ...AppHeader.it,
@@ -49,6 +51,7 @@ const messages: Messages = {
     ...UnderConstruction.it,
     ...LobsterStages.it,
     ...ConservationPage.it,
+    ...ResearchPage.it,
   },
 }
 

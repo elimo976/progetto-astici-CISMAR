@@ -1,8 +1,8 @@
 <template>
   <footer
-    class="relative w-full bg-gradient-to-tl from-custom-blue-light to-custom-blue-lobster text-white px-12 py-8 md:px-24 md:py-12 mt-auto"
+    class="relative w-full bg-gradient-to-tl from-custom-blue-light to-custom-blue-lobster text-white py-8 xs:pl-52 pl-72 md:pl-48 md:py-12 lg:px-12 mt-auto"
   >
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-8">
       <!-- Colonna 1: Navigazione -->
       <div>
         <h2 class="font-bold mb-6">{{ $t('navigation') }}</h2>
@@ -24,7 +24,7 @@
           </li>
           <li>
             <RouterLink to="/third-mission" class="hover:text-custom-blue-light hover:underline">{{
-              $t('thirdMission')
+              $t('dissemination')
             }}</RouterLink>
           </li>
         </ul>
@@ -36,15 +36,13 @@
         <ul class="space-y-4">
           <li>
             <RouterLink to="/conservation" class="hover:text-custom-blue-light hover:underline">{{
-              $t('releases')
+              $t('cismarRole')
             }}</RouterLink>
           </li>
           <li>
-            <RouterLink
-              to="/under-construction"
-              class="hover:text-custom-blue-light hover:underline"
-              >{{ $t('results') }}</RouterLink
-            >
+            <RouterLink to="/release" class="hover:text-custom-blue-light hover:underline">{{
+              $t('release')
+            }}</RouterLink>
           </li>
           <li>
             <RouterLink
@@ -122,16 +120,18 @@
         />
       </svg>
     </div>
-
-    <!-- Credits -->
-    <div class="text-center mt-10 pt-6 text-md">
-      &copy; 2024
-      <a href="mailto:elisamorreale@gmail.com" class="hover:underline hover:text-red-800">
-        <span class="text-red-500">e</span>lisa<span class="text-red-500">m</span>orreale
-      </a>
-      . {{ $t('rightsReserved') }}.
-    </div>
   </footer>
+
+  <!-- Credits -->
+  <div
+    class="text-center py-3 text-md bg-gradient-to-bl from-custom-blue-light to-custom-blue-lobster text-white"
+  >
+    &copy; 2024
+    <a href="mailto:elisamorreale@gmail.com" class="hover:underline hover:text-red-800">
+      <span class="text-red-500">e</span>lisa<span class="text-red-500">m</span>orreale
+    </a>
+    . {{ $t('rightsReserved') }}.
+  </div>
 </template>
 
 <script setup lang="ts">
