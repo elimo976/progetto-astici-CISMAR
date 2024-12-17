@@ -27,6 +27,7 @@ export default {
     lobsterDescription2: `La sua crescita è lenta e avviene tramite mute successive, con individui che possono raggiungere anche i 50 cm di lunghezza e un peso superiore ai 5 kg. L’astice ha una vita riproduttiva lunga, e le femmine depongono fino a 20.000 uova ogni 1-2 anni, ma la sopravvivenza delle larve è estremamente bassa, rendendo la specie vulnerabile a pressioni esterne.`,
     lobsterDescription3: `In Italia, le popolazioni di astice sono in declino a causa della sovrapesca, dovuta anche alla pesca illegale di individui sotto la taglia minima (30 cm) e al prelevo durante la riproduzione. Di conseguenza, le catture sono diminuite, mentre la pressione della pesca è aumentata, rendendo necessarie misure di gestione più rigorose.`,
     lobsterDescription4: `La ricerca scientifica riveste un ruolo fondamentale nel monitoraggio degli stock dell’astice e nell’identificazione di strategie sostenibili. Interventi come la protezione degli habitat critici e il ripopolamento con individui allevati in cattività e potrebbero contribuire al recupero della specie.`,
+    readPaper: `Vai all'articolo`,
   },
 
   en: {
@@ -58,5 +59,6 @@ export default {
     lobsterDescription2: `Its growth is slow, occurring through successive molts, with individuals reaching up to 50 cm in length and weighing over 5 kg. The lobster has a long reproductive life, with females laying up to 20,000 eggs every 1-2 years, though larval survival rates are extremely low, making the species vulnerable to external pressures.`,
     lobsterDescription3: `In Italy, lobster populations are declining due to overfishing, which includes illegal fishing of individuals below the minimum size (30 cm) and harvesting during reproduction. Consequently, catches have decreased while fishing pressure has increased, necessitating stricter management measures.`,
     lobsterDescription4: `Scientific research plays a key role in monitoring lobster stocks and identifying sustainable strategies. Interventions such as protecting critical habitats and repopulating with captive-reared individuals could contribute to the species' recovery.`,
+    readPaper: `Read the paper`,
   },
 }

@@ -1,120 +1,136 @@
 <template>
-  <div
-    class="h-screen flex justify-center items-center bg-gradient-to-r from-blue-50 via-green-50 to-blue-100"
-  >
-    <div
-      class="text-center p-8 md:p-16 bg-white shadow-xl rounded-xl max-w-lg w-full transform transition-all duration-300 hover:scale-105"
-    >
-      <!-- Icona Cogs -->
-      <div class="mb-12">
-        <font-awesome-icon
-          icon="cogs"
-          class="text-custom-green-cogs text-8xl transform transition-all duration-300 hover:scale-110 hover:text-custom-dark-cogs"
-        />
-      </div>
-
+  <section class="bg-custom-beige text-gray-800 py-8 text-left w-full">
+    <div class="max-w-4xl mx-auto">
       <!-- Titolo -->
-      <h1 class="text-4xl md:text-5xl font-semibold text-custom-blue-lobster mb-6 leading-tight">
-        {{ $t('titleUC') }}
+      <h1 class="text-custom-blue-lobster font-playfair text-4xl font-semibold my-8 text-center">
+        {{ $t('publications') }}
       </h1>
 
-      <!-- Descrizione -->
-      <p class="text-2xl text-gray-600 mb-6 leading-relaxed">
-        {{ $t('introUC') }}
-      </p>
+      <!-- Timeline -->
+      <div class="relativemax-w-[48rem] mx-auto">
+        <!-- Pubblicazione 1 -->
+        <div class="mb-10 ml-12 flex items-center">
+          <!-- Contenuto -->
+          <div class="flex flex-col md:flex-row items-center md:items-start w-full">
+            <!-- Immagine -->
+            <div class="lg:w-1/5 md:w-1/4 w-1/3 md:my-3 my-6">
+              <img
+                src="@/assets/images/appliedAnimal.jpg"
+                alt="Applied Animal Behaviour Science"
+                class="rounded-lg shadow-lg w-full w-48 object-cover aspect-square transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+              />
+            </div>
+            <!-- Testo Pubblicazione -->
+            <div class="md:ml-12 mt-4">
+              <h3 class="font-semibold text-lg text-custom-blue-lobster">
+                Latini, L. et al. (2023)
+              </h3>
+              <p class="text-gray-600 max-w-[28rem]">
+                Limited holding space reduces growth and behavioural performance in juvenile
+                European lobsters. <em>Applied Animal Behaviour Science, 266</em>, 106013.
+              </p>
+              <a
+                href="https://doi.org/10.1016/j.applanim.2023.106013"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500 hover:underline mt-2 block"
+              >
+                {{ $t('readPaper') }}
+              </a>
+            </div>
+          </div>
+        </div>
 
-      <!-- Torna alla Home -->
+        <!-- Pubblicazione 2 -->
+        <div class="mb-10 ml-12 flex items-center">
+          <div class="flex flex-col md:flex-row items-center md:items-start w-full">
+            <div class="lg:w-1/5 md:w-1/4 w-1/3 md:my-3 my-6">
+              <img
+                src="@/assets/images/rendicontiLincei.webp"
+                alt="Rendiconti Lincei"
+                class="rounded-lg shadow-lg w-full w-48 object-cover aspect-square transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+              />
+            </div>
+            <div class="md:ml-12 mt-4">
+              <h3 class="font-semibold text-lg text-custom-blue-lobster">
+                Carere, C. et al. (2015)
+              </h3>
+              <p class="text-gray-600 max-w-[28rem]">
+                Actions for restocking of the European lobster (<em>Homarus gammarus</em>): a case
+                study on the relevance of behaviour and welfare assessment of cultured juveniles.
+                <em>Rendiconti Lincei, 26</em>, 59-64.
+              </p>
+              <a
+                href="https://doi.org/10.1007/s12210-014-0361-6"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500 hover:underline mt-2 block"
+              >
+                {{ $t('readPaper') }}
+              </a>
+            </div>
+          </div>
+        </div>
 
-      <a
-        :href="'/'"
-        class="inline-flex items-center px-6 py-4 text-md font-medium text-custom-blue-lobster bg-custom-blue-hover border border-custom-blue-hover rounded-md hover:bg-custom-blue-active transition-all duration-300 mb-2 hover:bg-custom-blue-lobster hover:text-gray-200"
-        >{{ $t('backHome') }}</a
-      >
-
-      <!-- Footer -->
-      <footer class="mt-6 text-sm text-gray-500">
-        {{ $t('footerUC') }}
-      </footer>
+        <!-- Pubblicazione 3 -->
+        <div class="ml-12 flex items-center">
+          <div class="flex flex-col md:flex-row items-center md:items-start w-full">
+            <div class="lg:w-1/5 md:w-1/4 w-1/3 md:my-3 my-6">
+              <img
+                src="@/assets/images/norwegianLobFarm.jpg"
+                alt="ELCE Report"
+                class="rounded-lg shadow-lg w-full w-48 object-cover transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+              />
+            </div>
+            <div class="md:ml-12 mt-4">
+              <h3 class="font-semibold text-lg text-custom-blue-lobster">
+                Drengstig, A. et al. (2015)
+              </h3>
+              <p class="text-gray-600 max-w-[28rem]">
+                Current status on European lobster aquaculture in Europe. Report from the 3rd annual
+                ELCE meeting, Stavanger, Norway.
+              </p>
+              <a
+                href="https://eurolobster.svinna.is/wp-content/uploads/2014/07/ELCE_2015.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500 hover:underline mt-2 block"
+              >
+                {{ $t('readPaper') }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
-<script setup lang="ts">
-// Aggiungi qui eventuali logiche di traduzione, se necessario
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'PublicationsTimeline',
+})
 </script>
 
 <style scoped>
-/* Fondo con gradiente */
-body {
-  background-color: #f7f7f7;
+/* Colori personalizzati */
+.bg-custom-beige {
+  background-color: #fdf8f0;
+}
+.text-custom-blue-lobster {
+  color: #2f5881;
+}
+.border-custom-blue-timeline {
+  border-color: #3d6c9b;
+}
+.bg-custom-blue-timeline {
+  background-color: #003366;
 }
 
-/* Fondo gradiente e bordo dell'elemento centrale */
-.bg-gradient-to-r {
-  background-image: linear-gradient(
-    to right,
-    #e0f7fa,
-    #90c7c3,
-    #77c1cb
-  ); /* Sfumatura azzurro-verde */
-}
-
-/* Icone personalizzate */
-.text-custom-green-cogs {
-  color: #5db1a7; /* Verde personalizzato per l'icona */
-  transition: all 0.3s ease;
-}
-
-/* Hover su icona */
-.text-custom-green-cogs:hover {
-  color: #388e8e; /* Verde più scuro al passaggio del mouse */
-  transform: scale(1.1); /* Ingrandimento più fluido */
-}
-
-/* Hover sul contenitore */
-.bg-white:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombra più marcata quando si passa sopra il contenitore */
-}
-
-/* Titolo */
-h1 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-}
-
-/* Descrizione */
-p {
-  font-family: 'Lora', serif;
-  color: #555;
-  line-height: 1.75;
-  font-size: 1.4rem;
-}
-
-/* Footer */
-footer {
-  font-size: 1.125rem;
-  color: #8a8a8a;
-}
-
-/* Regola le dimensioni per schermi più piccoli */
-@media (max-width: 768px) {
-  .text-lg {
-    font-size: 1rem;
-  }
-
-  .text-4xl {
-    font-size: 2.25rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .text-2xl {
-    font-size: 1rem;
-  }
+/* Responsiveness per immagini */
+img {
+  display: block;
 }
 </style>

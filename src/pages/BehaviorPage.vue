@@ -1,120 +1,139 @@
 <template>
-  <div
-    class="h-screen flex justify-center items-center bg-gradient-to-r from-blue-50 via-green-50 to-blue-100"
-  >
-    <div
-      class="text-center p-8 md:p-16 bg-white shadow-xl rounded-xl max-w-lg w-full transform transition-all duration-300 hover:scale-105"
-    >
-      <!-- Icona Cogs -->
-      <div class="mb-12">
-        <font-awesome-icon
-          icon="cogs"
-          class="text-custom-green-cogs text-8xl transform transition-all duration-300 hover:scale-110 hover:text-custom-dark-cogs"
-        />
-      </div>
-
-      <!-- Titolo -->
-      <h1 class="text-4xl md:text-5xl font-semibold text-custom-blue-lobster mb-6 leading-tight">
-        {{ $t('titleUC') }}
+  <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-custom-blue-lobster font-playfair text-4xl font-semibold my-5 text-center">
+        {{ $t('behaviorTitle') }}
       </h1>
 
-      <!-- Descrizione -->
-      <p class="text-2xl text-gray-600 mb-6 leading-relaxed">
-        {{ $t('introUC') }}
-      </p>
+      <div class="max-w-[34rem] mx-auto">
+        <p>{{ $t('behaviorText1') }}</p>
+        <br />
+        <p>{{ $t('behaviorText2') }}</p>
+      </div>
 
-      <!-- Torna alla Home -->
+      <div class="max-w-[32rem] mx-auto">
+        <figure
+          class="md:w-2/5 sm:w-3/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+          @click="openModal(imageSrcBehavior1)"
+        >
+          <div class="w-full aspect-square rounded-full overflow-hidden shadow-xl">
+            <img
+              :src="imageSrcBehavior1"
+              :alt="$t('imageAltBehavior1')"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-center">
+            {{ $t('imageAltBehavior1') }}
+          </figcaption>
+        </figure>
+      </div>
 
-      <a
-        :href="'/'"
-        class="inline-flex items-center px-6 py-4 text-md font-medium text-custom-blue-lobster bg-custom-blue-hover border border-custom-blue-hover rounded-md hover:bg-custom-blue-active transition-all duration-300 mb-2 hover:bg-custom-blue-lobster hover:text-gray-200"
-        >{{ $t('backHome') }}</a
+      <div class="max-w-[34rem] mx-auto">
+        <p>{{ $t('behaviorText3') }}</p>
+        <br />
+        <p>{{ $t('behaviorText4') }}</p>
+        <br />
+        <p>{{ $t('behaviorText5') }}</p>
+      </div>
+
+      <div class="max-w-[32rem] mx-auto">
+        <figure
+          class="md:w-2/5 sm:w-3/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+          @click="openModal(imageSrcBehavior2)"
+        >
+          <div class="w-full aspect-square rounded-full overflow-hidden shadow-xl">
+            <img
+              :src="imageSrcBehavior2"
+              :alt="$t('imageAltBehavior2')"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-center">
+            {{ $t('imageAltBehavior2') }}
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="max-w-[34rem] mx-auto">
+        <p>{{ $t('behaviorText6') }}</p>
+      </div>
+
+      <div class="max-w-[32rem] mx-auto">
+        <figure
+          class="md:w-2/5 sm:w-3/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+          @click="openModal(imageSrcBehavior3)"
+        >
+          <div class="w-full aspect-square rounded-full overflow-hidden shadow-xl">
+            <img
+              :src="imageSrcBehavior3"
+              :alt="$t('imageAltBehavior3')"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-center">
+            {{ $t('imageAltBehavior3') }}
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Modal per immagine grande -->
+      <div
+        v-if="showImageModal"
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+        @click="closeImageModal"
       >
-
-      <!-- Footer -->
-      <footer class="mt-6 text-sm text-gray-500">
-        {{ $t('footerUC') }}
-      </footer>
+        <div class="relative w-3/4 max-w-3xl px-32 py-12 xs:px-3 xs:py-3">
+          <img
+            :src="selectedImage"
+            alt="Immagine ingrandita"
+            class="w-full h-auto rounded-lg border-4 border-white"
+          />
+          <button
+            @click="closeImageModal"
+            class="absolute top-14 right-35 xs:top-5 xs:right-5 bg-white opacity-60 text-black rounded-full py-0 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
-<script setup lang="ts">
-// Aggiungi qui eventuali logiche di traduzione, se necessario
+<script lang="ts">
+import { ref, defineComponent } from 'vue'
+import imageSrcBehavior1 from '@/assets/images/asticiEsploratori.jpg'
+import imageSrcBehavior2 from '@/assets/images/asticeGiovane.jpg'
+import imageSrcBehavior3 from '@/assets/images/asticinoConchiglie.png'
+
+export default defineComponent({
+  name: 'BehaviorPage',
+  setup() {
+    const showImageModal = ref(false)
+    const selectedImage = ref('')
+
+    const openModal = (imageSrc: string) => {
+      selectedImage.value = imageSrc
+      showImageModal.value = true
+    }
+
+    const closeImageModal = () => {
+      showImageModal.value = false
+      selectedImage.value = ''
+    }
+
+    return {
+      showImageModal,
+      selectedImage,
+      imageSrcBehavior1,
+      imageSrcBehavior2,
+      imageSrcBehavior3,
+      openModal,
+      closeImageModal,
+    }
+  },
+})
 </script>
 
-<style scoped>
-/* Fondo con gradiente */
-body {
-  background-color: #f7f7f7;
-}
-
-/* Fondo gradiente e bordo dell'elemento centrale */
-.bg-gradient-to-r {
-  background-image: linear-gradient(
-    to right,
-    #e0f7fa,
-    #90c7c3,
-    #77c1cb
-  ); /* Sfumatura azzurro-verde */
-}
-
-/* Icone personalizzate */
-.text-custom-green-cogs {
-  color: #5db1a7; /* Verde personalizzato per l'icona */
-  transition: all 0.3s ease;
-}
-
-/* Hover su icona */
-.text-custom-green-cogs:hover {
-  color: #388e8e; /* Verde più scuro al passaggio del mouse */
-  transform: scale(1.1); /* Ingrandimento più fluido */
-}
-
-/* Hover sul contenitore */
-.bg-white:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombra più marcata quando si passa sopra il contenitore */
-}
-
-/* Titolo */
-h1 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-}
-
-/* Descrizione */
-p {
-  font-family: 'Lora', serif;
-  color: #555;
-  line-height: 1.75;
-  font-size: 1.4rem;
-}
-
-/* Footer */
-footer {
-  font-size: 1.125rem;
-  color: #8a8a8a;
-}
-
-/* Regola le dimensioni per schermi più piccoli */
-@media (max-width: 768px) {
-  .text-lg {
-    font-size: 1rem;
-  }
-
-  .text-4xl {
-    font-size: 2.25rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .text-2xl {
-    font-size: 1rem;
-  }
-}
-</style>
+<style scoped></style>

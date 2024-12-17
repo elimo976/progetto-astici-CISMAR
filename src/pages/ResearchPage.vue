@@ -7,7 +7,6 @@
 
       <!-- Blocco di testo -->
       <div class="max-w-[34rem] mx-auto">
-        <hr class="mb-5 border-gray-300" />
         <p>{{ $t('researchText1') }}</p>
         <br />
         <p>{{ $t('researchText2') }}</p>
@@ -109,7 +108,7 @@ import imageSrcResearch2 from '@/assets/images/asticeRilasciato.jpg'
 import imageSrcResearch3 from '@/assets/images/asticeDNA.jpg'
 
 export default defineComponent({
-  name: 'ConservationPage',
+  name: 'ResearchPage',
   setup() {
     const showImageModal = ref(false)
     const selectedImage = ref('')

@@ -1,120 +1,138 @@
 <template>
-  <div
-    class="h-screen flex justify-center items-center bg-gradient-to-r from-blue-50 via-green-50 to-blue-100"
-  >
-    <div
-      class="text-center p-8 md:p-16 bg-white shadow-xl rounded-xl max-w-lg w-full transform transition-all duration-300 hover:scale-105"
-    >
-      <!-- Icona Cogs -->
-      <div class="mb-12">
-        <font-awesome-icon
-          icon="cogs"
-          class="text-custom-green-cogs text-8xl transform transition-all duration-300 hover:scale-110 hover:text-custom-dark-cogs"
-        />
-      </div>
-
-      <!-- Titolo -->
-      <h1 class="text-4xl md:text-5xl font-semibold text-custom-blue-lobster mb-6 leading-tight">
-        {{ $t('titleUC') }}
+  <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
+    <div class="max-w-7xl mx-auto">
+      <h1
+        class="text-custom-blue-lobster font-playfair text-4xl font-semibold mt-5 mb-8 text-center"
+      >
+        {{ $t('projectsTitle') }}
       </h1>
 
-      <!-- Descrizione -->
-      <p class="text-2xl text-gray-600 mb-6 leading-relaxed">
-        {{ $t('introUC') }}
-      </p>
+      <div class="max-w-[32rem] mx-auto mb-5">
+        <p>{{ $t('projectsIntro') }}</p>
+      </div>
 
-      <!-- Torna alla Home -->
+      <!-- Blocco di testo -->
+      <div class="max-w-[32rem] mx-auto mb-5">
+        <h3 class="font-bold mb-3 text-custom-blue-lobster">{{ $t('projectsHeading1') }}</h3>
+        <p class="mb-2">{{ $t('projectsText1') }}</p>
+      </div>
 
-      <a
-        :href="'/'"
-        class="inline-flex items-center px-6 py-4 text-md font-medium text-custom-blue-lobster bg-custom-blue-hover border border-custom-blue-hover rounded-md hover:bg-custom-blue-active transition-all duration-300 mb-2 hover:bg-custom-blue-lobster hover:text-gray-200"
-        >{{ $t('backHome') }}</a
+      <!-- Blocco di testo con elenco puntato -->
+      <div class="max-w-[32rem] mx-auto">
+        <h3 class="font-bold mb-3 text-custom-blue-lobster">{{ $t('projectsHeading2') }}</h3>
+        <p>{{ $t('projectsText2') }}</p>
+        <div class="max-w-[30rem] mx-auto mt-4">
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>{{ $t('projectsList1bold') }}</strong> {{ $t('projectsList1') }}
+              <p class="mt-3">
+                <a
+                  href="https://www.unitus.it/wp-content/uploads/2023/11/DEB_RICERCA_PROGETTO_Sito-web-healthy-stocks.pdf"
+                  class="text-blue-500 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {{ $t('projectsList1link') }}
+                </a>
+              </p>
+            </li>
+            <figure
+              class="md:w-2/5 sm:w-3/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+              @click="openModal(imageSrcProjects1)"
+            >
+              <div class="w-full aspect-[3/4] overflow-hidden shadow-xl">
+                <img
+                  :src="imageSrcProjects1"
+                  :alt="$t('imageAltProjects1')"
+                  class="w-full h-full object-cover border-4 border-white rounded-lg"
+                />
+              </div>
+              <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-center">
+                {{ $t('imageAltProjects1') }}
+              </figcaption>
+            </figure>
+
+            <li>
+              <strong>{{ $t('projectsList2bold') }}</strong> {{ $t('projectsList2') }}
+              <br />
+              <p class="mt-3 mb-5">
+                <a
+                  href="https://www.unitus.it/wp-content/uploads/2023/08/Comunicato-sito-web-DEB_FEAMP-Ripopolamento.pdf"
+                  class="text-blue-500 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {{ $t('projectsList2link') }}
+                </a>
+              </p>
+            </li>
+
+            <li>
+              <strong>{{ $t('projectsList3bold') }}</strong> {{ $t('projectsList3') }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Blocco di testo -->
+      <div class="max-w-[32rem] mx-auto">
+        <h3 class="font-bold mt-5 mb-3 text-custom-blue-lobster">{{ $t('projectsHeading3') }}</h3>
+        <p>{{ $t('projectsText3') }}</p>
+      </div>
+
+      <!-- Modal per immagine grande -->
+      <div
+        v-if="showImageModal"
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+        @click="closeImageModal"
       >
-
-      <!-- Footer -->
-      <footer class="mt-6 text-sm text-gray-500">
-        {{ $t('footerUC') }}
-      </footer>
+        <div class="relative w-3/4 max-w-3xl px-32 py-12 xs:px-3 xs:py-3">
+          <img
+            :src="selectedImage"
+            alt="Immagine ingrandita"
+            class="w-full h-auto rounded-lg border-4 border-white"
+          />
+          <button
+            @click="closeImageModal"
+            class="absolute top-14 right-35 xs:top-5 xs:right-5 bg-white opacity-60 text-black rounded-full py-0 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
-<script setup lang="ts">
-// Aggiungi qui eventuali logiche di traduzione, se necessario
+<script lang="ts">
+import { ref, defineComponent } from 'vue'
+import imageSrcProjects1 from '@/assets/images/posterFeamp.jpg'
+
+export default defineComponent({
+  name: 'ProjectsPage',
+  setup() {
+    const showImageModal = ref(false)
+    const selectedImage = ref('')
+
+    const openModal = (imageSrc: string) => {
+      selectedImage.value = imageSrc
+      showImageModal.value = true
+    }
+
+    const closeImageModal = () => {
+      showImageModal.value = false
+      selectedImage.value = ''
+    }
+
+    return {
+      showImageModal,
+      selectedImage,
+      imageSrcProjects1,
+      openModal,
+      closeImageModal,
+    }
+  },
+})
 </script>
 
-<style scoped>
-/* Fondo con gradiente */
-body {
-  background-color: #f7f7f7;
-}
-
-/* Fondo gradiente e bordo dell'elemento centrale */
-.bg-gradient-to-r {
-  background-image: linear-gradient(
-    to right,
-    #e0f7fa,
-    #90c7c3,
-    #77c1cb
-  ); /* Sfumatura azzurro-verde */
-}
-
-/* Icone personalizzate */
-.text-custom-green-cogs {
-  color: #5db1a7; /* Verde personalizzato per l'icona */
-  transition: all 0.3s ease;
-}
-
-/* Hover su icona */
-.text-custom-green-cogs:hover {
-  color: #388e8e; /* Verde più scuro al passaggio del mouse */
-  transform: scale(1.1); /* Ingrandimento più fluido */
-}
-
-/* Hover sul contenitore */
-.bg-white:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombra più marcata quando si passa sopra il contenitore */
-}
-
-/* Titolo */
-h1 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-}
-
-/* Descrizione */
-p {
-  font-family: 'Lora', serif;
-  color: #555;
-  line-height: 1.75;
-  font-size: 1.4rem;
-}
-
-/* Footer */
-footer {
-  font-size: 1.125rem;
-  color: #8a8a8a;
-}
-
-/* Regola le dimensioni per schermi più piccoli */
-@media (max-width: 768px) {
-  .text-lg {
-    font-size: 1rem;
-  }
-
-  .text-4xl {
-    font-size: 2.25rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .text-2xl {
-    font-size: 1rem;
-  }
-}
-</style>
+<style scoped></style>

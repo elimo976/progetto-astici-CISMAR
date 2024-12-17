@@ -1,12 +1,15 @@
 import AppCookie from './AppCookie'
 import AppFooter from './AppFooter'
 import AppHeader from './AppHeader'
+import BehaviorPage from './BehaviorPage'
 import ConservationPage from './ConservationPage'
+import GeneticsPage from './GeneticsPage'
 import HeroBanner from './HeroBanner'
 import HomePage from './HomePage'
 import LobsterStages from './LobsterStages'
 import MediaPage from './MediaPage'
 import NavigationMenu from './NavigationMenu'
+import ProjectPage from './ProjectPage'
 import ResearchPage from './ResearchPage'
 import ThirdMission from './ThirdMission'
 import UnderConstruction from './UnderConstruction'
@@ -38,6 +41,9 @@ const messages: Messages = {
     ...LobsterStages.en,
     ...ConservationPage.en,
     ...ResearchPage.en,
+    ...BehaviorPage.en,
+    ...GeneticsPage.en,
+    ...ProjectPage.en,
   },
   it: {
     ...AppHeader.it,
@@ -52,6 +58,9 @@ const messages: Messages = {
     ...LobsterStages.it,
     ...ConservationPage.it,
     ...ResearchPage.it,
+    ...BehaviorPage.it,
+    ...GeneticsPage.it,
+    ...ProjectPage.it,
   },
 }
 
