@@ -22,6 +22,12 @@
   </section>
 </template>
 
-<script lang="ts"></script>
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'GeneticsPage',
+})
+</script>
 
 <style scoped></style>
