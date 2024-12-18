@@ -1,4 +1,9 @@
 <template>
+  <img
+    :src="imageSrcBehavior0"
+    :alt="$t('imageAltBehavior0')"
+    class="w-full object-cover rounded-lg shadow-xl"
+  />
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
       <h1 class="text-custom-blue-lobster text-4xl font-semibold my-5 text-center">
@@ -105,6 +110,8 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
+
+import imageSrcBehavior0 from '@/assets/images/asticeTana-rit.jpg'
 import imageSrcBehavior1 from '@/assets/images/asticiEsploratori.jpg'
 import imageSrcBehavior2 from '@/assets/images/asticeGiovane.jpg'
 import imageSrcBehavior3 from '@/assets/images/asticinoConchiglie.png'
@@ -128,6 +135,7 @@ export default defineComponent({
     return {
       showImageModal,
       selectedImage,
+      imageSrcBehavior0,
       imageSrcBehavior1,
       imageSrcBehavior2,
       imageSrcBehavior3,

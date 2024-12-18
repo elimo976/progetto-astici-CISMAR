@@ -1,4 +1,8 @@
 <template>
+  <!-- LobsterStages Component -->
+  <div class="text-center border-y-4 shadow-lg lg:px-6 px-8 bg-custom-beige">
+    <LobsterStages />
+  </div>
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
       <!-- Sezione 2 -->
@@ -20,7 +24,7 @@
             :alt="$t('imageAltLobster1')"
             class="aspect-square lg:w-4/5 w-full object-cover rounded-lg shadow-xl"
           />
-          <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+          <figcaption class="mt-4 lg:mr-20 pr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltLobster1') }}
           </figcaption>
         </figure>
@@ -35,15 +39,11 @@
             :alt="$t('imageAltLobster2')"
             class="aspect-square lg:w-4/5 w-full object-cover rounded-lg shadow-xl"
           />
-          <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+          <figcaption class="mt-4 lg:mr-20 pr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltLobster2') }}
           </figcaption>
         </figure>
         <p class="mb-6 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentLobster3') }}</p>
-        <!-- LobsterStages Component -->
-        <div class="mt-8 text-center border-2 rounded-xl shadow-lg">
-          <LobsterStages />
-        </div>
       </div>
 
       <!-- Modal per immagine grande -->

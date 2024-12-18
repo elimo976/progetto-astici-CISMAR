@@ -12,6 +12,7 @@ export default {
     `,
     contentCismar4: `
      Per raggiungere questo obiettivo, sono stati condotti studi approfonditi sulla genetica, sull’ecologia e sul comportamento dell’astice. Questi dati sono stati fondamentali per progettare strutture adeguate e impostare le condizioni di allevamento ideali, un risultato raggiunto grazie al lavoro di un team di tecnici e ricercatori altamente qualificati del CISMAR, che continuano a impegnarsi in queste ricerche avanzate`,
+    imageAltCismar0: `Cismar visto dall'alto`,
     imageAltCismar1: 'Astice adulto',
     imageAltCismar2: 'Aquahive',
     textDiscoverCismar: 'Scopri di più sulle nostre attività di ricerca',
@@ -43,6 +44,7 @@ export default {
     contentTraining3: `
     Prima di essere liberati i giovali astici, e le loro madri selvatiche, saranno identificati su base genetica. Grazie a marcatori molecolari sviluppati appositamente per questa specie, ogni gruppo di fratelli viene caratterizzato da un insieme di varianti genetiche uniche, che permetteranno di individuare gli astici prodotti dal CISMAR tra quelli pescati. In questo modo è possibile valutare il reale apporto delle operazioni di rilascio sia alla consistenza delle popolazioni naturali sia al sostegno della piccola pesca costiera.
   `,
+    imageAltTraining0: 'Larva di astice',
     imageAltTraining1: 'Giovane astice',
     imageAltTraining2: 'Astice nella tana',
     imageAltTraining3: 'Astice nella tana',
@@ -60,6 +62,7 @@ export default {
     Qui i ricercatori si immergono liberando gli astici uno ad uno; la loro presenza tiene lontani i predatori dando tempo ai piccoli di rifugiarsi tra le rocce o le piante di Posidonia.
     Da questo momento sarà il mare ad occuparsi di loro.
     `,
+    imageAltRelease0: 'Rilascio di giovane astice',
     imageAltRelease1: 'Provette con larve di astici',
     imageAltRelease2: 'Rilascio di giovane astice',
 
@@ -78,6 +81,7 @@ export default {
     contentCismar4: `
       To achieve this goal, in-depth studies on the genetics, ecology, and behavior of lobsters were conducted. These data were crucial for designing appropriate facilities and setting ideal breeding conditions, an outcome achieved through the work of a team of highly skilled technicians and researchers at CISMAR, who continue to pursue advanced research in this area.
     `,
+    imageAltCismar0: `Cismar seen from above`,
     imageAltCismar1: 'Adult Lobster',
     imageAltCismar2: 'Aquahive',
 
@@ -108,6 +112,7 @@ export default {
     contentTraining3: `
       Before being released, the young lobsters and their wild mothers will be identified genetically. Thanks to molecular markers specifically developed for this species, each sibling group is characterized by a unique set of genetic variants, allowing researchers to distinguish CISMAR-produced lobsters among those caught. This makes it possible to assess the actual contribution of the release operations to both the natural population's abundance and the support of small-scale coastal fisheries.
     `,
+    imageAltTraining0: 'Lobster Larvae',
     imageAltTraining1: 'Young lobster',
     imageAltTraining2: 'Lobster in den',
     imageAltTraining3: 'Lobster in the den',
@@ -123,6 +128,7 @@ export default {
     contentRelease3: `
       Here, researchers dive to release the lobsters one by one; their presence keeps predators away, giving the juveniles time to hide among rocks or Posidonia plants. From this moment, the sea will take care of them.
     `,
+    imageAltRelease0: 'Release of young lobster',
     imageAltRelease1: 'Lobster larvae in test tubes',
     imageAltRelease2: 'Release of young lobster',
 

@@ -1,5 +1,6 @@
 export default {
   it: {
+    imageAltResearch0: `Piccoli astici bentonici`,
     researchTitle: `La ricerca`,
     researchText1: `Senza la ricerca non avremmo mai avuto gli astici per i ripopolamenti.`,
     researchText2: `Sono tante le ricerche necessarie per mettere a punto l’intera filiera che va dalla raccolta delle madri con le uova al rilascio di giovani pronti a sopravvivere alle sfide che la natura impone fino a diventare adulti e a riprodursi.`,
@@ -13,6 +14,7 @@ export default {
     imageAltResearch3: 'Astice con DNA, immagine generata con AI tramite DELL⋅E`,
   },
   en: {
+    imageAltResearch0: `Small bentonite lobster`,
     researchTitle: `The research`,
     researchText1: `Without research, we would never have the fish for the populations.`,
     researchText2: `There are so many research needed to set up the entire chain from collecting the parents with eggs to releasing ready-to-live fish.`,

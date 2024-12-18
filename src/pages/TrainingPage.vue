@@ -1,4 +1,9 @@
 <template>
+  <img
+    :src="imageSrcTraining0"
+    :alt="$t('imageAltTraining0')"
+    class="w-full object-cover shadow-xl"
+  />
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
       <!-- Sezione 3 -->
@@ -26,7 +31,7 @@
               :alt="$t('imageAltTraining1')"
               class="aspect-square w-full object-cover rounded-lg shadow-xl"
             />
-            <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-right">
+            <figcaption class="mt-4 text-base text-gray-600 text-right">
               {{ $t('imageAltTraining1') }}
             </figcaption>
           </figure>
@@ -101,6 +106,7 @@
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
 
+import imageSrcTraining0 from '@/assets/images/asticeLarva-rit.jpg'
 import imageSrcTraining1 from '@/assets/images/asticeGiovane.jpg'
 import imageSrcTraining2 from '@/assets/images/asticeTana1.jpg'
 import imageSrcTraining3 from '@/assets/images/asticeTana2.jpg'
@@ -124,6 +130,7 @@ export default defineComponent({
     return {
       showImageModal,
       selectedImage,
+      imageSrcTraining0,
       imageSrcTraining1,
       imageSrcTraining2,
       imageSrcTraining3,

@@ -156,7 +156,7 @@ const updateMenuItems = () => {
       link: '/',
       submenuOpen: false,
       children: [
-        { title: t('aboutUs'), link: '/#cismar' },
+        { title: t('project'), link: '/#cismar' },
         { title: t('lobster'), link: '/#lobster' },
       ],
     },
@@ -172,11 +172,11 @@ const updateMenuItems = () => {
       ],
     },
     {
-      title: t('goals'),
+      title: t('research'),
       link: '',
       submenuOpen: false,
       children: [
-        { title: t('research'), link: '/research' },
+        { title: t('researchSub'), link: '/research' },
         { title: t('behavior'), link: '/behavior' },
         { title: t('genetics'), link: '/genetics' },
         { title: t('projects'), link: '/projects' },
@@ -184,15 +184,15 @@ const updateMenuItems = () => {
       ],
     },
     {
-      title: t('thirdMission'),
+      title: t('dissemination'),
       link: '',
       submenuOpen: false,
       children: [
-        { title: t('dissemination'), link: '/third-mission' },
-        { title: t('conferences'), link: '#conferences' },
-        { title: t('orientation'), link: '#orientation' },
+        { title: t('thirdMission'), link: '/third-mission' },
+        { title: t('activities'), link: '/under-construction' },
+        { title: t('divulgastici'), link: '/under-construction' },
         { title: t('media'), link: 'media' },
-        { title: t('partners'), link: '#partners' },
+        // { title: t('partners'), link: '/under-construction' },
       ],
     },
   ]

@@ -1,4 +1,9 @@
 <template>
+  <img
+    :src="imageSrcCismar0"
+    :alt="$t('imageAltCismar0')"
+    class="w-full object-cover rounded-lg shadow-xl"
+  />
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
       <!-- Sezione 1 -->
@@ -24,7 +29,7 @@
             :alt="$t('imageAltCismar1')"
             class="aspect-square lg:w-4/5 w-full object-cover rounded-lg shadow-xl"
           />
-          <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+          <figcaption class="mt-4 lg:mr-20 pr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltCismar1') }}
           </figcaption>
         </figure>
@@ -40,7 +45,7 @@
             :alt="$t('imageAltCismar2')"
             class="aspect-square lg:w-4/5 w-full object-cover rounded-lg shadow-xl"
           />
-          <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+          <figcaption class="mt-4 lg:mr-20 pr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltCismar2') }}
           </figcaption>
         </figure>
@@ -80,6 +85,7 @@
 import { ref, defineComponent } from 'vue'
 import DOMPurify from 'dompurify'
 
+import imageSrcCismar0 from '@/assets/images/cismar-rit.jpg'
 import imageSrcCismar1 from '@/assets/images/asticeAdulto.jpg'
 import imageSrcCismar2 from '@/assets/images/aquahiveLoaded.jpg'
 
@@ -109,6 +115,7 @@ export default defineComponent({
     return {
       showImageModal,
       selectedImage,
+      imageSrcCismar0,
       imageSrcCismar1,
       imageSrcCismar2,
       openModal,

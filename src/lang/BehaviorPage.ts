@@ -1,5 +1,6 @@
 export default {
   it: {
+    imageAltBehavior0: `Astice nella tana`,
     behaviorTitle: `Il comportamento`,
     behaviorText1: `La capacità di adattare il proprio comportamento è un fattore fondamentale per la sopravvivenza degli animali in un mondo in rapida evoluzione.`,
     behaviorText2: `Questa plasticità comportamentale è particolarmente importante in età giovanile, quando un individuo raccoglie informazioni sull'ambiente circostante per decidere quale strategia adottare: essere audace e correre grossi rischi oppure optare per un atteggiamento più cauto? Ovviamente, la scelta dipende da quanto alto è il rischio e quanto il potenziale guadagno e quindi, in ultima analisi, dalle condizioni ambientali.`,
@@ -19,6 +20,7 @@ export default {
     imageAltBehavior3: `Piccolo astice bentonico su substrato di conchiglie`,
   },
   en: {
+    imageAltBehavior0: 'Lobster in den',
     behaviorTitle: 'Behavior',
     behaviorText1:
       'The ability to adapt one’s behavior is a fundamental factor for the survival of animals in a rapidly evolving world.',

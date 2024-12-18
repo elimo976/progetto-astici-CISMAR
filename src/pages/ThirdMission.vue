@@ -1,4 +1,9 @@
 <template>
+  <img
+    :src="imageSrcThirdMission1"
+    :alt="$t('imageAltCismar0')"
+    class="w-full object-cover rounded-lg shadow-xl"
+  />
   <main class="w-full flex-grow bg-gray-50 p-16 md:px-24 md:py-12 lg:py-8 lg:px-36 lg:pb-12">
     <section class="space-y-12">
       <!-- Contenitore per il testo e le immagini -->
@@ -68,16 +73,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import DOMPurify from 'dompurify'
+import imageSrcThirdMission1 from '@/assets/images/didattica-rit.jpg'
 
 export default defineComponent({
-  computed: {
-    // Sanitizza il testo dinamico prima di iniettarlo nel DOM
-    sanitizedThirdMissionText() {
-      const rawHtml = this.$t('thirdMissionText') as string
+  setup() {
+    const { t } = useI18n() // Accedi alla funzione di traduzione tramite useI18n
+
+    // Calcola e sanitizza il testo dinamico
+    const sanitizedThirdMissionText = computed(() => {
+      const rawHtml = t('thirdMissionText') // Usa 't' per ottenere la traduzione
       return DOMPurify.sanitize(rawHtml)
-    },
+    })
+
+    return {
+      imageSrcThirdMission1,
+      sanitizedThirdMissionText,
+    }
   },
 })
 </script>

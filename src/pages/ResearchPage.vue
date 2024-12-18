@@ -1,4 +1,9 @@
 <template>
+  <img
+    :src="imageSrcResearch0"
+    :alt="$t('imageAltResearch0')"
+    class="w-full object-cover rounded-lg shadow-xl"
+  />
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
       <h1 class="text-custom-blue-lobster text-4xl font-semibold my-5 text-center">
@@ -105,6 +110,8 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
+
+import imageSrcResearch0 from '@/assets/images/asticiniBent-rit.jpg'
 import imageSrcResearch1 from '@/assets/images/asticiBentonici.jpg'
 import imageSrcResearch2 from '@/assets/images/asticeRilasciato.jpg'
 import imageSrcResearch3 from '@/assets/images/asticeDNA.jpg'
@@ -128,6 +135,7 @@ export default defineComponent({
     return {
       showImageModal,
       selectedImage,
+      imageSrcResearch0,
       imageSrcResearch1,
       imageSrcResearch2,
       imageSrcResearch3,

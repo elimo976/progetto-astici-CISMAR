@@ -1,4 +1,9 @@
 <template>
+  <img
+    :src="imageSrcRelease0"
+    :alt="$t('imageAltRelease0')"
+    class="w-full object-cover rounded-lg shadow-xl"
+  />
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
       <!-- Sezione 4 -->
@@ -103,6 +108,7 @@
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
 
+import imageSrcRelease0 from '@/assets/images/asticeRilascio-rit.jpg'
 import imageSrcRelease1 from '@/assets/images/asticiniProvette.jpg'
 import imageSrcRelease2 from '@/assets/images/rilascioAstice.jpg'
 
@@ -126,6 +132,7 @@ export default defineComponent({
       showVideoModal,
       showImageModal,
       selectedImage,
+      imageSrcRelease0,
       imageSrcRelease1,
       imageSrcRelease2,
       openModal,
