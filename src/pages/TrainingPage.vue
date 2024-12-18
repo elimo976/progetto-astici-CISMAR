@@ -6,6 +6,9 @@
         <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
           {{ $t('titleTraining') }}
         </h1>
+
+        <hr class="hidden md:block mb-6 w-[90%] mx-auto" />
+
         <div class="max-w-[34rem] mx-auto xs:px-4">
           <p class="mb-4">{{ $t('contentTraining1') }}</p>
           <p class="mb-4">{{ $t('contentTraining2') }}</p>

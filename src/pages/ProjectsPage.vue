@@ -1,11 +1,11 @@
 <template>
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
-      <h1
-        class="text-custom-blue-lobster font-playfair text-4xl font-semibold mt-5 mb-8 text-center"
-      >
+      <h1 class="text-custom-blue-lobster text-4xl font-semibold mt-5 mb-8 text-center">
         {{ $t('projectsTitle') }}
       </h1>
+
+      <hr class="hidden md:block mb-6 w-[90%] mx-auto" />
 
       <div class="max-w-[32rem] mx-auto mb-5">
         <p>{{ $t('projectsIntro') }}</p>

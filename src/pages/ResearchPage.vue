@@ -1,9 +1,11 @@
 <template>
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
-      <h1 class="text-custom-blue-lobster font-playfair text-4xl font-semibold my-5 text-center">
+      <h1 class="text-custom-blue-lobster text-4xl font-semibold my-5 text-center">
         {{ $t('researchTitle') }}
       </h1>
+
+      <hr class="hidden md:block mb-6 w-[90%] mx-auto" />
 
       <!-- Blocco di testo -->
       <div class="max-w-[34rem] mx-auto">

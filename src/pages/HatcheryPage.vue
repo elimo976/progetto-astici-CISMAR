@@ -6,6 +6,9 @@
         <h1 class="text-custom-blue-lobster text-3xl font-semibold my-5 text-center">
           {{ $t('titleLobster') }}
         </h1>
+
+        <hr class="hidden md:block mb-6 w-[90%] mx-auto" />
+
         <p class="mb-4 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentLobster1') }}</p>
         <!-- Immagine 1 sezione 2 -->
         <figure

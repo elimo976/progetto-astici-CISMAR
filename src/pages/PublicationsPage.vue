@@ -2,11 +2,11 @@
   <section class="bg-custom-beige text-gray-800 py-8 text-left w-full">
     <div class="max-w-4xl mx-auto">
       <!-- Titolo -->
-      <h1 class="text-custom-blue-lobster font-playfair text-4xl font-semibold my-8 text-center">
+      <h1 class="text-custom-blue-lobster text-4xl font-semibold my-8 text-center">
         {{ $t('publications') }}
       </h1>
+      <hr class="hidden md:block mb-6 w-[90%] mx-auto" />
 
-      <!-- Timeline -->
       <div class="relativemax-w-[48rem] mx-auto">
         <!-- Pubblicazione 1 -->
         <div class="mb-10 md:ml-12 sm:ml-0 flex items-center">
@@ -116,9 +116,7 @@ export default defineComponent({
 
 <style scoped>
 /* Colori personalizzati */
-.bg-custom-beige {
-  background-color: #fdf8f0;
-}
+
 .text-custom-blue-lobster {
   color: #2f5881;
 }
