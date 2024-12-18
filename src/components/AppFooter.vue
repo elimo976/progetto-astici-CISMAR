@@ -1,8 +1,8 @@
 <template>
   <footer
-    class="relative w-full bg-gradient-to-tl from-custom-blue-light to-custom-blue-lobster text-white py-8 xs:pl-52 pl-72 md:pl-48 md:py-12 lg:px-12 mt-auto"
+    class="relative w-full bg-gradient-to-tl from-custom-blue-light to-custom-blue-lobster text-white py-8 px-14 text-lg md:py-12 lg:px-12 mt-auto"
   >
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-8">
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 gap-y-8">
       <!-- Colonna 1: Navigazione -->
       <div>
         <h2 class="font-bold mb-6">{{ $t('navigation') }}</h2>

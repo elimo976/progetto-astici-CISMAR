@@ -9,7 +9,7 @@
       <!-- Timeline -->
       <div class="relativemax-w-[48rem] mx-auto">
         <!-- Pubblicazione 1 -->
-        <div class="mb-10 ml-12 flex items-center">
+        <div class="mb-10 md:ml-12 sm:ml-0 flex items-center">
           <!-- Contenuto -->
           <div class="flex flex-col md:flex-row items-center md:items-start w-full">
             <!-- Immagine -->
@@ -42,7 +42,7 @@
         </div>
 
         <!-- Pubblicazione 2 -->
-        <div class="mb-10 ml-12 flex items-center">
+        <div class="mb-10 md:ml-12 sm:ml-0 flex items-center">
           <div class="flex flex-col md:flex-row items-center md:items-start w-full">
             <div class="lg:w-1/5 md:w-1/4 w-1/3 md:my-3 my-6">
               <img
@@ -73,7 +73,7 @@
         </div>
 
         <!-- Pubblicazione 3 -->
-        <div class="ml-12 flex items-center">
+        <div class="md:ml-12 sm:ml-0 flex items-center">
           <div class="flex flex-col md:flex-row items-center md:items-start w-full">
             <div class="lg:w-1/5 md:w-1/4 w-1/3 md:my-3 my-6">
               <img
