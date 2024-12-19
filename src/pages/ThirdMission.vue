@@ -13,7 +13,7 @@
           class="text-base text-justify lg:text-lg text-gray-700 leading-relaxed space-y-6 flex-1 pr-10"
         >
           <!-- Titolo principale -->
-          <h1 class="text-3xl lg:text-4xl font-playfair text-custom-blue-title text-center mb-10">
+          <h1 class="text-3xl lg:text-4xl text-custom-blue-title text-center mb-10">
             {{ $t('thirdMissionTitle') }}
           </h1>
           <div v-html="sanitizedThirdMissionText"></div>

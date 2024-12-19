@@ -1,9 +1,15 @@
 <template>
-  <img
-    :src="imageSrcCismar0"
-    :alt="$t('imageAltCismar0')"
-    class="w-full object-cover rounded-lg shadow-xl"
-  />
+  <picture>
+    <!-- Immagine per smartphone (predefinita) -->
+    <source :srcset="imageSrcCismar0SM" media="(max-width: 767px)" />
+    <!-- Immagine per tablet e desktop -->
+    <source :srcset="imageSrcCismar0" media="(min-width: 768px)" />
+    <img
+      :src="imageSrcCismar0SM"
+      :alt="$t('imageAltCismar0')"
+      class="w-full object-cover rounded-lg shadow-xl"
+    />
+  </picture>
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
       <!-- Sezione 1 -->
@@ -86,6 +92,7 @@ import { ref, defineComponent } from 'vue'
 import DOMPurify from 'dompurify'
 
 import imageSrcCismar0 from '@/assets/images/cismar-rit.jpg'
+import imageSrcCismar0SM from '@/assets/images/cismarSM-rit.jpg'
 import imageSrcCismar1 from '@/assets/images/asticeAdulto.jpg'
 import imageSrcCismar2 from '@/assets/images/aquahiveLoaded.jpg'
 
@@ -115,6 +122,7 @@ export default defineComponent({
     return {
       showImageModal,
       selectedImage,
+      imageSrcCismar0SM,
       imageSrcCismar0,
       imageSrcCismar1,
       imageSrcCismar2,

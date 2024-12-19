@@ -7,7 +7,7 @@
       </h1>
       <hr class="hidden md:block mb-6 w-[90%] mx-auto" />
 
-      <div class="relativemax-w-[48rem] mx-auto">
+      <div class="relativemax-w-[48rem] mx-auto xs:px-8">
         <!-- Pubblicazione 1 -->
         <div class="mb-10 md:ml-12 sm:ml-0 flex items-center">
           <!-- Contenuto -->

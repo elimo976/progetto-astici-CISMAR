@@ -8,29 +8,30 @@
         {{ $t('homeTitle') }}
       </h2>
 
-      <!-- IL PROGETTO -->
-      <section id="project" class="p-6 text-xl">
+      <!-- CISMAR -->
+      <section id="cismar" class="p-6 text-xl">
         <div
           ref="element1"
           class="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:mb-6 mb-10"
         >
           <img
-            src="@/assets/images/portoPescaArtigianale-rit.jpg"
-            alt="{{ $t('projectAltDescription1') }}"
-            class="w-48 lg:w-64 aspect-square object-cover rounded-full shadow-lg transition-all cursor-pointer"
-            @click="openModal('portoPescaArtigianale.jpg')"
+            src="@/assets/images/cismar1.png"
+            alt="CISMAR"
+            class="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full shadow-lg transition-all cursor-pointer"
+            @click="openModal('cismar1.png')"
             @load="setImageOpacity($event.target)"
           />
-
-          <div class="text-center lg:pl-12 sm:px-4 max-w-full w-full md:w-2/3 lg:w-3/4">
-            <h3 class="text-4xl lg:text-left font-semibold text-custom-blue-lobster mb-6 sm:mt-3">
-              {{ $t('projectTitle') }}
+          <div class="text-center lg:text-left lg:pl-12 max-w-full w-full md:w-2/3 lg:w-3/4">
+            <h3
+              v-if="$t('cismarTitle')"
+              class="text-4xl font-semibold text-custom-blue-lobster mb-6 sm:mt-3"
+            >
+              {{ $t('cismarTitle') }}
             </h3>
             <p
               class="text-gray-800 lg:pl-0 lg:mr-6 sm:px-4 lg:text-justify text-left max-w-[42rem]"
-            >
-              {{ $t('projectDescription1') }}
-            </p>
+              v-html="$t('cismarDescription1')"
+            ></p>
           </div>
         </div>
         <div
@@ -38,76 +39,238 @@
           class="flex flex-col lg:flex-row-reverse items-center space-x-0 lg:space-x-[clamp(1rem, 2vw, 1.5rem)] space-y-6 lg:mb-6 mb-10"
         >
           <img
-            src="@/assets/images/asticeAdultoVasca.jpg"
-            alt="{{ $t(' projectAltDescription2')}}"
+            src="@/assets/images/cavalluccioTondino.jpg"
+            alt="Cavalluccio"
             class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
-            @click="openModal('asticeAdultoVasca.jpg')"
+            @click="openModal('cavalluccio.jpg')"
             @load="setImageOpacity($event.target)"
           />
           <div class="max-w-full w-full md:w-2/3 lg:w-auto">
-            <p class="text-gray-800 lg:mr-12 sm:px-4 lg:text-justify text-left max-w-[42rem]">
-              {{ $t('projectDescription2') }}
-            </p>
+            <p
+              class="text-gray-800 lg:mr-12 sm:px-4 lg:text-justify text-left max-w-[42rem]"
+              v-html="$t('cismarDescription2')"
+            ></p>
           </div>
         </div>
 
+        <!-- Biodiversità e ricerca -->
         <div
           ref="element3"
           class="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-6 space-y-6 lg:mb-0 mb-10"
         >
           <img
-            src="@/assets/images/asticeBluOrizzontale.jpg"
-            alt="{{ $t('projectAltDescription3')}}"
+            src="@/assets/images/mazzancolla.jpg"
+            alt="Mazzancolla"
             class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
-            @click="openModal('asticeBluOrizzontale.jpg')"
+            @click="openModal('mazzancolla.jpg')"
             @load="setImageOpacity($event.target)"
           />
           <div
             class="text-center lg:text-left lg:pl-12 sm:px-4 max-w-full w-full md:w-2/3 lg:w-3/4"
           >
-            <p class="text-gray-800 pr-6 lg:text-justify text-left max-w-[42rem]">
-              {{ $t('projectDescription3') }}
-            </p>
+            <p
+              class="text-gray-800 pr-6 lg:text-justify text-left max-w-[42rem]"
+              v-html="$t('biodiversityDescription')"
+            ></p>
           </div>
         </div>
-
+        <!-- Laboratori -->
         <div
           ref="element4"
           class="flex flex-col lg:flex-row-reverse items-center space-x-0 lg:space-x-[clamp(1rem, 2vw, 1.5rem)] space-y-6 lg:mb-6 mb-10"
         >
           <img
-            src="@/assets/images/zoea.png"
-            alt="{{ $t('projectAltDescription4')}}"
+            src="@/assets/images/laboratory.jpg"
+            alt="Laboratorio"
             class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
-            @click="openModal('zoea.png')"
+            @click="openModal('laboratory.jpg')"
             @load="setImageOpacity($event.target)"
           />
           <div class="text-center lg:text-left max-w-full w-full md:w-2/3 lg:w-auto">
             <p
               class="text-gray-800 lg:pl-0 lg:mr-5 sm:px-4 lg:text-justify text-left max-w-[42rem]"
-            >
-              {{ $t('projectDescription4') }}
-            </p>
+              v-html="$t('laboratoryDescription')"
+            ></p>
+            <!-- Link 'Show more' -->
+            <button @click="toggleCarouselLab" class="text-blue-500 underline lg:pl-0 lg:mt-3">
+              {{ isCarouselLabVisible ? $t('showLess') : $t('showMore') }}
+            </button>
+            <!-- Carousel Lab-->
+            <div v-if="isCarouselLabVisible" class="my-10 relative">
+              <!-- Pulsanti freccia -->
+              <button
+                @click="scrollCarousel('left', 'labCarousel')"
+                class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-10 lg:hidden"
+                aria-label="Scroll left"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-gray-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              <div
+                id="labCarousel"
+                class="flex space-x-4 my-4 overflow-x-hidden lg:overflow-x-auto scroll-smooth max-w-full md:mr-10"
+              >
+                <!-- Immagine 1 -->
+                <img
+                  src="@/assets/images/bioreactors.jpg"
+                  alt="Bioreattori"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64 cursor-pointer"
+                  @click="openModal('bioreactors.jpg')"
+                  @load="setImageOpacity($event.target)"
+                />
+                <!-- Immagine 2 -->
+                <img
+                  src="@/assets/images/vasche1.jpg"
+                  alt="Vasche 1"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64 cursor-pointer"
+                  @click="openModal('vasche1.jpg')"
+                  @load="setImageOpacity($event.target)"
+                />
+                <!-- Immagine 3 -->
+                <img
+                  src="@/assets/images/vasche2.jpg"
+                  alt="Vasche 2"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64 cursor-pointer"
+                  @click="openModal('vasche2.jpg')"
+                  @load="setImageOpacity($event.target)"
+                />
+              </div>
+
+              <!-- Pulsante freccia destra -->
+              <button
+                @click="scrollCarousel('right', 'labCarousel')"
+                class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 md:mr-10 z-10 lg:hidden"
+                aria-label="Scroll right"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-gray-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-
+        <!-- Allevamento specie marine -->
         <div
           ref="element5"
           class="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-6 space-y-6 lg:mb-0 mb-10"
         >
           <img
-            src="@/assets/images/faoGoals.jpg"
-            alt="{{ $t('projectAltDescription5')}}"
+            src="@/assets/images/astice1.png"
+            alt="Astice 1"
             class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
-            @click="openModal('faoGoals.jpg')"
+            @click="openModal('astice1.png')"
             @load="setImageOpacity($event.target)"
           />
           <div
             class="text-center lg:text-left lg:pl-12 sm:px-4 max-w-full w-full md:w-2/3 lg:w-3/4"
           >
-            <p class="text-gray-800 pr-6 sm:mb-3 lg:text-justify text-left max-w-[42rem]">
-              {{ $t('projectDescription5') }}
-            </p>
+            <p
+              class="text-gray-800 pr-6 sm:mb-3 lg:text-justify text-left max-w-[42rem]"
+              v-html="$t('marineBreedingDescription')"
+            ></p>
+            <!-- Link 'Show more' -->
+            <button @click="toggleCarouselBreed" class="text-blue-500 underline md:mt-3">
+              {{ isCarouselBreedVisible ? $t('showLess') : $t('showMore') }}
+            </button>
+            <!-- Carousel Breeding-->
+            <div v-if="isCarouselBreedVisible" class="my-10 relative">
+              <!-- Pulsanti freccia -->
+              <button
+                @click="scrollCarousel('left', 'breedCarousel')"
+                class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-10 lg:hidden"
+                aria-label="Scroll left"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-gray-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              <div
+                id="breedCarousel"
+                class="flex space-x-4 overflow-x-hidden lg:overflow-x-auto max-w-full"
+              >
+                <!-- Immagine 1 -->
+                <img
+                  src="@/assets/images/incub1.jpg"
+                  alt="Incubatoio 1"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64 cursor-pointer"
+                  @click="openModal('incub1.jpg')"
+                  @load="setImageOpacity($event.target)"
+                />
+                <!-- Immagine 2 -->
+                <img
+                  src="@/assets/images/incub2.jpg"
+                  alt="Incubatoio 2"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64 cursor-pointer"
+                  @click="openModal('incub2.jpg')"
+                  @load="setImageOpacity($event.target)"
+                />
+                <!-- Immagine 3 -->
+                <img
+                  src="@/assets/images/incub3.jpg"
+                  alt="Incubatoio 3"
+                  class="w-64 h-64 object-cover rounded-lg shadow-md md:w-56 lg:w-64 cursor-pointer"
+                  @click="openModal('incub3.jpg')"
+                  @load="setImageOpacity($event.target)"
+                />
+              </div>
+              <!-- Pulsante freccia destra -->
+              <button
+                @click="scrollCarousel('right', 'breedCarousel')"
+                class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-10 lg:hidden"
+                aria-label="Scroll right"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-gray-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
         <!-- Linea divisoria decorativa -->
@@ -206,54 +369,27 @@
           </div>
         </div>
       </section>
-      <hr class="border-custom-blue-lobster" />
-      <section class="p-6 text-xl max-w-[55rem] mx-auto lg:text-justify">
-        <h2
-          class="text-3xl md:text-4xl font-bold text-center text-custom-blue-lobster md:mt-2 mt-4 mb-10"
-        >
-          {{ $t('historyTitle') }}
-        </h2>
-        <h3 class="text-2xl text-custom-blue-lobster font-medium mb-2">
-          {{ $t('historyTitle1') }}
-        </h3>
-        <div class="text-gray-800">
-          <p class="mb-2">{{ $t('historyDescription1') }}</p>
-          <p class="mb-2">{{ $t('historyDescription2') }}</p>
-          <p class="mb-4">{{ $t('historyDescription3') }}</p>
-
-          <h3 class="text-2xl text-custom-blue-lobster font-medium mb-2">
-            {{ $t('historyTitle2') }}
-          </h3>
-          <p>{{ $t('historyDescription4') }}</p>
-        </div>
-      </section>
 
       <!-- Modale per l'immagine ingrandita -->
       <div
         v-if="isModalOpen"
         class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
       >
-        <div class="relative bg-white rounded-lg max-w-[80vw] max-h-[90vh] overflow-auto p-5">
+        <div class="relative bg-white p-4 rounded-lg">
           <!-- Pulsante chiudi -->
-          <button
-            @click="closeModal"
-            class="absolute top-0 right-0 text-black text-3xl px-2 hover:bg-gray-100 rounded-full"
-          >
+          <button @click="closeModal" class="absolute top-0 right-2 text-black text-3xl p-2">
             &times;
           </button>
-          <!-- Contenitore per immagine -->
-          <div class="flex justify-center items-center w-full h-full">
-            <img
-              :src="modalImageSrc"
-              alt="Ingrandito"
-              class="max-w-full max-h-[80vh] object-contain p-3"
-            />
-          </div>
-
+          <!-- Immagine ingrandita -->
+          <img
+            :src="modalImageSrc"
+            alt="Ingrandito"
+            class="max-w-full max-h-screen object-contain p-8"
+          />
           <!-- Credits -->
           <p
             v-if="modalCredits"
-            class="absolute bottom-1 right-8 text-white bg-gray-700 bg-opacity-80 px-2 py-1 rounded text-xs"
+            class="absolute bottom-3 right-12 text-white bg-black bg-opacity-50 px-2 py-1 rounded text-sm"
           >
             {{ modalCredits }}
           </p>
@@ -272,11 +408,11 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import ScrollTopButton from '@/components/ScrollTopButton.vue'
 
-import projectSrc1 from '@/assets/images/portoPescaArtigianale.jpg'
-import projectSrc2 from '@/assets/images/asticeAdultoVasca.jpg'
-import projectSrc3 from '@/assets/images/asticeBluOrizzontale.jpg'
-import projectSrc4 from '@/assets/images/zoea.png'
-import projectSrc5 from '@/assets/images/FaoGoals.jpg'
+import cismar1 from '@/assets/images/cismar1.png'
+import cavalluccio from '@/assets/images/cavalluccio.jpg'
+import mazzancolla from '@/assets/images/mazzancolla.jpg'
+import laboratory from '@/assets/images/laboratory.jpg'
+import astice1 from '@/assets/images/astice1.png'
 import astice2 from '@/assets/images/astice2.jpg'
 import asticinoBlu from '@/assets/images/asticinoBlu.jpg'
 import larvaAstice2 from '@/assets/images/larvaAstice2.jpg'
@@ -301,25 +437,25 @@ const element8 = ref<HTMLElement | null>(null)
 const element9 = ref<HTMLElement | null>(null)
 
 const isModalOpen = ref(false)
-const modalImageSrc = ref(projectSrc1)
+const modalImageSrc = ref(cismar1)
 const modalCredits = ref('')
 
 const openModal = (imageSrc: string) => {
-  if (imageSrc === 'portoPescaArtigianale.jpg') {
-    modalImageSrc.value = projectSrc1
-    modalCredits.value = 'Pexels, AXP Photography '
-  } else if (imageSrc === 'asticeAdultoVasca.jpg') {
-    modalImageSrc.value = projectSrc2
+  if (imageSrc === 'cismar1.png') {
+    modalImageSrc.value = cismar1
     modalCredits.value = ''
-  } else if (imageSrc === 'asticeBluOrizzontale.jpg') {
-    modalImageSrc.value = projectSrc3
+  } else if (imageSrc === 'cavalluccio.jpg') {
+    modalImageSrc.value = cavalluccio
+    modalCredits.value = 'credits: Stefano Guerrieri'
+  } else if (imageSrc === 'mazzancolla.jpg') {
+    modalImageSrc.value = mazzancolla
+    modalCredits.value = 'credits: Xavier Rufray'
+  } else if (imageSrc === 'laboratory.jpg') {
+    modalImageSrc.value = laboratory
     modalCredits.value = ''
-  } else if (imageSrc === 'zoea.png') {
-    modalImageSrc.value = projectSrc4
-    modalCredits.value = ''
-  } else if (imageSrc === 'faoGoals.jpg') {
-    modalImageSrc.value = projectSrc5
-    modalCredits.value = ''
+  } else if (imageSrc === 'astice1.png') {
+    modalImageSrc.value = astice1
+    modalCredits.value = 'credits: https://pixabay.com/users/tauchteufel-2599128/'
   } else if (imageSrc === 'astice2.jpg') {
     modalImageSrc.value = astice2
     modalCredits.value = ''
@@ -365,6 +501,24 @@ const setImageOpacity = (imgElement: EventTarget | null) => {
   if (imgElement instanceof HTMLImageElement) {
     imgElement.style.opacity = '1'
   }
+}
+
+const scrollCarousel = (direction: 'left' | 'right', id: string) => {
+  const carousel = document.getElementById(id)
+  if (carousel) {
+    const scrollAmount = direction === 'left' ? -200 : 200
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+  }
+}
+
+const isCarouselLabVisible = ref(false)
+const toggleCarouselLab = () => {
+  isCarouselLabVisible.value = !isCarouselLabVisible.value
+}
+
+const isCarouselBreedVisible = ref(false)
+const toggleCarouselBreed = () => {
+  isCarouselBreedVisible.value = !isCarouselBreedVisible.value
 }
 
 const animateOnScroll = () => {

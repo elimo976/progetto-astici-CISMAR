@@ -19,7 +19,7 @@
       <!-- Bottone 'Guarda il video' -->
       <button
         @click="openVideoModal"
-        class="absolute bottom-[15%] left-1/2 transform -translate-x-1/2 translate-y-full backdrop-blur-md bg-white/30 border-2 border-custom-blue-lobster text-white md:px-6 md:py-3 px-5 py-2 text-xs font-semibold rounded-full shadow-md hover:bg-white/50 lg:hover:scale-105 hover:scale-110 active:scale-110 transition-all duration-300"
+        class="absolute bottom-[15%] left-1/2 xs:bottom-[25%] transform -translate-x-1/2 translate-y-full backdrop-blur-md bg-white/30 border-2 border-custom-blue-lobster text-white md:px-6 md:py-3 px-5 py-2 text-xs font-semibold rounded-full shadow-md hover:bg-white/50 lg:hover:scale-105 hover:scale-110 active:scale-110 transition-all duration-300"
       >
         {{ $t('button') }}
       </button>
