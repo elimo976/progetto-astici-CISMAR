@@ -23,7 +23,7 @@
       </div>
 
       <!-- Blocco di elenco puntato -->
-      <div class="max-w-[42rem] mx-auto">
+      <div class="max-w-[44rem] mx-auto">
         <ul>
           <li>
             {{ $t('researchList1') }}

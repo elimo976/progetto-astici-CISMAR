@@ -1,6 +1,5 @@
 export default {
   it: {
-    homeTitle: `Scopri di più sul nostro progetto`,
     // IL PROGETTO
     projectTitle: `Il progetto`,
     projectDescription1: `Il Progetto Astici è nato quasi vent’anni fa dalla constatazione che le popolazioni di molte specie marine sono in forte declino a causa degli impatti di attività antropiche come la pesca eccessiva, spesso illegale, la distruzione degli habitat costieri, l’inquinamento. Il forte calo del pescato e la conseguente crisi della pesca dimostrano che la sostenibilità ambientale va a braccetto con quella socio-economica.`,
@@ -53,7 +52,6 @@ export default {
   },
 
   en: {
-    homeTitle: `Discover more about our project`,
     // PROJECT
     projectTitle: `The project`,
     projectDescription1: `The Astici Project was born almost twenty years ago from the observation that the populations of many marine species are in sharp decline due to the impacts of anthropic activities such as excessive, often illegal, fishing, the destruction of coastal habitats and pollution. The sharp decline in catches and the resulting fishing crisis demonstrate that environmental sustainability goes hand in hand with socio-economic sustainability.`,

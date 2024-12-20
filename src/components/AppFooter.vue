@@ -13,8 +13,8 @@
             }}</RouterLink>
           </li>
           <li>
-            <RouterLink to="/#cismar" class="hover:text-custom-blue-light hover:underline">{{
-              $t('aboutUs')
+            <RouterLink to="/#project" class="hover:text-custom-blue-light hover:underline">{{
+              $t('project')
             }}</RouterLink>
           </li>
           <li>
@@ -24,7 +24,7 @@
           </li>
           <li>
             <RouterLink to="/third-mission" class="hover:text-custom-blue-light hover:underline">{{
-              $t('dissemination')
+              $t('thirdMission')
             }}</RouterLink>
           </li>
         </ul>
@@ -45,18 +45,14 @@
             }}</RouterLink>
           </li>
           <li>
-            <RouterLink
-              to="/under-construction"
-              class="hover:text-custom-blue-light hover:underline"
-              >{{ $t('project') }}</RouterLink
-            >
+            <RouterLink to="/training" class="hover:text-custom-blue-light hover:underline">{{
+              $t('training')
+            }}</RouterLink>
           </li>
           <li>
-            <RouterLink
-              to="/under-construction"
-              class="hover:text-custom-blue-light hover:underline"
-              >{{ $t('publications') }}</RouterLink
-            >
+            <RouterLink to="/publications" class="hover:text-custom-blue-light hover:underline">{{
+              $t('publications')
+            }}</RouterLink>
           </li>
         </ul>
       </div>
@@ -69,7 +65,7 @@
             <RouterLink
               to="/under-construction"
               class="hover:text-custom-blue-light hover:underline"
-              >{{ $t('conferences') }}</RouterLink
+              >{{ $t('activities') }}</RouterLink
             >
           </li>
           <li>
@@ -81,7 +77,7 @@
             <RouterLink
               to="/under-construction"
               class="hover:text-custom-blue-light hover:underline"
-              >{{ $t('partners') }}</RouterLink
+              >{{ $t('divulgastici') }}</RouterLink
             >
           </li>
         </ul>

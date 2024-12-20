@@ -1,40 +1,36 @@
 <template>
-  <main class="w-full flex-grow bg-gray-50 p-8 md:p-12 lg:p-24">
+  <main class="w-full flex-grow bg-gray-50 px-8 md:px-12 lg:px-24 py-8">
     <section class="space-y-12 max-w-7xl mx-auto">
-      <!-- Titolo principale -->
-      <h2
-        class="text-3xl lg:text-4xl font-playfair font-bold text-center text-custom-blue-lobster md:mt-4 sm:mt-4 mb-10"
-      >
-        {{ $t('homeTitle') }}
-      </h2>
-
       <!-- IL PROGETTO -->
-      <section id="project" class="p-6 text-xl">
-        <div
-          ref="element1"
-          class="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:mb-6 mb-10"
-        >
-          <img
-            src="@/assets/images/portoPescaArtigianale-rit.jpg"
-            alt="{{ $t('projectAltDescription1') }}"
-            class="w-48 lg:w-64 aspect-square object-cover rounded-full shadow-lg transition-all cursor-pointer"
-            @click="openModal('portoPescaArtigianale.jpg')"
-            @load="setImageOpacity($event.target)"
-          />
+      <section id="project" class="px-6 text-xl">
+        <article>
+          <h3
+            class="text-4xl lg:text-5xl text-center font-semibold lg:font-normal text-custom-blue-lobster mb-8"
+          >
+            {{ $t('projectTitle') }}
+          </h3>
+          <hr class="border-custom-blue-lobster mb-8 hidden md:block" />
 
-          <div class="lg:pl-12 sm:px-4 max-w-full w-full md:w-2/3 lg:w-3/4">
-            <h3
-              class="text-4xl text-center lg:text-left font-semibold text-custom-blue-lobster mb-6 sm:mt-3"
-            >
-              {{ $t('projectTitle') }}
-            </h3>
-            <p
-              class="text-gray-800 lg:pl-0 lg:mr-6 sm:px-4 lg:text-justify text-left max-w-[42rem]"
-            >
-              {{ $t('projectDescription1') }}
-            </p>
+          <div
+            ref="element1"
+            class="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:mb-6 mb-10"
+          >
+            <img
+              src="@/assets/images/portoPescaArtigianale-rit.jpg"
+              alt="{{ $t('projectAltDescription1') }}"
+              class="w-48 lg:w-64 aspect-square object-cover rounded-full shadow-lg transition-all cursor-pointer"
+              @click="openModal('portoPescaArtigianale.jpg')"
+              @load="setImageOpacity($event.target)"
+            />
+            <div class="lg:pl-12 sm:px-4 max-w-full w-full md:w-2/3 lg:w-3/4">
+              <p
+                class="text-gray-800 lg:pl-0 lg:mr-6 sm:px-4 lg:text-justify text-left max-w-[42rem]"
+              >
+                {{ $t('projectDescription1') }}
+              </p>
+            </div>
           </div>
-        </div>
+        </article>
         <div
           ref="element2"
           class="flex flex-col lg:flex-row-reverse items-center space-x-0 lg:space-x-[clamp(1rem, 2vw, 1.5rem)] space-y-6 lg:mb-6 mb-10"
@@ -112,45 +108,37 @@
             </p>
           </div>
         </div>
-        <!-- Linea divisoria decorativa -->
-        <div class="relative py-8 mt-4">
-          <div class="absolute inset-0 flex items-center">
-            <div class="w-full border-t border-gray-300"></div>
-          </div>
-          <div class="relative flex justify-center">
-            <span class="bg-gray-50 px-4 text-gray-600 text-sm italic">
-              {{ $t('dividerText') }}
-            </span>
-          </div>
-        </div>
       </section>
 
       <!-- Astice -->
-      <section id="lobster" class="p-6 text-xl">
-        <div
-          ref="element6"
-          class="flex flex-col lg:flex-row-reverse items-center space-x-0 lg:space-x-[clamp(1rem, 2vw, 1.5rem)] space-y-6 mb-10"
-        >
-          <img
-            src="@/assets/images/astice2Tondino.jpg"
-            alt="Astice 1"
-            class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
-            @click="openModal('astice2.jpg')"
-            @load="setImageOpacity($event.target)"
-          />
-          <div class="text-left lg:mr-6 max-w-full w-full md:w-2/3 lg:w-auto">
-            <h3
-              v-if="$t('lobsterTitle')"
-              class="text-4xl font-semibold text-custom-blue-lobster mb-6 text-center lg:text-left md:text-center sm:text-center"
-            >
-              {{ $t('lobsterTitle') }}
-            </h3>
-            <p
-              class="text-gray-800 lg:pl-0 lg:mr-6 sm:px-4 lg:text-justify text-left max-w-[42rem]"
-              v-html="$t('lobsterDescription1')"
-            ></p>
+      <section id="lobster" class="px-6 text-xl">
+        <article>
+          <h3
+            v-if="$t('lobsterTitle')"
+            class="text-4xl lg:text-5xl font-semibold lg:font-normal text-custom-blue-lobster mb-8 text-center text-center"
+          >
+            {{ $t('lobsterTitle') }}
+          </h3>
+          <hr class="border-custom-blue-lobster mb-8 hidden md:block" />
+          <div
+            ref="element6"
+            class="flex flex-col lg:flex-row-reverse items-center space-x-0 lg:space-x-[clamp(1rem, 2vw, 1.5rem)] space-y-6 mb-10"
+          >
+            <img
+              src="@/assets/images/astice2Tondino.jpg"
+              alt="Astice 1"
+              class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
+              @click="openModal('astice2.jpg')"
+              @load="setImageOpacity($event.target)"
+            />
+            <div class="text-left lg:mr-6 max-w-full w-full md:w-2/3 lg:w-auto">
+              <p
+                class="text-gray-800 lg:pl-0 lg:mr-6 sm:px-4 lg:text-justify text-left max-w-[42rem]"
+                v-html="$t('lobsterDescription1')"
+              ></p>
+            </div>
           </div>
-        </div>
+        </article>
         <div
           ref="element7"
           class="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-6 space-y-6 lg:mb-0 mb-10"
@@ -208,13 +196,16 @@
           </div>
         </div>
       </section>
-      <hr class="border-custom-blue-lobster" />
-      <section class="p-6 text-xl max-w-[55rem] mx-auto lg:text-justify">
+
+      <!-- Storia -->
+      <section class="px-6 text-xl max-w-[55rem] mx-auto lg:text-justify">
         <h2
-          class="text-3xl md:text-4xl font-bold text-center text-custom-blue-lobster md:mt-2 mt-4 mb-10"
+          class="text-4xl lg:text-5xl font-semibold lg:font-normal text-center text-custom-blue-lobster md:mt-2 mt-4 mb-10"
         >
           {{ $t('historyTitle') }}
         </h2>
+        <hr class="border-custom-blue-lobster mb-8 hidden md:block" />
+
         <h3 class="text-2xl text-custom-blue-lobster font-medium mb-2">
           {{ $t('historyTitle1') }}
         </h3>
@@ -235,7 +226,7 @@
         v-if="isModalOpen"
         class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
       >
-        <div class="relative bg-white rounded-lg max-w-[80vw] max-h-[90vh] overflow-auto p-5">
+        <div class="relative bg-white rounded-lg max-w-[80vw] max-h-[90vh] overflow-auto p-3">
           <!-- Pulsante chiudi -->
           <button
             @click="closeModal"
@@ -255,7 +246,7 @@
           <!-- Credits -->
           <p
             v-if="modalCredits"
-            class="absolute bottom-1 right-8 text-white bg-gray-700 bg-opacity-80 px-2 py-1 rounded text-xs"
+            class="absolute bottom-1 right-8 text-gray-700 px-2 rounded text-xs"
           >
             {{ modalCredits }}
           </p>

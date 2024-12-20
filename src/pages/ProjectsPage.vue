@@ -21,7 +21,7 @@
       <div class="max-w-[42rem] mx-auto">
         <h3 class="font-bold mb-3 text-custom-blue-lobster">{{ $t('projectsHeading2') }}</h3>
         <p>{{ $t('projectsText2') }}</p>
-        <div class="max-w-[38rem] mx-auto mt-4">
+        <div class="max-w-[42rem] mx-auto mt-4">
           <ul>
             <li>
               <strong>{{ $t('projectsList1bold') }}</strong> {{ $t('projectsList1') }}
