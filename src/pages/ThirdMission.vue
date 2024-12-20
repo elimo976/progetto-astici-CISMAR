@@ -110,8 +110,8 @@
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
 import imageSrcThirdMission1 from '@/assets/images/didattica-rit.jpg'
-import imageSrcThirdMission2 from '@/assets/images/bent.jpeg'
-import imageSrcThirdMission3 from '@/assets/images/bent3.jpeg'
+import imageSrcThirdMission2 from '@/assets/images/retiVuote.jpg'
+import imageSrcThirdMission3 from '@/assets/images/rilascioAsticeTrdM.jpg'
 
 export default defineComponent({
   setup() {

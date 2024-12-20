@@ -189,7 +189,7 @@ const updateMenuItems = () => {
       submenuOpen: false,
       children: [
         { title: t('thirdMission'), link: '/third-mission' },
-        { title: t('activities'), link: '/under-construction' },
+        { title: t('activities'), link: '/activities' },
         { title: t('divulgastici'), link: '/under-construction' },
         { title: t('media'), link: 'media' },
         // { title: t('partners'), link: '/under-construction' },

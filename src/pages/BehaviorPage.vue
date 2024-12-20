@@ -114,7 +114,7 @@ import { ref, defineComponent } from 'vue'
 import imageSrcBehavior0 from '@/assets/images/asticeTana-rit.jpg'
 import imageSrcBehavior1 from '@/assets/images/asticiEsploratori.jpg'
 import imageSrcBehavior2 from '@/assets/images/asticeGiovane.jpg'
-import imageSrcBehavior3 from '@/assets/images/asticinoConchiglie.png'
+import imageSrcBehavior3 from '@/assets/images/giovanileAstice-rit.jpg'
 
 export default defineComponent({
   name: 'BehaviorPage',

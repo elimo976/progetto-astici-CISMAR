@@ -13,6 +13,7 @@ import BehaviorPage from '@/pages/BehaviorPage.vue'
 import GeneticsPage from '@/pages/GeneticsPage.vue'
 import ProjectsPage from '@/pages/ProjectsPage.vue'
 import PublicationsPage from '@/pages/PublicationsPage.vue'
+import ActivitiesPage from '@/pages/ActivitiesPage.vue'
 
 const routes = [
   {
@@ -74,6 +75,11 @@ const routes = [
     path: '/publications',
     name: 'Publications',
     component: PublicationsPage,
+  },
+  {
+    path: '/activities',
+    name: 'Activities',
+    component: ActivitiesPage,
   },
   {
     path: '/under-construction',

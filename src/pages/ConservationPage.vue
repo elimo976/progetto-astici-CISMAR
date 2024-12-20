@@ -33,17 +33,30 @@
               :alt="$t('imageAltRoleCismar0')"
               class="aspect-square w-full object-cover rounded-lg shadow-xl"
             />
-            <figcaption class="mt-4 lg:mr-20 pr-1 text-sm md:text-base text-gray-600 text-right">
+            <figcaption class="mt-4 pr-1 text-sm md:text-base text-gray-600 text-right">
               {{ $t('imageAltRoleCismar0') }}
             </figcaption>
           </figure>
           <p class="mb-4">{{ $t('cismarDescription2') }}</p>
           <p class="mb-4">{{ $t('cismarDescription3') }}</p>
 
-          <!-- Immagini cavalluccio e mazzancolla -->
+          <!-- Immagini seppia, cavalluccio e mazzancolla -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-6 md:max-w-[46rem] max-w-[22rem] mx-auto px-4"
+            class="grid grid-cols-1 md:grid-cols-3 gap-6 md:max-w-[46rem] max-w-[22rem] mx-auto px-4"
           >
+            <figure
+              class="mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+              @click="openModal(imageSrcCismar8)"
+            >
+              <img
+                :src="imageSrcCismar8"
+                :alt="$t('cismarAltDescription3')"
+                class="aspect-square w-full object-cover rounded-lg shadow-xl"
+              />
+              <figcaption class="mt-4 text-xs md:text-sm text-gray-600 text-right">
+                {{ $t('cismarAltDescription3') }}
+              </figcaption>
+            </figure>
             <figure
               class="mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
               @click="openModal(imageSrcCismar3)"
@@ -53,7 +66,7 @@
                 :alt="$t('cismarAltDescription1')"
                 class="aspect-square w-full object-cover rounded-lg shadow-xl"
               />
-              <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-right">
+              <figcaption class="mt-4 text-xs md:text-sm text-gray-600 text-right">
                 {{ $t('cismarAltDescription1') }}
               </figcaption>
             </figure>
@@ -66,7 +79,7 @@
                 :alt="$t('cismarAltDescription2')"
                 class="aspect-square w-full object-cover rounded-lg shadow-xl"
               />
-              <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-right">
+              <figcaption class="mt-4 pr-1 text-xs md:text-sm text-gray-600 text-right">
                 {{ $t('cismarAltDescription2') }}
               </figcaption>
             </figure>
@@ -84,7 +97,7 @@
               :alt="$t('laboratoryAltDescription')"
               class="aspect-square w-full object-cover rounded-lg shadow-xl"
             />
-            <figcaption class="mt-4 lg:mr-20 pr-1 text-sm md:text-base text-gray-600 text-right">
+            <figcaption class="mt-4 pr-1 text-sm md:text-base text-gray-600 text-right">
               {{ $t('laboratoryAltDescription') }}
             </figcaption>
           </figure>
@@ -104,7 +117,7 @@
                 :alt="$t('laboratoryAltDescription1')"
                 class="aspect-square w-full object-cover rounded-lg shadow-xl"
               />
-              <figcaption class="mt-4 lg:mr-20 pr-1 text-sm md:text-base text-gray-600 text-right">
+              <figcaption class="mt-4 pr-1 text-sm md:text-base text-gray-600 text-right">
                 {{ $t('laboratoryAltDescription1') }}
               </figcaption>
             </figure>
@@ -118,7 +131,7 @@
                 :alt="$t('laboratoryAltDescription2')"
                 class="aspect-square w-full object-cover rounded-lg shadow-xl"
               />
-              <figcaption class="mt-4 lg:mr-20 pr-1 text-sm md:text-base text-gray-600 text-right">
+              <figcaption class="mt-4 pr-1 text-sm md:text-base text-gray-600 text-right">
                 {{ $t('laboratoryAltDescription2') }}
               </figcaption>
             </figure>
@@ -132,7 +145,7 @@
                 :alt="$t('laboratoryAltDescription3')"
                 class="aspect-square w-full object-cover rounded-lg shadow-xl"
               />
-              <figcaption class="mt-4 lg:mr-20 pr-1 text-sm md:text-base text-gray-600 text-right">
+              <figcaption class="mt-4 pr-1 text-sm md:text-base text-gray-600 text-right">
                 {{ $t('laboratoryAltDescription3') }}
               </figcaption>
             </figure>
@@ -156,7 +169,7 @@
 
         <div class="max-w-[47rem] mx-auto xs:px-4">
           <p class="mb-4">{{ $t('contentRoleCismar1') }}</p>
-          <p v-html="sanitizedContentCismar2()" class="mb-3"></p>
+          <p class="mb-3">{{ $t('contentRoleCismar2') }}</p>
           <p class="mb-4">{{ $t('contentRoleCismar3') }}</p>
         </div>
         <!-- Immagine 1 sezione 1-->
@@ -223,7 +236,6 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
-import DOMPurify from 'dompurify'
 
 import imageSrcCismar0 from '@/assets/images/cismar-rit.jpg'
 import imageSrcCismar0SM from '@/assets/images/cismarSM-rit.jpg'
@@ -235,6 +247,7 @@ import imageSrcCismar4 from '@/assets/images/mazzancolla.jpg'
 import imageSrcCismar5 from '@/assets/images/bioreactors.jpg'
 import imageSrcCismar6 from '@/assets/images/vasche2.jpg'
 import imageSrcCismar7 from '@/assets/images/incub1.jpg'
+import imageSrcCismar8 from '@/assets/images/seppia.jpg'
 
 import imageSrcRoleCismar1 from '@/assets/images/asticeAdulto.jpg'
 import imageSrcRoleCismar2 from '@/assets/images/aquahiveLoaded.jpg'
@@ -255,13 +268,6 @@ export default defineComponent({
       selectedImage.value = ''
     }
 
-    const sanitizedContentCismar2 = () => {
-      // Usa una stringa come esempio del contenuto che vuoi sanificare
-      const rawHtml =
-        '<p>Nel caso dell’astice europeo un ostacolo iniziale importante è stato l’assenza di tecniche consolidate per l’allevamento. Essendo una specie non allevata per scopi commerciali, è stato necessario sviluppare da zero procedure e metodologie specifiche. Questo risultato è stato raggiunto grazie alle ricerche condotte dal <strong>CISMAR</strong>, il centro di eccellenza del DEB impegnato nello studio e nella conservazione dell’astice.</p>'
-      return DOMPurify.sanitize(rawHtml)
-    }
-
     return {
       showImageModal,
       selectedImage,
@@ -275,11 +281,11 @@ export default defineComponent({
       imageSrcCismar5,
       imageSrcCismar6,
       imageSrcCismar7,
+      imageSrcCismar8,
       imageSrcRoleCismar1,
       imageSrcRoleCismar2,
       openModal,
       closeImageModal,
-      sanitizedContentCismar2,
     }
   },
 })

@@ -1,3 +1,4 @@
+import ActivitiesPage from './ActivitiesPage'
 import AppCookie from './AppCookie'
 import AppFooter from './AppFooter'
 import AppHeader from './AppHeader'
@@ -44,6 +45,7 @@ const messages: Messages = {
     ...BehaviorPage.en,
     ...GeneticsPage.en,
     ...ProjectsPage.en,
+    ...ActivitiesPage.en,
   },
   it: {
     ...AppHeader.it,
@@ -61,6 +63,7 @@ const messages: Messages = {
     ...BehaviorPage.it,
     ...GeneticsPage.it,
     ...ProjectsPage.it,
+    ...ActivitiesPage.it,
   },
 }
 

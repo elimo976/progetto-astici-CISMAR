@@ -31,7 +31,7 @@
               :alt="$t('imageAltTraining1')"
               class="aspect-square w-full object-cover rounded-lg shadow-xl"
             />
-            <figcaption class="mt-4 text-base text-gray-600 text-right">
+            <figcaption class="mt-4 text-sm text-gray-600 text-right">
               {{ $t('imageAltTraining1') }}
             </figcaption>
           </figure>
@@ -44,7 +44,7 @@
               :alt="$t('imageAltTraining2')"
               class="aspect-square w-full object-cover rounded-lg shadow-xl"
             />
-            <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+            <figcaption class="mt-4 mr-1 text-sm text-gray-600 text-right">
               {{ $t('imageAltTraining2') }}
             </figcaption>
           </figure>
@@ -57,7 +57,7 @@
               :alt="$t('imageAltTraining3')"
               class="aspect-square w-full object-cover rounded-lg shadow-xl"
             />
-            <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+            <figcaption class="mt-4 mr-1 text-sm text-gray-600 text-right">
               {{ $t('imageAltTraining3') }}
             </figcaption>
           </figure>

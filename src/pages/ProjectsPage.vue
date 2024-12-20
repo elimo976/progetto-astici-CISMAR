@@ -11,15 +11,25 @@
         <p>{{ $t('projectsIntro') }}</p>
       </div>
 
-      <!-- Blocco di testo -->
+      <!-- PRIN -->
       <div class="max-w-[42rem] mx-auto mb-5">
-        <h3 class="font-bold mb-3 text-custom-blue-lobster">{{ $t('projectsHeading1') }}</h3>
+        <div
+          class="flex md:justify-between md:flex-row flex-col md:items-start items-center mb-3 pr-3"
+        >
+          <h3 class="font-bold text-custom-blue-lobster mb-3">{{ $t('projectsHeading1') }}</h3>
+          <img src="@/assets/loghi/prinLogo.png" alt="Logo PRIN" class="w-auto h-14" />
+        </div>
         <p class="mb-2">{{ $t('projectsText1') }}</p>
       </div>
 
-      <!-- Blocco di testo con elenco puntato -->
+      <!-- FEAMP -->
       <div class="max-w-[42rem] mx-auto">
-        <h3 class="font-bold mb-3 text-custom-blue-lobster">{{ $t('projectsHeading2') }}</h3>
+        <div
+          class="flex md:justify-between md:flex-row flex-col md:items-start items-center mb-3 pr-3"
+        >
+          <h3 class="font-bold mb-3 text-custom-blue-lobster">{{ $t('projectsHeading2') }}</h3>
+          <img src="@/assets/loghi/feampLogo.png" alt="Logo PRIN" class="w-auto h-14 border" />
+        </div>
         <p>{{ $t('projectsText2') }}</p>
         <div class="max-w-[42rem] mx-auto mt-4">
           <ul>
@@ -74,9 +84,16 @@
         </div>
       </div>
 
-      <!-- Blocco di testo -->
+      <!-- CENTRO BIODIVERSITA -->
       <div class="max-w-[42rem] mx-auto">
-        <h3 class="font-bold mt-5 mb-3 text-custom-blue-lobster">{{ $t('projectsHeading3') }}</h3>
+        <div
+          class="flex md:justify-between md:flex-row flex-col md:items-start items-center mt-6 mb-3 mr-5"
+        >
+          <h3 class="font-bold my-5 md:my-0 text-custom-blue-lobster">
+            {{ $t('projectsHeading3') }}
+          </h3>
+          <img src="@/assets/loghi/centroBiodivLogo.png" alt="Logo PRIN" class="w-auto mb-2 h-14" />
+        </div>
         <p>{{ $t('projectsText3') }}</p>
       </div>
 

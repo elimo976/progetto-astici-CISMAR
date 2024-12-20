@@ -24,9 +24,8 @@ export default {
 
     dividerText: `Esplora la sezione successiva`,
 
-    lobsterTitle: "L'astice", // European lobster repopulation
+    lobsterTitle: `L'astice`, // European lobster repopulation
     lobsterDescription1: `L’astice europeo (<i>Homarus gammarus</i>) è uno dei crostacei più iconici dei mari italiani.<br />
-    <br />
     Diffuso dall’Atlantico nord-orientale al Mediterraneo, abita prevalentemente fondali rocciosi e sabbiosi, da pochi metri fino a 150 m di profondità. Questo crostaceo notturno si nutre di una dieta varia, composta principalmente da molluschi, piccoli pesci e altri invertebrati bentonici.`,
     lobsterDescription2: `La sua crescita è lenta e avviene tramite mute successive, con individui che possono raggiungere anche i 50 cm di lunghezza e un peso superiore ai 5 kg. L’astice ha una vita riproduttiva lunga, e le femmine depongono fino a 20.000 uova ogni 1-2 anni, ma la sopravvivenza delle larve è estremamente bassa, rendendo la specie vulnerabile a pressioni esterne.`,
     lobsterDescription3: `In Italia, le popolazioni di astice sono in declino a causa della sovrapesca, dovuta anche alla pesca illegale di individui sotto la taglia minima (30 cm) e al prelevo durante la riproduzione. Di conseguenza, le catture sono diminuite, mentre la pressione della pesca è aumentata, rendendo necessarie misure di gestione più rigorose.`,
@@ -56,30 +55,29 @@ export default {
     projectTitle: `The project`,
     projectDescription1: `The Astici Project was born almost twenty years ago from the observation that the populations of many marine species are in sharp decline due to the impacts of anthropic activities such as excessive, often illegal, fishing, the destruction of coastal habitats and pollution. The sharp decline in catches and the resulting fishing crisis demonstrate that environmental sustainability goes hand in hand with socio-economic sustainability.`,
 
-    projectAltDescription1: `Artisanal fishing port`,
+    projectAltDescription1: `Small-scale artisanal fishing port`,
 
     projectDescription2: `The European lobster is one of these cases: in the Mediterranean the populations show signs of overexploitation and the management measures already implemented have not produced a rapid recovery of the species, which is a fundamental resource for coastal fishing.`,
 
-    projectAltDescription2: `Adult lobster`,
+    projectAltDescription2: `An adult European lobster`,
 
     projectDescription3: `Studies are carried out in several laboratories specializing in molecular ecology, environmental and benthic monitoring, microscopy, ethology, ecogenotoxicology, and parasitology.`,
 
-    projectAltDescription3: `Release of a young lobster`,
+    projectAltDescription3: `A juvenile of European lobster is released`,
 
     projectDescription4: `The young lobsters used for repopulation are produced in the experimental aquaculture plants of the Experimental Marine Ichthyogenic Center (CISMAR) of the Tarquinia Saline, where all the research and production activities take place, from lobster breeding techniques to genetic monitoring.`,
 
-    projectAltDescription4: `Lobster larvae at the zoea stage`,
+    projectAltDescription4: `An European lobster larva at the zoea stage`,
 
     projectDescription5: `The Astici Project proposes both concrete answers to the problem of the impoverishment of marine biodiversity and a generalizable model of sustainable resource management in accordance with the United Nations 2030 Agenda for Sustainable Development objectives. In fact, if biodiversity and ecosystems are not "healthy" today, we will not be healthy tomorrow either, and we will not be able to maintain a prosperous and fair society.`,
 
-    projectAltDescription5: `The Sustainable Development Goals Agenda 2030`,
+    projectAltDescription5: `Agenda 2030 Sustainable Development Goals`,
 
-    dividerText: 'Explore the next section',
+    dividerText: `Explore the next section`,
 
-    lobsterTitle: 'The Lobster',
+    lobsterTitle: `The Lobster`,
     lobsterDescription1: `
       The European lobster (<i>Homarus gammarus</i>) is one of the most iconic crustaceans of Italian seas.<br />
-      <br />
       Found from the northeastern Atlantic to the Mediterranean, it primarily inhabits rocky and sandy seabeds at depths ranging from a few meters to 150 meters. This nocturnal crustacean has a varied diet consisting mainly of mollusks, small fish, and other benthic invertebrates.`,
     lobsterDescription2: `Its growth is slow, occurring through successive molts, with individuals reaching up to 50 cm in length and weighing over 5 kg. The lobster has a long reproductive life, with females laying up to 20,000 eggs every 1-2 years, though larval survival rates are extremely low, making the species vulnerable to external pressures.`,
     lobsterDescription3: `In Italy, lobster populations are declining due to overfishing, which includes illegal fishing of individuals below the minimum size (30 cm) and harvesting during reproduction. Consequently, catches have decreased while fishing pressure has increased, necessitating stricter management measures.`,

@@ -1,4 +1,39 @@
 <template>
+  <div class="relative w-full">
+    <!-- Immagine del banner -->
+    <img
+      :src="imageSrcGeneticsBanner"
+      :alt="$t('imageAltGeneticsBanner')"
+      class="w-full object-cover rounded-lg shadow-xl"
+    />
+
+    <!-- Attribuzione nell'angolo in basso a destra -->
+    <div
+      class="absolute bottom-1 right-1 bg-gray-300 bg-opacity-40 text-xs text-gray-700 px-2 py-1 rounded-lg shadow-md"
+    >
+      <p>
+        Image by
+        <a
+          href="https://pixabay.com/users/qimono-1962238/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1811955"
+          class="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Arek Socha
+        </a>
+        from
+        <a
+          href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1811955"
+          class="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pixabay
+        </a>
+      </p>
+    </div>
+  </div>
+
   <section class="bg-custom-beige text-gray-800 md:px-8 px-12 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
       <h1 class="text-custom-blue-lobster text-4xl font-semibold my-5 text-center">
@@ -18,15 +53,15 @@
         <!-- Immagine ricercatore -->
         <figure
           class="w-3/5 xs:w-4/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-          @click="openModal(imageSrcTraining4)"
+          @click="openModal(imageSrcGenetics1)"
         >
           <img
-            :src="imageSrcTraining4"
-            :alt="$t('imageAltTraining4')"
+            :src="imageSrcGenetics1"
+            :alt="$t('imageAltGenetics1')"
             class="aspect-square w-full object-cover rounded-lg shadow-xl"
           />
           <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-            {{ $t('imageAltTraining4') }}
+            {{ $t('imageAltGenetics1') }}
           </figcaption>
         </figure>
         <p>{{ $t('geneticsText4') }}</p>
@@ -63,7 +98,8 @@
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
 
-import imageSrcTraining4 from '@/assets/images/labwork.jpg'
+import imageSrcGeneticsBanner from '@/assets/images/bannerGenetics.jpg'
+import imageSrcGenetics1 from '@/assets/images/labwork.jpg'
 
 export default defineComponent({
   name: 'GeneticsPage',
@@ -85,7 +121,8 @@ export default defineComponent({
     return {
       showImageModal,
       selectedImage,
-      imageSrcTraining4,
+      imageSrcGeneticsBanner,
+      imageSrcGenetics1,
       openModal,
       closeImageModal,
     }

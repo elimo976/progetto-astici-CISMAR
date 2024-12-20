@@ -2,24 +2,25 @@ export default {
   it: {
     // CISMAR
     cismarTitle: 'CISMAR',
-    cismarDescription1: `Il CISMAR, fondato nel 2008, è la struttura di ricerca del DEB per l’acquacoltura sperimentale e l’ecologia marina.`,
+    cismarDescription1: `Il CISMAR, fondato nel 2008, è la struttura di ricerca del Dipartimento di Scienze Ecologiche e Biologiche dell’Università degli studi della Tuscia (DEB) per l’acquacoltura sperimentale e l’ecologia marina. `,
 
     cismarDescription2: `Il CISMAR è localizzato all’interno della Riserva Naturale Regionale delle Saline di Tarquinia, dove edifici un tempo destinati all’estrazione del sale e poi abbandonati sono stati restaurati e riconvertiti in laboratori e strutture di ricerca dal Dipartimento di Scienze Ecologiche e Biologiche dell’Università della Tuscia.`,
 
     cismarDescription3: `Qui si studia la biodiversità degli ambienti marino-costieri e come conservarla, attraverso ricerche di genetica, ecologia ed etologia che riguardano tante specie marine: crostacei, cefalopodi, pesci e loro parassiti.`,
 
-    cismarAltDescription1: `Cavalluccio marino - credits: Stefano Guerrieri`,
+    cismarAltDescription1: `Cavalluccio marino - Credits: Stefano Guerrieri`,
     cismarAltDescription2: `Mazzancolla`,
+    cismarAltDescription3: `Seppia comune - Credits: Pawel Kalisinski; pexels.com`,
 
     biodiversityDescription: `Gli studi vengono condotti in numerosi laboratori: di ecologia molecolare, di monitoraggio ambientale e del benthos, di microscopia, di etologia, di ecogenotossicologia, di parassitologia.`,
 
     laboratoryDescription: `La parte più estesa è destinata all’allevamento di diverse specie marine in tutti i loro stadi vitali: uova, larve, giovani ed adulti. Ci sono molte vasche con diverse dimensioni e caratteristiche, incubatoi sperimentali e bioreattori per la produzione di fito- e zooplancton destinato a nutrire gli organismi stabulati.`,
 
-    laboratoryAltDescription: `I laboratori del CISMAR`,
+    laboratoryAltDescription: `I laboratori di Ecologia Molecolare`,
 
-    laboratoryAltDescription1: `Bioreattori`,
-    laboratoryAltDescription2: `Vasche`,
-    laboratoryAltDescription3: `Incubatoio`,
+    laboratoryAltDescription1: `Bioreattori per la produzione di fitoplankton`,
+    laboratoryAltDescription2: `Vasche per l’allevamento`,
+    laboratoryAltDescription3: `Schiuditoi per astici Aquahive®`,
 
     showMore: `Scopri di più`,
 
@@ -31,7 +32,7 @@ export default {
     titleRoleCismar: 'Il ruolo del CISMAR',
     contentRoleCismar1: `Il ripopolamento (o restocking) è una tecnica fondamentale per favorire la ripresa delle specie marine che hanno subito un forte calo numerico a causa di attività umane, come la pesca intensiva.`,
     contentRoleCismar2: `
-      Nel caso dell’astice europeo un ostacolo iniziale importante è stato l’assenza di tecniche consolidate per l’allevamento. Essendo una specie non allevata per scopi commerciali, è stato necessario sviluppare da zero procedure e metodologie specifiche. Questo risultato è stato raggiunto grazie alle ricerche condotte dal <strong>CISMAR</strong>, il centro di eccellenza del DEB impegnato nello studio e nella conservazione dell’astice.,
+      Nel caso dell’astice europeo un ostacolo iniziale importante è stato l’assenza di tecniche consolidate per l’allevamento. Essendo una specie non allevata per scopi commerciali, è stato necessario sviluppare da zero procedure e metodologie specifiche. Questo risultato è stato raggiunto grazie alle ricerche condotte dal CISMAR, il centro di eccellenza del DEB impegnato nello studio e nella conservazione dell’astice.,
     `,
     linkRoleCismar: ` (link alla pagina CISMAR)`,
     contentRoleCismar3: `
@@ -39,9 +40,9 @@ export default {
     `,
     contentRoleCismar4: `
      Per raggiungere questo obiettivo, sono stati condotti studi approfonditi sulla genetica, sull’ecologia e sul comportamento dell’astice. Questi dati sono stati fondamentali per progettare strutture adeguate e impostare le condizioni di allevamento ideali, un risultato raggiunto grazie al lavoro di un team di tecnici e ricercatori altamente qualificati del CISMAR, che continuano a impegnarsi in queste ricerche avanzate`,
-    imageAltRoleCismar0: `Cismar visto dall'alto`,
-    imageAltRoleCismar1: `Astice adulto`,
-    imageAltRoleCismar2: `Aquahive`,
+    imageAltRoleCismar0: `Il CISMAR alle Saline di Tarquinia `,
+    imageAltRoleCismar1: `Una femmina con le uova viene controllata dai ricercatori del CISMAR`,
+    imageAltRoleCismar2: `Giovani astici nell’Aquahive®`,
     textDiscoverRoleCismar: `Scopri di più sulle nostre attività di ricerca`,
     linkDiscoverRoleCismar: 'qui!',
 
@@ -57,8 +58,8 @@ export default {
     contentLobster3: `
     Quando le uova sono prossime alla schiusa, le madri vengono trasferite in apposite “sale parto” e quando rilasciano le larve, queste vengono contate e trasferite nei loro incubatoi dove saranno nutrite con una dieta bilanciata appositamente studiata e potranno compiere tutte le mute fino a trasformarsi in piccoli astici bentonici (che vivono sul fondo, invece di galleggiare nella colonna d’acqua).
   `,
-    imageAltLobster1: 'Femmina con Uova',
-    imageAltLobster2: 'Uova al microscopio',
+    imageAltLobster1: `Femmina con le uova`,
+    imageAltLobster2: `Uova al microscopio`,
 
     // Training and DNA
     titleTraining: 'Il training e il DNA',
@@ -71,11 +72,10 @@ export default {
     contentTraining3: `
     Prima di essere liberati i giovali astici, e le loro madri selvatiche, saranno identificati su base genetica. Grazie a marcatori molecolari sviluppati appositamente per questa specie, ogni gruppo di fratelli viene caratterizzato da un insieme di varianti genetiche uniche, che permetteranno di individuare gli astici prodotti dal CISMAR tra quelli pescati. In questo modo è possibile valutare il reale apporto delle operazioni di rilascio sia alla consistenza delle popolazioni naturali sia al sostegno della piccola pesca costiera.
   `,
-    imageAltTraining0: 'Larva di astice',
-    imageAltTraining1: 'Giovane astice',
-    imageAltTraining2: 'Astice nella tana',
-    imageAltTraining3: 'Astice nella tana',
-    imageAltTraining4: 'Labwork - credits: Czapp Árpád',
+    imageAltTraining0: `Larva allo stadio di zoea`,
+    imageAltTraining1: `Un giovanile di astice manipola il substrato di ghiaia`,
+    imageAltTraining2: `Un giovanile di astice incontra i predatori`,
+    imageAltTraining3: `Un giovanile di astice nella tana`,
 
     // Release
     titleRelease: 'Il rilascio',
@@ -89,11 +89,11 @@ export default {
     Qui i ricercatori si immergono liberando gli astici uno ad uno; la loro presenza tiene lontani i predatori dando tempo ai piccoli di rifugiarsi tra le rocce o le piante di Posidonia.
     Da questo momento sarà il mare ad occuparsi di loro.
     `,
-    imageAltRelease0: 'Rilascio di giovane astice',
-    imageAltRelease1: 'Provette con larve di astici',
-    imageAltRelease2: 'Rilascio di giovane astice',
+    imageAltRelease0: `Rilascio di giovane astice`,
+    imageAltRelease1: `Astici pronti per il rilascio, trasportati in provette individuali`,
+    imageAltRelease2: `Giovane astice rilasciato in mare`,
 
-    watchVideoConservation: 'Guarda il video del rilascio',
+    watchVideoConservation: `Guarda il video del rilascio`,
   },
   en: {
     cismarTitle: 'CISMAR',
@@ -103,18 +103,19 @@ export default {
 
     cismarDescription3: `Here we study the biodiversity of marine-coastal environments and how to conserve it, through genetic, ecology and ethology research involving many marine species: crustaceans, cephalopods, fish and their parasites.`,
 
-    cismarAltDescription1: `Seahorse - credits: Stefano Guerrieri`,
-    cismarAltDescription2: `Prawn`,
+    cismarAltDescription1: `Seahorse - Credits: Stefano Guerrieri`,
+    cismarAltDescription2: `Caramote prawn`,
+    cismarAltDescription3: `Common cuttlefish - Credits: Pawel Kalisinski; pexels.com`,
 
     biodiversityDescription: `The studies are conducted in numerous laboratories: molecular ecology, environmental and benthos monitoring, microscopy, ethology, ecogenotoxicology, parasitology.`,
 
     laboratoryDescription: `The largest part is intended for the breeding of various marine species in all their vital stages: eggs, larvae, juveniles and adults. There are many tanks with different sizes and characteristics, experimental hatcheries and bioreactors for the production of phyto- and zooplankton intended to nourish the housed organisms.`,
 
-    laboratoryAltDescription: `The CISMAR laboratories`,
+    laboratoryAltDescription: `Molecular labs at CISMAR`,
 
-    laboratoryAltDescription1: `Bioreactors`,
-    laboratoryAltDescription2: `Tank`,
-    laboratoryAltDescription3: `Hatchery`,
+    laboratoryAltDescription1: `Bioreactors for phytoplankton production`,
+    laboratoryAltDescription2: `Tanks for lobster rearing`,
+    laboratoryAltDescription3: `Aquahive® lobster hatchery`,
 
     marineBreedingDescription: `Controlled reproduction to obtain specimens to be released into the sea as part of repopulation actions is one of the most applied strategies for the sustainable management of marine species. At CISMAR the most studied species for this purpose is the European lobster (<i>Homarus gammarus</i>), whose populations in Mediterranean waters are decreasing due to intense fishing pressure.`,
 
@@ -130,9 +131,9 @@ export default {
     contentRoleCismar4: `
       To achieve this goal, in-depth studies on the genetics, ecology, and behavior of lobsters were conducted. These data were crucial for designing appropriate facilities and setting ideal breeding conditions, an outcome achieved through the work of a team of highly skilled technicians and researchers at CISMAR, who continue to pursue advanced research in this area.
     `,
-    imageAltRoleCismar0: `Cismar seen from above`,
-    imageAltRoleCismar1: 'Adult Lobster',
-    imageAltRoleCismar2: 'Aquahive',
+    imageAltRoleCismar0: `CISMAR headquarters at the Tarquinia Salterns`,
+    imageAltRoleCismar1: `CISMAR researchers check a berried female`,
+    imageAltRoleCismar2: 'Aquahive® with lobster juveniles',
 
     textDiscoverRoleCismar: 'Learn more about our research activities',
     linkDiscoverRoleCismar: 'here!',
@@ -148,10 +149,10 @@ export default {
     contentLobster3: `
       When the eggs are about to hatch, the mothers are transferred to special "birthing rooms," and once they release the larvae, these are counted and moved to incubators where they are fed a specially designed balanced diet and undergo all molts until they transform into small benthic lobsters (living on the seabed rather than floating in the water column).
     `,
-    imageAltLobster1: 'Egg-Bearing Female',
-    imageAltLobster2: 'Lobster eggs under the microscope',
+    imageAltLobster1: `Berried female`,
+    imageAltLobster2: `Lobster eggs under the microscope`,
 
-    titleTraining: 'Training and DNA',
+    titleTraining: `Training and DNA`,
     contentTraining1: `
       The young benthic lobsters will be released into the sea at two months of age.
     `,
@@ -161,13 +162,12 @@ export default {
     contentTraining3: `
       Before being released, the young lobsters and their wild mothers will be identified genetically. Thanks to molecular markers specifically developed for this species, each sibling group is characterized by a unique set of genetic variants, allowing researchers to distinguish CISMAR-produced lobsters among those caught. This makes it possible to assess the actual contribution of the release operations to both the natural population's abundance and the support of small-scale coastal fisheries.
     `,
-    imageAltTraining0: 'Lobster Larvae',
-    imageAltTraining1: 'Young lobster',
-    imageAltTraining2: 'Lobster in den',
-    imageAltTraining3: 'Lobster in the den',
-    imageAltTraining4: 'Labwork - credits: Czapp Árpád',
+    imageAltTraining0: `Zoea larval stage`,
+    imageAltTraining1: `A juvenile lobster manipulates the gravel substrated`,
+    imageAltTraining2: `A juvenile lobster encounters predators`,
+    imageAltTraining3: `A juvenile lobster in its shelter`,
 
-    titleRelease: 'The Release',
+    titleRelease: `The Release`,
     contentRelease1: `
       At around two months of age, the young lobsters are released into the sea.
     `,
@@ -177,10 +177,10 @@ export default {
     contentRelease3: `
       Here, researchers dive to release the lobsters one by one; their presence keeps predators away, giving the juveniles time to hide among rocks or Posidonia plants. From this moment, the sea will take care of them.
     `,
-    imageAltRelease0: 'Release of young lobster',
-    imageAltRelease1: 'Lobster larvae in test tubes',
-    imageAltRelease2: 'Release of young lobster',
+    imageAltRelease0: `Release of young lobster`,
+    imageAltRelease1: `European lobsters ready for release, transported in individual tubes`,
+    imageAltRelease2: `A young lobster is released at sea`,
 
-    watchVideoConservation: 'Watch the release video',
+    watchVideoConservation: `Watch the release video`,
   },
 }
