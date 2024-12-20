@@ -70,13 +70,16 @@
         </video>
       </div>
 
-      <!-- Modal per immagine grande -->
+      <!-- Modal per immagine ingrandita -->
       <div
         v-if="showImageModal"
         class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
         @click="closeImageModal"
       >
-        <div class="relative w-3/4 max-w-3xl px-32 py-12 xs:px-3 xs:py-3">
+        <!-- Contenitore dinamico per adattarsi ai dispositivi -->
+        <div
+          class="relative w-3/4 max-w-3xl px-32 py-12 sm:w-2/3 sm:px-8 sm:py-8 xs:w-4/5 xs:px-3 xs:py-3"
+        >
           <img
             :src="selectedImage"
             alt="Immagine ingrandita"
@@ -84,7 +87,7 @@
           />
           <button
             @click="closeImageModal"
-            class="absolute top-14 right-35 xs:top-5 xs:right-5 bg-white opacity-60 text-black rounded-full py-0 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+            class="absolute top-14 right-35 sm:top-8 sm:right-8 md:top-10 md:right-10 xs:top-5 xs:right-5 bg-white opacity-60 text-black rounded-full py-0 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
           >
             ✕
           </button>
@@ -99,8 +102,6 @@ import { ref, defineComponent } from 'vue'
 
 import imageSrcActivitiesBanner from '@/assets/images/bannerActivities.jpg'
 import imageSrcActivities1 from '@/assets/images/asticiEsploratori.jpg'
-import imageSrcBehavior2 from '@/assets/images/asticeGiovane.jpg'
-import imageSrcBehavior3 from '@/assets/images/asticinoConchiglie.png'
 
 export default defineComponent({
   name: 'ActivitiesPage',
@@ -124,8 +125,6 @@ export default defineComponent({
       selectedImage,
       imageSrcActivitiesBanner,
       imageSrcActivities1,
-      imageSrcBehavior2,
-      imageSrcBehavior3,
       videoPlayer,
       openModal,
       closeImageModal,

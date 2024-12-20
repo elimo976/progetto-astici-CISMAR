@@ -70,7 +70,7 @@ export default {
     Nel frattempo, saranno allenati a confrontarsi con l’ambiente naturale grazie al substrato e alle tane presenti nelle loro celle di allevamento. Questo “arricchimento” ambientale produrrà giovani pronti ad esplorare l’ambiente marino per identificare velocemente il rifugio più adatto e sfuggire ai predatori.
   `,
     contentTraining3: `
-    Prima di essere liberati i giovali astici, e le loro madri selvatiche, saranno identificati su base genetica. Grazie a marcatori molecolari sviluppati appositamente per questa specie, ogni gruppo di fratelli viene caratterizzato da un insieme di varianti genetiche uniche, che permetteranno di individuare gli astici prodotti dal CISMAR tra quelli pescati. In questo modo è possibile valutare il reale apporto delle operazioni di rilascio sia alla consistenza delle popolazioni naturali sia al sostegno della piccola pesca costiera.
+    Prima di essere liberati i giovani astici, e le loro madri selvatiche, saranno identificati su base genetica. Grazie a marcatori molecolari sviluppati appositamente per questa specie, ogni gruppo di fratelli viene caratterizzato da un insieme di varianti genetiche uniche, che permetteranno di individuare gli astici prodotti dal CISMAR tra quelli pescati. In questo modo è possibile valutare il reale apporto delle operazioni di rilascio sia alla consistenza delle popolazioni naturali sia al sostegno della piccola pesca costiera.
   `,
     imageAltTraining0: `Larva allo stadio di zoea`,
     imageAltTraining1: `Un giovanile di astice manipola il substrato di ghiaia`,
