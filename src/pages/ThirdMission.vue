@@ -75,7 +75,7 @@
     </div>
 
     <!-- Loghi con separatori centrati sotto il testo -->
-    <div class="mt-4 flex flex-wrap justify-center items-center gap-6 px-4 lg:flex-nowrap lg:h-32">
+    <div class="mt-14 flex flex-wrap justify-center items-center gap-6 px-4 lg:flex-nowrap lg:h-32">
       <!-- Logo Unitus -->
       <img
         src="@/assets/loghi/logo-unitus.png"
