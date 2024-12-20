@@ -13,7 +13,7 @@
       <hr class="hidden md:block mb-6 w-[90%] mx-auto" />
 
       <!-- Blocco di testo -->
-      <div class="max-w-[34rem] mx-auto">
+      <div class="max-w-[44rem] mx-auto">
         <p>{{ $t('researchText1') }}</p>
         <br />
         <p>{{ $t('researchText2') }}</p>
@@ -23,8 +23,8 @@
       </div>
 
       <!-- Blocco di elenco puntato -->
-      <div class="max-w-[32rem] mx-auto">
-        <ul class="list-disc list-inside">
+      <div class="max-w-[42rem] mx-auto">
+        <ul>
           <li>
             {{ $t('researchList1') }}
             (<router-link to="/hatchery" class="text-blue-500 hover:underline">{{

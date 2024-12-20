@@ -7,22 +7,22 @@
 
       <hr class="hidden md:block mb-6 w-[90%] mx-auto" />
 
-      <div class="max-w-[32rem] mx-auto mb-5">
+      <div class="max-w-[42rem] mx-auto mb-5">
         <p>{{ $t('projectsIntro') }}</p>
       </div>
 
       <!-- Blocco di testo -->
-      <div class="max-w-[32rem] mx-auto mb-5">
+      <div class="max-w-[42rem] mx-auto mb-5">
         <h3 class="font-bold mb-3 text-custom-blue-lobster">{{ $t('projectsHeading1') }}</h3>
         <p class="mb-2">{{ $t('projectsText1') }}</p>
       </div>
 
       <!-- Blocco di testo con elenco puntato -->
-      <div class="max-w-[32rem] mx-auto">
+      <div class="max-w-[42rem] mx-auto">
         <h3 class="font-bold mb-3 text-custom-blue-lobster">{{ $t('projectsHeading2') }}</h3>
         <p>{{ $t('projectsText2') }}</p>
-        <div class="max-w-[30rem] mx-auto mt-4">
-          <ul class="list-disc list-inside">
+        <div class="max-w-[38rem] mx-auto mt-4">
+          <ul>
             <li>
               <strong>{{ $t('projectsList1bold') }}</strong> {{ $t('projectsList1') }}
               <p class="mt-3">
@@ -75,7 +75,7 @@
       </div>
 
       <!-- Blocco di testo -->
-      <div class="max-w-[32rem] mx-auto">
+      <div class="max-w-[42rem] mx-auto">
         <h3 class="font-bold mt-5 mb-3 text-custom-blue-lobster">{{ $t('projectsHeading3') }}</h3>
         <p>{{ $t('projectsText3') }}</p>
       </div>

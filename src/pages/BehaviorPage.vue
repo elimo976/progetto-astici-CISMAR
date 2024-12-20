@@ -12,13 +12,13 @@
 
       <hr class="hidden md:block mb-6 w-[90%] mx-auto" />
 
-      <div class="max-w-[34rem] mx-auto">
+      <div class="max-w-[44rem] mx-auto">
         <p>{{ $t('behaviorText1') }}</p>
         <br />
         <p>{{ $t('behaviorText2') }}</p>
       </div>
 
-      <div class="max-w-[32rem] mx-auto">
+      <div class="max-w-[42rem] mx-auto">
         <figure
           class="md:w-2/5 sm:w-3/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
           @click="openModal(imageSrcBehavior1)"
@@ -36,7 +36,7 @@
         </figure>
       </div>
 
-      <div class="max-w-[34rem] mx-auto">
+      <div class="max-w-[44rem] mx-auto">
         <p>{{ $t('behaviorText3') }}</p>
         <br />
         <p>{{ $t('behaviorText4') }}</p>
@@ -44,7 +44,7 @@
         <p>{{ $t('behaviorText5') }}</p>
       </div>
 
-      <div class="max-w-[32rem] mx-auto">
+      <div class="max-w-[42rem] mx-auto">
         <figure
           class="md:w-2/5 sm:w-3/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
           @click="openModal(imageSrcBehavior2)"
@@ -62,11 +62,11 @@
         </figure>
       </div>
 
-      <div class="max-w-[34rem] mx-auto">
+      <div class="max-w-[44rem] mx-auto">
         <p>{{ $t('behaviorText6') }}</p>
       </div>
 
-      <div class="max-w-[32rem] mx-auto">
+      <div class="max-w-[42rem] mx-auto">
         <figure
           class="md:w-2/5 sm:w-3/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
           @click="openModal(imageSrcBehavior3)"

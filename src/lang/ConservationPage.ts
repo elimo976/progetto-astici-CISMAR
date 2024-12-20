@@ -1,22 +1,49 @@
 export default {
   it: {
     // CISMAR
-    titleCismar: 'Il ruolo del CISMAR',
-    contentCismar1: `Il ripopolamento (o restocking) è una tecnica fondamentale per favorire la ripresa delle specie marine che hanno subito un forte calo numerico a causa di attività umane, come la pesca intensiva.`,
-    contentCismar2: `
+    cismarTitle: 'CISMAR',
+    cismarDescription1: `Il CISMAR, fondato nel 2008, è la struttura di ricerca del DEB per l’acquacoltura sperimentale e l’ecologia marina.`,
+
+    cismarDescription2: `Il CISMAR è localizzato all’interno della Riserva Naturale Regionale delle Saline di Tarquinia, dove edifici un tempo destinati all’estrazione del sale e poi abbandonati sono stati restaurati e riconvertiti in laboratori e strutture di ricerca dal Dipartimento di Scienze Ecologiche e Biologiche dell’Università della Tuscia.`,
+
+    cismarDescription3: `Qui si studia la biodiversità degli ambienti marino-costieri e come conservarla, attraverso ricerche di genetica, ecologia ed etologia che riguardano tante specie marine: crostacei, cefalopodi, pesci e loro parassiti.`,
+
+    cismarAltDescription1: `Cavalluccio marino - credits: Stefano Guerrieri`,
+    cismarAltDescription2: `Mazzancolla`,
+
+    biodiversityDescription: `Gli studi vengono condotti in numerosi laboratori: di ecologia molecolare, di monitoraggio ambientale e del benthos, di microscopia, di etologia, di ecogenotossicologia, di parassitologia.`,
+
+    laboratoryDescription: `La parte più estesa è destinata all’allevamento di diverse specie marine in tutti i loro stadi vitali: uova, larve, giovani ed adulti. Ci sono molte vasche con diverse dimensioni e caratteristiche, incubatoi sperimentali e bioreattori per la produzione di fito- e zooplancton destinato a nutrire gli organismi stabulati.`,
+
+    laboratoryAltDescription: `I laboratori del CISMAR`,
+
+    laboratoryAltDescription1: `Bioreattori`,
+    laboratoryAltDescription2: `Vasche`,
+    laboratoryAltDescription3: `Incubatoio`,
+
+    showMore: `Scopri di più`,
+
+    showLess: `Nascondi`,
+
+    marineBreedingDescription: `La riproduzione controllata per ottenere esemplari da liberare in mare nell’ambito di azioni di ripopolamento è una delle strategie più applicate per la gestione sostenibile delle specie marine. Presso il CISMAR la specie più studiata con questa finalità è l’astice europeo (<i>Homarus gammarus</i>), le cui popolazioni nelle acque del Mediterraneo sono in calo a causa dell’intensa pressione di pesca.`,
+
+    // RUOLO CISMAR
+    titleRoleCismar: 'Il ruolo del CISMAR',
+    contentRoleCismar1: `Il ripopolamento (o restocking) è una tecnica fondamentale per favorire la ripresa delle specie marine che hanno subito un forte calo numerico a causa di attività umane, come la pesca intensiva.`,
+    contentRoleCismar2: `
       Nel caso dell’astice europeo un ostacolo iniziale importante è stato l’assenza di tecniche consolidate per l’allevamento. Essendo una specie non allevata per scopi commerciali, è stato necessario sviluppare da zero procedure e metodologie specifiche. Questo risultato è stato raggiunto grazie alle ricerche condotte dal <strong>CISMAR</strong>, il centro di eccellenza del DEB impegnato nello studio e nella conservazione dell’astice.,
     `,
-    linkCismar: ` (link alla pagina CISMAR)`,
-    contentCismar3: `
+    linkRoleCismar: ` (link alla pagina CISMAR)`,
+    contentRoleCismar3: `
       Ci sono voluti anni di ricerche, perché gli esemplari destinati al ripopolamento devono possedere caratteristiche genetiche, comportamentali e fisiologiche identiche a quelle degli animali selvatici, per garantire il successo del rilascio in mare.
     `,
-    contentCismar4: `
+    contentRoleCismar4: `
      Per raggiungere questo obiettivo, sono stati condotti studi approfonditi sulla genetica, sull’ecologia e sul comportamento dell’astice. Questi dati sono stati fondamentali per progettare strutture adeguate e impostare le condizioni di allevamento ideali, un risultato raggiunto grazie al lavoro di un team di tecnici e ricercatori altamente qualificati del CISMAR, che continuano a impegnarsi in queste ricerche avanzate`,
-    imageAltCismar0: `Cismar visto dall'alto`,
-    imageAltCismar1: 'Astice adulto',
-    imageAltCismar2: 'Aquahive',
-    textDiscoverCismar: 'Scopri di più sulle nostre attività di ricerca',
-    linkDiscoverCismar: 'qui!',
+    imageAltRoleCismar0: `Cismar visto dall'alto`,
+    imageAltRoleCismar1: `Astice adulto`,
+    imageAltRoleCismar2: `Aquahive`,
+    textDiscoverRoleCismar: `Scopri di più sulle nostre attività di ricerca`,
+    linkDiscoverRoleCismar: 'qui!',
 
     // Lobster
     titleLobster: 'L’allevamento dell’astice europeo',
@@ -69,24 +96,46 @@ export default {
     watchVideoConservation: 'Guarda il video del rilascio',
   },
   en: {
-    titleCismar: 'The Role of CISMAR',
-    contentCismar1: `Restocking is a fundamental technique to help recover marine species that have suffered significant population declines due to human activities, such as intensive fishing.`,
-    contentCismar2: `
+    cismarTitle: 'CISMAR',
+    cismarDescription1: `CISMAR, founded in 2008, is the DEB's research facility for experimental aquaculture and marine ecology.`,
+
+    cismarDescription2: `CISMAR is located within the Saline di Tarquinia Regional Nature Reserve, where buildings once used for salt extraction and then abandoned have been restored and converted into laboratories and research facilities by the University's Department of Ecological and Biological Sciences of Tuscia.`,
+
+    cismarDescription3: `Here we study the biodiversity of marine-coastal environments and how to conserve it, through genetic, ecology and ethology research involving many marine species: crustaceans, cephalopods, fish and their parasites.`,
+
+    cismarAltDescription1: `Seahorse - credits: Stefano Guerrieri`,
+    cismarAltDescription2: `Prawn`,
+
+    biodiversityDescription: `The studies are conducted in numerous laboratories: molecular ecology, environmental and benthos monitoring, microscopy, ethology, ecogenotoxicology, parasitology.`,
+
+    laboratoryDescription: `The largest part is intended for the breeding of various marine species in all their vital stages: eggs, larvae, juveniles and adults. There are many tanks with different sizes and characteristics, experimental hatcheries and bioreactors for the production of phyto- and zooplankton intended to nourish the housed organisms.`,
+
+    laboratoryAltDescription: `The CISMAR laboratories`,
+
+    laboratoryAltDescription1: `Bioreactors`,
+    laboratoryAltDescription2: `Tank`,
+    laboratoryAltDescription3: `Hatchery`,
+
+    marineBreedingDescription: `Controlled reproduction to obtain specimens to be released into the sea as part of repopulation actions is one of the most applied strategies for the sustainable management of marine species. At CISMAR the most studied species for this purpose is the European lobster (<i>Homarus gammarus</i>), whose populations in Mediterranean waters are decreasing due to intense fishing pressure.`,
+
+    titleRoleCismar: 'The Role of CISMAR',
+    contentRoleCismar1: `Restocking is a fundamental technique to help recover marine species that have suffered significant population declines due to human activities, such as intensive fishing.`,
+    contentRoleCismar2: `
       In the case of the European lobster, an initial major challenge was the lack of established techniques for rearing. Since this species is not farmed for commercial purposes, it was necessary to develop specific procedures and methodologies from scratch. This achievement was made possible by research conducted by <strong>CISMAR</strong>, the DEB’s center of excellence dedicated to the study and conservation of lobsters.,
     `,
-    linkCismar: `(link to the CISMAR page)`,
-    contentCismar3: `
+    linkRoleCismar: `(link to the CISMAR page)`,
+    contentRoleCismar3: `
       Years of research were required because the specimens intended for restocking must have genetic, behavioral, and physiological characteristics identical to those of wild animals to ensure the success of their release into the sea.
     `,
-    contentCismar4: `
+    contentRoleCismar4: `
       To achieve this goal, in-depth studies on the genetics, ecology, and behavior of lobsters were conducted. These data were crucial for designing appropriate facilities and setting ideal breeding conditions, an outcome achieved through the work of a team of highly skilled technicians and researchers at CISMAR, who continue to pursue advanced research in this area.
     `,
-    imageAltCismar0: `Cismar seen from above`,
-    imageAltCismar1: 'Adult Lobster',
-    imageAltCismar2: 'Aquahive',
+    imageAltRoleCismar0: `Cismar seen from above`,
+    imageAltRoleCismar1: 'Adult Lobster',
+    imageAltRoleCismar2: 'Aquahive',
 
-    textDiscoverCismar: 'Learn more about our research activities',
-    linkDiscoverCismar: 'here!',
+    textDiscoverRoleCismar: 'Learn more about our research activities',
+    linkDiscoverRoleCismar: 'here!',
 
     titleLobster: 'European Lobster Rearing',
     contentLobster1: `

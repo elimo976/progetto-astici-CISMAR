@@ -22,8 +22,10 @@
             @load="setImageOpacity($event.target)"
           />
 
-          <div class="text-center lg:pl-12 sm:px-4 max-w-full w-full md:w-2/3 lg:w-3/4">
-            <h3 class="text-4xl lg:text-left font-semibold text-custom-blue-lobster mb-6 sm:mt-3">
+          <div class="lg:pl-12 sm:px-4 max-w-full w-full md:w-2/3 lg:w-3/4">
+            <h3
+              class="text-4xl text-center lg:text-left font-semibold text-custom-blue-lobster mb-6 sm:mt-3"
+            >
               {{ $t('projectTitle') }}
             </h3>
             <p
@@ -139,7 +141,7 @@
           <div class="text-left lg:mr-6 max-w-full w-full md:w-2/3 lg:w-auto">
             <h3
               v-if="$t('lobsterTitle')"
-              class="text-4xl font-semibold text-custom-blue-lobster mb-6 lg:text-left md:text-center sm:text-center"
+              class="text-4xl font-semibold text-custom-blue-lobster mb-6 text-center lg:text-left md:text-center sm:text-center"
             >
               {{ $t('lobsterTitle') }}
             </h3>

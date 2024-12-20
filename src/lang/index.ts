@@ -9,7 +9,7 @@ import HomePage from './HomePage'
 import LobsterStages from './LobsterStages'
 import MediaPage from './MediaPage'
 import NavigationMenu from './NavigationMenu'
-import ProjectPage from './ProjectPage'
+import ProjectsPage from './ProjectsPage'
 import ResearchPage from './ResearchPage'
 import ThirdMission from './ThirdMission'
 import UnderConstruction from './UnderConstruction'
@@ -43,7 +43,7 @@ const messages: Messages = {
     ...ResearchPage.en,
     ...BehaviorPage.en,
     ...GeneticsPage.en,
-    ...ProjectPage.en,
+    ...ProjectsPage.en,
   },
   it: {
     ...AppHeader.it,
@@ -60,7 +60,7 @@ const messages: Messages = {
     ...ResearchPage.it,
     ...BehaviorPage.it,
     ...GeneticsPage.it,
-    ...ProjectPage.it,
+    ...ProjectsPage.it,
   },
 }
 

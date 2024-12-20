@@ -14,13 +14,13 @@
 
         <hr class="hidden md:block mb-6 w-[90%] mx-auto" />
 
-        <div class="max-w-[34rem] mx-auto xs:px-4">
+        <div class="max-w-[44rem] mx-auto xs:px-4">
           <p class="mb-4">{{ $t('contentTraining1') }}</p>
           <p class="mb-4">{{ $t('contentTraining2') }}</p>
         </div>
         <!-- Immagini sezione 3 -->
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-4 max-w-[52rem] mx-auto xs:px-4"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-4 lg:max-w-[48rem] md:max-w-[38rem] mx-auto xs:px-4"
         >
           <figure
             class="md:w-full sm:w-4/5 xs:w-2/3 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
@@ -62,21 +62,7 @@
             </figcaption>
           </figure>
         </div>
-        <p class="mb-6 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentTraining3') }}</p>
-        <!-- Immagine sezione 3 -->
-        <figure
-          class="md:w-1/3 sm:w-2/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
-          @click="openModal(imageSrcTraining4)"
-        >
-          <img
-            :src="imageSrcTraining4"
-            :alt="$t('imageAltTraining4')"
-            class="aspect-square w-full object-cover rounded-lg shadow-xl"
-          />
-          <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
-            {{ $t('imageAltTraining4') }}
-          </figcaption>
-        </figure>
+        <p class="mb-6 max-w-[44rem] mx-auto xs:px-4">{{ $t('contentTraining3') }}</p>
       </div>
 
       <!-- Modal per immagine grande -->
@@ -110,7 +96,6 @@ import imageSrcTraining0 from '@/assets/images/asticeLarva-rit.jpg'
 import imageSrcTraining1 from '@/assets/images/asticeGiovane.jpg'
 import imageSrcTraining2 from '@/assets/images/asticeTana1.jpg'
 import imageSrcTraining3 from '@/assets/images/asticeTana2.jpg'
-import imageSrcTraining4 from '@/assets/images/labwork.jpg'
 
 export default defineComponent({
   setup() {
@@ -134,7 +119,6 @@ export default defineComponent({
       imageSrcTraining1,
       imageSrcTraining2,
       imageSrcTraining3,
-      imageSrcTraining4,
       openModal,
       closeImageModal,
     }

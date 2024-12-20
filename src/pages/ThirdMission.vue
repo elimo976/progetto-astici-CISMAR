@@ -10,29 +10,70 @@
       <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
         <!-- Testo con interruzioni di paragrafo -->
         <div
-          class="text-base text-justify lg:text-lg text-gray-700 leading-relaxed space-y-6 flex-1 pr-10"
+          class="text-base text-justify md:text-xl text-lg text-gray-700 leading-relaxed space-y-6 flex-1 pr-10"
         >
           <!-- Titolo principale -->
           <h1 class="text-3xl lg:text-4xl text-custom-blue-title text-center mb-10">
             {{ $t('thirdMissionTitle') }}
           </h1>
-          <div v-html="sanitizedThirdMissionText"></div>
+          <div class="max-w-[42rem] space-y-5">
+            <p>{{ $t('thirdMissionText1') }}</p>
+
+            <figure
+              class="p-5 md:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+              @click="openModal(imageSrcThirdMission2)"
+            >
+              <img
+                :src="imageSrcThirdMission2"
+                :alt="$t('imageAltThirdMission1')"
+                class="aspect-square w-full object-cover rounded-lg shadow-xl"
+              />
+              <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+                {{ $t('imageAltThirdMission1') }}
+              </figcaption>
+            </figure>
+
+            <p>{{ $t('thirdMissionText2') }}</p>
+
+            <p>{{ $t('thirdMissionText3') }}</p>
+
+            <figure
+              class="p-5 md:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+              @click="openModal(imageSrcThirdMission3)"
+            >
+              <img
+                :src="imageSrcThirdMission3"
+                :alt="$t('imageAltThirdMission2')"
+                class="aspect-square w-full object-cover rounded-lg shadow-xl"
+              />
+              <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
+                {{ $t('imageAltThirdMission2') }}
+              </figcaption>
+            </figure>
+
+            <p>{{ $t('thirdMissionText4') }}</p>
+          </div>
         </div>
 
-        <!-- Immagini verticali a destra -->
-        <div class="flex-shrink-0 space-y-6 pt-14">
-          <!-- Immagine verticale 1 -->
-          <img
-            src="@/assets/images/bent.jpeg"
-            alt="Immagine Bent"
-            class="w-full max-w-sm lg:max-w-48 rounded-lg shadow-lg"
-          />
-          <!-- Immagine verticale 2 -->
-          <img
-            src="@/assets/images/bent3.jpeg"
-            alt="Immagine Bent 3"
-            class="w-full max-w-sm lg:max-w-48 rounded-lg shadow-lg"
-          />
+        <!-- Modal per immagine grande -->
+        <div
+          v-if="showImageModal"
+          class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+          @click="closeImageModal"
+        >
+          <div class="relative w-3/4 max-w-3xl px-32 py-12 xs:px-3 xs:py-3">
+            <img
+              :src="selectedImage"
+              alt="Immagine ingrandita"
+              class="w-full h-auto rounded-lg border-4 border-white"
+            />
+            <button
+              @click="closeImageModal"
+              class="absolute top-14 right-35 xs:top-5 xs:right-5 bg-white opacity-60 text-black rounded-full py-0 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+            >
+              ✕
+            </button>
+          </div>
         </div>
       </div>
 
@@ -73,24 +114,34 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-import DOMPurify from 'dompurify'
+import { ref, defineComponent } from 'vue'
 import imageSrcThirdMission1 from '@/assets/images/didattica-rit.jpg'
+import imageSrcThirdMission2 from '@/assets/images/bent.jpeg'
+import imageSrcThirdMission3 from '@/assets/images/bent3.jpeg'
 
 export default defineComponent({
   setup() {
-    const { t } = useI18n() // Accedi alla funzione di traduzione tramite useI18n
+    const showImageModal = ref(false)
+    const selectedImage = ref('')
 
-    // Calcola e sanitizza il testo dinamico
-    const sanitizedThirdMissionText = computed(() => {
-      const rawHtml = t('thirdMissionText') // Usa 't' per ottenere la traduzione
-      return DOMPurify.sanitize(rawHtml)
-    })
+    const openModal = (imageSrc: string) => {
+      selectedImage.value = imageSrc
+      showImageModal.value = true
+    }
+
+    const closeImageModal = () => {
+      showImageModal.value = false
+      selectedImage.value = ''
+    }
 
     return {
       imageSrcThirdMission1,
-      sanitizedThirdMissionText,
+      imageSrcThirdMission2,
+      imageSrcThirdMission3,
+      showImageModal,
+      selectedImage,
+      openModal,
+      closeImageModal,
     }
   },
 })

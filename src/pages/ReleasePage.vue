@@ -14,7 +14,7 @@
 
         <hr class="hidden md:block mb-6 w-[90%] mx-auto" />
 
-        <div class="max-w-[34rem] mx-auto xs:px-4">
+        <div class="max-w-[44rem] mx-auto xs:px-4">
           <p class="mb-4">{{ $t('contentRelease1') }}</p>
           <p class="mb-4">{{ $t('contentRelease2') }}</p>
           <p class="mb-6">{{ $t('contentRelease3') }}</p>

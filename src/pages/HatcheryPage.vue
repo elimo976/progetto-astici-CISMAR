@@ -13,7 +13,7 @@
 
         <hr class="hidden md:block mb-6 w-[90%] mx-auto" />
 
-        <p class="mb-4 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentLobster1') }}</p>
+        <p class="mb-4 max-w-[44rem] mx-auto xs:px-4">{{ $t('contentLobster1') }}</p>
         <!-- Immagine 1 sezione 2 -->
         <figure
           class="md:w-1/3 sm:w-2/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
@@ -28,7 +28,7 @@
             {{ $t('imageAltLobster1') }}
           </figcaption>
         </figure>
-        <p class="mb-4 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentLobster2') }}</p>
+        <p class="mb-4 max-w-[44rem] mx-auto xs:px-4">{{ $t('contentLobster2') }}</p>
         <!-- Immagine 2 sezione 2 -->
         <figure
           class="md:w-1/3 sm:w-2/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
@@ -43,7 +43,7 @@
             {{ $t('imageAltLobster2') }}
           </figcaption>
         </figure>
-        <p class="mb-6 max-w-[34rem] mx-auto xs:px-4">{{ $t('contentLobster3') }}</p>
+        <p class="mb-6 max-w-[44rem] mx-auto xs:px-4">{{ $t('contentLobster3') }}</p>
       </div>
 
       <!-- Modal per immagine grande -->

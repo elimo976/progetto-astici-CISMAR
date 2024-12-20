@@ -17,27 +17,8 @@
       v-if="videos2020.length || videos2021.length || videos2023.length || videos2024.length"
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
     >
-      <!-- Video 2020 -->
-      <div v-for="video in videos2020" :key="video.id" class="video-card">
-        <a :href="video.url" target="_blank">
-          <div class="relative">
-            <img
-              :src="video.thumbnail"
-              :alt="video.title"
-              class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition duration-300 ease-in-out"
-            />
-            <div
-              class="absolute top-0 left-0 bg-black bg-opacity-50 w-full h-full flex justify-center items-center opacity-0 hover:opacity-100 transition duration-300"
-            >
-              <i class="fas fa-play text-white text-3xl"></i>
-            </div>
-          </div>
-          <h3 class="text-center text-lg font-semibold mt-2 text-gray-800">{{ video.title }}</h3>
-        </a>
-      </div>
-
-      <!-- Video 2021 -->
-      <div v-for="video in videos2021" :key="video.id" class="video-card">
+      <!-- Video 2024 -->
+      <div v-for="video in videos2024" :key="video.id" class="video-card">
         <a :href="video.url" target="_blank">
           <div class="relative">
             <img
@@ -74,8 +55,27 @@
         </a>
       </div>
 
-      <!-- Video 2024 -->
-      <div v-for="video in videos2024" :key="video.id" class="video-card">
+      <!-- Video 2021 -->
+      <div v-for="video in videos2021" :key="video.id" class="video-card">
+        <a :href="video.url" target="_blank">
+          <div class="relative">
+            <img
+              :src="video.thumbnail"
+              :alt="video.title"
+              class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition duration-300 ease-in-out"
+            />
+            <div
+              class="absolute top-0 left-0 bg-black bg-opacity-50 w-full h-full flex justify-center items-center opacity-0 hover:opacity-100 transition duration-300"
+            >
+              <i class="fas fa-play text-white text-3xl"></i>
+            </div>
+          </div>
+          <h3 class="text-center text-lg font-semibold mt-2 text-gray-800">{{ video.title }}</h3>
+        </a>
+      </div>
+
+      <!-- Video 2020 -->
+      <div v-for="video in videos2020" :key="video.id" class="video-card">
         <a :href="video.url" target="_blank">
           <div class="relative">
             <img
@@ -158,24 +158,30 @@ export default {
       videos2024: [
         {
           id: 1,
+          title: 'Terra Mater',
+          url: 'https://www.youtube.com/watch?v=iSksdnDSAFE&t=486', // 8:06
+          thumbnail: 'https://img.youtube.com/vi/iSksdnDSAFE/0.jpg',
+        },
+        {
+          id: 2,
           title: 'Marcatura genetica',
           url: 'https://www.youtube.com/watch?v=vhto6dXEigU',
           thumbnail: 'https://img.youtube.com/vi/vhto6dXEigU/0.jpg',
         },
         {
-          id: 2,
+          id: 3,
           title: 'PRIN PL-Astici',
           url: 'https://www.instagram.com/unitus_deb/p/C1JjTprMP4r/?img_index=1',
           thumbnail: prinAstice,
         },
         {
-          id: 3,
+          id: 4,
           title: 'TusciaUP',
           url: 'https://www.instagram.com/tusciaup/p/C8wersRMBMS/',
           thumbnail: tusciaUpThumbnail, // Correct image reference
         },
         {
-          id: 4,
+          id: 5,
           title: 'Marine Biology and Ecology',
           url: 'https://www.youtube.com/watch?v=B1enFVNBKTc',
           thumbnail: 'https://img.youtube.com/vi/B1enFVNBKTc/0.jpg',
