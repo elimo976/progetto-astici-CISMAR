@@ -72,11 +72,9 @@
             }}</RouterLink>
           </li>
           <li>
-            <RouterLink
-              to="/under-construction"
-              class="hover:text-custom-blue-light hover:underline"
-              >{{ $t('divulgastici') }}</RouterLink
-            >
+            <RouterLink to="/divulgastici" class="hover:text-custom-blue-light hover:underline">{{
+              $t('divulgastici')
+            }}</RouterLink>
           </li>
         </ul>
       </div>

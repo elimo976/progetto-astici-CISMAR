@@ -4,6 +4,7 @@ import AppFooter from './AppFooter'
 import AppHeader from './AppHeader'
 import BehaviorPage from './BehaviorPage'
 import ConservationPage from './ConservationPage'
+import DivulgasticiPage from './DivulgasticiPage'
 import GeneticsPage from './GeneticsPage'
 import HeroBanner from './HeroBanner'
 import HomePage from './HomePage'
@@ -46,6 +47,7 @@ const messages: Messages = {
     ...GeneticsPage.en,
     ...ProjectsPage.en,
     ...ActivitiesPage.en,
+    ...DivulgasticiPage.en,
   },
   it: {
     ...AppHeader.it,
@@ -64,6 +66,7 @@ const messages: Messages = {
     ...GeneticsPage.it,
     ...ProjectsPage.it,
     ...ActivitiesPage.it,
+    ...DivulgasticiPage.it,
   },
 }
 
