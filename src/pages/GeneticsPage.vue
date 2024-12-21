@@ -9,7 +9,7 @@
 
     <!-- Attribuzione nell'angolo in basso a destra -->
     <div
-      class="absolute bottom-1 right-1 bg-gray-300 bg-opacity-40 text-xs text-gray-700 px-2 py-1 rounded-lg shadow-md"
+      class="absolute bottom-1 md:right-1 right-0 bg-gray-300 bg-opacity-40 text-xs scale-75 lg:scale-100 text-gray-700 px-2 py-1 rounded-lg"
     >
       <p>
         Image by

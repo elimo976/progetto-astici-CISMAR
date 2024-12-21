@@ -8,6 +8,38 @@
       <hr class="hidden md:block mb-6 w-[90%] mx-auto" />
 
       <div class="relativemax-w-[48rem] mx-auto xs:px-8">
+        <!-- Pubblicazione 0 -->
+        <div class="mb-10 md:ml-12 sm:ml-0 flex items-center">
+          <!-- Contenuto -->
+          <div class="flex flex-col md:flex-row items-center md:items-start w-full">
+            <!-- Immagine -->
+            <div class="lg:w-1/5 md:w-1/4 w-1/3 md:my-3 my-6">
+              <img
+                src="@/assets/images/behavioralEcologySociobiology.jpg"
+                alt="Applied Animal Behaviour Science"
+                class="rounded-lg shadow-lg w-full w-48 object-cover aspect-square transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+              />
+            </div>
+            <!-- Testo Pubblicazione -->
+            <div class="md:ml-12 mt-4">
+              <h3 class="font-semibold text-lg text-custom-blue-lobster">
+                Lucon-Xiccato, T. et al. (2024)
+              </h3>
+              <p class="text-gray-600 max-w-[28rem]">
+                Intraspecific variation in invertebrate cognition: a review.
+                <em>Behavioral Ecology and Sociobiology 78</em>, 1.
+              </p>
+              <a
+                href="https://link.springer.com/article/10.1007/s00265-023-03413-8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500 hover:underline mt-2 block"
+              >
+                {{ $t('readPaper') }}
+              </a>
+            </div>
+          </div>
+        </div>
         <!-- Pubblicazione 1 -->
         <div class="mb-10 md:ml-12 sm:ml-0 flex items-center">
           <!-- Contenuto -->

@@ -5,7 +5,7 @@ export default {
     behaviorText1: `La capacità di adattare il proprio comportamento è un fattore fondamentale per la sopravvivenza degli animali in un mondo in rapida evoluzione.`,
     behaviorText2: `Questa plasticità comportamentale è particolarmente importante in età giovanile, quando un individuo raccoglie informazioni sull'ambiente circostante per decidere quale strategia adottare: essere audace e correre grossi rischi oppure optare per un atteggiamento più cauto? Ovviamente, la scelta dipende da quanto alto è il rischio e quanto il potenziale guadagno e quindi, in ultima analisi, dalle condizioni ambientali.`,
 
-    imageAltBehavior1: `Astici che esplorando l’ambiente con diversi atteggiamenti. Immagine generata con IA, DELL⋅E`,
+    imageAltBehavior1: `Astici che esplorano l’ambiente con diversi atteggiamenti. Immagine generata con IA, DELL⋅E`,
 
     behaviorText3: `Le condizioni di allevamento in cattività spesso mancano di stimoli ambientali importanti, come il rischio di predazione o un ambiente eterogeneo, e possono perciò rivelarsi dannose per la sopravvivenza degli animali una volta liberati in mare.`,
 

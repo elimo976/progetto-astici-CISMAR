@@ -1,6 +1,7 @@
 export default {
   it: {
-    divulgTitle: `Divulgastici`,
+    imageAltDivulgBanner: `Banner DivulgAstici`,
+    divulgTitle: `DivulgAstici`,
 
     divulgText1: `“Il ripopolamento dell’astice europeo nei mari del Lazio settentrionale come opportunità di <i>Public Engagement</i>” è un progetto di Terza Missione finanziato dall’Università degli Studi della Tuscia grazie ai fondi DM 737 e Rome Technopole con lo scopo di avviare una fase di verifica delle azioni, sia di ripopolamento che di disseminazione, condotte nel quinquennio 2020-2024.`,
 
@@ -15,7 +16,8 @@ export default {
     divulgAltLogoTechnopolo: `Logo Technopole`,
   },
   en: {
-    divulgTitle: `Divulgastici`,
+    imageAltDivulgBanner: `Banner DivulgAstici`,
+    divulgTitle: `DivulgAstici`,
 
     divulgText1: `“The repopulation of the European lobster in the seas of northern Lazio as an opportunity for <i>Public Engagement</i>” is a Third Mission project financed by the University of Tuscia thanks to the DM 737 and Rome Technopole funds with the aim to start a verification phase of the actions, both repopulation and dissemination, conducted in the five-year period 2020-2024.`,
 

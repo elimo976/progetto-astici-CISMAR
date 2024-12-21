@@ -1,4 +1,9 @@
 <template>
+  <img
+    :src="imageSrcDivulgBanner"
+    :alt="$t('imageAltDivulgBanner')"
+    class="w-full object-cover border-t border-gray-100 shadow-xl"
+  />
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
       <h1 class="text-custom-blue-lobster text-4xl font-semibold my-5 text-center">
@@ -42,12 +47,14 @@
 import { defineComponent } from 'vue'
 
 import imageSrcResearch0 from '@/assets/images/asticiniBent-rit.jpg'
+import imageSrcDivulgBanner from '@/assets/images/bannerDivulg.jpg'
 
 export default defineComponent({
   name: 'ResearchPage',
   setup() {
     return {
       imageSrcResearch0,
+      imageSrcDivulgBanner,
     }
   },
 })

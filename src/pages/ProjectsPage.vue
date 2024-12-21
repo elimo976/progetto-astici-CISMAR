@@ -27,8 +27,10 @@
         <div
           class="flex md:justify-between md:flex-row flex-col md:items-start items-center mb-3 pr-3"
         >
-          <h3 class="font-bold mb-3 text-custom-blue-lobster">{{ $t('projectsHeading2') }}</h3>
-          <img src="@/assets/loghi/feampLogo.png" alt="Logo PRIN" class="w-auto h-14 border" />
+          <h3 class="font-bold mb-3 md:mt-4 text-custom-blue-lobster">
+            {{ $t('projectsHeading2') }}
+          </h3>
+          <img src="@/assets/loghi/feampLogo.png" alt="Logo PRIN" class="w-auto h-20" />
         </div>
         <p>{{ $t('projectsText2') }}</p>
         <div class="max-w-[42rem] mx-auto mt-4">

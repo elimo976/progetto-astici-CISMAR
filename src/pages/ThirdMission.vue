@@ -13,7 +13,7 @@
         <h1 class="text-3xl lg:text-4xl text-custom-blue-title text-center mb-10">
           {{ $t('thirdMissionTitle') }}
         </h1>
-        <div class="max-w-[42rem] space-y-5 mx-auto">
+        <div class="max-w-[42rem] px-8 space-y-5 mx-auto">
           <p>{{ $t('thirdMissionText1') }}</p>
 
           <figure

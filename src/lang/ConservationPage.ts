@@ -2,14 +2,14 @@ export default {
   it: {
     // CISMAR
     cismarTitle: 'CISMAR',
-    cismarDescription1: `Il CISMAR, fondato nel 2008, è la struttura di ricerca del Dipartimento di Scienze Ecologiche e Biologiche dell’Università degli studi della Tuscia (DEB) per l’acquacoltura sperimentale e l’ecologia marina. `,
+    cismarDescription1: `Il CISMAR, fondato nel 2008, è la struttura di ricerca del Dipartimento di Scienze Ecologiche e Biologiche dell’Università degli Studi della Tuscia (DEB) per l’acquacoltura sperimentale e l’ecologia marina. `,
 
     cismarDescription2: `Il CISMAR è localizzato all’interno della Riserva Naturale Regionale delle Saline di Tarquinia, dove edifici un tempo destinati all’estrazione del sale e poi abbandonati sono stati restaurati e riconvertiti in laboratori e strutture di ricerca dal Dipartimento di Scienze Ecologiche e Biologiche dell’Università della Tuscia.`,
 
     cismarDescription3: `Qui si studia la biodiversità degli ambienti marino-costieri e come conservarla, attraverso ricerche di genetica, ecologia ed etologia che riguardano tante specie marine: crostacei, cefalopodi, pesci e loro parassiti.`,
 
     cismarAltDescription1: `Cavalluccio marino - Credits: Stefano Guerrieri`,
-    cismarAltDescription2: `Mazzancolla`,
+    cismarAltDescription2: `Mazzancolla - Credits: Xavier Rufray; inaturalist.org`,
     cismarAltDescription3: `Seppia comune - Credits: Pawel Kalisinski; pexels.com`,
 
     biodiversityDescription: `Gli studi vengono condotti in numerosi laboratori: di ecologia molecolare, di monitoraggio ambientale e del benthos, di microscopia, di etologia, di ecogenotossicologia, di parassitologia.`,
@@ -32,7 +32,7 @@ export default {
     titleRoleCismar: 'Il ruolo del CISMAR',
     contentRoleCismar1: `Il ripopolamento (o restocking) è una tecnica fondamentale per favorire la ripresa delle specie marine che hanno subito un forte calo numerico a causa di attività umane, come la pesca intensiva.`,
     contentRoleCismar2: `
-      Nel caso dell’astice europeo un ostacolo iniziale importante è stato l’assenza di tecniche consolidate per l’allevamento. Essendo una specie non allevata per scopi commerciali, è stato necessario sviluppare da zero procedure e metodologie specifiche. Questo risultato è stato raggiunto grazie alle ricerche condotte dal CISMAR, il centro di eccellenza del DEB impegnato nello studio e nella conservazione dell’astice.,
+      Nel caso dell’astice europeo un ostacolo iniziale importante è stato l’assenza di tecniche consolidate per l’allevamento. Essendo una specie non allevata per scopi commerciali, è stato necessario sviluppare da zero procedure e metodologie specifiche. Questo risultato è stato raggiunto grazie alle ricerche condotte dal CISMAR, il centro di eccellenza del DEB impegnato nello studio e nella conservazione dell’astice.
     `,
     linkRoleCismar: ` (link alla pagina CISMAR)`,
     contentRoleCismar3: `

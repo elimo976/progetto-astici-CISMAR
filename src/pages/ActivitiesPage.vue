@@ -17,57 +17,57 @@
         <br />
         <p>{{ $t('activitiesText2') }}</p>
       </div>
-
+      <br />
       <div class="max-w-[44rem] mx-auto">
         <p>
-          <span>{{ $t('activitiesTextBold1') }}</span> {{ $t('activitiesText3') }}
+          <span>🦞 {{ $t('activitiesTextBold1') }}</span> {{ $t('activitiesText3') }}
+        </p>
+        <br />
+        <p>
+          <span>🦞 {{ $t('activitiesTextBold2') }}</span
+          >{{ $t('activitiesText4') }}
+        </p>
+
+        <!-- Video estratto saline -->
+        <div class="max-w-[44rem] mx-auto mb-10">
+          <h2 class="text-custom-blue-lobster text-2xl font-semibold my-10 text-center">
+            {{ $t('activitiesVideoTitle') }}
+          </h2>
+          <video
+            ref="videoPlayer"
+            class="w-full h-auto rounded-md"
+            controls
+            playsinline
+            preload="auto"
+            poster="@/assets/images/estratto-filmato-saline-low.jpg"
+          >
+            <source src="@/assets/video/estratto-filmato-saline-low.mp4" type="video/mp4" />
+            Il tuo browser non supporta la riproduzione di video.
+          </video>
+        </div>
+
+        <p>
+          <span>🦞 {{ $t('activitiesTextBold3') }}</span
+          >{{ $t('activitiesText5') }}
         </p>
 
         <div class="max-w-[42rem] mx-auto">
           <figure
-            class="md:w-2/5 sm:w-3/5 xs:w-3/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+            class="w-4/5 mx-auto my-12 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
             @click="openModal(imageSrcActivities1)"
           >
-            <div class="w-full aspect-square rounded-md overflow-hidden shadow-xl">
+            <div class="w-full rounded-sm overflow-hidden shadow-xl">
               <img
                 :src="imageSrcActivities1"
                 :alt="$t('imageAltActivities1')"
                 class="w-full h-full object-cover"
               />
             </div>
-            <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-center">
+            <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-center hidden">
               {{ $t('imageAltActivities1') }}
             </figcaption>
           </figure>
         </div>
-
-        <p>
-          <span>{{ $t('activitiesTextBold2') }}</span
-          >{{ $t('activitiesText4') }}
-        </p>
-        <br />
-        <p>
-          <span>{{ $t('activitiesTextBold3') }}</span
-          >{{ $t('activitiesText5') }}
-        </p>
-      </div>
-
-      <!-- Video estratto saline -->
-      <div class="max-w-[44rem] mx-auto">
-        <h2 class="text-custom-blue-lobster text-2xl font-semibold my-10 text-center">
-          {{ $t('activitiesVideoTitle') }}
-        </h2>
-        <video
-          ref="videoPlayer"
-          class="w-full h-auto rounded-md"
-          controls
-          playsinline
-          preload="auto"
-          poster="@/assets/images/estratto-filmato-saline-low.jpg"
-        >
-          <source src="@/assets/video/estratto-filmato-saline-low.mp4" type="video/mp4" />
-          Il tuo browser non supporta la riproduzione di video.
-        </video>
       </div>
 
       <!-- Modal per immagine ingrandita -->
@@ -101,7 +101,7 @@
 import { ref, defineComponent } from 'vue'
 
 import imageSrcActivitiesBanner from '@/assets/images/bannerActivities.jpg'
-import imageSrcActivities1 from '@/assets/images/asticiEsploratori.jpg'
+import imageSrcActivities1 from '@/assets/images/divulgPresentazione.jpg'
 
 export default defineComponent({
   name: 'ActivitiesPage',

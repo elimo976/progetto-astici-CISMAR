@@ -18,7 +18,7 @@ export default {
     thirdMission: `La terza missione`,
     dissemination: `Divulgazione`,
     activities: `Le attività`,
-    divulgastici: `Divulgastici`,
+    divulgastici: `DivulgAstici`,
     media: `Media`,
     partners: `I nostri sostenitori`,
   },
