@@ -10,6 +10,7 @@ import HeroBanner from './HeroBanner'
 import HomePage from './HomePage'
 import LobsterStages from './LobsterStages'
 import MediaPage from './MediaPage'
+import MetaTags from './MetaTags'
 import NavigationMenu from './NavigationMenu'
 import ProjectsPage from './ProjectsPage'
 import ResearchPage from './ResearchPage'
@@ -48,6 +49,7 @@ const messages: Messages = {
     ...ProjectsPage.en,
     ...ActivitiesPage.en,
     ...DivulgasticiPage.en,
+    ...MetaTags.en,
   },
   it: {
     ...AppHeader.it,
@@ -67,6 +69,7 @@ const messages: Messages = {
     ...ProjectsPage.it,
     ...ActivitiesPage.it,
     ...DivulgasticiPage.it,
+    ...MetaTags.it,
   },
 }
 

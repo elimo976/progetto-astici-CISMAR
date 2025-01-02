@@ -1,5 +1,6 @@
 export default {
   it: {
+    imageAltThirdMission0: `Didattica`,
     thirdMissionTitle: 'Terza Missione',
     thirdMissionText1: `Il mare e le sue risorse hanno un ruolo cruciale nel garantire la qualità della vita e della salute umana. Negli ultimi anni è risultato sempre più evidente che la conservazione della biodiversità e la gestione sostenibile delle risorse marine sono essenziali per sostenere le comunità costiere e per garantire la sicurezza alimentare e l’equità sociale ed economica.`,
 
@@ -14,6 +15,7 @@ export default {
     thirdMissionText4: `Il programma di ripopolamento di astici europei è stato al centro di molte delle attività di Divulgazione delle Conoscenze condotte dal DEB. I programmi di ripopolamento si prestano infatti ad aumentare la consapevolezza dei cittadini, dei pescatori e anche delle Istituzioni sulla necessità di pratiche di pesca sostenibili e, più in generale, sull'importanza della conservazione delle risorse marine.`,
   },
   en: {
+    imageAltThirdMission0: `Education`,
     thirdMissionTitle: 'Third Mission',
     thirdMissionText1: `The sea and its resources play a crucial role in ensuring the quality of life and human health. In recent years it has become increasingly clear that the conservation of biodiversity and the sustainable management of marine resources are essential to support coastal communities and to ensure food security and social and economic equity.`,
 

@@ -31,6 +31,11 @@ export default {
     lobsterDescription3: `In Italia, le popolazioni di astice sono in declino a causa della sovrapesca, dovuta anche alla pesca illegale di individui sotto la taglia minima (30 cm) e al prelevo durante la riproduzione. Di conseguenza, le catture sono diminuite, mentre la pressione della pesca è aumentata, rendendo necessarie misure di gestione più rigorose.`,
     lobsterDescription4: `La ricerca scientifica riveste un ruolo fondamentale nel monitoraggio degli stock dell’astice e nell’identificazione di strategie sostenibili. Interventi come la protezione degli habitat critici e il ripopolamento con individui allevati in cattività e potrebbero contribuire al recupero della specie.`,
 
+    lobsterAltDescription1: `Astice europeo in mare`,
+    lobsterAltDescription2: `Giovane di astice`,
+    lobsterAltDescription3: `Larva di astice`,
+    lobsterAltDescription4: `Misurazione di una femmina`,
+
     //HISTORY
     historyTitle: `Un po' di storia`,
 
@@ -48,6 +53,8 @@ export default {
 
     // PUBLICATIONSPAGE
     readPaper: `Vai all'articolo`,
+
+    closeModal: `Chiudi l'immagine`,
   },
 
   en: {
@@ -83,6 +90,11 @@ export default {
     lobsterDescription3: `In Italy, lobster populations are declining due to overfishing, which includes illegal fishing of individuals below the minimum size (30 cm) and harvesting during reproduction. Consequently, catches have decreased while fishing pressure has increased, necessitating stricter management measures.`,
     lobsterDescription4: `Scientific research plays a key role in monitoring lobster stocks and identifying sustainable strategies. Interventions such as protecting critical habitats and repopulating with captive-reared individuals could contribute to the species' recovery.`,
 
+    lobsterAltDescription1: `European lobster in the sea`,
+    lobsterAltDescription2: `Young lobster`,
+    lobsterAltDescription3: `Lobster larva`,
+    lobsterAltDescription4: `Measurement of a female`,
+
     // HISTORY
     historyTitle: `A bit of history`,
 
@@ -100,5 +112,7 @@ export default {
 
     // PUBLICATIONSPAGE
     readPaper: `Read the paper`,
+
+    closeModal: `Close image`,
   },
 }

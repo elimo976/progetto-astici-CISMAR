@@ -21,10 +21,12 @@
               class="w-48 lg:w-64 aspect-square object-cover rounded-full shadow-lg transition-all cursor-pointer"
               @click="openModal('portoPescaArtigianale.jpg')"
               @load="setImageOpacity($event.target)"
+              aria-label="{{ $t('projectAltDescription1') }}"
             />
             <div class="lg:pl-12 sm:px-4 max-w-full w-full md:w-2/3 lg:w-3/4">
               <p
                 class="text-gray-800 lg:pl-0 lg:mr-6 sm:px-4 lg:text-justify text-left max-w-[42rem]"
+                aria-live="polite"
               >
                 {{ $t('projectDescription1') }}
               </p>
@@ -41,9 +43,13 @@
             class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
             @click="openModal('asticeAdultoVasca.jpg')"
             @load="setImageOpacity($event.target)"
+            aria-label="{{ $t(' projectAltDescription2')}}"
           />
           <div class="max-w-full w-full md:w-2/3 lg:w-auto">
-            <p class="text-gray-800 lg:mr-12 sm:px-4 lg:text-justify text-left max-w-[42rem]">
+            <p
+              class="text-gray-800 lg:mr-12 sm:px-4 lg:text-justify text-left max-w-[42rem]"
+              aria-live="polite"
+            >
               {{ $t('projectDescription2') }}
             </p>
           </div>
@@ -59,11 +65,15 @@
             class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
             @click="openModal('asticeBluOrizzontale.jpg')"
             @load="setImageOpacity($event.target)"
+            aria-label="{{ $t('projectAltDescription3')}}"
           />
           <div
             class="text-center lg:text-left lg:pl-12 sm:px-4 max-w-full w-full md:w-2/3 lg:w-3/4"
           >
-            <p class="text-gray-800 pr-6 lg:text-justify text-left max-w-[42rem]">
+            <p
+              class="text-gray-800 pr-6 lg:text-justify text-left max-w-[42rem]"
+              aria-live="polite"
+            >
               {{ $t('projectDescription3') }}
             </p>
           </div>
@@ -79,10 +89,12 @@
             class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
             @click="openModal('zoea.png')"
             @load="setImageOpacity($event.target)"
+            aria-label="{{ $t('projectAltDescription4')}}"
           />
           <div class="text-center lg:text-left max-w-full w-full md:w-2/3 lg:w-auto">
             <p
               class="text-gray-800 lg:pl-0 lg:mr-5 sm:px-4 lg:text-justify text-left max-w-[42rem]"
+              aria-live="polite"
             >
               {{ $t('projectDescription4') }}
             </p>
@@ -99,11 +111,15 @@
             class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
             @click="openModal('faoGoals.jpg')"
             @load="setImageOpacity($event.target)"
+            aria-label="{{ $t('projectAltDescription5')}}"
           />
           <div
             class="text-center lg:text-left lg:pl-12 sm:px-4 max-w-full w-full md:w-2/3 lg:w-3/4"
           >
-            <p class="text-gray-800 pr-6 sm:mb-3 lg:text-justify text-left max-w-[42rem]">
+            <p
+              class="text-gray-800 pr-6 sm:mb-3 lg:text-justify text-left max-w-[42rem]"
+              aria-live="polite"
+            >
               {{ $t('projectDescription5') }}
             </p>
           </div>
@@ -231,6 +247,7 @@
           <button
             @click="closeModal"
             class="absolute top-0 right-0 text-black text-3xl px-2 hover:bg-gray-100 rounded-full"
+            aria-label="{{ $t('closeModal') }}"
           >
             &times;
           </button>
@@ -263,8 +280,10 @@
 import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import { useI18n } from 'vue-i18n' // Importa i18n per la gestione delle traduzioni
 import ScrollTopButton from '@/components/ScrollTopButton.vue'
 
+// Import immagini
 import projectSrc1 from '@/assets/images/portoPescaArtigianale.jpg'
 import projectSrc2 from '@/assets/images/asticeAdultoVasca.jpg'
 import projectSrc3 from '@/assets/images/asticeBluOrizzontale.jpg'
@@ -281,96 +300,70 @@ import incub1 from '@/assets/images/incub1.jpg'
 import incub2 from '@/assets/images/incub2.jpg'
 import incub3 from '@/assets/images/incub3.jpg'
 
+// Registra il plugin GSAP
 gsap.registerPlugin(ScrollTrigger)
 
-const element1 = ref<HTMLElement | null>(null)
-const element2 = ref<HTMLElement | null>(null)
-const element3 = ref<HTMLElement | null>(null)
-const element4 = ref<HTMLElement | null>(null)
-const element5 = ref<HTMLElement | null>(null)
-const element6 = ref<HTMLElement | null>(null)
-const element7 = ref<HTMLElement | null>(null)
-const element8 = ref<HTMLElement | null>(null)
-const element9 = ref<HTMLElement | null>(null)
+// Riferimenti agli elementi del DOM
+const elementRefs = Array.from({ length: 9 }, () => ref<HTMLElement | null>(null))
 
+// Modal state
 const isModalOpen = ref(false)
 const modalImageSrc = ref(projectSrc1)
 const modalCredits = ref('')
 
+// Funzione per aprire il modal
 const openModal = (imageSrc: string) => {
-  if (imageSrc === 'portoPescaArtigianale.jpg') {
-    modalImageSrc.value = projectSrc1
-    modalCredits.value = 'Pexels, AXP Photography '
-  } else if (imageSrc === 'asticeAdultoVasca.jpg') {
-    modalImageSrc.value = projectSrc2
-    modalCredits.value = ''
-  } else if (imageSrc === 'asticeBluOrizzontale.jpg') {
-    modalImageSrc.value = projectSrc3
-    modalCredits.value = ''
-  } else if (imageSrc === 'zoea.png') {
-    modalImageSrc.value = projectSrc4
-    modalCredits.value = ''
-  } else if (imageSrc === 'faoGoals.jpg') {
-    modalImageSrc.value = projectSrc5
-    modalCredits.value = ''
-  } else if (imageSrc === 'astice2.jpg') {
-    modalImageSrc.value = astice2
-    modalCredits.value = ''
-  } else if (imageSrc === 'asticinoBlu.jpg') {
-    modalImageSrc.value = asticinoBlu
-    modalCredits.value = ''
-  } else if (imageSrc === 'larvaAstice2.jpg') {
-    modalImageSrc.value = larvaAstice2
-    modalCredits.value = ''
-  } else if (imageSrc === 'misurazioneAstice.jpg') {
-    modalImageSrc.value = misurazioneAstice
-    modalCredits.value = ''
-  } else if (imageSrc === 'bioreactors.jpg') {
-    modalImageSrc.value = bioreactors
-    modalCredits.value = ''
-  } else if (imageSrc === 'vasche1.jpg') {
-    modalImageSrc.value = vasche1
-    modalCredits.value = ''
-  } else if (imageSrc === 'vasche2.jpg') {
-    modalImageSrc.value = vasche2
-    modalCredits.value = ''
-  } else if (imageSrc === 'incub1.jpg') {
-    modalImageSrc.value = incub1
-    modalCredits.value = ''
-  } else if (imageSrc === 'incub2.jpg') {
-    modalImageSrc.value = incub2
-    modalCredits.value = ''
-  } else if (imageSrc === 'incub3.jpg') {
-    modalImageSrc.value = incub3
-    modalCredits.value = ''
+  const imageMap: Record<string, { src: string; credits: string }> = {
+    'portoPescaArtigianale.jpg': { src: projectSrc1, credits: 'Pexels, AXP Photography ' },
+    'asticeAdultoVasca.jpg': { src: projectSrc2, credits: '' },
+    'asticeBluOrizzontale.jpg': { src: projectSrc3, credits: '' },
+    'zoea.png': { src: projectSrc4, credits: '' },
+    'faoGoals.jpg': { src: projectSrc5, credits: '' },
+    'astice2.jpg': { src: astice2, credits: '' },
+    'asticinoBlu.jpg': { src: asticinoBlu, credits: '' },
+    'larvaAstice2.jpg': { src: larvaAstice2, credits: '' },
+    'misurazioneAstice.jpg': { src: misurazioneAstice, credits: '' },
+    'bioreactors.jpg': { src: bioreactors, credits: '' },
+    'vasche1.jpg': { src: vasche1, credits: '' },
+    'vasche2.jpg': { src: vasche2, credits: '' },
+    'incub1.jpg': { src: incub1, credits: '' },
+    'incub2.jpg': { src: incub2, credits: '' },
+    'incub3.jpg': { src: incub3, credits: '' },
+  }
+
+  const selectedImage = imageMap[imageSrc]
+  if (selectedImage) {
+    modalImageSrc.value = selectedImage.src
+    modalCredits.value = selectedImage.credits
   }
 
   isModalOpen.value = true
   document.body.style.overflow = 'hidden'
 }
 
+// Funzione per chiudere il modal
 const closeModal = () => {
   isModalOpen.value = false
   document.body.style.overflow = 'auto'
 }
 
+// Funzione per impostare l'opacità delle immagini
 const setImageOpacity = (imgElement: EventTarget | null) => {
   if (imgElement instanceof HTMLImageElement) {
     imgElement.style.opacity = '1'
   }
 }
 
+// Animazioni con GSAP e ScrollTrigger
 const animateOnScroll = () => {
-  const elements = [element1, element2, element3, element4, element5]
-
-  elements.forEach((el) => {
-    if (el.value) {
-      gsap.from(el.value, {
+  elementRefs.forEach((elRef) => {
+    if (elRef.value) {
+      gsap.from(elRef.value, {
         opacity: 0,
         y: 100,
         duration: 1,
         scrollTrigger: {
-          trigger: el.value,
+          trigger: elRef.value,
           start: 'top bottom',
           end: 'top center',
           scrub: 1,
@@ -380,8 +373,33 @@ const animateOnScroll = () => {
   })
 }
 
+// Esegui animazioni al montaggio del componente e aggiorna i meta tag
 onMounted(() => {
   animateOnScroll()
+
+  // Ottieni l'istanza di i18n
+  const { t } = useI18n()
+
+  // Modifica o aggiungi meta tag
+  const metaTags = [
+    { name: 'description', content: t('pageDescriptionHome') },
+    { property: 'og:title', content: t('ogTitleHome') },
+    { property: 'og:description', content: t('ogDescriptionHome') },
+    { name: 'keywords', content: t('keywordsHome') },
+    { name: 'language', content: 'it' }, // Lingua corrente
+  ]
+
+  metaTags.forEach(({ name, property, content }) => {
+    const selector = name ? `meta[name="${name}"]` : `meta[property="${property}"]`
+    let meta = document.head.querySelector(selector) as HTMLMetaElement
+    if (!meta) {
+      meta = document.createElement('meta')
+      if (name) meta.setAttribute('name', name)
+      if (property) meta.setAttribute('property', property)
+      document.head.appendChild(meta)
+    }
+    meta.setAttribute('content', content)
+  })
 })
 </script>
 

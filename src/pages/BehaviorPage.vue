@@ -112,12 +112,13 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent, onMounted } from 'vue'
 
 import imageSrcBehavior0 from '@/assets/images/asticeTana-rit.jpg'
 import imageSrcBehavior1 from '@/assets/images/asticiEsploratori.jpg'
 import imageSrcBehavior2 from '@/assets/images/asticeGiovane.jpg'
 import imageSrcBehavior3 from '@/assets/images/giovanileAstice-rit.jpg'
+import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   name: 'BehaviorPage',
@@ -134,6 +135,33 @@ export default defineComponent({
       showImageModal.value = false
       selectedImage.value = ''
     }
+
+    // Gestione dei meta tag
+    onMounted(() => {
+      const { t } = useI18n()
+
+      // Meta tag dinamici per la pagina di conservazione
+      const metaTags = [
+        { name: 'description', content: t('pageDescriptionBehavior') },
+        { property: 'og:title', content: t('ogTitleBehavior') },
+        { property: 'og:description', content: t('ogDescriptionBehavior') },
+        { name: 'keywords', content: t('keywordsBehavior') },
+        { name: 'language', content: 'it' }, // Lingua corrente
+      ]
+
+      // Aggiungi o modifica i meta tag nel head
+      metaTags.forEach(({ name, property, content }) => {
+        const selector = name ? `meta[name="${name}"]` : `meta[property="${property}"]`
+        let meta = document.head.querySelector(selector) as HTMLMetaElement
+        if (!meta) {
+          meta = document.createElement('meta')
+          if (name) meta.setAttribute('name', name)
+          if (property) meta.setAttribute('property', property)
+          document.head.appendChild(meta)
+        }
+        meta.setAttribute('content', content)
+      })
+    })
 
     return {
       showImageModal,

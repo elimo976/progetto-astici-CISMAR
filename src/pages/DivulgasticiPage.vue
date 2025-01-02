@@ -44,14 +44,42 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted } from 'vue'
 
 import imageSrcResearch0 from '@/assets/images/asticiniBent-rit.jpg'
 import imageSrcDivulgBanner from '@/assets/images/bannerDivulg.jpg'
+import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   name: 'ResearchPage',
   setup() {
+    // Gestione dei meta tag
+    onMounted(() => {
+      const { t } = useI18n()
+
+      // Meta tag dinamici per la pagina di conservazione
+      const metaTags = [
+        { name: 'description', content: t('pageDescriptionDivulgastici') },
+        { property: 'og:title', content: t('ogTitleDivulgastici') },
+        { property: 'og:description', content: t('ogDescriptionDivulgastici') },
+        { name: 'keywords', content: t('keywordsDivulgastici') },
+        { name: 'language', content: 'it' }, // Lingua corrente
+      ]
+
+      // Aggiungi o modifica i meta tag nel head
+      metaTags.forEach(({ name, property, content }) => {
+        const selector = name ? `meta[name="${name}"]` : `meta[property="${property}"]`
+        let meta = document.head.querySelector(selector) as HTMLMetaElement
+        if (!meta) {
+          meta = document.createElement('meta')
+          if (name) meta.setAttribute('name', name)
+          if (property) meta.setAttribute('property', property)
+          document.head.appendChild(meta)
+        }
+        meta.setAttribute('content', content)
+      })
+    })
+
     return {
       imageSrcResearch0,
       imageSrcDivulgBanner,

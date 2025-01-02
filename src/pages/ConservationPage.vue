@@ -238,7 +238,8 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import imageSrcCismar0 from '@/assets/images/cismar-rit.jpg'
 import imageSrcCismar0SM from '@/assets/images/cismarSM-rit.jpg'
@@ -270,6 +271,33 @@ export default defineComponent({
       showImageModal.value = false
       selectedImage.value = ''
     }
+
+    // Gestione dei meta tag
+    onMounted(() => {
+      const { t } = useI18n()
+
+      // Meta tag dinamici per la pagina di conservazione
+      const metaTags = [
+        { name: 'description', content: t('pageDescriptionCismar') },
+        { property: 'og:title', content: t('ogTitleCismar') },
+        { property: 'og:description', content: t('ogDescriptionCismar') },
+        { name: 'keywords', content: t('keywordsCismar') },
+        { name: 'language', content: 'it' }, // Lingua corrente
+      ]
+
+      // Aggiungi o modifica i meta tag nel head
+      metaTags.forEach(({ name, property, content }) => {
+        const selector = name ? `meta[name="${name}"]` : `meta[property="${property}"]`
+        let meta = document.head.querySelector(selector) as HTMLMetaElement
+        if (!meta) {
+          meta = document.createElement('meta')
+          if (name) meta.setAttribute('name', name)
+          if (property) meta.setAttribute('property', property)
+          document.head.appendChild(meta)
+        }
+        meta.setAttribute('content', content)
+      })
+    })
 
     return {
       showImageModal,
