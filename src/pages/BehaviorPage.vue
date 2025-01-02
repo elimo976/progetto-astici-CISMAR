@@ -3,6 +3,7 @@
     :src="imageSrcBehavior0"
     :alt="$t('imageAltBehavior0')"
     class="w-full object-cover rounded-lg shadow-xl"
+    aria-label="$t('imageAltBehavior0')"
   />
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
@@ -28,6 +29,7 @@
               :src="imageSrcBehavior1"
               :alt="$t('imageAltBehavior1')"
               class="w-full h-full object-cover"
+              aria-label="$t('imageAltBehavior1')"
             />
           </div>
           <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-center">
@@ -54,6 +56,7 @@
               :src="imageSrcBehavior2"
               :alt="$t('imageAltBehavior2')"
               class="w-full h-full object-cover"
+              aria-label="$t('imageAltBehavior2')"
             />
           </div>
           <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-center">
@@ -76,6 +79,7 @@
               :src="imageSrcBehavior3"
               :alt="$t('imageAltBehavior3')"
               class="w-full h-full object-cover"
+              aria-label="$t('imageAltBehavior3')"
             />
           </div>
           <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-center">
@@ -102,6 +106,7 @@
           <button
             @click="closeImageModal"
             class="absolute top-14 right-35 sm:top-8 sm:right-8 md:top-10 md:right-10 xs:top-5 xs:right-5 bg-white opacity-60 text-black rounded-full py-0 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+            aria-label="$t('closeModal')"
           >
             ✕
           </button>

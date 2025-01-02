@@ -3,6 +3,7 @@
     :src="imageSrcDivulgBanner"
     :alt="$t('imageAltDivulgBanner')"
     class="w-full object-cover border-t border-gray-100 shadow-xl"
+    aria-label="$t('imageAltDivulgBanner')"
   />
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
@@ -37,6 +38,7 @@
           src="@/assets/loghi/logo-tecnopolo.png"
           alt="{{ $t('divulgAltLogoTechnopolo')}}"
           class="h-32 object-contain"
+          aria-label="{{ $t('divulgAltLogoTechnopolo')}}"
         />
       </div>
     </div>

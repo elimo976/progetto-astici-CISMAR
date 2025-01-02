@@ -3,6 +3,7 @@
     :src="imageSrcActivitiesBanner"
     :alt="$t('activitiesAltActivitiesBanner')"
     class="w-full object-cover shadow-xl"
+    aria-label="$t('activitiesAltActivitiesBanner')"
   />
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
@@ -61,6 +62,7 @@
                 :src="imageSrcActivities1"
                 :alt="$t('imageAltActivities1')"
                 class="w-full h-full object-cover"
+                aria-label="$t('imageAltActivities1')"
               />
             </div>
             <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-center hidden">
@@ -88,6 +90,8 @@
           <button
             @click="closeImageModal"
             class="absolute top-14 right-35 sm:top-8 sm:right-8 md:top-10 md:right-10 xs:top-5 xs:right-5 bg-white opacity-60 text-black rounded-full py-0 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+            aria-label="$t('closeModal')"
+            type="button"
           >
             ✕
           </button>

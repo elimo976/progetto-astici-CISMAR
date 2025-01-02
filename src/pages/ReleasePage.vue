@@ -3,6 +3,7 @@
     :src="imageSrcRelease0"
     :alt="$t('imageAltRelease0')"
     class="w-full object-cover rounded-lg shadow-xl"
+    aria-label="$t('imageAltRelease0')"
   />
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
@@ -31,6 +32,7 @@
               :src="imageSrcRelease1"
               :alt="$t('imageAltRelease1')"
               class="aspect-square w-full object-cover rounded-lg shadow-xl"
+              aria-label="$t('imageAltRelease1')"
             />
             <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
               {{ $t('imageAltRelease1') }}
@@ -44,6 +46,7 @@
               :src="imageSrcRelease2"
               :alt="$t('imageAltRelease2')"
               class="aspect-square w-full object-cover rounded-lg shadow-xl"
+              aria-label="$t('imageAltRelease2')"
             />
             <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
               {{ $t('imageAltRelease2') }}
@@ -99,6 +102,7 @@
           <button
             @click="closeImageModal"
             class="absolute top-14 right-35 sm:top-8 sm:right-8 md:top-10 md:right-10 xs:top-5 xs:right-5 bg-white opacity-60 text-black rounded-full py-0 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+            aria-label="$t('closeModal')"
           >
             ✕
           </button>

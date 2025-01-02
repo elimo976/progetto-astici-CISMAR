@@ -21,7 +21,7 @@
               class="w-48 lg:w-64 aspect-square object-cover rounded-full shadow-lg transition-all cursor-pointer"
               @click="openModal('portoPescaArtigianale.jpg')"
               @load="setImageOpacity($event.target)"
-              aria-label="{{ $t('projectAltDescription1') }}"
+              aria-label="$t('projectAltDescription1')"
             />
             <div class="lg:pl-12 sm:px-4 max-w-full w-full md:w-2/3 lg:w-3/4">
               <p
@@ -43,7 +43,7 @@
             class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
             @click="openModal('asticeAdultoVasca.jpg')"
             @load="setImageOpacity($event.target)"
-            aria-label="{{ $t(' projectAltDescription2')}}"
+            aria-label="$t(' projectAltDescription2')"
           />
           <div class="max-w-full w-full md:w-2/3 lg:w-auto">
             <p
@@ -65,7 +65,7 @@
             class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
             @click="openModal('asticeBluOrizzontale.jpg')"
             @load="setImageOpacity($event.target)"
-            aria-label="{{ $t('projectAltDescription3')}}"
+            aria-label="$t('projectAltDescription3')"
           />
           <div
             class="text-center lg:text-left lg:pl-12 sm:px-4 max-w-full w-full md:w-2/3 lg:w-3/4"
@@ -89,7 +89,7 @@
             class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
             @click="openModal('zoea.png')"
             @load="setImageOpacity($event.target)"
-            aria-label="{{ $t('projectAltDescription4')}}"
+            aria-label="$t('projectAltDescription4')"
           />
           <div class="text-center lg:text-left max-w-full w-full md:w-2/3 lg:w-auto">
             <p
@@ -111,7 +111,7 @@
             class="w-48 h-48 lg:w-64 lg:h-64 md:mb-3 sm:mb-2 object-cover rounded-full shadow-lg transition-all cursor-pointer"
             @click="openModal('faoGoals.jpg')"
             @load="setImageOpacity($event.target)"
-            aria-label="{{ $t('projectAltDescription5')}}"
+            aria-label="$t('projectAltDescription5')"
           />
           <div
             class="text-center lg:text-left lg:pl-12 sm:px-4 max-w-full w-full md:w-2/3 lg:w-3/4"

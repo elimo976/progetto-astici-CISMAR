@@ -17,7 +17,12 @@
           class="flex md:justify-between md:flex-row flex-col md:items-start items-center mb-3 pr-3"
         >
           <h3 class="font-bold text-custom-blue-lobster mb-3">{{ $t('projectsHeading1') }}</h3>
-          <img src="@/assets/loghi/prinLogo.png" alt="Logo PRIN" class="w-auto h-14" />
+          <img
+            src="@/assets/loghi/prinLogo.png"
+            alt="Logo PRIN"
+            class="w-auto h-14"
+            aria-label="logo PRIN"
+          />
         </div>
         <p class="mb-2">{{ $t('projectsText1') }}</p>
       </div>
@@ -30,7 +35,12 @@
           <h3 class="font-bold mb-3 md:mt-4 text-custom-blue-lobster">
             {{ $t('projectsHeading2') }}
           </h3>
-          <img src="@/assets/loghi/feampLogo.png" alt="Logo PRIN" class="w-auto h-20" />
+          <img
+            src="@/assets/loghi/feampLogo.png"
+            alt="Logo FEAMP"
+            class="w-auto h-20"
+            aria-label="Logo FEAMP"
+          />
         </div>
         <p>{{ $t('projectsText2') }}</p>
         <div class="max-w-[42rem] mx-auto mt-4">
@@ -57,6 +67,7 @@
                   :src="imageSrcProjects1"
                   :alt="$t('imageAltProjects1')"
                   class="w-full h-full object-cover border-4 border-white rounded-lg"
+                  aria-label="$t('imageAltProjects1')"
                 />
               </div>
               <figcaption class="mt-4 text-sm md:text-base text-gray-600 text-center">
@@ -94,7 +105,12 @@
           <h3 class="font-bold my-5 md:my-0 text-custom-blue-lobster">
             {{ $t('projectsHeading3') }}
           </h3>
-          <img src="@/assets/loghi/centroBiodivLogo.png" alt="Logo PRIN" class="w-auto mb-2 h-14" />
+          <img
+            src="@/assets/loghi/centroBiodivLogo.png"
+            alt="Logo National Biodiversity Future Center"
+            class="w-auto mb-2 h-14"
+            aria-label="Logo National Biodiversity Future Center"
+          />
         </div>
         <p>{{ $t('projectsText3') }}</p>
       </div>

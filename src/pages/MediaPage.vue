@@ -25,6 +25,7 @@
               :src="video.thumbnail"
               :alt="video.title"
               class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition duration-300 ease-in-out"
+              aria-label="video.title"
             />
             <div
               class="absolute top-0 left-0 bg-black bg-opacity-50 w-full h-full flex justify-center items-center opacity-0 hover:opacity-100 transition duration-300"
@@ -44,6 +45,7 @@
               :src="video.thumbnail"
               :alt="video.title"
               class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition duration-300 ease-in-out"
+              aria-label="video.title"
             />
             <div
               class="absolute top-0 left-0 bg-black bg-opacity-50 w-full h-full flex justify-center items-center opacity-0 hover:opacity-100 transition duration-300"
@@ -63,6 +65,7 @@
               :src="video.thumbnail"
               :alt="video.title"
               class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition duration-300 ease-in-out"
+              aria-label="video.title"
             />
             <div
               class="absolute top-0 left-0 bg-black bg-opacity-50 w-full h-full flex justify-center items-center opacity-0 hover:opacity-100 transition duration-300"
@@ -82,6 +85,7 @@
               :src="video.thumbnail"
               :alt="video.title"
               class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition duration-300 ease-in-out"
+              aria-label="video.title"
             />
             <div
               class="absolute top-0 left-0 bg-black bg-opacity-50 w-full h-full flex justify-center items-center opacity-0 hover:opacity-100 transition duration-300"

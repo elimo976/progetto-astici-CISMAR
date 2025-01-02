@@ -23,6 +23,7 @@
             :src="imageSrcLobster1"
             :alt="$t('imageAltLobster1')"
             class="aspect-square lg:w-4/5 w-full object-cover rounded-lg shadow-xl"
+            aria-label="$t('imageAltLobster1')"
           />
           <figcaption class="mt-4 lg:mr-20 pr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltLobster1') }}
@@ -38,6 +39,7 @@
             :src="imageSrcLobster2"
             :alt="$t('imageAltLobster2')"
             class="aspect-square lg:w-4/5 w-full object-cover rounded-lg shadow-xl"
+            aria-label="$t('imageAltLobster2')"
           />
           <figcaption class="mt-4 lg:mr-20 pr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltLobster2') }}
@@ -64,6 +66,7 @@
           <button
             @click="closeImageModal"
             class="absolute top-14 right-35 sm:top-8 sm:right-8 md:top-10 md:right-10 xs:top-5 xs:right-5 bg-white opacity-60 text-black rounded-full py-0 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+            aria-label="$t('closeModal')"
           >
             ✕
           </button>

@@ -5,6 +5,7 @@
       :src="imageSrcGeneticsBanner"
       :alt="$t('imageAltGeneticsBanner')"
       class="w-full object-cover shadow-xl"
+      aria-label="$t('imageAltGeneticsBanner')"
     />
 
     <!-- Attribuzione nell'angolo in basso a destra -->
@@ -59,6 +60,7 @@
             :src="imageSrcGenetics1"
             :alt="$t('imageAltGenetics1')"
             class="aspect-square w-full object-cover rounded-lg shadow-xl"
+            aria-label="$t('imageAltGenetics1')"
           />
           <figcaption class="mt-4 mr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltGenetics1') }}
@@ -89,6 +91,7 @@
           <button
             @click="closeImageModal"
             class="absolute top-14 right-35 sm:top-8 sm:right-8 md:top-10 md:right-10 xs:top-5 xs:right-5 bg-white opacity-60 text-black rounded-full py-0 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+            aria-label="$t('closeModal')"
           >
             ✕
           </button>

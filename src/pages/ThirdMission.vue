@@ -3,6 +3,7 @@
     :src="imageSrcThirdMission1"
     :alt="$t('imageAltThirdMission0')"
     class="w-full object-cover rounded-lg shadow-xl"
+    aria-label="$t('imageAltThirdMission0')"
   />
   <section class="bg-custom-beige text-gray-800 px-4 sm:px-6 lg:px-8 py-8 w-full">
     <!-- Contenitore per il testo e le immagini -->
@@ -24,6 +25,7 @@
               :src="imageSrcThirdMission2"
               :alt="$t('imageAltThirdMission1')"
               class="aspect-square md:w-full w-4/5 object-cover rounded-lg shadow-xl mx-auto"
+              aria-label="$t('imageAltThirdMission1')"
             />
             <figcaption
               class="mt-4 md:mr-1 sm:mr-16 xs:mr-16 text-sm md:text-base text-gray-600 text-right"
@@ -44,6 +46,7 @@
               :src="imageSrcThirdMission3"
               :alt="$t('imageAltThirdMission2')"
               class="aspect-square md:w-full w-4/5 object-cover rounded-lg shadow-xl mx-auto"
+              aria-label="$t('imageAltThirdMission2')"
             />
             <figcaption
               class="mt-4 md:mr-1 sm:mr-16 xs:mr-16 text-sm md:text-base text-gray-600 text-right"
@@ -74,6 +77,8 @@
           <button
             @click="closeImageModal"
             class="absolute top-14 right-35 sm:top-8 sm:right-8 md:top-10 md:right-10 xs:top-5 xs:right-5 bg-white opacity-60 text-black rounded-full py-0 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+            type="button"
+            aria-label="$t('closeModal')"
           >
             ✕
           </button>
@@ -88,6 +93,7 @@
         src="@/assets/loghi/logo-unitus.png"
         alt="Logo Unitus"
         class="h-16 lg:h-full object-contain max-w-[100px] md:max-w-[30%]"
+        aria-label="Logo Unitus"
       />
 
       <!-- Linea di separazione -->
@@ -96,8 +102,9 @@
       <!-- Logo Tecnopolo -->
       <img
         src="@/assets/loghi/logo-tecnopolo.png"
-        alt="Logo Tecnopolo"
+        alt="Logo Technopole"
         class="h-16 lg:h-full object-contain max-w-[100px] md:max-w-[30%]"
+        aria-label="Logo Technopole"
       />
 
       <!-- Linea di separazione -->
@@ -108,6 +115,7 @@
         src="@/assets/loghi/logo-cismar.png"
         alt="Logo Cismar"
         class="h-16 lg:h-full object-contain max-w-[100px] md:max-w-[30%]"
+        aria-label="Logo Cismar"
       />
     </div>
   </section>

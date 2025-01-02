@@ -8,6 +8,7 @@
       :src="imageSrcCismar0SM"
       :alt="$t('imageAltRoleCismar0')"
       class="w-full object-cover rounded-lg shadow-xl"
+      aria-label="$t('imageAltRoleCismar0')"
     />
   </picture>
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
@@ -32,6 +33,7 @@
               :src="imageSrcCismar1"
               :alt="$t('imageAltRoleCismar0')"
               class="aspect-square w-full object-cover rounded-lg shadow-xl"
+              aria-label="$t('imageAltRoleCismar0')"
             />
             <figcaption class="mt-4 pr-1 text-sm md:text-base text-gray-600 text-right">
               {{ $t('imageAltRoleCismar0') }}
@@ -52,6 +54,7 @@
                 :src="imageSrcCismar8"
                 :alt="$t('cismarAltDescription3')"
                 class="aspect-square w-full object-cover rounded-lg shadow-xl"
+                aria-label=" $t('cismarAltDescription3')"
               />
               <figcaption class="mt-4 text-xs md:text-sm text-gray-600 text-right">
                 {{ $t('cismarAltDescription3') }}
@@ -65,6 +68,7 @@
                 :src="imageSrcCismar3rit"
                 :alt="$t('cismarAltDescription1')"
                 class="aspect-square w-full object-cover rounded-lg shadow-xl"
+                aria-label="$t('cismarAltDescription1')"
               />
               <figcaption class="mt-4 text-xs md:text-sm text-gray-600 text-right">
                 {{ $t('cismarAltDescription1') }}
@@ -78,6 +82,7 @@
                 :src="imageSrcCismar4"
                 :alt="$t('cismarAltDescription2')"
                 class="aspect-square w-full object-cover rounded-lg shadow-xl"
+                aria-label="$t('cismarAltDescription2')"
               />
               <figcaption class="mt-4 pr-1 text-xs md:text-sm text-gray-600 text-right">
                 {{ $t('cismarAltDescription2') }}
@@ -96,6 +101,7 @@
               :src="imageSrcCismar2"
               :alt="$t('laboratoryAltDescription')"
               class="aspect-square w-full object-cover rounded-lg shadow-xl"
+              aria-label="$t('laboratoryAltDescription')"
             />
             <figcaption class="mt-4 pr-1 text-sm md:text-base text-gray-600 text-right">
               {{ $t('laboratoryAltDescription') }}
@@ -116,6 +122,7 @@
                 :src="imageSrcCismar5"
                 :alt="$t('laboratoryAltDescription1')"
                 class="aspect-square w-full object-cover rounded-lg shadow-xl"
+                aria-label="$t('laboratoryAltDescription1')"
               />
               <figcaption class="mt-4 pr-1 text-sm md:text-base text-gray-600 text-right">
                 {{ $t('laboratoryAltDescription1') }}
@@ -130,6 +137,7 @@
                 :src="imageSrcCismar6"
                 :alt="$t('laboratoryAltDescription2')"
                 class="aspect-square w-full object-cover rounded-lg shadow-xl"
+                aria-label="$t('laboratoryAltDescription2')"
               />
               <figcaption class="mt-4 pr-1 text-sm md:text-base text-gray-600 text-right">
                 {{ $t('laboratoryAltDescription2') }}
@@ -144,6 +152,7 @@
                 :src="imageSrcCismar7"
                 :alt="$t('laboratoryAltDescription3')"
                 class="aspect-square w-full object-cover rounded-lg shadow-xl"
+                aria-label="$t(laboratoryAltDescription3)"
               />
               <figcaption class="mt-4 pr-1 text-sm md:text-base text-gray-600 text-right">
                 {{ $t('laboratoryAltDescription3') }}
@@ -181,6 +190,7 @@
             :src="imageSrcRoleCismar1"
             :alt="$t('imageAltRoleCismar1')"
             class="aspect-square lg:w-4/5 w-full object-cover rounded-lg shadow-xl"
+            aria-label="$t('imageAltRoleCismar1')"
           />
           <figcaption class="mt-4 lg:mr-20 pr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltRoleCismar1') }}
@@ -197,6 +207,7 @@
             :src="imageSrcRoleCismar2"
             :alt="$t('imageAltRoleCismar2')"
             class="aspect-square lg:w-4/5 w-full object-cover rounded-lg shadow-xl"
+            aria-label="$t('imageAltRoleCismar2')"
           />
           <figcaption class="mt-4 lg:mr-20 pr-1 text-sm md:text-base text-gray-600 text-right">
             {{ $t('imageAltRoleCismar2') }}
@@ -228,6 +239,7 @@
           <button
             @click="closeImageModal"
             class="absolute top-14 right-35 sm:top-8 sm:right-8 md:top-10 md:right-10 xs:top-5 xs:right-5 bg-white opacity-60 text-black rounded-full py-0 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+            aria-label="$t('closeModal')"
           >
             ✕
           </button>

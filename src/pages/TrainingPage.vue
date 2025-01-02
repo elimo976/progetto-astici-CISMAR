@@ -3,6 +3,7 @@
     :src="imageSrcTraining0"
     :alt="$t('imageAltTraining0')"
     class="w-full object-cover shadow-xl"
+    aria-label="$t('imageAltTraining0')"
   />
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">
     <div class="max-w-7xl mx-auto">
@@ -30,6 +31,7 @@
               :src="imageSrcTraining1"
               :alt="$t('imageAltTraining1')"
               class="aspect-square w-full object-cover rounded-lg shadow-xl"
+              aria-label="$t('imageAltTraining1')"
             />
             <figcaption class="mt-4 text-sm text-gray-600 text-right">
               {{ $t('imageAltTraining1') }}
@@ -43,6 +45,7 @@
               :src="imageSrcTraining2"
               :alt="$t('imageAltTraining2')"
               class="aspect-square w-full object-cover rounded-lg shadow-xl"
+              aria-label="$t('imageAltTraining2')"
             />
             <figcaption class="mt-4 mr-1 text-sm text-gray-600 text-right">
               {{ $t('imageAltTraining2') }}
@@ -56,6 +59,7 @@
               :src="imageSrcTraining3"
               :alt="$t('imageAltTraining3')"
               class="aspect-square w-full object-cover rounded-lg shadow-xl"
+              aria-label="$t('imageAltTraining3')"
             />
             <figcaption class="mt-4 mr-1 text-sm text-gray-600 text-right">
               {{ $t('imageAltTraining3') }}
@@ -83,6 +87,7 @@
           <button
             @click="closeImageModal"
             class="absolute top-14 right-35 sm:top-8 sm:right-8 md:top-10 md:right-10 xs:top-5 xs:right-5 bg-white opacity-60 text-black rounded-full py-0 px-2 shadow-md hover:bg-gray-500 hover:text-white transition duration-200"
+            ria-label="{{ $t('closeModal') }}"
           >
             ✕
           </button>

@@ -16,8 +16,9 @@
             <div class="lg:w-1/5 md:w-1/4 w-1/3 md:my-3 my-6">
               <img
                 src="@/assets/images/behavioralEcologySociobiology.jpg"
-                alt="Applied Animal Behaviour Science"
+                alt="Behavioral Ecology and Sociobiology"
                 class="rounded-lg shadow-lg w-full w-48 object-cover aspect-square transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                aria-label="Behavioral Ecology and Sociobiology Cover"
               />
             </div>
             <!-- Testo Pubblicazione -->
@@ -48,8 +49,9 @@
             <div class="lg:w-1/5 md:w-1/4 w-1/3 md:my-3 my-6">
               <img
                 src="@/assets/images/appliedAnimal.jpg"
-                alt="Applied Animal Behaviour Science"
+                alt="Applied Animal Behaviour Science,"
                 class="rounded-lg shadow-lg w-full w-48 object-cover aspect-square transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                aria-label="Applied Animal Behaviour Science Cover"
               />
             </div>
             <!-- Testo Pubblicazione -->
@@ -81,6 +83,7 @@
                 src="@/assets/images/rendicontiLincei.webp"
                 alt="Rendiconti Lincei"
                 class="rounded-lg shadow-lg w-full w-48 object-cover aspect-square transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                aria-label="Rendiconti Lincei Cover"
               />
             </div>
             <div class="md:ml-12 mt-4">
@@ -112,6 +115,7 @@
                 src="@/assets/images/norwegianLobFarm.jpg"
                 alt="ELCE Report"
                 class="rounded-lg shadow-lg w-full w-48 object-cover transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                aria-label="ELCE Report Cover"
               />
             </div>
             <div class="md:ml-12 mt-4">
