@@ -1,20 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import HomePage from '@/pages/HomePage.vue'
-import ThirdMission from '@/pages/ThirdMission.vue'
-import MediaPage from '@/pages/MediaPage.vue'
-import UnderConstruction from '@/pages/UnderConstruction.vue'
-import ConservationPage from '@/pages/ConservationPage.vue'
-import TrainingPage from '@/pages/TrainingPage.vue'
-import HatcheryPage from '@/pages/HatcheryPage.vue'
-import ReleasePage from '@/pages/ReleasePage.vue'
-import ResearchPage from '@/pages/ResearchPage.vue'
-import BehaviorPage from '@/pages/BehaviorPage.vue'
-import GeneticsPage from '@/pages/GeneticsPage.vue'
-import ProjectsPage from '@/pages/ProjectsPage.vue'
-import PublicationsPage from '@/pages/PublicationsPage.vue'
-import ActivitiesPage from '@/pages/ActivitiesPage.vue'
-import DivulgasticiPage from '@/pages/DivulgasticiPage.vue'
+const HomePage = () => import('@/pages/HomePage.vue')
+const ThirdMission = () => import('@/pages/ThirdMission.vue')
+const MediaPage = () => import('@/pages/MediaPage.vue')
+const UnderConstruction = () => import('@/pages/UnderConstruction.vue')
+const ConservationPage = () => import('@/pages/ConservationPage.vue')
+const TrainingPage = () => import('@/pages/TrainingPage.vue')
+const HatcheryPage = () => import('@/pages/HatcheryPage.vue')
+const ReleasePage = () => import('@/pages/ReleasePage.vue')
+const ResearchPage = () => import('@/pages/ResearchPage.vue')
+const BehaviorPage = () => import('@/pages/BehaviorPage.vue')
+const GeneticsPage = () => import('@/pages/GeneticsPage.vue')
+const ProjectsPage = () => import('@/pages/ProjectsPage.vue')
+const PublicationsPage = () => import('@/pages/PublicationsPage.vue')
+const ActivitiesPage = () => import('@/pages/ActivitiesPage.vue')
+const DivulgasticiPage = () => import('@/pages/DivulgasticiPage.vue')
 
 const routes = [
   {
