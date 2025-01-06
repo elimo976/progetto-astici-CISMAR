@@ -116,4 +116,18 @@ const router = createRouter({
   },
 })
 
+// Aggiungi l'hook afterEach per aggiornare il tag canonical
+router.afterEach(() => {
+  const canonicalLink = document.querySelector("link[rel='canonical']")
+
+  if (canonicalLink) {
+    canonicalLink.setAttribute('href', window.location.href)
+  } else {
+    const link = document.createElement('link')
+    link.setAttribute('rel', 'canonical')
+    link.setAttribute('href', window.location.href)
+    document.head.appendChild(link)
+  }
+})
+
 export default router

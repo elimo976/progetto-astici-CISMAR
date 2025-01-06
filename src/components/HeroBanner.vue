@@ -88,6 +88,26 @@ const playPopupVideoOnLoad = () => {
 
 onMounted(() => {
   playVideoOnLoad()
+
+  // Dati strutturati per il video in JSON-LD
+  const videoMetadata = {
+    '@context': 'http://schema.org',
+    '@type': 'VideoObject',
+    name: 'Hero Video - Homepage',
+    description:
+      'Un video emozionante di benvenuto sulla nostra homepage, che mostra il rilascio di un giovane astice europeo.',
+    thumbnailUrl: '@/assets/images/asticeRilasciato.jpg', // Link alla miniatura del video
+    contentUrl: '@/assets/video/video-hero-banner.mp4', // URL del video principale
+    embedUrl: '@/assets/video/video-hero-banner.mp4', // URL per l'embed
+    duration: 'PT29S', // Durata del video
+    uploadDate: '2024-12-12', // Data di upload del video
+  }
+
+  // Aggiungi il JSON-LD al documento
+  const script = document.createElement('script')
+  script.type = 'application/ld+json'
+  script.textContent = JSON.stringify(videoMetadata)
+  document.head.appendChild(script)
 })
 
 // Funzione per aprire il modal e avviare il video del popup
