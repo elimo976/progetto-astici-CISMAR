@@ -116,7 +116,7 @@ const router = createRouter({
   },
 })
 
-// Aggiungi l'hook afterEach per aggiornare il tag canonical
+// Hook afterEach per aggiornare il tag canonical
 router.afterEach(() => {
   const canonicalLink = document.querySelector("link[rel='canonical']")
 
