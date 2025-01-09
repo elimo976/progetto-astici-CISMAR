@@ -59,13 +59,10 @@
       </div>
     </div>
 
-    <!-- RICORDATI DI TOGLIERE IL TEXT-WHITE AI 3 ELEMENTI IT | EN !!!!!!!!! -->
-
     <!-- Selettore di lingua -->
     <div class="absolute top-4 right-8 flex space-x-3 text-lg">
       <button
         @click="setLanguage('it')"
-        class="text-white"
         :class="{ 'text-gray-400': language === 'en', 'text-black': language === 'it' }"
       >
         IT
@@ -73,7 +70,6 @@
       <span class="text-white">|</span>
       <button
         @click="setLanguage('en')"
-        class="text-white"
         :class="{ 'text-gray-400': language === 'it', 'text-black': language === 'en' }"
       >
         EN

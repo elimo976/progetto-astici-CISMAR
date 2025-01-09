@@ -8,7 +8,7 @@ export default {
               `,
   },
   en: {
-    headerTitle: 'Lobsters Projects',
+    headerTitle: 'The Lobster Project',
     debLink: 'Department of ecological and biological sciences - University of Tuscia',
   },
 }

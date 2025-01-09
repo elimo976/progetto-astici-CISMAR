@@ -3,7 +3,7 @@
     class="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 flex justify-center items-center"
     v-if="!isAccepted"
   >
-    <div class="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg relative">
+    <div class="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg relative mx-3">
       <!-- Bottone di chiusura in alto a destra -->
       <button
         class="absolute top-1 right-3 text-gray-800 hover:text-gray-600 transition"

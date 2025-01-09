@@ -38,7 +38,7 @@ const routes = [
     component: ConservationPage,
   },
   {
-    path: '/hatchery',
+    path: '/rearing',
     name: 'HatcheryPage',
     component: HatcheryPage,
   },

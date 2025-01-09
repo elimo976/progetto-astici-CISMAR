@@ -46,7 +46,8 @@
         <div class="max-w-[42rem] mx-auto mt-4">
           <ul>
             <li>
-              <strong>{{ $t('projectsList1bold') }}</strong> {{ $t('projectsList1') }}
+              <strong>{{ $t('projectsList1bold') }}</strong> {{ $t('projectsList1') }} <br />
+              <i>{{ $t('projectsList1i') }}</i>
               <p class="mt-3">
                 <a
                   href="https://www.unitus.it/wp-content/uploads/2023/11/DEB_RICERCA_PROGETTO_Sito-web-healthy-stocks.pdf"
@@ -76,8 +77,8 @@
             </figure>
 
             <li>
-              <strong>{{ $t('projectsList2bold') }}</strong> {{ $t('projectsList2') }}
-              <br />
+              <strong>{{ $t('projectsList2bold') }}</strong> {{ $t('projectsList2') }} <br />
+              <i>{{ $t('projectsList2i') }}</i>
               <p class="mt-3 mb-5">
                 <a
                   href="https://www.unitus.it/wp-content/uploads/2023/08/Comunicato-sito-web-DEB_FEAMP-Ripopolamento.pdf"
@@ -92,6 +93,8 @@
 
             <li>
               <strong>{{ $t('projectsList3bold') }}</strong> {{ $t('projectsList3') }}
+              <br />
+              <i>{{ $t('projectsList3i') }}</i>
             </li>
           </ul>
         </div>

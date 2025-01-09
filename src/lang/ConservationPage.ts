@@ -95,21 +95,22 @@ export default {
 
     watchVideoConservation: `Guarda il video del rilascio`,
   },
+
   en: {
     cismarTitle: 'CISMAR',
-    cismarDescription1: `CISMAR, founded in 2008, is the DEB's research facility for experimental aquaculture and marine ecology.`,
+    cismarDescription1: `Founded in 2008, CISMAR is the research facility of the Department of Ecological and Biological Sciences at the University of Tuscia (DEB) dedicated to experimental aquaculture and marine ecology. `,
 
-    cismarDescription2: `CISMAR is located within the Saline di Tarquinia Regional Nature Reserve, where buildings once used for salt extraction and then abandoned have been restored and converted into laboratories and research facilities by the University's Department of Ecological and Biological Sciences of Tuscia.`,
+    cismarDescription2: `Located within the Regional Natural Reserve of the Saline di Tarquinia, the center occupies restored and repurposed buildings once used for salt extraction. These structures now house state-of-the-art laboratories and research facilities.`,
 
-    cismarDescription3: `Here we study the biodiversity of marine-coastal environments and how to conserve it, through genetic, ecology and ethology research involving many marine species: crustaceans, cephalopods, fish and their parasites.`,
+    cismarDescription3: `Research at CISMAR spans multiple specialized laboratories, including molecular ecology, environmental and benthic monitoring, microscopy, ethology, ecogenotoxicology, and parasitology. `,
 
     cismarAltDescription1: `Seahorse - Credits: Stefano Guerrieri`,
     cismarAltDescription2: `Caramote prawn`,
     cismarAltDescription3: `Common cuttlefish - Credits: Pawel Kalisinski; pexels.com`,
 
-    biodiversityDescription: `The studies are conducted in numerous laboratories: molecular ecology, environmental and benthos monitoring, microscopy, ethology, ecogenotoxicology, parasitology.`,
+    biodiversityDescription: `The center focuses on understanding and preserving the biodiversity of marine and coastal ecosystems through genetic, ecological, and behavioral studies involving various marine species, including crustaceans, cephalopods, fish, and their parasites.`,
 
-    laboratoryDescription: `The largest part is intended for the breeding of various marine species in all their vital stages: eggs, larvae, juveniles and adults. There are many tanks with different sizes and characteristics, experimental hatcheries and bioreactors for the production of phyto- and zooplankton intended to nourish the housed organisms.`,
+    laboratoryDescription: `CISMAR also features extensive facilities for rearing marine species at all life stages—eggs, larvae, juveniles, and adults. These include numerous tanks of varying sizes and specifications, experimental incubators, and bioreactors for producing phytoplankton and zooplankton to feed reared organisms.`,
 
     laboratoryAltDescription: `Molecular labs at CISMAR`,
 
@@ -117,19 +118,19 @@ export default {
     laboratoryAltDescription2: `Tanks for lobster rearing`,
     laboratoryAltDescription3: `Aquahive® lobster hatchery`,
 
-    marineBreedingDescription: `Controlled reproduction to obtain specimens to be released into the sea as part of repopulation actions is one of the most applied strategies for the sustainable management of marine species. At CISMAR the most studied species for this purpose is the European lobster (<i>Homarus gammarus</i>), whose populations in Mediterranean waters are decreasing due to intense fishing pressure.`,
+    marineBreedingDescription: `Controlled breeding for restocking is one of the most effective strategies for managing and restoring depleted marine species. At CISMAR, the European lobster (<i>Homarus gammarus</i>) is a key focus, as its populations in the Mediterranean have declined significantly due to overfishing pressures.`,
 
-    titleRoleCismar: 'The Role of CISMAR',
-    contentRoleCismar1: `Restocking is a fundamental technique to help recover marine species that have suffered significant population declines due to human activities, such as intensive fishing.`,
+    titleRoleCismar: 'The Role of CISMAR in Lobster Conservation',
+    contentRoleCismar1: `Restocking, or the release of captive-bred juveniles into the wild, is crucial for reversing this trend. However, an initial challenge was the lack of established techniques for rearing lobsters. Unlike species farmed for commercial purposes, the European lobster required entirely new procedures and methodologies. This groundbreaking work was carried out by CISMAR’s researchers, positioning the center as a leader in lobster conservation..`,
     contentRoleCismar2: `
-      In the case of the European lobster, an initial major challenge was the lack of established techniques for rearing. Since this species is not farmed for commercial purposes, it was necessary to develop specific procedures and methodologies from scratch. This achievement was made possible by research conducted by <strong>CISMAR</strong>, the DEB’s center of excellence dedicated to the study and conservation of lobsters.,
+      Years of research were required to develop techniques that ensure restocked lobsters possess the genetic, behavioral, and physiological traits of wild individuals. These characteristics are essential for the success of their release into natural habitats.
     `,
     linkRoleCismar: `(link to the CISMAR page)`,
     contentRoleCismar3: `
-      Years of research were required because the specimens intended for restocking must have genetic, behavioral, and physiological characteristics identical to those of wild animals to ensure the success of their release into the sea.
+      To achieve this, CISMAR conducted extensive studies on lobster genetics, ecology, and behavior. These findings informed the design of specialized facilities and optimal rearing conditions. The success of these initiatives is a testament to the expertise and dedication of CISMAR’s team of researchers and technicians, who continue to advance this important work.
     `,
     contentRoleCismar4: `
-      To achieve this goal, in-depth studies on the genetics, ecology, and behavior of lobsters were conducted. These data were crucial for designing appropriate facilities and setting ideal breeding conditions, an outcome achieved through the work of a team of highly skilled technicians and researchers at CISMAR, who continue to pursue advanced research in this area.
+      By integrating cutting-edge research with hands-on aquaculture, CISMAR is not only addressing the decline of the European lobster but also providing a scalable model for sustainable marine resource management.
     `,
     imageAltRoleCismar0: `CISMAR headquarters at the Tarquinia Salterns`,
     imageAltRoleCismar1: `CISMAR researchers check a berried female`,
@@ -138,29 +139,29 @@ export default {
     textDiscoverRoleCismar: 'Learn more about our research activities',
     linkDiscoverRoleCismar: 'here!',
 
-    titleLobster: 'European Lobster Rearing',
+    titleLobster: 'European Lobster Rearing at CISMAR',
     contentLobster1: `
-      Lobsters do not reproduce in captivity, so rearing begins with egg-bearing females that are collected from the same areas where the juveniles will be released.
-      This ensures that the genetic heritage of the animals will be entirely compatible with wild populations, as they originate from them.
+      European lobsters do not reproduce in captivity, so the rearing process begins with egg-bearing females collected from the same areas where their offspring will eventually be released. This ensures that the genetic makeup of the reared lobsters is fully compatible with local wild populations, as it originates directly from them.
     `,
     contentLobster2: `
-      The egg-bearing females are kept in tanks with controlled environmental parameters, such as temperature, light, and water quality.
+      The egg-bearing females are kept in tanks with carefully controlled environmental conditions, including temperature, lighting, and water quality.
     `,
     contentLobster3: `
-      When the eggs are about to hatch, the mothers are transferred to special "birthing rooms," and once they release the larvae, these are counted and moved to incubators where they are fed a specially designed balanced diet and undergo all molts until they transform into small benthic lobsters (living on the seabed rather than floating in the water column).
+      As the eggs near hatching, the females are moved to dedicated "maternity tanks." Once the larvae are released, they are counted and transferred to specialized incubators. There, the larvae are fed a carefully balanced diet designed specifically for their needs, enabling them to go through all molting stages until they develop into juvenile benthic lobsters (which live on the seabed rather than floating in the water column).
     `,
     imageAltLobster1: `Berried female`,
     imageAltLobster2: `Lobster eggs under the microscope`,
 
-    titleTraining: `Training and DNA`,
+    titleTraining: `Training and Genetic Identification`,
     contentTraining1: `
-      The young benthic lobsters will be released into the sea at two months of age.
+      Juvenile benthic lobsters are released into the sea at two months of age.
     `,
     contentTraining2: `
-      Meanwhile, they are trained to adapt to the natural environment through the substrate and burrows in their rearing cells. This environmental "enrichment" will produce juveniles ready to explore the marine environment, quickly identify the most suitable shelter, and evade predators.
+      In the meantime, they undergo “training” to prepare for natural environments. The substrate and burrows provided in their rearing cells serve as environmental enrichment, enabling them to practice behaviors necessary for survival. This training helps the young lobsters become adept at exploring marine environments, quickly identifying suitable shelters, and escaping predators.
     `,
     contentTraining3: `
-      Before being released, the young lobsters and their wild mothers will be identified genetically. Thanks to molecular markers specifically developed for this species, each sibling group is characterized by a unique set of genetic variants, allowing researchers to distinguish CISMAR-produced lobsters among those caught. This makes it possible to assess the actual contribution of the release operations to both the natural population's abundance and the support of small-scale coastal fisheries.
+      Before being released, both the juvenile lobsters and their wild mothers are genetically identified. Using molecular markers specifically developed for this species, each sibling group is characterized by a unique set of genetic variants. This allows CISMAR to distinguish the lobsters produced in its facilities from those naturally occurring in the wild. This genetic tracking system makes it possible to evaluate the real contribution of released lobsters to the recovery of natural populations and to the sustainability of small-scale coastal fisheries.
+
     `,
     imageAltTraining0: `Zoea larval stage`,
     imageAltTraining1: `A juvenile lobster manipulates the gravel substrated`,
@@ -169,13 +170,12 @@ export default {
 
     titleRelease: `The Release`,
     contentRelease1: `
-      At around two months of age, the young lobsters are released into the sea.
-    `,
+      At around two months of age, the juvenile lobsters are released into the sea.`,
     contentRelease2: `
-      To prevent them from attacking each other, they are placed in individual tubes and transported by CISMAR boats to release sites near suitable habitats such as Posidonia meadows and rocky seabeds.
+      To prevent them from harming one another, the young lobsters are placed in individual tubes and transported by CISMAR vessels to selected release sites close to suitable habitats, such as Posidonia oceanica seagrass meadows and rocky seabeds.
     `,
     contentRelease3: `
-      Here, researchers dive to release the lobsters one by one; their presence keeps predators away, giving the juveniles time to hide among rocks or Posidonia plants. From this moment, the sea will take care of them.
+      At the release locations, researchers dive into the water to release the lobsters one by one. Their presence deters predators, giving the juveniles time to find shelter among the rocks or within Posidonia plants. From that moment on, the sea takes over their care.
     `,
     imageAltRelease0: `Release of young lobster`,
     imageAltRelease1: `European lobsters ready for release, transported in individual tubes`,

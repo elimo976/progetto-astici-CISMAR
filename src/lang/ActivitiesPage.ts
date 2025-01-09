@@ -19,18 +19,18 @@ export default {
   },
   en: {
     activitiesAltActivitiesBanner: `Lobster on shore`,
-    activitiesTitle: `Activities`,
-    activitiesText1: `Carrying out repopulation operations with a valuable and rapidly declining species such as the European lobster demonstrates how the results of scientific research make it possible to safeguard marine biodiversity and, at the same time, produce tangible results in favor of economic sustainability.`,
-    activitiesText2: `The activities carried out and the results achieved as part of the "Astici Project" have been the subject of many dissemination initiatives.`,
-    activitiesTextBold1: `Meetings with fishermen and citizens`,
-    activitiesText3: `with the dual purpose of both illustrating and sharing the project and its implications for the small-scale fishing sector, and directly involving fishermen in the project through the capture of female ovigerians.`,
+    activitiesTitle: `Outreach Activities`,
+    activitiesText1: `Carrying out restocking operations with a valuable and critically declining species like the European lobster demonstrates how scientific research can safeguard marine biodiversity while providing substantial results that support economic sustainability.`,
+    activitiesText2: `The activities and achievements of the "Lobster Project" have been at the center of numerous outreach initiatives:`,
+    activitiesTextBold1: `Engaging with fishermen and the community: `,
+    activitiesText3: `Meetings are regularly held to both explain and share the project’s goals and its benefits for the small-scale fishing sector, and to directly involve fishers by having them assist in catching egg-bearing females.`,
 
     imageAltActivities1: ``,
 
-    activitiesTextBold2: `Involvement and orientation activities for schools:`,
-    activitiesText4: `dissemination activities dedicated to secondary school students are carried out regularly every year, through lessons at schools and activity days at CISMAR, with the aim of consolidating interactions with the world of school and bringing students closer to the themes of biodiversity and environmental sustainability.`,
-    activitiesTextBold3: `Dissemination via mass media and social media:`,
-    activitiesText5: `Numerous television and journalistic interviews were released with the aim of making known the actions undertaken as part of this project. The social channels of UNITUS and DEB also periodically host content that disseminates the results and perspectives of the project.`,
+    activitiesTextBold2: `Educational activities for schools: `,
+    activitiesText4: `Annual dissemination activities are conducted for secondary school students, including classroom lessons and on-site activities at CISMAR. These events aim to strengthen ties with the education sector and inspire students to engage with topics like biodiversity conservation and environmental sustainability.`,
+    activitiesTextBold3: `Mass media and social media outreach: `,
+    activitiesText5: `The project has been featured in numerous television and newspaper interviews to promote awareness of its actions. Additionally, the social media channels of UNITUS and DEB regularly share updates and insights into the project's outcomes and future goals.`,
 
     activitiesVideoTitle: `Lobsters project teaching and dissemination`,
   },

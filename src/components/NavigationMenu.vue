@@ -166,7 +166,7 @@ const updateMenuItems = () => {
       submenuOpen: false,
       children: [
         { title: t('cismarRole'), link: '/conservation' },
-        { title: t('hatchery'), link: '/hatchery' },
+        { title: t('rearing'), link: '/rearing' },
         { title: t('training'), link: '/training' },
         { title: t('release'), link: '/release' },
       ],
@@ -184,7 +184,7 @@ const updateMenuItems = () => {
       ],
     },
     {
-      title: t('dissemination'),
+      title: t('outreach'),
       link: '',
       submenuOpen: false,
       children: [

@@ -16,17 +16,17 @@ export default {
   },
   en: {
     imageAltThirdMission0: `Education`,
-    thirdMissionTitle: 'Third Mission',
-    thirdMissionText1: `The sea and its resources play a crucial role in ensuring the quality of life and human health. In recent years it has become increasingly clear that the conservation of biodiversity and the sustainable management of marine resources are essential to support coastal communities and to ensure food security and social and economic equity.`,
+    thirdMissionTitle: 'Public Engagement',
+    thirdMissionText1: `The sea and its resources play a crucial role in ensuring human well-being and health. In recent years, it has become increasingly evident that conserving biodiversity and managing marine resources sustainably are essential for supporting coastal communities, guaranteeing food security, and promoting social and economic equity.`,
 
     imageAltThirdMission1: `Nets grow emptier over time - Credits: Julia Volk; pexels.com`,
 
-    thirdMissionText2: `It is therefore important that the world of research contributes to spreading an ever greater understanding not only of the impacts that human activities determine on marine biodiversity, but also of the new and increasingly advanced scientific solutions available. Therefore, the dissemination of knowledge on the conservation and management of marine biodiversity should be a priority for universities and research institutions.`,
+    thirdMissionText2: `It is therefore vital for the research community to help spread awareness not only about the impacts of human activities on marine biodiversity but also about the advanced scientific solutions available to address these challenges. Disseminating knowledge on the conservation and management of marine biodiversity should be a priority for universities and research institutions.`,
 
-    thirdMissionText3: `The University of Tuscia has long combined research and teaching in the sector of ecology and marine biology thanks to the activities of the Department of Ecological and Biological Sciences (DEB) at the Experimental Marine Ichthyogenic Center of the Saline di Tarquinia (CISMAR).`,
+    thirdMissionText3: `The University of Tuscia has long combined research and education in marine ecology and biology through the activities of the Department of Ecological and Biological Sciences (DEB) at the Marine Experimental Hatchery Center (CISMAR) in the Saline di Tarquinia.`,
 
     imageAltThirdMission2: `European lobster release`,
 
-    thirdMissionText4: `The European lobster restocking program has been the focus of many of the Knowledge Dissemination activities conducted by the DEB. In fact, repopulation programs lend themselves to increasing the awareness of citizens, fishermen and also institutions on the need for sustainable fishing practices and, more generally, on the importance of conserving marine resources.`,
+    thirdMissionText4: `The European lobster restocking program has been central to many of DEB’s outreach activities. Restocking programs are particularly effective in raising awareness among citizens, fishermen, and institutions about the need for sustainable fishing practices and, more broadly, the importance of conserving marine resources.`,
   },
 }

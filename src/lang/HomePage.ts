@@ -59,24 +59,24 @@ export default {
 
   en: {
     // PROJECT
-    projectTitle: `The project`,
-    projectDescription1: `The Astici Project was born almost twenty years ago from the observation that the populations of many marine species are in sharp decline due to the impacts of anthropic activities such as excessive, often illegal, fishing, the destruction of coastal habitats and pollution. The sharp decline in catches and the resulting fishing crisis demonstrate that environmental sustainability goes hand in hand with socio-economic sustainability.`,
+    projectTitle: `The Project`,
+    projectDescription1: `Nearly twenty years ago, the Lobster Project was launched to address the alarming decline of many marine species, driven by human activities such as overfishing—often illegal—coastal habitat destruction, and pollution. The sharp drop in fish catches and the resulting crisis in the fishing sector highlight the inseparable link between environmental and socio-economic sustainability.`,
 
-    projectAltDescription1: `Small-scale artisanal fishing port`,
+    projectAltDescription1: `Artisanal fishing port`,
 
-    projectDescription2: `The European lobster is one of these cases: in the Mediterranean the populations show signs of overexploitation and the management measures already implemented have not produced a rapid recovery of the species, which is a fundamental resource for coastal fishing.`,
+    projectDescription2: `The European lobster is a prime example of this crisis. In the Mediterranean, lobster populations are showing signs of overexploitation, and existing management measures have not yet led to a swift recovery of this critical resource for coastal fisheries.`,
 
-    projectAltDescription2: `An adult European lobster`,
+    projectAltDescription2: `Adult lobster`,
 
-    projectDescription3: `Studies are carried out in several laboratories specializing in molecular ecology, environmental and benthic monitoring, microscopy, ethology, ecogenotoxicology, and parasitology.`,
+    projectDescription3: `The Lobster Project tackles this issue by boosting lobster populations through restocking actions. Over the past five years, approximately 15,000 juvenile lobsters have been released into the wild.`,
 
-    projectAltDescription3: `A juvenile of European lobster is released`,
+    projectAltDescription3: `Release of a juvenile lobster`,
 
-    projectDescription4: `The young lobsters used for repopulation are produced in the experimental aquaculture plants of the Experimental Marine Ichthyogenic Center (CISMAR) of the Tarquinia Saline, where all the research and production activities take place, from lobster breeding techniques to genetic monitoring.`,
+    projectDescription4: `The juvenile lobsters used for restocking are bred in the experimental aquaculture facilities of the Marine Experimental Hatchery Center (CISMAR) at the Saline di Tarquinia. These facilities handle every aspect of research and production, from lobster rearing techniques to genetic monitoring.`,
 
-    projectAltDescription4: `An European lobster larva at the zoea stage`,
+    projectAltDescription4: `Lobster larvae in the zoea stage`,
 
-    projectDescription5: `The Astici Project proposes both concrete answers to the problem of the impoverishment of marine biodiversity and a generalizable model of sustainable resource management in accordance with the United Nations 2030 Agenda for Sustainable Development objectives. In fact, if biodiversity and ecosystems are not "healthy" today, we will not be healthy tomorrow either, and we will not be able to maintain a prosperous and fair society.`,
+    projectDescription5: `Beyond providing a direct response to the decline in marine biodiversity, the Lobster Project serves as a scalable model for sustainable resource management, aligning with the United Nations’ Agenda 2030 Sustainable Development Goals. If biodiversity and ecosystems are not “healthy” today, neither will be us tomorrow, compromising the possibility of developing a prosperous and equitable society.`,
 
     projectAltDescription5: `Agenda 2030 Sustainable Development Goals`,
 
@@ -98,17 +98,17 @@ export default {
     // HISTORY
     historyTitle: `A bit of history`,
 
-    historyTitle1: `RISE AND DECLINE OF AN IMPORTANT RESOURCE`,
+    historyTitle1: `The Rise and Decline of an Essential Resource`,
 
-    historyDescription1: `Widespread in the north-eastern Atlantic and the Mediterranean, the lobster has played a fundamental ecological role for centuries and represented a highly valuable economic resource. However, its abundance has undergone significant variations throughout history, especially due to the intensification of fishing.`,
+    historyDescription1: `Widely distributed in the northeastern Atlantic and the Mediterranean, the European lobster has played a crucial ecological role for centuries and served as a valuable economic resource. However, its abundance has fluctuated significantly throughout history, particularly due to intensified fishing activities.`,
 
-    historyDescription2: `In the Mediterranean, until the mid-20th century, lobster populations were mainly exploited by small artisanal fleets, with limited demographic impact. However, the intensification of fishing after the Second World War, accompanied by the expansion of industrial fleets, led to a rapid decline in stocks.`,
+    historyDescription2: `In the Mediterranean, lobster populations were primarily exploited by small-scale artisanal fleets until the mid-20th century, with limited demographic impact. However, post-World War II industrial fleet expansion and intensified fishing caused a rapid stock decline.`,
 
-    historyDescription3: `Today, Mediterranean lobster populations show signs of overexploitation in several areas, but the activation of management measures has given promising results. Some states, such as France and Italy, have introduced catch limits, seasonal closures and regulations to protect ovigerous females. In parallel, repopulation projects with the release of young lobsters bred in captivity have shown positive results in restoring local populations.`,
+    historyDescription3: `Today, Mediterranean lobster populations show signs of overexploitation in several areas. Nonetheless, the implementation of management measures has yielded promising results. Countries like France and Italy have introduced capture limits, seasonal closures, and protections for egg-bearing females. Additionally, restocking projects involving the release of captive-reared juvenile lobsters have demonstrated success in restoring local populations.`,
 
-    historyTitle2: `A SUSTAINABLE FUTURE`,
+    historyTitle2: `A Sustainable Future`,
 
-    historyDescription4: `The lobster's demographic history reflects the importance of an integrated approach to marine resource management. The combination of regulations, habitat conservation and repopulation represents an effective strategy to ensure the sustainability of the species. However, long-term success will depend on collaboration between local communities, fishermen and scientific institutions, to preserve this important crustacean in European and Mediterranean seas.`,
+    historyDescription4: `The demographic history of the European lobster underscores the importance of an integrated approach to marine resource management. Combining regulations, habitat conservation, and restocking efforts offers an effective strategy to ensure the species' sustainability. However, long-term success will depend on collaboration between local communities, fishers, and scientific institutions to safeguard this vital crustacean in European and Mediterranean waters.`,
 
     // PUBLICATIONSPAGE
     readPaper: `Read the paper`,

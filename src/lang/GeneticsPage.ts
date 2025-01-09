@@ -19,18 +19,18 @@ export default {
 
     geneticsTitle: `Genetics`,
 
-    geneticsText1: `Quantifying the success of a repopulation such as that of lobsters is not easy.`,
+    geneticsText1: `Quantifying the success of a restocking program, such as that of the European lobster, is no simple task.`,
 
-    geneticsText2: `At CISMAR, a method of genetic identification of the lobsters produced and their mothers has been developed to be able to identify the lobsters released from the totally wild ones in the catch.`,
+    geneticsText2: `At CISMAR, researchers have developed a genetic identification method to distinguish lobsters produced in captivity, as well as their mothers, from fully wild individuals in the catch.`,
 
-    geneticsText3: `Kinship analyzes use molecular markers to reconstruct the kinship relationships between parents, children and siblings thanks to the characteristic genetic signature of each individual. In fact, even within the same family unit, each individual has their own genetic profile, very different and recognizable compared to that of their parents or siblings.`,
+    geneticsText3: `Kinship analyses use molecular markers to trace relationships between parents, offspring, and siblings through the unique genetic signature of each individual. Even within the same family, every lobster has its own genetic profile, distinct and easily identifiable from those of its parents or siblings.`,
 
     imageAltGenetics1: `Molecular labwork - Credits: Czapp Árpád; pexels.com`,
 
-    geneticsText4: `CISMAR researchers have developed a method that allows the DNA of lobsters to be taken from their moult (the armor they periodically abandon during growth), without causing any stress to the animals.`,
+    geneticsText4: `CISMAR researchers have devised a non-invasive method to collect lobster DNA from their molts—the exoskeletons they shed during growth—without causing any stress to the animals.`,
 
-    geneticsText5: `The molecular markers that allow us to reconstruct the individual genetic profile of lobsters are microsatellites, and at CISMAR all mothers with eggs and a significant percentage of young lobsters are studied in order to be able to recognize them in the future, should they be caught.`,
+    geneticsText5: `The molecular markers used to reconstruct individual genetic profiles are microsatellites. At CISMAR, all egg-bearing mothers and a significant percentage of juvenile lobsters are genetically studied, enabling their identification if they are later caught.`,
 
-    geneticsText6: `In this way it is possible to scientifically quantify the success of repopulation operations.`,
+    geneticsText6: `This approach allows researchers to scientifically quantify the success of restocking efforts, providing valuable insights into the impact of these operations on wild populations.`,
   },
 }
