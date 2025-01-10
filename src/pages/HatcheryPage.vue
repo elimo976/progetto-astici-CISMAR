@@ -46,6 +46,7 @@
           </figcaption>
         </figure>
         <p class="mb-6 max-w-[44rem] mx-auto xs:px-4">{{ $t('contentLobster3') }}</p>
+        <p class="mb-6 max-w-[44rem] mx-auto xs:px-4">{{ $t('contentLobster3bis') }}</p>
       </div>
 
       <!-- Modal per immagine ingrandita -->

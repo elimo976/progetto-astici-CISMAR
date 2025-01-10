@@ -58,6 +58,7 @@ export default {
     contentLobster3: `
     Quando le uova sono prossime alla schiusa, le madri vengono trasferite in apposite “sale parto” e quando rilasciano le larve, queste vengono contate e trasferite nei loro incubatoi dove saranno nutrite con una dieta bilanciata appositamente studiata e potranno compiere tutte le mute fino a trasformarsi in piccoli astici bentonici (che vivono sul fondo, invece di galleggiare nella colonna d’acqua).
   `,
+    contentLobster3bis: ``,
     imageAltLobster1: `Femmina con le uova`,
     imageAltLobster2: `Uova al microscopio`,
 
@@ -102,13 +103,13 @@ export default {
 
     cismarDescription2: `Located within the Regional Natural Reserve of the Saline di Tarquinia, the center occupies restored and repurposed buildings once used for salt extraction. These structures now house state-of-the-art laboratories and research facilities.`,
 
-    cismarDescription3: `Research at CISMAR spans multiple specialized laboratories, including molecular ecology, environmental and benthic monitoring, microscopy, ethology, ecogenotoxicology, and parasitology. `,
+    cismarDescription3: `The center focuses on understanding and preserving the biodiversity of marine and coastal ecosystems through genetic, ecological, and behavioral studies involving various marine species, including crustaceans, cephalopods, fish, and their parasites.`,
 
     cismarAltDescription1: `Seahorse - Credits: Stefano Guerrieri`,
     cismarAltDescription2: `Caramote prawn`,
     cismarAltDescription3: `Common cuttlefish - Credits: Pawel Kalisinski; pexels.com`,
 
-    biodiversityDescription: `The center focuses on understanding and preserving the biodiversity of marine and coastal ecosystems through genetic, ecological, and behavioral studies involving various marine species, including crustaceans, cephalopods, fish, and their parasites.`,
+    biodiversityDescription: `Research at CISMAR spans multiple specialized laboratories, including molecular ecology, environmental and benthic monitoring, microscopy, ethology, ecogenotoxicology, and parasitology.`,
 
     laboratoryDescription: `CISMAR also features extensive facilities for rearing marine species at all life stages—eggs, larvae, juveniles, and adults. These include numerous tanks of varying sizes and specifications, experimental incubators, and bioreactors for producing phytoplankton and zooplankton to feed reared organisms.`,
 
@@ -121,7 +122,7 @@ export default {
     marineBreedingDescription: `Controlled breeding for restocking is one of the most effective strategies for managing and restoring depleted marine species. At CISMAR, the European lobster (<i>Homarus gammarus</i>) is a key focus, as its populations in the Mediterranean have declined significantly due to overfishing pressures.`,
 
     titleRoleCismar: 'The Role of CISMAR in Lobster Conservation',
-    contentRoleCismar1: `Restocking, or the release of captive-bred juveniles into the wild, is crucial for reversing this trend. However, an initial challenge was the lack of established techniques for rearing lobsters. Unlike species farmed for commercial purposes, the European lobster required entirely new procedures and methodologies. This groundbreaking work was carried out by CISMAR’s researchers, positioning the center as a leader in lobster conservation..`,
+    contentRoleCismar1: `Restocking, or the release of captive-bred juveniles into the wild, is crucial for reversing this trend. However, an initial challenge was the lack of established techniques for rearing lobsters. Unlike species farmed for commercial purposes, the European lobster required entirely new procedures and methodologies. This groundbreaking work was carried out by CISMAR’s researchers, positioning the center as a leader in lobster conservation.`,
     contentRoleCismar2: `
       Years of research were required to develop techniques that ensure restocked lobsters possess the genetic, behavioral, and physiological traits of wild individuals. These characteristics are essential for the success of their release into natural habitats.
     `,
@@ -147,7 +148,9 @@ export default {
       The egg-bearing females are kept in tanks with carefully controlled environmental conditions, including temperature, lighting, and water quality.
     `,
     contentLobster3: `
-      As the eggs near hatching, the females are moved to dedicated "maternity tanks." Once the larvae are released, they are counted and transferred to specialized incubators. There, the larvae are fed a carefully balanced diet designed specifically for their needs, enabling them to go through all molting stages until they develop into juvenile benthic lobsters (which live on the seabed rather than floating in the water column).
+      As the eggs nearly hatching, the females are moved to dedicated "maternity tanks." Once the larvae are released, they are counted and transferred to specialized incubators. There, the larvae are fed a carefully balanced diet designed specifically for their needs, enabling them to go through all molting stages until they develop into juvenile benthic lobsters (which live on the seabed rather than floating in the water column).
+  `,
+    contentLobster3bis: `This meticulous process ensures the production of healthy juveniles that are well-suited for restocking programs aimed at rebuilding lobster populations in their natural habitats
     `,
     imageAltLobster1: `Berried female`,
     imageAltLobster2: `Lobster eggs under the microscope`,

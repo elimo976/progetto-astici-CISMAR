@@ -70,6 +70,7 @@
             </figcaption>
           </figure>
         </div>
+        <p>{{ $t('activitiesText1') }}</p>
       </div>
 
       <!-- Modal per immagine ingrandita -->

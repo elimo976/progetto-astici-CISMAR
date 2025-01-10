@@ -60,7 +60,7 @@ export default {
   en: {
     // PROJECT
     projectTitle: `The Project`,
-    projectDescription1: `Nearly twenty years ago, the Lobster Project was launched to address the alarming decline of many marine species, driven by human activities such as overfishing—often illegal—coastal habitat destruction, and pollution. The sharp drop in fish catches and the resulting crisis in the fishing sector highlight the inseparable link between environmental and socio-economic sustainability.`,
+    projectDescription1: `Nearly twenty years ago, the Lobster Project was launched to address the alarming decline of many marine species, driven by human activities such as overfishing — often illegal — coastal habitat destruction, and pollution. The sharp drop in fish catches and the resulting crisis in the fishing sector highlight the inseparable link between environmental and socio-economic sustainability.`,
 
     projectAltDescription1: `Artisanal fishing port`,
 
@@ -85,10 +85,10 @@ export default {
     lobsterTitle: `The Lobster`,
     lobsterDescription1: `
       The European lobster (<i>Homarus gammarus</i>) is one of the most iconic crustaceans of Italian seas.<br />
-      Found from the northeastern Atlantic to the Mediterranean, it primarily inhabits rocky and sandy seabeds at depths ranging from a few meters to 150 meters. This nocturnal crustacean has a varied diet consisting mainly of mollusks, small fish, and other benthic invertebrates.`,
-    lobsterDescription2: `Its growth is slow, occurring through successive molts, with individuals reaching up to 50 cm in length and weighing over 5 kg. The lobster has a long reproductive life, with females laying up to 20,000 eggs every 1-2 years, though larval survival rates are extremely low, making the species vulnerable to external pressures.`,
-    lobsterDescription3: `In Italy, lobster populations are declining due to overfishing, which includes illegal fishing of individuals below the minimum size (30 cm) and harvesting during reproduction. Consequently, catches have decreased while fishing pressure has increased, necessitating stricter management measures.`,
-    lobsterDescription4: `Scientific research plays a key role in monitoring lobster stocks and identifying sustainable strategies. Interventions such as protecting critical habitats and repopulating with captive-reared individuals could contribute to the species' recovery.`,
+      Widespread from the northeastern Atlantic to the Mediterranean, it primarily inhabits rocky and sandy seabeds, ranging from shallow waters to depths of 150 meters. This nocturnal crustacean feeds on a diverse diet of mollusks, small fish, and other benthic invertebrates.`,
+    lobsterDescription2: `Its growth is slow, occurring through successive molts, with individuals reaching up to 50 cm in length and weighing over 5 kg. The lobster has a long reproductive life, with females laying up to 20,000 eggs every 1–2 years. However, larval survival rates are extremely low, making the species particularly vulnerable to external pressures.`,
+    lobsterDescription3: `In Italy, lobster populations are in decline due to overfishing, including the illegal harvesting of undersized individuals (below 30 cm) and fishing during the reproductive season. As a result, catches have decreased while fishing pressure has intensified, highlighting the urgent need for stricter management measures.`,
+    lobsterDescription4: `Scientific research plays a crucial role in monitoring lobster stocks and developing sustainable strategies. Actions such as protecting critical habitats and restocking with captive-reared individuals could significantly contribute to the recovery of this valuable species.`,
 
     lobsterAltDescription1: `European lobster in the sea`,
     lobsterAltDescription2: `Young lobster`,

@@ -13,6 +13,8 @@ export default {
     imageAltThirdMission2: `Rilascio di astici`,
 
     thirdMissionText4: `Il programma di ripopolamento di astici europei è stato al centro di molte delle attività di Divulgazione delle Conoscenze condotte dal DEB. I programmi di ripopolamento si prestano infatti ad aumentare la consapevolezza dei cittadini, dei pescatori e anche delle Istituzioni sulla necessità di pratiche di pesca sostenibili e, più in generale, sull'importanza della conservazione delle risorse marine.`,
+
+    thirdMissionText5: `Attraverso queste iniziative, il CISMAR dimostra come la scienza possa colmare il divario tra la conservazione della biodiversità e i bisogni della società, promuovendo una comprensione più profonda della necessità di proteggere il mare e le sue inestimabili risorse.`,
   },
   en: {
     imageAltThirdMission0: `Education`,
@@ -28,5 +30,7 @@ export default {
     imageAltThirdMission2: `European lobster release`,
 
     thirdMissionText4: `The European lobster restocking program has been central to many of DEB’s outreach activities. Restocking programs are particularly effective in raising awareness among citizens, fishermen, and institutions about the need for sustainable fishing practices and, more broadly, the importance of conserving marine resources.`,
+
+    thirdMissionText5: `Through these initiatives, DEB and CISMAR highlight how science can bridge gaps between ecological preservation and societal needs, fostering a deeper understanding of our shared responsibility to protect the sea and its invaluable biodiversity`,
   },
 }

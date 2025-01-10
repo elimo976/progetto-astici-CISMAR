@@ -56,6 +56,7 @@
           </figure>
 
           <p>{{ $t('thirdMissionText4') }}</p>
+          <p>{{ $t('thirdMissionText5') }}</p>
         </div>
       </div>
 

@@ -14,6 +14,7 @@ export default {
     activitiesText4: `sono svolte regolarmente ogni anno attività di disseminazione dedicate agli studenti delle scuole secondarie, attraverso lezioni presso le scuole e giornate di attività presso il CISMAR, con la finalità di consolidare le interazioni con il mondo della scuola e avvicinare gli studenti ai temi della biodiversità e della sostenibilità ambientale.`,
     activitiesTextBold3: `Diffusione tramite mass media e social: `,
     activitiesText5: `sono state rilasciate numerose interviste televisive e giornalistiche allo scopo di far conoscere le azioni intraprese nell’ambito di questo progetto. Anche i canali social di UNITUS e DEB ospitano periodicamente contenuti che diffondono i risultati e le prospettive del progetto.`,
+    activitiesText6: `Attraverso queste iniziative, il Progetto Astici crea un’intersezione tra scienza, conservazione e coinvolgimento della comunità, promuovendo una cultura di sostenibilità e consapevolezza sulla biodiversità marina.`,
 
     activitiesVideoTitle: `Divulgazione e didattica per il progetto astici`,
   },
@@ -31,6 +32,7 @@ export default {
     activitiesText4: `Annual dissemination activities are conducted for secondary school students, including classroom lessons and on-site activities at CISMAR. These events aim to strengthen ties with the education sector and inspire students to engage with topics like biodiversity conservation and environmental sustainability.`,
     activitiesTextBold3: `Mass media and social media outreach: `,
     activitiesText5: `The project has been featured in numerous television and newspaper interviews to promote awareness of its actions. Additionally, the social media channels of UNITUS and DEB regularly share updates and insights into the project's outcomes and future goals.`,
+    activitiesText6: `Through these initiatives, the Lobster Project highlights the intersection of science, conservation, and community engagement, fostering a culture of sustainability and awareness for marine biodiversity.`,
 
     activitiesVideoTitle: `Lobsters project teaching and dissemination`,
   },
