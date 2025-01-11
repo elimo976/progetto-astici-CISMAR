@@ -100,7 +100,7 @@ onMounted(() => {
     contentUrl: '@/assets/video/video-hero-banner.mp4', // URL del video principale
     embedUrl: '@/assets/video/video-hero-banner.mp4', // URL per l'embed
     duration: 'PT29S', // Durata del video
-    uploadDate: '2024-12-12', // Data di upload del video
+    uploadDate: '2024-12-12T00:00:00Z', // Data di upload del video
   }
 
   // Aggiungi il JSON-LD al documento
