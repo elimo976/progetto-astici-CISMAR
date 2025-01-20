@@ -13,8 +13,13 @@
       </button>
 
       <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-        <p class="lg:pr-10 p-3 text-lg text-gray-800 font-medium text-justify">
+        <p class="md:pr-10 p-3 text-lg text-gray-800 font-medium text-justify">
           {{ $t('cookieBanner.message') }}
+          <br />
+          <br />
+          <button @click="openPrivacyPolicyModal" class="text-blue-500 hover:underline">
+            Privacy Policy
+          </button>
         </p>
         <div class="flex items-center space-x-4">
           <button
@@ -74,6 +79,49 @@
       </div>
     </div>
   </div>
+  <!-- Modale Privacy Policy -->
+  <div
+    v-if="showPrivacyPolicy"
+    class="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 flex justify-center items-center"
+  >
+    <div
+      class="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg relative mx-3 overflow-y-auto max-h-[90vh]"
+    >
+      <!-- Bottone di chiusura in alto a destra -->
+      <button
+        class="absolute top-1 right-3 text-gray-800 hover:text-gray-600 transition"
+        @click="closePrivacyPolicyModal"
+      >
+        <span class="text-2xl font-bold">&times;</span>
+      </button>
+
+      <div class="space-y-6">
+        <!-- Contenuto Privacy Policy -->
+        <section>
+          <h2 class="text-xl font-semibold mb-1">{{ $t('privacyPolicy.introductionTitle') }}</h2>
+          <p>{{ $t('privacyPolicy.introductionText') }}</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-semibold mb-1">{{ $t('privacyPolicy.noPersonalDataTitle') }}</h2>
+          <p>{{ $t('privacyPolicy.noPersonalDataText') }}</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-semibold mb-1">{{ $t('privacyPolicy.cookieTitle') }}</h2>
+          <p>{{ $t('privacyPolicy.cookieText') }}</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-semibold mb-1">{{ $t('privacyPolicy.externalLinksTitle') }}</h2>
+          <p>{{ $t('privacyPolicy.externalLinksText') }}</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-semibold mb-1">
+            {{ $t('privacyPolicy.privacyPolicyUpdatesTitle') }}
+          </h2>
+          <p>{{ $t('privacyPolicy.privacyPolicyUpdatesText') }}</p>
+        </section>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -81,6 +129,7 @@ import { ref } from 'vue'
 
 const isAccepted = ref(false)
 const showPreferences = ref(false)
+const showPrivacyPolicy = ref(false)
 
 // Preferenze default
 const preferences = ref({
@@ -144,6 +193,15 @@ const loadPreferences = () => {
   }
 }
 
+// Apre la modale Privacy Policy
+const openPrivacyPolicyModal = () => {
+  showPrivacyPolicy.value = true
+}
+
+// Chiude la modale Privacy Policy
+const closePrivacyPolicyModal = () => {
+  showPrivacyPolicy.value = false
+}
 loadPreferences()
 </script>
 
