@@ -2,7 +2,7 @@
   <img
     :src="imageSrcResearch0"
     :alt="$t('imageAltResearch0')"
-    class="w-full object-cover rounded-lg shadow-xl"
+    class="w-full object-cover"
     aria-label="$t('imageAltResearch0')"
   />
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">

@@ -2,7 +2,7 @@
   <img
     :src="imageSrcRelease0"
     :alt="$t('imageAltRelease0')"
-    class="w-full object-cover rounded-lg shadow-xl"
+    class="w-full object-cover"
     aria-label="$t('imageAltRelease0')"
   />
   <section class="bg-custom-beige text-gray-800 px-8 py-8 text-left text-lg w-full">

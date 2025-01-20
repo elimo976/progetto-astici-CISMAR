@@ -7,7 +7,7 @@
     <img
       :src="imageSrcCismar0SM"
       :alt="$t('imageAltRoleCismar0')"
-      class="w-full object-cover rounded-lg shadow-xl"
+      class="w-full object-cover"
       aria-label="$t('imageAltRoleCismar0')"
     />
   </picture>
@@ -229,7 +229,7 @@
       >
         <!-- Contenitore dinamico per adattarsi ai dispositivi -->
         <div
-          class="relative w-3/4 max-w-3xl px-32 py-12 sm:w-4/5 sm:px-8 sm:py-8 xs:w-full xs:px-3 xs:py-3"
+          class="relative w-3/4 md:max-w-lg sm:max-w-sm px-32 py-12 sm:w-4/5 sm:px-8 sm:py-8 xs:w-full xs:px-3 xs:py-3"
         >
           <img
             :src="selectedImage"

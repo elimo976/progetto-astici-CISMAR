@@ -2,7 +2,7 @@
   <img
     :src="imageSrcThirdMission1"
     :alt="$t('imageAltThirdMission0')"
-    class="w-full object-cover rounded-lg shadow-xl"
+    class="w-full object-cover"
     aria-label="$t('imageAltThirdMission0')"
   />
   <section class="bg-custom-beige text-gray-800 px-4 sm:px-6 lg:px-8 py-8 w-full">
