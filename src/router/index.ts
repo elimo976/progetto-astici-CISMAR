@@ -1,3 +1,11 @@
+// Dichiarazione di gtag
+declare global {
+  interface Window {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    gtag: (...args: any[]) => void
+  }
+}
+
 import { createRouter, createWebHistory } from 'vue-router'
 
 const HomePage = () => import('@/pages/HomePage.vue')
@@ -116,8 +124,16 @@ const router = createRouter({
   },
 })
 
-// Hook afterEach per aggiornare il tag canonical
-router.afterEach(() => {
+// Listener per i cambiamenti di route
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+router.afterEach((to, from) => {
+  // Traccia la pagina con Google Analytics
+  if (window.gtag) {
+    window.gtag('event', 'page_view', {
+      page_path: to.fullPath,
+    })
+  }
+  // Aggiorna il tag canonical
   const canonicalLink = document.querySelector("link[rel='canonical']")
 
   if (canonicalLink) {
